@@ -68,6 +68,7 @@
         max-width: 230px;
     }
     /* END HOME */
+
     /* START MENU CATEGORY */
     
     .category__title {
@@ -148,6 +149,7 @@
     .slider__wrapper{
         padding-top: 30px;
         padding-bottom: 30px;
+        box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
     }    
     .slider__slick{
         box-shadow: 0 1px 11px rgba(59, 36, 90, 0.4);
@@ -215,6 +217,70 @@
         transform: translateY(-50%);
     }
     /* END SLIDER SLICK */
+
+    /* START featured */
+    .featured__wrapper{
+        display: flex;
+        justify-content: space-between;    
+        box-shadow: 0 0 11px rgba(59, 36, 90, 0.16);   
+        border-radius: 15px; 
+    }
+    .featured__info-box{
+        background-color: #3b245a;
+        padding: 26px;
+        border-radius: 15px;
+    }
+    .featured__info-box-title {
+        color: #fff;
+        font-family: 'Lato-Semibold';
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        width: 172px;
+        line-height: 31px;
+    }
+    .featured__info-box-link {
+        color: #fff;
+        font-family: 'Lato-Semibold';
+        font-size: 15px;
+        font-weight: 600;
+        padding: 10px 47px;
+        border-radius: 8px;
+        background-image: linear-gradient(180deg, #0dc06d 0%, #0db14b 100%); 
+        margin-bottom: 20px;   
+        display: block;
+    }
+    .featured__info-box-img {
+        text-align: center;
+    }
+    .featured__slider {
+        padding: 20px 0 20px 30px;
+    }
+    .featured__item {
+        box-shadow: 0 4px 14px 7px rgba(121, 121, 121, 0.05);
+        border-radius: 15px;
+        background-color: #fff;
+        padding: 20px 10px 17px 10px;
+    }
+    .featured__item-img {
+        text-align: center;
+    }
+    .featured__item-star {
+    }
+    .featured__item-title {
+    }
+    .featured__item-box {
+    }
+    .featured__item-box-price {
+    }
+    .featured__item-box-old {
+    }
+    .featured__item-box-new {
+    }
+    .featured__item-box-cart {
+    }
+
+    /* END featured */
     
     @media (max-width: 1259px) {
         .list__item:nth-child(4n+4) {

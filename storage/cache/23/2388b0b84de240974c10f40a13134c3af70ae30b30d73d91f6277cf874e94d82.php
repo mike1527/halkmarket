@@ -16,7 +16,7 @@ class __TwigTemplate_66e02b48ddc03a5ac32fbbde784ef75a8f112903aa240e7e22ebf97d1d9
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<!-- <footer>
+        echo "<footer>
   <div class=\"footer__container\">
     <div class=\"container\">
       <div class=\"footer__wrapper\">
@@ -66,7 +66,7 @@ class __TwigTemplate_66e02b48ddc03a5ac32fbbde784ef75a8f112903aa240e7e22ebf97d1d9
       
 
   </div>
-</footer> -->
+</footer>
 ";
         // line 44
         $context['_parent'] = $context;
@@ -114,7 +114,7 @@ class __TwigTemplate_66e02b48ddc03a5ac32fbbde784ef75a8f112903aa240e7e22ebf97d1d9
         return array (  97 => 59,  76 => 45,  72 => 44,  52 => 27,  30 => 10,  19 => 1,);
     }
 }
-/* <!-- <footer>*/
+/* <footer>*/
 /*   <div class="footer__container">*/
 /*     <div class="container">*/
 /*       <div class="footer__wrapper">*/
@@ -156,7 +156,7 @@ class __TwigTemplate_66e02b48ddc03a5ac32fbbde784ef75a8f112903aa240e7e22ebf97d1d9
 /*       */
 /* */
 /*   </div>*/
-/* </footer> -->*/
+/* </footer>*/
 /* {% for script in scripts %}*/
 /* <script src="{{ script }}" type="text/javascript"></script>*/
 /* */

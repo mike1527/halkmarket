@@ -1,24 +1,84 @@
 {{ header }}
 <!-- <div id="common-home" class="container"> -->
-  <!-- <div class="row">
-
-    {{ column_left }}
-    {% if column_left and column_right %}
-    {% set class = 'col-sm-6' %}
-    {% elseif column_left or column_right %}
-    {% set class = 'col-sm-9' %}
-    {% else %}
-    {% set class = 'col-sm-12' %}
-    {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>
-    {{ column_right }}
-  </div> -->
-
-  
+  <!-- <div class="row"> -->
+    
+    <!-- {{ column_left }} -->
+    <!-- {% if column_left and column_right %} -->
+    <!-- {% set class = 'col-sm-6' %} -->
+    <!-- {% elseif column_left or column_right %} -->
+    <!-- {% set class = 'col-sm-9' %} -->
+    <!-- {% else %} -->
+    <!-- {% set class = 'col-sm-12' %} -->
+    <!-- {% endif %} -->
+    <!-- <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>
+    {{ column_right }} -->
+  <!-- </div> -->
 
   
 <!-- </div> -->
 
+<section class="advantages">
+    <div class="container__page-grey">
+        <div class="container">
+            <div class="advantages__wrapper">
+
+                <div class="advantages__item advantages__item-1">
+                    <h4 class="advantages__item-title">И все на каждый день</h4>
+                    <p class="advantages__item-text">
+                        Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных
+                    </p>
+                </div>
+
+                <div class="advantages__item advantages__item-2">
+                    <h4 class="advantages__item-title">И свежесть и качество</h4>
+                    <p class="advantages__item-text">
+                        Будьте уверены: мы тщательно следим за свежестью и качеством продуктов на складе и на всех этапах доставки
+                    </p>
+                </div>
+
+                <div class="advantages__item advantages__item-3">
+                    <h4 class="advantages__item-title">И WOW-удобно</h4>
+                    <p class="advantages__item-text">
+                        Планируйте и экономьте время: оформляйте и получайте заказы где и когда удобно
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{{ menu }}
+
+<div class="featured">
+  <div class="container">
+    <div class="featured__wrapper">
+      <div class="featured__info-box">
+        <h4 class="featured__info-box-title">Наши спецпредложения</h4>
+        <a class="featured__info-box-link" href="#">Показать все</a>
+        <div class="featured__info-box-img"><img src="/image/halkmarket/slider/feautered-icon.png" alt=""></div>
+      </div>
+      <div class="featured__slider">
+
+        <div class="featured__item">
+          <div class="featured__item-img"><img src="/image/halkmarket/slider/featured-item-1.jpg" alt=""></div>
+          <div class="featured__item-star"></div>
+          <div class="featured__item-title"></div>
+          <div class="featured__item-box">
+            <div class="featured__item-box-price">
+              <div class="featured__item-box-old"></div>
+              <div class="featured__item-box-new"></div>
+            </div>
+            <div class="featured__item-box-cart"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
 {{ footer }}

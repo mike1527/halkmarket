@@ -16,7 +16,7 @@ class __TwigTemplate_72a7fd17961436466f9cbdb5750ed56633f160dc45cd226b52033b2121c
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<h3>";
+        echo "<!-- <h3>";
         echo (isset($context["heading_title"]) ? $context["heading_title"] : null);
         echo "</h3>
 <div class=\"row\">
@@ -147,7 +147,9 @@ class __TwigTemplate_72a7fd17961436466f9cbdb5750ed56633f160dc45cd226b52033b2121c
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 42
-        echo "</div>
+        echo "</div> -->
+
+
 ";
     }
 
@@ -166,7 +168,7 @@ class __TwigTemplate_72a7fd17961436466f9cbdb5750ed56633f160dc45cd226b52033b2121c
         return array (  150 => 42,  137 => 37,  131 => 36,  125 => 35,  121 => 33,  117 => 31,  109 => 29,  106 => 28,  98 => 26,  92 => 24,  90 => 23,  87 => 22,  84 => 21,  80 => 19,  74 => 18,  70 => 16,  66 => 14,  63 => 13,  59 => 12,  56 => 11,  54 => 10,  50 => 9,  44 => 8,  33 => 6,  29 => 4,  25 => 3,  19 => 1,);
     }
 }
-/* <h3>{{ heading_title }}</h3>*/
+/* <!-- <h3>{{ heading_title }}</h3>*/
 /* <div class="row">*/
 /*  {% for product in products %}*/
 /*   <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">*/
@@ -207,5 +209,7 @@ class __TwigTemplate_72a7fd17961436466f9cbdb5750ed56633f160dc45cd226b52033b2121c
 /*     </div>*/
 /*   </div>*/
 /*   {% endfor %}*/
-/* </div>*/
+/* </div> -->*/
+/* */
+/* */
 /* */

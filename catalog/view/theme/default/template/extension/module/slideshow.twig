@@ -1,19 +1,19 @@
 <!-- Подключение SLICK слайдера -->
 
-  <div class="container__page">
-    <div class="slider__wrapper">{% for banner in banners %}      
-      <div class="slider__item">
-          {% if banner.link %}
-          <a class="slider__item-link" href="{{ banner.link }}">
-            <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic">
-          </a>
-          {% else %}
-          <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic"/>
-          {% endif %}
-      </div>
-          {% endfor %}      
+  <!-- <div class="container__page"> -->
+    <div class="slider__wrapper">{% for banner in banners %}    
+        <div class="slider__item">
+            {% if banner.link %}
+            <a class="slider__item-link" href="{{ banner.link }}">
+              <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic">
+            </a>
+            {% else %}
+            <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic"/>
+            {% endif %}
+        </div>
+            {% endfor %} 
     </div>    
-  </div>
+  <!-- </div> -->
 </section>
 
 <script>

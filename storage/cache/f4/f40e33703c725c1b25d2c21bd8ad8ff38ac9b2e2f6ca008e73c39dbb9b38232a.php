@@ -18,49 +18,49 @@ class __TwigTemplate_e55e6a72e9b582876a66c686e57c2f419a7f14c580e8478df149d49c8cc
         // line 1
         echo "<!-- Подключение SLICK слайдера -->
 
-  <div class=\"container__page\">
+  <!-- <div class=\"container__page\"> -->
     <div class=\"slider__wrapper\">";
         // line 4
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["banners"]) ? $context["banners"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["banner"]) {
-            echo "      
-      <div class=\"slider__item\">
-          ";
+            echo "    
+        <div class=\"slider__item\">
+            ";
             // line 6
             if ($this->getAttribute($context["banner"], "link", array())) {
                 // line 7
-                echo "          <a class=\"slider__item-link\" href=\"";
+                echo "            <a class=\"slider__item-link\" href=\"";
                 echo $this->getAttribute($context["banner"], "link", array());
                 echo "\">
-            <img src=\"";
+              <img src=\"";
                 // line 8
                 echo $this->getAttribute($context["banner"], "image", array());
                 echo "\" alt=\"";
                 echo $this->getAttribute($context["banner"], "title", array());
                 echo "\" class=\"img-responsive slider__item-pic\">
-          </a>
-          ";
+            </a>
+            ";
             } else {
                 // line 11
-                echo "          <img src=\"";
+                echo "            <img src=\"";
                 echo $this->getAttribute($context["banner"], "image", array());
                 echo "\" alt=\"";
                 echo $this->getAttribute($context["banner"], "title", array());
                 echo "\" class=\"img-responsive slider__item-pic\"/>
-          ";
+            ";
             }
             // line 13
-            echo "      </div>
-          ";
+            echo "        </div>
+            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['banner'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 14
-        echo "      
+        echo " 
     </div>    
-  </div>
+  <!-- </div> -->
 </section>
 
 <script>
@@ -172,20 +172,20 @@ class __TwigTemplate_e55e6a72e9b582876a66c686e57c2f419a7f14c580e8478df149d49c8cc
 }
 /* <!-- Подключение SLICK слайдера -->*/
 /* */
-/*   <div class="container__page">*/
-/*     <div class="slider__wrapper">{% for banner in banners %}      */
-/*       <div class="slider__item">*/
-/*           {% if banner.link %}*/
-/*           <a class="slider__item-link" href="{{ banner.link }}">*/
-/*             <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic">*/
-/*           </a>*/
-/*           {% else %}*/
-/*           <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic"/>*/
-/*           {% endif %}*/
-/*       </div>*/
-/*           {% endfor %}      */
+/*   <!-- <div class="container__page"> -->*/
+/*     <div class="slider__wrapper">{% for banner in banners %}    */
+/*         <div class="slider__item">*/
+/*             {% if banner.link %}*/
+/*             <a class="slider__item-link" href="{{ banner.link }}">*/
+/*               <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic">*/
+/*             </a>*/
+/*             {% else %}*/
+/*             <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic"/>*/
+/*             {% endif %}*/
+/*         </div>*/
+/*             {% endfor %} */
 /*     </div>    */
-/*   </div>*/
+/*   <!-- </div> -->*/
 /* </section>*/
 /* */
 /* <script>*/
