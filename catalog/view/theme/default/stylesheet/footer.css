@@ -1,0 +1,140 @@
+.footer__container{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    background-color: #3b245a;
+    
+}
+
+.footer__wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0 114px;
+    border-bottom: 1px solid #fff;
+}
+
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__item-1{
+    padding-right: 125px;
+    width: 100%;
+}
+.footer__item-2{
+    padding-right: 136px;
+    width: 100%;
+}
+.footer__item-3{
+    width: 418px;
+}
+
+.footer__item-title{
+    color: #fff;
+    font-family: 'Lucida-Grande';
+    font-size: 20px;
+    line-height: 35px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.footer__item-link{
+    font-family: 'Lato-Regular';
+    font-weight: 400;
+    display: block;
+    color: #fff;
+    line-height: 29px;
+}
+
+.footer__item-link-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 42px;
+}
+
+.footer__item-text{
+    color: #fff;
+    font-family: 'Lato-Regular';
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.footer__item-text-link{
+    color: #f7b500;
+}
+
+.footer__copy{
+    padding: 20px 0;
+}
+.footer__copy-box {
+    text-align: center;
+}
+
+.footer__copy-text {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Lato-Medium';
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media (max-width: 1110px){
+    .footer__wrapper{
+        padding: 70px 0 74px;
+    }
+}
+@media (max-width: 992px){
+    .footer__item-1{
+        padding-right: 0px;
+    }
+    .footer__item-2{
+        padding-right: 0px;
+    }   
+    .footer__wrapper{
+        padding: 60px 0 64px;
+    }
+
+}
+@media (max-width: 736px){
+    .footer__wrapper{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }  
+    .footer__item{
+        width: auto;
+    }
+    .footer__wrapper{
+        padding: 40px 0 44px;
+    }
+    .footer__inner{
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .footer__item-1{
+        margin-right: 15px;
+    }
+    .footer__item-2{
+        margin-left: 15px;
+    } 
+    .footer__item-link-box{
+        justify-content: center;
+    }
+    .social-link{
+        margin: 0 10px;
+    }
+    .footer__item-text{
+        text-align: center;
+    }
+
+}
+@media (max-width: 425px){
+    .footer__item-link-box{
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+    }
+
+    .social-link {
+        margin: 10px 0px;
+    }
+
+}

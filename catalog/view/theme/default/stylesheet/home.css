@@ -1,0 +1,182 @@
+    /* START HOME */
+    
+    .advantages__wrapper {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 39px;
+        margin-bottom: 65px;
+    }
+    
+    .advantages__item {
+        padding-left: 63px;
+        position: relative;
+        margin-right: 15px;
+    }
+    
+    .advantages__item::before {
+        content: '';
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: #c9a1ff;
+        left: 0;
+    }
+    
+    .advantages__item-1::after {
+        content: '';
+        position: absolute;
+        background-image: url(/image/halkmarket/advantages/advantages-icon-1.svg);
+        left: 4px;
+        top: 4px;
+        width: 36px;
+        height: 32px;
+    }
+    
+    .advantages__item-2::after {
+        content: '';
+        position: absolute;
+        background-image: url(/image/halkmarket/advantages/advantages-icon-2.svg);
+        left: 8px;
+        top: 6px;
+        width: 26px;
+        height: 32px;
+    }
+    
+    .advantages__item-3::after {
+        content: '';
+        position: absolute;
+        background-image: url(/image/halkmarket/advantages/advantages-icon-3.svg);
+        left: 8px;
+        top: 7px;
+        width: 28px;
+        height: 26px;
+    }
+    
+    .advantages__item-title {
+        font-family: 'Lato-Semibold';
+        font-weight: 600;
+        font-size: 20px;
+        line-height: normal;
+        margin-bottom: 6px;
+    }
+    
+    .advantages__item-text {
+        font-family: 'Lucida-Grande';
+        font-weight: 400;
+        font-size: 16px;
+        max-width: 230px;
+    }
+    /* END HOME */
+    /* START MENU CATEGORY */
+    
+    .category__title {
+        font-family: 'Lato-Bold';
+        font-weight: 700;
+        color: #2e2e2e;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .list__category {
+        /*  min-width: 1240px; */
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .list__item {
+        /* padding: 33px 20px 29px 19px; */
+        border-radius: 14px;
+        background-color: #3dacf2;
+        position: relative;
+        width: 275px;
+        height: 215px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .list__item:nth-child(4n+4) {
+        margin-right: 0;
+    }
+    
+    .list__item:nth-child(1) {
+        /* background-image: url('/image/halkmarket/category/cat-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    bottom: 32px; */
+    }
+    
+    .list__item-link {
+        font-family: 'Lato-Bold';
+        font-weight: 700;
+        color: #fff;
+        font-size: 24px;
+        line-height: 28px;
+        width: 220px;
+        position: absolute;
+        top: 27px;
+        left: 20px;
+    }
+    
+    .navbar-header-span {
+        display: none;
+    }
+    /* END MENU CATEGORY */
+    
+    @media (max-width: 1259px) {
+        .list__item:nth-child(4n+4) {
+            margin-right: 40px;
+        }
+        .list__category {
+            justify-content: center;
+        }
+        .category__title {
+            text-align: center;
+        }
+    }
+    
+    @media (max-width: 926px) {
+        .list__item:nth-child(odd) {
+            margin-right: 40px;
+        }
+        .list__item:nth-child(even) {
+            margin-right: 0;
+        }
+    }
+    
+    @media (max-width: 611px) {
+        .list__item:nth-child(odd) {
+            margin-right: 5px;
+        }
+        .list__item:nth-child(even) {
+            margin-left: 5px;
+        }
+    }
+    
+    @media (max-width: 673px) {
+        .advantages__wrapper {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+        }
+        .advantages__item {
+            margin-right: 0px;
+        }
+        .advantages__item-1 {
+            margin-bottom: 25px;
+        }
+        .advantages__item-2 {
+            margin-bottom: 25px;
+        }
+    }
+    
+    @media (max-width: 582px) {
+        .list__item:nth-child(odd) {
+            margin-right: 0px;
+        }
+        .list__item:nth-child(even) {
+            margin-left: 0px;
+        }
+    }

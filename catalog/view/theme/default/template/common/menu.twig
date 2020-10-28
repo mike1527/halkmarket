@@ -1,0 +1,67 @@
+<section class="advantages">
+    <div class="container__page-grey">
+        <div class="container">
+            <div class="advantages__wrapper">
+
+                <div class="advantages__item advantages__item-1">
+                    <h4 class="advantages__item-title">И все на каждый день</h4>
+                    <p class="advantages__item-text">
+                        Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных
+                    </p>
+                </div>
+
+                <div class="advantages__item advantages__item-2">
+                    <h4 class="advantages__item-title">И свежесть и качество</h4>
+                    <p class="advantages__item-text">
+                        Будьте уверены: мы тщательно следим за свежестью и качеством продуктов на складе и на всех этапах доставки
+                    </p>
+                </div>
+
+                <div class="advantages__item advantages__item-3">
+                    <h4 class="advantages__item-title">И WOW-удобно</h4>
+                    <p class="advantages__item-text">
+                        Планируйте и экономьте время: оформляйте и получайте заказы где и когда удобно
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="category">
+    <div class="container__page-grey">
+        <div class="container">
+            {% if categories %}
+            <nav id="menu" class="navbar">
+                <!-- <div class="container"> -->
+                <h4 class="category__title">Категории</h4>
+                <div class="navbar-header"><span id="category" class="visible-xs navbar-header-span">{{ text_category }}</span>
+                    <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav list__category">
+                        {% for category in categories %} {% if category.children %}
+                        <li class="dropdown list__item"><a href="{{ category.href }}" class="dropdown-toggle list__item-link" data-toggle="dropdown">{{ category.name }}</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-inner"> {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
+                                    <ul class="list-unstyled">
+                                        {% for child in children %}
+                                        <li><a href="{{ child.href }}">{{ child.name }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                    {% endfor %}</div>
+                                <a href="{{ category.href }}" class="see-all">{{ text_all }} {{ category.name }}</a> </div>
+                        </li>
+                        {% else %}
+                        <li class="list__item"><a class="list__item-link" href="{{ category.href }} ">{{ category.name }}</a></li>
+                        {% endif %} {% endfor %}
+                    </ul>
+                </div>
+                <!-- </div> -->
+            </nav>
+
+            {% endif %}
+        </div>
+    </div>
+</section>
