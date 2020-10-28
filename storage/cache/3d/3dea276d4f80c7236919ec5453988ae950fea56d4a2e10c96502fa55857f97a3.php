@@ -19,7 +19,7 @@ class __TwigTemplate_690c728e953287d8c178ab159380c42dedad888050771649fbfc239c789
         echo (isset($context["header"]) ? $context["header"] : null);
         echo "
 <!-- <div id=\"common-home\" class=\"container\"> -->
-  <div class=\"row\">
+  <!-- <div class=\"row\">
 
     ";
         // line 5
@@ -57,14 +57,11 @@ class __TwigTemplate_690c728e953287d8c178ab159380c42dedad888050771649fbfc239c789
         // line 14
         echo (isset($context["column_right"]) ? $context["column_right"] : null);
         echo "
-  </div>
+  </div> -->
 
   
 
-  <!-- ";
-        // line 19
-        echo (isset($context["menu"]) ? $context["menu"] : null);
-        echo " -->
+  
 <!-- </div> -->
 
 
@@ -86,12 +83,12 @@ class __TwigTemplate_690c728e953287d8c178ab159380c42dedad888050771649fbfc239c789
 
     public function getDebugInfo()
     {
-        return array (  74 => 24,  66 => 19,  58 => 14,  50 => 13,  47 => 12,  44 => 11,  41 => 10,  38 => 9,  35 => 8,  32 => 7,  30 => 6,  26 => 5,  19 => 1,);
+        return array (  71 => 24,  58 => 14,  50 => 13,  47 => 12,  44 => 11,  41 => 10,  38 => 9,  35 => 8,  32 => 7,  30 => 6,  26 => 5,  19 => 1,);
     }
 }
 /* {{ header }}*/
 /* <!-- <div id="common-home" class="container"> -->*/
-/*   <div class="row">*/
+/*   <!-- <div class="row">*/
 /* */
 /*     {{ column_left }}*/
 /*     {% if column_left and column_right %}*/
@@ -103,11 +100,11 @@ class __TwigTemplate_690c728e953287d8c178ab159380c42dedad888050771649fbfc239c789
 /*     {% endif %}*/
 /*     <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>*/
 /*     {{ column_right }}*/
-/*   </div>*/
+/*   </div> -->*/
 /* */
 /*   */
 /* */
-/*   <!-- {{ menu }} -->*/
+/*   */
 /* <!-- </div> -->*/
 /* */
 /* */

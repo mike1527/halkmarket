@@ -1,32 +1,27 @@
 <!-- Подключение SLICK слайдера -->
 
-<section class="slider__slick">
   <div class="container__page">
-    <div class="slider__wrapper">{% for banner in banners %}
+    <div class="slider__wrapper">{% for banner in banners %}      
       <div class="slider__item">
-        {% if banner.link %}
-        <a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" >
-        </a>
-        {% else %}
-        <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" />
-        {% endif %}   
+          {% if banner.link %}
+          <a class="slider__item-link" href="{{ banner.link }}">
+            <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic">
+          </a>
+          {% else %}
+          <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic"/>
+          {% endif %}
       </div>
-      {% endfor %}
+          {% endfor %}      
     </div>    
-  </div>  
-</section>	
-<style>
-  .slider__item {
-   min-height: 600px;
-   background-repeat: no-repeat;
-   background-position: top center;
-   background-size: cover;
-}
-</style>
+  </div>
+</section>
 
 <script>
   $(function () {
-   $('.slider__wrapper').slick({});
+   $('.slider__wrapper').slick({
+    nextArrow: '<button class="slick-arrow slick-arrow-transform slick-next"><img src="/image/halkmarket/slider/slider-next-arrow.svg" alt="next arrow"></button>',
+    prevArrow: '<button class="slick-arrow slick-arrow-transform slick-prev"><img src="/image/halkmarket/slider/slider-prev-arrow.svg" alt="prev arrow"></button>'
+   });   
 });
 </script>
 
