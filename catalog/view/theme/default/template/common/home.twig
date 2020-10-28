@@ -1,20 +1,20 @@
 {{ header }}
 <!-- <div id="common-home" class="container"> -->
-  <!-- <div class="row"> -->
-    
-    <!-- {{ column_left }} -->
-    <!-- {% if column_left and column_right %} -->
-    <!-- {% set class = 'col-sm-6' %} -->
-    <!-- {% elseif column_left or column_right %} -->
-    <!-- {% set class = 'col-sm-9' %} -->
-    <!-- {% else %} -->
-    <!-- {% set class = 'col-sm-12' %} -->
-    <!-- {% endif %} -->
-    <!-- <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>
-    {{ column_right }} -->
-  <!-- </div> -->
+<!-- <div class="row"> -->
 
-  
+<!-- {{ column_left }} -->
+<!-- {% if column_left and column_right %} -->
+<!-- {% set class = 'col-sm-6' %} -->
+<!-- {% elseif column_left or column_right %} -->
+<!-- {% set class = 'col-sm-9' %} -->
+<!-- {% else %} -->
+<!-- {% set class = 'col-sm-12' %} -->
+<!-- {% endif %} -->
+<!-- <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>
+    {{ column_right }} -->
+<!-- </div> -->
+
+
 <!-- </div> -->
 
 <section class="advantages">
@@ -51,33 +51,42 @@
 
 
 {{ menu }}
-
 <div class="featured">
-  <div class="container">
-    <div class="featured__wrapper">
-      <div class="featured__info-box">
-        <h4 class="featured__info-box-title">Наши спецпредложения</h4>
-        <a class="featured__info-box-link" href="#">Показать все</a>
-        <div class="featured__info-box-img"><img src="/image/halkmarket/slider/feautered-icon.png" alt=""></div>
-      </div>
-      <div class="featured__slider">
-
-        <div class="featured__item">
-          <div class="featured__item-img"><img src="/image/halkmarket/slider/featured-item-1.jpg" alt=""></div>
-          <div class="featured__item-star"></div>
-          <div class="featured__item-title"></div>
-          <div class="featured__item-box">
-            <div class="featured__item-box-price">
-              <div class="featured__item-box-old"></div>
-              <div class="featured__item-box-new"></div>
+    <div class="container">
+        <div class="featured__wrapper">
+            <div class="featured__info-box">
+                <h4 class="featured__info-box-title">Наши спецпредложения</h4>
+                <a class="featured__info-box-link" href="#">Показать все</a>
+                <div class="featured__info-box-img"><img src="/image/halkmarket/slider/feautered-icon.png" alt=""></div>
             </div>
-            <div class="featured__item-box-cart"></div>
-          </div>
-        </div>
+            <div class="featured__slider">
 
-      </div>
+                <div class="featured__item">
+                    <div class="featured__item-img">
+                        <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive" /></a>
+                    </div>
+                    <div class="rating">{% for i in 1..5 %} {% if product.rating
+                        < i %} <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span> {% else %} <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> {% endif %} {% endfor %}
+                    </div>
+                    <h4 class="featured__item-title"><a href="{{ product.href }}">{{ product.name }}</a></h4>
+                    <div class="featured__item-box">
+                        <div class="featured__item-box-price">
+                            <!-- <div class="featured__item-box-old">18.60 TMT</div>
+                            <div class="featured__item-box-new">17.00 TMT</div> -->
+                            {% if product.price %}
+                            <p class="price"> {% if not product.special %} {{ product.price }} {% else %} <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span> {% endif %} {% if product.tax %} <span class="price-tax">{{ text_tax }} {{ product.tax }}</span>                                {% endif %} </p>
+                            {% endif %}
+
+                        </div>
+                        <div class="featured__item-box-cart">
+                            <button class="slider__cut-btn" type="button" onclick="cart.add('{{ product.product_id }}');"></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 

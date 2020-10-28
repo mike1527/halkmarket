@@ -1407,6 +1407,32 @@ textarea {
     line-height: inherit
 }
 
+.slider__cut-btn {
+    outline: none;
+    border: none;
+    background: #fff;
+    position: relative;
+    width: 18px;
+    height: 16px;
+    padding-right: 20px;
+}
+
+.slider__cut-btn::before {
+    content: '';
+    position: absolute;
+    background-image: url(/image/halkmarket/slider/cut-icon.svg);
+    width: 18px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+}
+
+.slider__cut-btn:hover::before {
+    stroke: #0db85a;
+    fill: #0db85a;
+}
+
 a {
     color: #337ab7;
     text-decoration: none
