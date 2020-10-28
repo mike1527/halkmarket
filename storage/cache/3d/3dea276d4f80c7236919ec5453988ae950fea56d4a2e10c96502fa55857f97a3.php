@@ -21,7 +21,7 @@ class __TwigTemplate_690c728e953287d8c178ab159380c42dedad888050771649fbfc239c789
 <!-- <div id=\"common-home\" class=\"container\"> -->
   <div class=\"row\">
 
-    <!-- ";
+    ";
         // line 5
         echo (isset($context["column_left"]) ? $context["column_left"] : null);
         echo "
@@ -57,7 +57,7 @@ class __TwigTemplate_690c728e953287d8c178ab159380c42dedad888050771649fbfc239c789
         // line 14
         echo (isset($context["column_right"]) ? $context["column_right"] : null);
         echo "
-  </div> -->
+  </div>
 
   
 
@@ -93,7 +93,7 @@ class __TwigTemplate_690c728e953287d8c178ab159380c42dedad888050771649fbfc239c789
 /* <!-- <div id="common-home" class="container"> -->*/
 /*   <div class="row">*/
 /* */
-/*     <!-- {{ column_left }}*/
+/*     {{ column_left }}*/
 /*     {% if column_left and column_right %}*/
 /*     {% set class = 'col-sm-6' %}*/
 /*     {% elseif column_left or column_right %}*/
@@ -103,7 +103,7 @@ class __TwigTemplate_690c728e953287d8c178ab159380c42dedad888050771649fbfc239c789
 /*     {% endif %}*/
 /*     <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>*/
 /*     {{ column_right }}*/
-/*   </div> -->*/
+/*   </div>*/
 /* */
 /*   */
 /* */

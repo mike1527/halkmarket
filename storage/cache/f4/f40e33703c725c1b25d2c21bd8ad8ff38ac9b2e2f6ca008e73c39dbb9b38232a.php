@@ -16,20 +16,86 @@ class __TwigTemplate_e55e6a72e9b582876a66c686e57c2f419a7f14c580e8478df149d49c8cc
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<div class=\"swiper__inner\">
+        echo "<!-- Подключение SLICK слайдера -->
+
+<section class=\"slider__slick\">
+  <div class=\"container__page\">
+    <div class=\"slider__wrapper\">";
+        // line 5
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["banners"]) ? $context["banners"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["banner"]) {
+            // line 6
+            echo "      <!-- <div class=\"slider__item\">ITEM 1</div>
+      <div class=\"slider__item\">ITEM 2</div>
+      <div class=\"slider__item\">ITEM 3</div> -->
+      <div class=\"slider__item\">
+        ";
+            // line 10
+            if ($this->getAttribute($context["banner"], "link", array())) {
+                // line 11
+                echo "        <a href=\"";
+                echo $this->getAttribute($context["banner"], "link", array());
+                echo "\"><img src=\"";
+                echo $this->getAttribute($context["banner"], "image", array());
+                echo "\" alt=\"";
+                echo $this->getAttribute($context["banner"], "title", array());
+                echo "\" class=\"img-responsive\" >
+        </a>
+        ";
+            } else {
+                // line 14
+                echo "        <img src=\"";
+                echo $this->getAttribute($context["banner"], "image", array());
+                echo "\" alt=\"";
+                echo $this->getAttribute($context["banner"], "title", array());
+                echo "\" class=\"img-responsive\" />
+        ";
+            }
+            // line 15
+            echo "   
+      </div>
+      ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['banner'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 18
+        echo "    </div>    
+  </div>  
+</section>\t
+<style>
+  .slider__item {
+   min-height: 600px;
+   background-repeat: no-repeat;
+   background-position: top center;
+   background-size: cover;
+}
+</style>
+
+<script>
+  \$(function () {
+   \$('.slider__wrapper').slick({});
+});
+</script>
+
+
+<!-- Подключение swiper слайдера -->
+
+<!-- <div class=\"swiper__inner\">
   <div class=\"container__page\">
     <div class=\"swiper-viewport\">
       <div class=\"swiper__box\">
         <div id=\"slideshow";
-        // line 5
+        // line 43
         echo (isset($context["module"]) ? $context["module"] : null);
         echo "\" class=\"swiper-container\">
           <div class=\"swiper-wrapper\"> ";
-        // line 6
+        // line 44
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["banners"]) ? $context["banners"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["banner"]) {
-            // line 7
+            // line 45
             echo "            <div class=\"swiper-slide text-center\">";
             if ($this->getAttribute($context["banner"], "link", array())) {
                 echo "<a href=\"";
@@ -52,13 +118,13 @@ class __TwigTemplate_e55e6a72e9b582876a66c686e57c2f419a7f14c580e8478df149d49c8cc
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['banner'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 8
+        // line 46
         echo " 
           </div>
         </div>
     </div>    
     <div class=\"swiper-pagination slideshow";
-        // line 12
+        // line 50
         echo (isset($context["module"]) ? $context["module"] : null);
         echo "\"></div>
     <div class=\"swiper-pager\">
@@ -69,17 +135,17 @@ class __TwigTemplate_e55e6a72e9b582876a66c686e57c2f419a7f14c580e8478df149d49c8cc
   
   </div>
     
-</div>
+</div> -->
 
-<script type=\"text/javascript\">
+<!-- <script type=\"text/javascript\">
 \$('#slideshow";
-        // line 24
+        // line 62
         echo (isset($context["module"]) ? $context["module"] : null);
         echo "').swiper({
 \tmode: 'horizontal',
 \tslidesPerView: 1,
 \tpagination: '.slideshow";
-        // line 27
+        // line 65
         echo (isset($context["module"]) ? $context["module"] : null);
         echo "',
 \tpaginationClickable: true,
@@ -90,7 +156,10 @@ class __TwigTemplate_e55e6a72e9b582876a66c686e57c2f419a7f14c580e8478df149d49c8cc
     autoplayDisableOnInteraction: true,
 \tloop: true
 });
-</script>";
+</script> -->
+
+
+";
     }
 
     public function getTemplateName()
@@ -105,10 +174,48 @@ class __TwigTemplate_e55e6a72e9b582876a66c686e57c2f419a7f14c580e8478df149d49c8cc
 
     public function getDebugInfo()
     {
-        return array (  83 => 27,  77 => 24,  62 => 12,  56 => 8,  33 => 7,  29 => 6,  25 => 5,  19 => 1,);
+        return array (  149 => 65,  143 => 62,  128 => 50,  122 => 46,  99 => 45,  95 => 44,  91 => 43,  64 => 18,  56 => 15,  48 => 14,  37 => 11,  35 => 10,  29 => 6,  25 => 5,  19 => 1,);
     }
 }
-/* <div class="swiper__inner">*/
+/* <!-- Подключение SLICK слайдера -->*/
+/* */
+/* <section class="slider__slick">*/
+/*   <div class="container__page">*/
+/*     <div class="slider__wrapper">{% for banner in banners %}*/
+/*       <!-- <div class="slider__item">ITEM 1</div>*/
+/*       <div class="slider__item">ITEM 2</div>*/
+/*       <div class="slider__item">ITEM 3</div> -->*/
+/*       <div class="slider__item">*/
+/*         {% if banner.link %}*/
+/*         <a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" >*/
+/*         </a>*/
+/*         {% else %}*/
+/*         <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" />*/
+/*         {% endif %}   */
+/*       </div>*/
+/*       {% endfor %}*/
+/*     </div>    */
+/*   </div>  */
+/* </section>	*/
+/* <style>*/
+/*   .slider__item {*/
+/*    min-height: 600px;*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: top center;*/
+/*    background-size: cover;*/
+/* }*/
+/* </style>*/
+/* */
+/* <script>*/
+/*   $(function () {*/
+/*    $('.slider__wrapper').slick({});*/
+/* });*/
+/* </script>*/
+/* */
+/* */
+/* <!-- Подключение swiper слайдера -->*/
+/* */
+/* <!-- <div class="swiper__inner">*/
 /*   <div class="container__page">*/
 /*     <div class="swiper-viewport">*/
 /*       <div class="swiper__box">*/
@@ -128,9 +235,9 @@ class __TwigTemplate_e55e6a72e9b582876a66c686e57c2f419a7f14c580e8478df149d49c8cc
 /*   */
 /*   </div>*/
 /*     */
-/* </div>*/
+/* </div> -->*/
 /* */
-/* <script type="text/javascript">*/
+/* <!-- <script type="text/javascript">*/
 /* $('#slideshow{{ module }}').swiper({*/
 /* 	mode: 'horizontal',*/
 /* 	slidesPerView: 1,*/
@@ -143,4 +250,7 @@ class __TwigTemplate_e55e6a72e9b582876a66c686e57c2f419a7f14c580e8478df149d49c8cc
 /*     autoplayDisableOnInteraction: true,*/
 /* 	loop: true*/
 /* });*/
-/* </script>*/
+/* </script> -->*/
+/* */
+/* */
+/* */

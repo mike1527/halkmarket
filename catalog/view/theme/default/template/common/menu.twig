@@ -1,4 +1,4 @@
-<section class="advantages">
+<!-- <section class="advantages">
     <div class="container__page-grey">
         <div class="container">
             <div class="advantages__wrapper">
@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="category">
     <div class="container__page-grey">
@@ -42,7 +42,7 @@
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav list__category">
                         {% for category in categories %} {% if category.children %}
-                        <li class="dropdown list__item"><a href="{{ category.href }}" class="dropdown-toggle list__item-link" data-toggle="dropdown">{{ category.name }}</a>
+                        <li class="dropdown list__item"><a href="{{ category.href }}" class="dropdown-toggle list__item-link" data-toggle="dropdown"><h4 class="list__item-link-title">{{ category.name }}</h4></a>
                             <div class="dropdown-menu">
                                 <div class="dropdown-inner"> {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
                                     <ul class="list-unstyled">
@@ -51,10 +51,10 @@
                                         {% endfor %}
                                     </ul>
                                     {% endfor %}</div>
-                                <a href="{{ category.href }}" class="see-all">{{ text_all }} {{ category.name }}</a> </div>
+                                <a href="{{ category.href }}" class="see-all">{{ text_all }} <h4 class="list__item-link-title">{{ category.name }}</h4></a> </div>
                         </li>
                         {% else %}
-                        <li class="list__item"><a class="list__item-link" href="{{ category.href }} ">{{ category.name }}</a></li>
+                        <li class="list__item"><a class="list__item-link" href="{{ category.href }} "><h4 class="list__item-link-title">{{ category.name }}</h4></a></li>
                         {% endif %} {% endfor %}
                     </ul>
                 </div>

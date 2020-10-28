@@ -16,7 +16,7 @@ class __TwigTemplate_aeccbc62d8e0f60b63a1dd63b944a049f887bd1b5c7d91a892a53665059
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<section class=\"advantages\">
+        echo "<!-- <section class=\"advantages\">
     <div class=\"container__page-grey\">
         <div class=\"container\">
             <div class=\"advantages__wrapper\">
@@ -45,7 +45,7 @@ class __TwigTemplate_aeccbc62d8e0f60b63a1dd63b944a049f887bd1b5c7d91a892a53665059
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class=\"category\">
     <div class=\"container__page-grey\">
@@ -75,9 +75,9 @@ class __TwigTemplate_aeccbc62d8e0f60b63a1dd63b944a049f887bd1b5c7d91a892a53665059
                     // line 45
                     echo "                        <li class=\"dropdown list__item\"><a href=\"";
                     echo $this->getAttribute($context["category"], "href", array());
-                    echo "\" class=\"dropdown-toggle list__item-link\" data-toggle=\"dropdown\">";
+                    echo "\" class=\"dropdown-toggle list__item-link\" data-toggle=\"dropdown\"><h4 class=\"list__item-link-title\">";
                     echo $this->getAttribute($context["category"], "name", array());
-                    echo "</a>
+                    echo "</h4></a>
                             <div class=\"dropdown-menu\">
                                 <div class=\"dropdown-inner\"> ";
                     // line 47
@@ -116,18 +116,18 @@ class __TwigTemplate_aeccbc62d8e0f60b63a1dd63b944a049f887bd1b5c7d91a892a53665059
                     echo $this->getAttribute($context["category"], "href", array());
                     echo "\" class=\"see-all\">";
                     echo (isset($context["text_all"]) ? $context["text_all"] : null);
-                    echo " ";
+                    echo " <h4 class=\"list__item-link-title\">";
                     echo $this->getAttribute($context["category"], "name", array());
-                    echo "</a> </div>
+                    echo "</h4></a> </div>
                         </li>
                         ";
                 } else {
                     // line 57
                     echo "                        <li class=\"list__item\"><a class=\"list__item-link\" href=\"";
                     echo $this->getAttribute($context["category"], "href", array());
-                    echo " \">";
+                    echo " \"><h4 class=\"list__item-link-title\">";
                     echo $this->getAttribute($context["category"], "name", array());
-                    echo "</a></li>
+                    echo "</h4></a></li>
                         ";
                 }
                 // line 58
@@ -165,7 +165,7 @@ class __TwigTemplate_aeccbc62d8e0f60b63a1dd63b944a049f887bd1b5c7d91a892a53665059
         return array (  148 => 65,  140 => 59,  134 => 58,  126 => 57,  116 => 54,  113 => 53,  106 => 52,  95 => 50,  91 => 49,  88 => 48,  84 => 47,  76 => 45,  70 => 44,  62 => 39,  57 => 36,  55 => 35,  19 => 1,);
     }
 }
-/* <section class="advantages">*/
+/* <!-- <section class="advantages">*/
 /*     <div class="container__page-grey">*/
 /*         <div class="container">*/
 /*             <div class="advantages__wrapper">*/
@@ -194,7 +194,7 @@ class __TwigTemplate_aeccbc62d8e0f60b63a1dd63b944a049f887bd1b5c7d91a892a53665059
 /*             </div>*/
 /*         </div>*/
 /*     </div>*/
-/* </section>*/
+/* </section> -->*/
 /* */
 /* <section class="category">*/
 /*     <div class="container__page-grey">*/
@@ -209,7 +209,7 @@ class __TwigTemplate_aeccbc62d8e0f60b63a1dd63b944a049f887bd1b5c7d91a892a53665059
 /*                 <div class="collapse navbar-collapse navbar-ex1-collapse">*/
 /*                     <ul class="nav navbar-nav list__category">*/
 /*                         {% for category in categories %} {% if category.children %}*/
-/*                         <li class="dropdown list__item"><a href="{{ category.href }}" class="dropdown-toggle list__item-link" data-toggle="dropdown">{{ category.name }}</a>*/
+/*                         <li class="dropdown list__item"><a href="{{ category.href }}" class="dropdown-toggle list__item-link" data-toggle="dropdown"><h4 class="list__item-link-title">{{ category.name }}</h4></a>*/
 /*                             <div class="dropdown-menu">*/
 /*                                 <div class="dropdown-inner"> {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}*/
 /*                                     <ul class="list-unstyled">*/
@@ -218,10 +218,10 @@ class __TwigTemplate_aeccbc62d8e0f60b63a1dd63b944a049f887bd1b5c7d91a892a53665059
 /*                                         {% endfor %}*/
 /*                                     </ul>*/
 /*                                     {% endfor %}</div>*/
-/*                                 <a href="{{ category.href }}" class="see-all">{{ text_all }} {{ category.name }}</a> </div>*/
+/*                                 <a href="{{ category.href }}" class="see-all">{{ text_all }} <h4 class="list__item-link-title">{{ category.name }}</h4></a> </div>*/
 /*                         </li>*/
 /*                         {% else %}*/
-/*                         <li class="list__item"><a class="list__item-link" href="{{ category.href }} ">{{ category.name }}</a></li>*/
+/*                         <li class="list__item"><a class="list__item-link" href="{{ category.href }} "><h4 class="list__item-link-title">{{ category.name }}</h4></a></li>*/
 /*                         {% endif %} {% endfor %}*/
 /*                     </ul>*/
 /*                 </div>*/

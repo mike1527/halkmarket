@@ -109,16 +109,18 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
 <script src=\"catalog/view/javascript/bootstrap/js/bootstrap.min.js\" type=\"text/javascript\"></script>
 <link href=\"catalog/view/javascript/font-awesome/css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\" />
 <link href=\"catalog/view/theme/default/stylesheet/global.css\" rel=\"stylesheet\">
+<link href=\"catalog/view/javascript/slick/slick.css\" rel=\"stylesheet\">
+<link href=\"catalog/view/javascript/slick/slick.min.js\" rel=\"stylesheet\">
 <link href=\"catalog/view/theme/default/stylesheet/fonts.css\" rel=\"stylesheet\">
 <link href=\"catalog/view/theme/default/stylesheet/header.css\" rel=\"stylesheet\">
 <link href=\"catalog/view/theme/default/stylesheet/home.css\" rel=\"stylesheet\">
 <link href=\"catalog/view/theme/default/stylesheet/footer.css\" rel=\"stylesheet\">
 ";
-        // line 41
+        // line 43
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["styles"]) ? $context["styles"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["style"]) {
-            // line 42
+            // line 44
             echo "<link href=\"";
             echo $this->getAttribute($context["style"], "href", array());
             echo "\" type=\"text/css\" rel=\"";
@@ -131,11 +133,11 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['style'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 44
+        // line 46
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["scripts"]) ? $context["scripts"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["script"]) {
-            // line 45
+            // line 47
             echo "<script src=\"";
             echo $context["script"];
             echo "\" type=\"text/javascript\"></script>
@@ -144,14 +146,14 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['script'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 49
         echo "<script src=\"catalog/view/javascript/common.js\" type=\"text/javascript\"></script>
 ";
-        // line 48
+        // line 50
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["links"]) ? $context["links"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["link"]) {
-            // line 49
+            // line 51
             echo "<link href=\"";
             echo $this->getAttribute($context["link"], "href", array());
             echo "\" rel=\"";
@@ -162,11 +164,11 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['link'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 51
+        // line 53
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["analytics"]) ? $context["analytics"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["analytic"]) {
-            // line 52
+            // line 54
             echo $context["analytic"];
             echo "
 ";
@@ -174,7 +176,7 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['analytic'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 54
+        // line 56
         echo "</head>
 <body>
 <nav id=\"top\">
@@ -182,7 +184,7 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
     <div class=\"container__page\">
       <div class=\"header__top-tel\">
         <a class=\"header__top-tel__link\" href=\"tel:+99312351212\" >";
-        // line 60
+        // line 62
         echo (isset($context["telephone"]) ? $context["telephone"] : null);
         echo "</a>
       </div>
@@ -197,12 +199,12 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
         <div id=\"logo\" class=\"header__bottom-logo\">
           <a href=\"#\">
             ";
-        // line 72
+        // line 74
         if ((isset($context["logo"]) ? $context["logo"] : null)) {
-            // line 73
+            // line 75
             echo "              ";
             if (((isset($context["home"]) ? $context["home"] : null) == (isset($context["og_url"]) ? $context["og_url"] : null))) {
-                // line 74
+                // line 76
                 echo "                <img src=\"";
                 echo (isset($context["logo"]) ? $context["logo"] : null);
                 echo "\" title=\"";
@@ -212,7 +214,7 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
                 echo "\" class=\"img-responsive\" />
               ";
             } else {
-                // line 76
+                // line 78
                 echo "                <a href=\"";
                 echo (isset($context["home"]) ? $context["home"] : null);
                 echo "\"><img src=\"";
@@ -224,10 +226,10 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
                 echo "\" class=\"img-responsive\" /></a>
               ";
             }
-            // line 78
+            // line 80
             echo "            ";
         } else {
-            // line 79
+            // line 81
             echo "              <h1><a href=\"";
             echo (isset($context["home"]) ? $context["home"] : null);
             echo "\">";
@@ -235,7 +237,7 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
             echo "</a></h1>
             ";
         }
-        // line 81
+        // line 83
         echo "          </a>            
         </div>
 
@@ -247,7 +249,7 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
 
         <div class=\"header__bottom-search\">
           ";
-        // line 91
+        // line 93
         echo (isset($context["search"]) ? $context["search"] : null);
         echo "
         </div>
@@ -257,62 +259,62 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
         </div>
 
         <div class=\"header__bottom-account\"><a href=\"";
-        // line 98
+        // line 100
         echo (isset($context["account"]) ? $context["account"] : null);
         echo "\" title=\"";
         echo (isset($context["text_account"]) ? $context["text_account"] : null);
         echo "\" class=\"dropdown-toggle bottom-account__arrow\" data-toggle=\"dropdown\"><span class=\"account-caret\"></span></a>
           <ul class=\"dropdown-menu dropdown-menu-right\">
             ";
-        // line 100
+        // line 102
         if ((isset($context["logged"]) ? $context["logged"] : null)) {
-            // line 101
+            // line 103
             echo "            <li><a href=\"";
             echo (isset($context["account"]) ? $context["account"] : null);
             echo "\">";
             echo (isset($context["text_account"]) ? $context["text_account"] : null);
             echo "</a></li>
             <li><a href=\"";
-            // line 102
+            // line 104
             echo (isset($context["order"]) ? $context["order"] : null);
             echo "\">";
             echo (isset($context["text_order"]) ? $context["text_order"] : null);
             echo "</a></li>
             <li><a href=\"";
-            // line 103
+            // line 105
             echo (isset($context["transaction"]) ? $context["transaction"] : null);
             echo "\">";
             echo (isset($context["text_transaction"]) ? $context["text_transaction"] : null);
             echo "</a></li>
             <li><a href=\"";
-            // line 104
+            // line 106
             echo (isset($context["download"]) ? $context["download"] : null);
             echo "\">";
             echo (isset($context["text_download"]) ? $context["text_download"] : null);
             echo "</a></li>
             <li><a href=\"";
-            // line 105
+            // line 107
             echo (isset($context["logout"]) ? $context["logout"] : null);
             echo "\">";
             echo (isset($context["text_logout"]) ? $context["text_logout"] : null);
             echo "</a></li>
             ";
         } else {
-            // line 107
+            // line 109
             echo "            <li><a href=\"";
             echo (isset($context["register"]) ? $context["register"] : null);
             echo "\">";
             echo (isset($context["text_register"]) ? $context["text_register"] : null);
             echo "</a></li>
             <li><a href=\"";
-            // line 108
+            // line 110
             echo (isset($context["login"]) ? $context["login"] : null);
             echo "\">";
             echo (isset($context["text_login"]) ? $context["text_login"] : null);
             echo "</a></li>
             ";
         }
-        // line 110
+        // line 112
         echo "          </ul>
         </div>
 
@@ -327,7 +329,7 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
   
 </header>
 ";
-        // line 123
+        // line 125
         echo (isset($context["menu"]) ? $context["menu"] : null);
         echo "
 ";
@@ -345,7 +347,7 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
 
     public function getDebugInfo()
     {
-        return array (  331 => 123,  316 => 110,  309 => 108,  302 => 107,  295 => 105,  289 => 104,  283 => 103,  277 => 102,  270 => 101,  268 => 100,  261 => 98,  251 => 91,  239 => 81,  231 => 79,  228 => 78,  216 => 76,  206 => 74,  203 => 73,  201 => 72,  186 => 60,  178 => 54,  170 => 52,  166 => 51,  155 => 49,  151 => 48,  148 => 47,  139 => 45,  135 => 44,  122 => 42,  118 => 41,  104 => 31,  98 => 29,  92 => 27,  90 => 26,  86 => 25,  80 => 23,  74 => 21,  72 => 20,  66 => 18,  64 => 17,  59 => 16,  53 => 14,  51 => 13,  47 => 12,  36 => 6,  29 => 4,  23 => 3,  19 => 1,);
+        return array (  333 => 125,  318 => 112,  311 => 110,  304 => 109,  297 => 107,  291 => 106,  285 => 105,  279 => 104,  272 => 103,  270 => 102,  263 => 100,  253 => 93,  241 => 83,  233 => 81,  230 => 80,  218 => 78,  208 => 76,  205 => 75,  203 => 74,  188 => 62,  180 => 56,  172 => 54,  168 => 53,  157 => 51,  153 => 50,  150 => 49,  141 => 47,  137 => 46,  124 => 44,  120 => 43,  104 => 31,  98 => 29,  92 => 27,  90 => 26,  86 => 25,  80 => 23,  74 => 21,  72 => 20,  66 => 18,  64 => 17,  59 => 16,  53 => 14,  51 => 13,  47 => 12,  36 => 6,  29 => 4,  23 => 3,  19 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -384,6 +386,8 @@ class __TwigTemplate_f5cdffc2eb932df5e5a6a249defcfe2619596e23d85bf2ad949d28adf55
 /* <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>*/
 /* <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />*/
 /* <link href="catalog/view/theme/default/stylesheet/global.css" rel="stylesheet">*/
+/* <link href="catalog/view/javascript/slick/slick.css" rel="stylesheet">*/
+/* <link href="catalog/view/javascript/slick/slick.min.js" rel="stylesheet">*/
 /* <link href="catalog/view/theme/default/stylesheet/fonts.css" rel="stylesheet">*/
 /* <link href="catalog/view/theme/default/stylesheet/header.css" rel="stylesheet">*/
 /* <link href="catalog/view/theme/default/stylesheet/home.css" rel="stylesheet">*/

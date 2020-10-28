@@ -1,4 +1,39 @@
-<div class="swiper__inner">
+<!-- Подключение SLICK слайдера -->
+
+<section class="slider__slick">
+  <div class="container__page">
+    <div class="slider__wrapper">{% for banner in banners %}
+      <div class="slider__item">
+        {% if banner.link %}
+        <a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" >
+        </a>
+        {% else %}
+        <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" />
+        {% endif %}   
+      </div>
+      {% endfor %}
+    </div>    
+  </div>  
+</section>	
+<style>
+  .slider__item {
+   min-height: 600px;
+   background-repeat: no-repeat;
+   background-position: top center;
+   background-size: cover;
+}
+</style>
+
+<script>
+  $(function () {
+   $('.slider__wrapper').slick({});
+});
+</script>
+
+
+<!-- Подключение swiper слайдера -->
+
+<!-- <div class="swiper__inner">
   <div class="container__page">
     <div class="swiper-viewport">
       <div class="swiper__box">
@@ -18,9 +53,9 @@
   
   </div>
     
-</div>
+</div> -->
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 $('#slideshow{{ module }}').swiper({
 	mode: 'horizontal',
 	slidesPerView: 1,
@@ -33,4 +68,6 @@ $('#slideshow{{ module }}').swiper({
     autoplayDisableOnInteraction: true,
 	loop: true
 });
-</script>
+</script> -->
+
+
