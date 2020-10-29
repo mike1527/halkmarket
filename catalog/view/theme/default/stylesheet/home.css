@@ -424,8 +424,58 @@
         border-radius: 5px;
         background-color: rgba(255, 255, 255, 0.5);
     }
-    
+       
     /* END featured */
+
+    /* START BANNER */
+    .banner__wrapper{
+        padding: 40px 0;
+        background-color: #f8f7fa;
+    }
+
+    .banner__box{
+        display: block;
+        background: #f7c823;
+    }
+    .banner__item{
+        padding: 44px 0 70px 41px;
+        background: #3b245a;
+        border-radius: 0 100px 100px 0;
+        height: 200px;
+        width: 60%;
+        position: relative;
+    }
+    .banner__item::before{
+        content: '';
+        position: absolute;
+        background-image: url(/image/halkmarket/banner/banner-home.png);
+        width: 436px;
+        height: 154px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        right: -198px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .banner__box-item-title1 {
+        width: 440px;
+        color: #ffffff;
+        font-family: 'Lucida-Grande', sans-serif;
+        font-size: 40px;
+        font-weight: 700;        
+        text-align: left;        
+        margin-bottom: 10px;
+    }
+    .banner__box-item-title2 {
+        width: 310px;
+        color: #ffffff;
+        font-family: 'Lucida-Grande', sans-serif;
+        font-size: 30px;
+        text-align: left;
+    }
+    /* END BANNER */
     
     @media (max-width: 1259px) {
         .list__item:nth-child(4n+4) {
