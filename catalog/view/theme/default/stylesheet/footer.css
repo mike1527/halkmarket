@@ -31,14 +31,14 @@
 
 .footer__item-title{
     color: #fff;
-    font-family: 'Lucida-Grande';
+    font-family: 'Lucida-Grande', sans-serif;
     font-size: 20px;
     line-height: 35px;
     text-align: left;
     margin-bottom: 20px;
 }
 .footer__item-link{
-    font-family: 'Lato-Regular';
+    font-family: 'Lato-Regular', sans-serif;
     font-weight: 400;
     display: block;
     color: #fff;
@@ -54,7 +54,7 @@
 
 .footer__item-text{
     color: #fff;
-    font-family: 'Lato-Regular';
+    font-family: 'Lato-Regular', sans-serif;
     font-size: 18px;
     font-weight: 400;
     text-align: left;
@@ -73,7 +73,7 @@
 
 .footer__copy-text {
     color: rgba(255, 255, 255, 0.75);
-    font-family: 'Lato-Medium';
+    font-family: 'Lato-Medium', sans-serif;
     font-size: 20px;
     font-weight: 500;
 }

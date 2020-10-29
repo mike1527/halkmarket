@@ -1,7 +1,6 @@
-<!-- Подключение SLICK слайдера -->
-
-  <!-- <div class="container__page"> -->
-    <div class="slider__wrapper">{% for banner in banners %}    
+<!-- Подключение SWIPER слайдера -->
+<!-- <div class="swiper__container">
+  <div class="slider__wrapper">{% for banner in banners %}    
         <div class="slider__item">
             {% if banner.link %}
             <a class="slider__item-link" href="{{ banner.link }}">
@@ -12,9 +11,62 @@
             {% endif %}
         </div>
             {% endfor %} 
-    </div>    
-  <!-- </div> -->
-</section>
+  </div>
+</div> -->
+
+<!-- <script>
+  var mySwiper = new Swiper('.swiper__container', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+})
+</script> -->
+<!-- <script type="text/javascript">
+$('#slideshow{{ module }}').swiper({
+	mode: 'horizontal',
+	slidesPerView: 1,
+	pagination: '.slideshow{{ module }}',
+	paginationClickable: true,
+	nextButton: '.right__btn',
+    prevButton: '.left__btn',
+    spaceBetween: 30,
+	autoplay: 2500,
+    autoplayDisableOnInteraction: true,
+	loop: true
+});
+</script> -->
+
+
+<!-- Подключение SLICK слайдера -->
+
+    <!-- <div class="slider__wrapper">{% for banner in banners %}    
+        <div class="slider__item">
+            {% if banner.link %}
+            <a class="slider__item-link" href="{{ banner.link }}">
+              <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic">
+            </a>
+            {% else %}
+            <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic"/>
+            {% endif %}
+        </div>
+            {% endfor %} 
+    </div>
 
 <script>
   $(function () {
@@ -23,12 +75,12 @@
     prevArrow: '<button class="slick-arrow featured-arrow slick-arrow-transform slick-prev"><img src="/image/halkmarket/slider/slider-prev-arrow.svg" alt="prev arrow"></button>'
    });   
 });
-</script>
+</script> -->
 
 
 <!-- Подключение swiper слайдера -->
 
-<!-- <div class="swiper__inner">
+<div class="swiper__inner">
   <div class="container__page">
     <div class="swiper-viewport">
       <div class="swiper__box">
@@ -48,19 +100,19 @@
   
   </div>
     
-</div> -->
+</div>
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 $('#slideshow{{ module }}').swiper({
 	mode: 'horizontal',
 	slidesPerView: 1,
 	pagination: '.slideshow{{ module }}',
 	paginationClickable: true,
 	nextButton: '.right__btn',
-    prevButton: '.left__btn',
-    spaceBetween: 30,
-	autoplay: 2500,
-    autoplayDisableOnInteraction: true,
-	loop: true
+  prevButton: '.left__btn',
+  spaceBetween: 30,
+  autoplay: 2500,
+  autoplayDisableOnInteraction: true,
+  loop: true
 });
-</script> -->
+</script>

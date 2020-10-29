@@ -54,7 +54,7 @@
     }
     
     .advantages__item-title {
-        font-family: 'Lato-Semibold';
+        font-family: 'Lato-Semibold', sans-serif;
         font-weight: 600;
         font-size: 20px;
         line-height: normal;
@@ -62,7 +62,7 @@
     }
     
     .advantages__item-text {
-        font-family: 'Lucida-Grande';
+        font-family: 'Lucida-Grande', sans-serif;
         font-weight: 400;
         font-size: 16px;
         max-width: 230px;
@@ -71,7 +71,7 @@
     /* START MENU CATEGORY */
     
     .category__title {
-        font-family: 'Lato-Bold';
+        font-family: 'Lato-Bold', sans-serif;
         font-weight: 700;
         color: #2e2e2e;
         font-size: 30px;
@@ -140,7 +140,7 @@
     
     .list__item-link-title {
         width: 172px;
-        font-family: 'Lato-Bold';
+        font-family: 'Lato-Bold', sans-serif;
         font-weight: 700;
         color: #fff;
         font-size: 24px;
@@ -195,15 +195,31 @@
     }
     
     .slick-arrow:before {
-        content: "";
+        /* content: "";
         position: absolute;
+        width: 21px;
+        height: 31px;
         top: 50%;
         transform: translateY(-50%);
         left: 0;
         width: 70px;
         height: 86px;
         border-radius: 5px;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.5); */
+    }
+    .slick-arrow:after {
+        content: "";
+        position: absolute;
+        background-image: url('/image/halkmarket/slider/slider-next-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 21px;
+        height: 31px;
+        top: 32px;
+        left: 27px;
+        transform: rotate(180deg);
+        opacity: 0.4;
     }
     
     .slick-next {
@@ -258,7 +274,7 @@
     
     .featured__info-box-title {
         color: #fff;
-        font-family: 'Lato-Semibold';
+        font-family: 'Lato-Semibold', sans-serif;
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 30px;
@@ -268,7 +284,7 @@
     
     .featured__info-box-link {
         color: #fff;
-        font-family: 'Lato-Semibold';
+        font-family: 'Lato-Semibold', sans-serif;
         font-size: 15px;
         font-weight: 600;
         padding: 10px 47px;
@@ -359,7 +375,7 @@
     .featured__item-title a{
         display: block;
         color: #373738;
-        font-family: "Lato Semibold";
+        font-family: "Lato Semibold", sans-serif;
         font-size: 15px;
         font-weight: 600;
         text-align: center;
@@ -377,7 +393,7 @@
     
     .featured__item-box-old {
         color: #b4b4b4;
-        font-family: 'CircularStd-Bold';
+        font-family: 'CircularStd-Bold', sans-serif;
         font-size: 15px;
         font-weight: 700;
         text-align: center;
@@ -387,7 +403,7 @@
     
     .featured__item-box-new {
         color: #f8cb00;
-        font-family: 'CircularStd-Bold';
+        font-family: 'CircularStd-Bold', sans-serif;
         font-size: 15px;
         font-weight: 700;
         text-align: center;

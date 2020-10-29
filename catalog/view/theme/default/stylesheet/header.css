@@ -8,7 +8,7 @@
     margin-left: 23px;
 }
 .header__top-tel__link {    
-    font-family: "Circular Std Book";
+    font-family: "Circular Std Book", sans-serif;
     font-size: 16px;
     font-weight: 300;
     color: #fff;
@@ -72,7 +72,7 @@
     content: 'Каталог';
     position: absolute;
     color: #fff;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 700;
     top: 11px;
@@ -81,7 +81,7 @@
 
 .header__bottom-search{
     color: #3b245a;
-    font-family: "Lucida Grande";
+    font-family: "Lucida Grande", sans-serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
