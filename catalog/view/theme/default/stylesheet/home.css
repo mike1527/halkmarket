@@ -81,6 +81,7 @@
     .list__category {
         /*  min-width: 1240px; */
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
     
@@ -549,6 +550,8 @@
             text-align: center;
         }
     }
+    
+    @media (max-width: 984px) {}
     
     @media (max-width: 926px) {
         .list__item:nth-child(odd) {
