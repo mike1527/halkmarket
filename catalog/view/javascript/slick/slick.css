@@ -89,6 +89,9 @@
 .slick-slide img
 {
     display: block;
+    margin: 0 auto;
+    outline: none;
+    border: none;
 }
 .slick-slide.slick-loading img
 {
@@ -116,4 +119,7 @@
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+.featured-arrow-prev{
+    display: none !important;
 }

@@ -7758,6 +7758,9 @@ button.close {
     text-shadow: none
 }
 
+.rating{
+    text-align: center;
+}
 @media screen and (min-width:768px) {
     .carousel-control .glyphicon-chevron-left,
     .carousel-control .glyphicon-chevron-right,
