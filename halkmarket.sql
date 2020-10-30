@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 28 2020 г., 20:27
+-- Время создания: Окт 30 2020 г., 05:54
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.3.17
 
@@ -1420,7 +1420,7 @@ CREATE TABLE `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Рубль', 'RUB', '', 'р.', '2', 1.00000000, 1, '2020-10-28 16:39:55'),
+(1, 'Рубль', 'RUB', '', 'р.', '2', 1.00000000, 1, '2020-10-29 16:56:20'),
 (2, 'US Dollar', 'USD', '$', '', '2', 0.01697793, 1, '2017-07-19 21:28:21'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.01476363, 1, '2017-07-19 21:28:21'),
 (4, 'Гривна', 'UAH', '', 'грн.', '2', 0.44016022, 1, '2017-07-19 21:28:21');
@@ -3812,9 +3812,10 @@ CREATE TABLE `oc_session` (
 --
 
 INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
+('07978de5e8a89d0de5c6658f9d', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-29 16:45:31'),
 ('0f15a2b7078761f5dadb0f8e9f', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"nqCMfiKw7IZSsznhdcdXamTs3LwTNA1h\"}', '2020-10-25 19:52:37'),
 ('120eba90f6169007a154f2d27b', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 04:49:12'),
-('2cc512c292555df10b12e30f59', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"IPILEarjwxL63trRGGE28V58uBODYcx2\",\"path\":\"20\"}', '2020-10-28 18:25:55'),
+('2cc512c292555df10b12e30f59', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"VqmaicwJw7JtqUcmUXBWofqi4kYGHkF6\",\"path\":\"20\"}', '2020-10-29 20:14:29'),
 ('54f5d39da07e56eef65ad81e4e', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 05:07:40'),
 ('6a278bfcb91c184e78e7370d58', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-28 12:09:51'),
 ('6ff3b09d7097a2e7332e1274a1', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-27 13:13:40'),
@@ -3823,7 +3824,7 @@ INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
 ('ae38323d6c8b6ea941a22c1621', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 05:07:21'),
 ('c831dca348c221e766f1ce2ad5', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 04:53:46'),
 ('d41a29641671228a1d57c99286', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 04:48:34'),
-('f9ea41416097026be65ee8fa8a', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-28 17:05:28');
+('f9ea41416097026be65ee8fa8a', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-29 16:21:27');
 
 -- --------------------------------------------------------
 
@@ -4013,8 +4014,7 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (198, 0, 'report_product_purchased', 'report_product_purchased_sort_order', '11', 0),
 (199, 0, 'report_marketing', 'report_marketing_status', '1', 0),
 (200, 0, 'report_marketing', 'report_marketing_sort_order', '12', 0),
-(201, 0, 'developer', 'developer_theme', '1', 0),
-(202, 0, 'developer', 'developer_sass', '1', 0),
+(418, 0, 'developer', 'developer_sass', '0', 0),
 (203, 0, 'configblog', 'configblog_name', 'Блог', 0),
 (204, 0, 'configblog', 'configblog_html_h1', 'Блог для интернет магазина на OpenCart', 0),
 (205, 0, 'configblog', 'configblog_meta_title', 'Блог для интернет магазина на OpenCart', 0),
@@ -4069,7 +4069,8 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (322, 0, 'config', 'config_meta_description', 'Мой магазин', 0),
 (412, 0, 'config', 'config_page_postfix', '', 0),
 (413, 0, 'config', 'config_valide_param_flag', '0', 0),
-(414, 0, 'config', 'config_valide_params', 'tracking\r\nutm_source\r\nutm_campaign\r\nutm_medium\r\ntype\r\nsource\r\nblock\r\nposition\r\nkeyword\r\nyclid\r\ngclid', 0);
+(414, 0, 'config', 'config_valide_params', 'tracking\r\nutm_source\r\nutm_campaign\r\nutm_medium\r\ntype\r\nsource\r\nblock\r\nposition\r\nkeyword\r\nyclid\r\ngclid', 0),
+(417, 0, 'developer', 'developer_theme', '0', 0);
 
 -- --------------------------------------------------------
 
@@ -10117,7 +10118,7 @@ ALTER TABLE `oc_seo_url`
 -- AUTO_INCREMENT для таблицы `oc_setting`
 --
 ALTER TABLE `oc_setting`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=415;
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=419;
 
 --
 -- AUTO_INCREMENT для таблицы `oc_statistics`

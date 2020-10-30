@@ -189,11 +189,11 @@
     @media (max-width: 1325px) {
         .right__btn {
             right: -100px;
-            height: 325px;
+            height: 311px;
         }
         .left__btn {
             left: -100px;
-            height: 325px;
+            height: 311px;
         }
         .swiper-viewport {
             width: 978px;
@@ -204,14 +204,14 @@
         }
     }
     
-    @media (max-width: 1240px) {
+    @media (max-width: 1241px) {
         .right__btn {
             right: -90px;
-            height: 325px;
+            height: 309px;
         }
         .left__btn {
             left: -90px;
-            height: 325px;
+            height: 309px;
         }
         .swiper-viewport {
             width: 978px;
@@ -228,7 +228,7 @@
         }
         .slider__btn {
             width: 55px;
-            height: 305px;
+            height: 293px;
         }
         .right__btn {
             right: -67px;
@@ -244,7 +244,7 @@
         }
         .slider__btn {
             width: 50px;
-            height: 288px;
+            height: 274px;
         }
         .right__btn {
             right: -60px;
@@ -263,7 +263,7 @@
         }
         .slider__btn {
             width: 45px;
-            height: 269px;
+            height: 255px;
         }
         .right__btn {
             right: -60px;
@@ -282,7 +282,7 @@
         }
         .slider__btn {
             width: 40px;
-            height: 251px;
+            height: 240px;
         }
         .right__btn {
             right: -50px;
@@ -298,7 +298,7 @@
         }
         .slider__btn {
             width: 40px;
-            height: 234px;
+            height: 223px;
         }
         .slider__btn-span {
             height: 52px;
@@ -311,7 +311,7 @@
         }
         .slider__btn {
             width: 40px;
-            height: 218px;
+            height: 208px;
         }
     }
     
@@ -321,7 +321,7 @@
         }
         .slider__btn {
             width: 40px;
-            height: 203px;
+            height: 192px;
         }
     }
     
@@ -330,7 +330,7 @@
             width: 550px;
         }
         .slider__btn {
-            height: 183px;
+            height: 176px;
             width: 34px;
         }
         .right__btn {
@@ -346,7 +346,7 @@
             width: 500px;
         }
         .slider__btn {
-            height: 169px;
+            height: 160px;
             width: 30px;
         }
         .right__btn {
@@ -362,7 +362,7 @@
             width: 450px;
         }
         .slider__btn {
-            height: 151px;
+            height: 144px;
             width: 26px;
         }
         .right__btn {
@@ -385,7 +385,7 @@
             width: 400px;
         }
         .slider__btn {
-            height: 134px;
+            height: 128px;
         }
     }
     
@@ -394,7 +394,7 @@
             width: 350px;
         }
         .slider__btn {
-            height: 118px;
+            height: 112px;
         }
         .swiper__inner {
             padding: 12px 0;
@@ -406,7 +406,7 @@
             width: 320px;
         }
         .slider__btn {
-            height: 106px;
+            height: 102px;
         }
         .right__btn {
             right: -1px;
@@ -421,6 +421,6 @@
             width: 301px;
         }
         .slider__btn {
-            height: 100px;
+            height: 97px;
         }
     }

@@ -1,283 +1,303 @@
-/* START HEADER */
-.header__top{
-    background: #3b245a;
-    padding: 16px 0;
-}
-
-.header__top-tel {
-    margin-left: 23px;
-}
-.header__top-tel__link {    
-    font-family: "Circular Std Book", sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: #fff;
-    line-height: 31px;
-    padding-left: 24px;
-    position: relative;
-}
-
-.header__top-tel__link:hover{
-    color: #fff;
-    text-decoration: none;
-}
-
-.header__top-tel__link::before{
-    content: '';
-    position: absolute;
-    background-image: url('/image/halkmarket/header/icon/tel-header-top.svg');
-    width: 14px;
-    height: 14px;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.header__bottom-wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 26px 0;
-}
-
-.header__bottom-logo{
-    cursor: pointer;
-}
-
-.header__bottom-catalog{
-}
-
-.catalog-btn{
-    width: 140px;
-    height: 45px;
-    padding: 10px 18px 13px;
-    border-radius: 10px;
-    background-color: #0db14b;
-    position: relative;
-    outline: none;
-    border: none;
-    box-shadow: none;
-}
-
-.catalog-btn::before{
-    content: '';
-    position: absolute;
-    width: 21px;
-    height: 14px;
-    background-image: url('/image/halkmarket/header/icon/category-btn.svg');
-    top: 14px;
-    left: 18px;
-}
-.catalog-btn::after{
-    content: 'Каталог';
-    position: absolute;
-    color: #fff;
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    top: 11px;
-    right: 18px;
-}
-
-.header__bottom-search{
-    color: #3b245a;
-    font-family: "Lucida Grande", sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 24px;
-    position: relative;
-}
-
-.header-search-btn:active{
-    outline: none;
-    border-style: none;
-    border: none;
-}
-
-.header-search-btn:before{
-    content: '';
-    position: absolute;
-    background-image: url('/image/halkmarket/header/icon/btn-search.svg');
-    width: 17px;
-    height: 17px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    top: 14px;
-    left: 13px;
-}
-
-button.button-close{
-    width: 20px;
-    height: 20px;
-    background-image: url('/image/halkmarket/header/icon/btn-seach-close.svg');
-    background-repeat: no-repeat;
-    background-position: center center;   
-    background-color: transparent;
-    border: none;
-    outline: none;
-    z-index: 3;
-    position: absolute;
-    right: 23px;
-    top: 12px;
-}
-
-.header__bottom-percent{
-    width: 25px;
-    height: 20px;
-    border-radius: 4px;
-    background-color: #3b245a;
-    position: relative;
-}
-
-.header__bottom-percent::before{
-    content: '';
-    position: absolute;
-    width: 18px;
-    height: 15px;
-    background-image: url('/image/halkmarket/header/icon/btn-header-percent.svg');
-    top: 2px;
-    left: 3px;
-}
-
-.header__bottom-account{
-    width: 68px;
-    position: relative;
-}
-
-.header__bottom-account li span.account-caret{
-    opacity: 0;
-}
-
-.bottom-account__arrow::before{
-    content: '';
-    position: absolute;
-    width: 14px;
-    height: 10px;
-    background-image: url('/image/halkmarket/header/icon/arrow-down-header-acc.svg');
-    background-repeat: no-repeat;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.header__bottom-account::after{
-    content: '';
-    position: absolute;
-    width: 17px;
-    height: 20px;
-    background-image: url('/image/halkmarket/header/icon/acc-icon.svg');
-    background-repeat: no-repeat;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-}
-/* END HEADER */
-
-@media (max-width: 1200px){
-    .header__bottom-logo{
-        /* flex-wrap: wrap; */
-    }
-
-}
-@media (max-width: 1060px){
-    .bottom-account__arrow::before{
-        left: 5px;
-    }
-
-}
-@media (max-width: 1060px){
-    .bottom-account__arrow::before{
-        left: 5px;
-    }
-
-}
-@media (max-width: 1030px){
-    .bottom-account__arrow::before{
-        left: 15px;
-    }
-
-}
-@media (max-width: 1000px){
-    .bottom-account__arrow::before{
-        left: 25px;
-    }
-
-}
-@media (max-width: 960px){
-    .header__bottom-wrapper{
-        flex-wrap: wrap;
-    }
-    .header__bottom-percent{
-        margin-left: 10px;
-    }
-    .header__bottom-catalog{
-        margin: 0 10px;
-    }
-    .header__bottom-wrapper{
-        position: relative;
-    }
-    .header__bottom-percent{
-        position: absolute;
-        top: 90px;
-        right: 75px;
-        margin-left: 0px;
-    }
-    .header__bottom-account{
-        position: absolute;
-        right: 0;
-        top: 100px;
-    }
-}
-@media (max-width: 857px){
-    .header__bottom-logo{
-        margin-bottom: 10px;
-    }
-    
-    .header__bottom-catalog{
-        margin: 0px 10px 10px 10px;
-    }
-    .header__bottom-search{
-        margin-left: 1px;
-    }
-
-}
-@media (max-width: 840px){    
-    .header__bottom-catalog{
-        /* margin: 0; */
-        margin-bottom: 10px;
-    }
-@media (max-width: 835px){    
-    .header__bottom-catalog{
-        margin-right: 0px;
-    }
-
-}
-@media (max-width: 590px){
-    .header__bottom-search{
-        width: 100%;
-    }
-    .header__bottom-percent{
-        top: 140px;
-    }
-    .header__bottom-account{
-        top: 150px;
-    }
-}
-@media (max-width: 385px){
-    .header__bottom-logo{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .header__bottom-catalog{
-        width: 100%;
-        display: flex;
-        justify-content: start;
-    }
-    .header__bottom-percent{
-        top: 89px
-    }
-    .header__bottom-account{
-        top: 100px
-    }
-}
+                                            /* START HEADER */
+                                    
+                                    .header__top {
+                                        background: #3b245a;
+                                        padding: 16px 0;
+                                    }
+                                    
+                                    .header__top-tel {
+                                        margin-left: 23px;
+                                    }
+                                    
+                                    .header__top-tel__link {
+                                        font-family: "Circular Std Book", sans-serif;
+                                        font-size: 16px;
+                                        font-weight: 300;
+                                        color: #fff;
+                                        line-height: 31px;
+                                        padding-left: 24px;
+                                        position: relative;
+                                    }
+                                    
+                                    .header__top-tel__link:hover {
+                                        color: #fff;
+                                        text-decoration: none;
+                                    }
+                                    
+                                    .header__top-tel__link::before {
+                                        content: '';
+                                        position: absolute;
+                                        background-image: url('/image/halkmarket/header/icon/tel-header-top.svg');
+                                        width: 14px;
+                                        height: 14px;
+                                        left: 0;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                    }
+                                    
+                                    .header__bottom-wrapper {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        padding: 26px 0;
+                                    }
+                                    
+                                    .header__bottom-logo {
+                                        cursor: pointer;
+                                    }
+                                    
+                                    .header__bottom-catalog {}
+                                    
+                                    .catalog-btn {
+                                        width: 140px;
+                                        height: 45px;
+                                        padding: 10px 18px 13px;
+                                        border-radius: 10px;
+                                        background-color: #0db14b;
+                                        position: relative;
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                    
+                                    .catalog-btn::before {
+                                        content: '';
+                                        position: absolute;
+                                        width: 21px;
+                                        height: 14px;
+                                        background-image: url('/image/halkmarket/header/icon/category-btn.svg');
+                                        top: 14px;
+                                        left: 18px;
+                                    }
+                                    
+                                    .catalog-btn::after {
+                                        content: 'Каталог';
+                                        position: absolute;
+                                        color: #fff;
+                                        font-family: "Open Sans", sans-serif;
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                        top: 11px;
+                                        right: 18px;
+                                    }
+                                    
+                                    .header__bottom-search {
+                                        color: #3b245a;
+                                        font-family: "Lucida Grande", sans-serif;
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        line-height: 24px;
+                                        position: relative;
+                                    }
+                                    
+                                    .input__header-bottom {
+                                        width: 460px;
+                                    }
+                                    
+                                    .header-search-btn:active {
+                                        outline: none;
+                                        border-style: none;
+                                        border: none;
+                                    }
+                                    
+                                    .header-search-btn:before {
+                                        content: '';
+                                        position: absolute;
+                                        background-image: url('/image/halkmarket/header/icon/btn-search.svg');
+                                        width: 17px;
+                                        height: 17px;
+                                        background-repeat: no-repeat;
+                                        background-position: center center;
+                                        background-size: cover;
+                                        top: 14px;
+                                        left: 13px;
+                                    }
+                                    
+                                    button.button-close {
+                                        width: 20px;
+                                        height: 20px;
+                                        background-image: url('/image/halkmarket/header/icon/btn-seach-close.svg');
+                                        background-repeat: no-repeat;
+                                        background-position: center center;
+                                        background-color: transparent;
+                                        border: none;
+                                        outline: none;
+                                        z-index: 3;
+                                        position: absolute;
+                                        right: 23px;
+                                        top: 12px;
+                                    }
+                                    
+                                    .header__bottom-percent {
+                                        width: 25px;
+                                        height: 20px;
+                                        border-radius: 4px;
+                                        background-color: #3b245a;
+                                        position: relative;
+                                    }
+                                    
+                                    .header__bottom-percent::before {
+                                        content: '';
+                                        position: absolute;
+                                        width: 18px;
+                                        height: 15px;
+                                        background-image: url('/image/halkmarket/header/icon/btn-header-percent.svg');
+                                        top: 2px;
+                                        left: 3px;
+                                    }
+                                    
+                                    .header__bottom-account {
+                                        width: 68px;
+                                        position: relative;
+                                    }
+                                    
+                                    .header__bottom-account li span.account-caret {
+                                        opacity: 0;
+                                    }
+                                    
+                                    .bottom-account__arrow::before {
+                                        content: '';
+                                        position: absolute;
+                                        width: 14px;
+                                        height: 10px;
+                                        background-image: url('/image/halkmarket/header/icon/arrow-down-header-acc.svg');
+                                        background-repeat: no-repeat;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                    }
+                                    
+                                    .header__bottom-account::after {
+                                        content: '';
+                                        position: absolute;
+                                        width: 17px;
+                                        height: 20px;
+                                        background-image: url('/image/halkmarket/header/icon/acc-icon.svg');
+                                        background-repeat: no-repeat;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        right: 0;
+                                    }
+                                    /* END HEADER */
+                                    
+                                    @media (max-width: 1200px) {
+                                        .header__bottom-logo {
+                                            /* flex-wrap: wrap; */
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 1060px) {
+                                        .bottom-account__arrow::before {
+                                            left: 5px;
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 1060px) {
+                                        .bottom-account__arrow::before {
+                                            left: 5px;
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 1030px) {
+                                        .bottom-account__arrow::before {
+                                            left: 15px;
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 1000px) {
+                                        .bottom-account__arrow::before {
+                                            left: 25px;
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 960px) {
+                                        .header__bottom-wrapper {
+                                            flex-wrap: wrap;
+                                            padding-bottom: 50px;
+                                        }
+                                        .header__bottom-percent {
+                                            margin-left: 10px;
+                                        }
+                                        .header__bottom-catalog {
+                                            margin: 0 10px;
+                                        }
+                                        .header__bottom-wrapper {
+                                            position: relative;
+                                        }
+                                        .header__bottom-percent {
+                                            position: absolute;
+                                            top: 90px;
+                                            right: 75px;
+                                            margin-left: 0px;
+                                        }
+                                        .header__bottom-account {
+                                            position: absolute;
+                                            right: 0;
+                                            top: 100px;
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 871px) {
+                                        .header__bottom-catalog {
+                                            margin: 0 1px;
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 857px) {
+                                        .header__bottom-logo {
+                                            margin-bottom: 10px;
+                                        }
+                                        .header__bottom-catalog {
+                                            margin: 0px 10px 10px 10px;
+                                        }
+                                        .header__bottom-search {
+                                            margin-left: 1px;
+                                        }
+                                        .header__bottom-wrapper {
+                                            padding-bottom: 14px;
+                                        }
+                                        @media (max-width: 840px) {
+                                            .header__bottom-catalog {
+                                                margin-bottom: 10px;
+                                            }
+                                            @media (max-width: 835px) {
+                                                .header__bottom-catalog {
+                                                    margin-right: 0px;
+                                                }
+                                            }
+                                            @media (max-width: 610px) {
+                                                .header__bottom-wrapper {
+                                                    padding-bottom: 45px;
+                                                }
+                                            }
+                                            @media (max-width: 592px) {
+                                                .input__header-bottom {
+                                                    width: 100%;
+                                                }
+                                                .input-lg {
+                                                    width: 100%;
+                                                }
+                                                .header__bottom-percent {
+                                                    top: 140px;
+                                                }
+                                                .header__bottom-account {
+                                                    top: 150px;
+                                                }
+                                            }
+                                            @media (max-width: 385px) {
+                                                .header__bottom-logo {
+                                                    width: 100%;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                }
+                                                .header__bottom-catalog {
+                                                    width: 100%;
+                                                    display: flex;
+                                                    justify-content: start;
+                                                }
+                                                .header__bottom-percent {
+                                                    top: 89px
+                                                }
+                                                .header__bottom-account {
+                                                    top: 100px
+                                                }
+                                            }
