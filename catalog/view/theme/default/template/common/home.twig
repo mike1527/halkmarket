@@ -41,14 +41,12 @@
 </section>
 
 
-
 {{ menu }}
 
 
 
-
 <section class="banner">
-    <div class="container__page-grey">
+    <div class="container__page-grey banner__container">
         <div class="container">
             <a class="banner__box" href="#">
                 <div class="banner__box-item banner__item">
@@ -61,8 +59,59 @@
 </section>
 
 
+<div class="featured">
+    <div class="container featured__container">
+      <div class="featured__wrapper">
+        <div class="featured__info-box">
+          <h4 class="featured__info-box-title">Наши спецпредложения</h4>
+          <a class="featured__info-box-link" href="#">Показать все</a>
+          <div class="featured__info-box-img"><img src="/image/halkmarket/slider/feautered-icon.png" alt=""></div>
+        </div>
+        <div class="featured__slider-inner">
 
-<script>
+            <div class="featured__slider">
+  
+                <div class="featured__item">
+                    <a href="#">
+                        <div class="featured__item-img" style="background-image: url('image/halkmarket/slider/featured-item-1.jpg');">
+                    </div>
+                    </a>
+                    
+                    <div class="featured__item-star">
+                            <input type="radio" name="star" id="star1">
+                            <label for="star1"></label>
+                            <input type="radio" name="star" id="star2">
+                            <label for="star2"></label>
+                            <input type="radio" name="star" id="star3">
+                            <label for="star3"></label>
+                            <input type="radio" name="star" id="star4">
+                            <label for="star4"></label>
+                            <input type="radio" name="star" id="star5">
+                            <label for="star5"></label>
+                    </div>
+                    <a href="#">
+                        <div class="featured__item-title"><h4 class="featured__item-title-text">Холодный чай черный Lipton Лимон 1 л</h4></div>
+                    </a>
+                    
+                    <div class="featured__item-box">
+                        <div class="featured__item-box-price">
+                            <div class="featured__item-box-old">18.60 TMT</div>
+                            <div class="featured__item-box-new">12.00 TMT</div>
+                        </div>
+                        <div class="featured__item-box-cart"></div>
+                    </div>
+                </div>  
+        </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- <script>
     $(function() {
         $('.featured__slider').slick({
             infinite: true,
@@ -82,6 +131,6 @@
             }]
         });
     });
-</script>
+</script> -->
 
 {{ footer }}
