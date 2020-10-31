@@ -306,3 +306,8 @@
                     top: 100px
                 }
             }
+            @media (max-width: 335px) {
+                .header__bottom-percent{
+                    right: 40px;
+                }
+            }

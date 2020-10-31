@@ -1469,6 +1469,16 @@ img {
     border-radius: 15px;
 }
 
+.slider__img-responsive{
+    background-image: url('{{ banner.image }}');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 1078px;
+    height: 344px;
+}
+
 .img-rounded {
     border-radius: 6px
 }

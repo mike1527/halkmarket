@@ -510,17 +510,26 @@ left: -40px;
     }
 
     .right__btn {
-        right: 5px;
+        right: 0px;
     }
 
     .left__btn {
-        left: -1px;
+        left: 0px;
     }
 }
-
-@media (max-width: 328px) {
+@media (max-width: 348px) {
+    .swiper-viewport {
+        width: 312px;
+    }
+}
+@media (max-width: 338px) {
     .swiper-viewport {
         width: 301px;
+    }
+}
+@media (max-width: 327px) {
+    .swiper-viewport {
+        width: 294px;
     }
 
     .slider__btn {
