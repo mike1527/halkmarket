@@ -78,16 +78,17 @@
                     </a>
                     
                     <div class="featured__item-star">
-                            <input type="radio" name="star" id="star1">
-                            <label for="star1"></label>
-                            <input type="radio" name="star" id="star2">
-                            <label for="star2"></label>
-                            <input type="radio" name="star" id="star3">
-                            <label for="star3"></label>
-                            <input type="radio" name="star" id="star4">
-                            <label for="star4"></label>
-                            <input type="radio" name="star" id="star5">
-                            <label for="star5"></label>
+                        <div class="rating home__rating">                            
+                                {% for i in 1..5 %}
+                                {% if rating < i %}
+                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                {% else %}
+                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                {% endif %}
+                                {% endfor %} 
+                                <a class="rating__rew-num-link" href="#" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">{{ reviews }}13</a>                                
+                            
+                        </div>
                     </div>
                     <a href="#">
                         <div class="featured__item-title"><h4 class="featured__item-title-text">Холодный чай черный Lipton Лимон 1 л</h4></div>
@@ -98,9 +99,176 @@
                             <div class="featured__item-box-old">18.60 TMT</div>
                             <div class="featured__item-box-new">12.00 TMT</div>
                         </div>
-                        <div class="featured__item-box-cart"></div>
+                            <button type="button" id="button-cart" data-loading-text="Загрузка..." class="btn btn-primary btn-lg btn-block item__btn">
+                            </button>
                     </div>
                 </div>  
+
+                <div class="featured__item">
+                    <a href="#">
+                        <div class="featured__item-img" style="background-image: url('image/halkmarket/slider/featured-item-1.jpg');">
+                    </div>
+                    </a>
+                    
+                    <div class="featured__item-star">
+                        <div class="rating home__rating">                            
+                                {% for i in 1..5 %}
+                                {% if rating < i %}
+                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                {% else %}
+                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                {% endif %}
+                                {% endfor %} 
+                                <a class="rating__rew-num-link" href="#" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">{{ reviews }}13</a>                                
+                            
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="featured__item-title"><h4 class="featured__item-title-text">Холодный чай черный Lipton Лимон 1 л</h4></div>
+                    </a>
+                    
+                    <div class="featured__item-box">
+                        <div class="featured__item-box-price">
+                            <div class="featured__item-box-old">18.60 TMT</div>
+                            <div class="featured__item-box-new">12.00 TMT</div>
+                        </div>
+                            <button type="button" id="button-cart" data-loading-text="Загрузка..." class="btn btn-primary btn-lg btn-block item__btn">
+                            </button>
+                    </div>
+                </div> 
+
+                <div class="featured__item">
+                    <a href="#">
+                        <div class="featured__item-img" style="background-image: url('image/halkmarket/slider/featured-item-1.jpg');">
+                    </div>
+                    </a>
+                    
+                    <div class="featured__item-star">
+                        <div class="rating home__rating">                            
+                                {% for i in 1..5 %}
+                                {% if rating < i %}
+                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                {% else %}
+                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                {% endif %}
+                                {% endfor %} 
+                                <a class="rating__rew-num-link" href="#" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">{{ reviews }}13</a>                                
+                            
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="featured__item-title"><h4 class="featured__item-title-text">Холодный чай черный Lipton Лимон 1 л</h4></div>
+                    </a>
+                    
+                    <div class="featured__item-box">
+                        <div class="featured__item-box-price">
+                            <div class="featured__item-box-old">18.60 TMT</div>
+                            <div class="featured__item-box-new">12.00 TMT</div>
+                        </div>
+                            <button type="button" id="button-cart" data-loading-text="Загрузка..." class="btn btn-primary btn-lg btn-block item__btn">
+                            </button>
+                    </div>
+                </div> 
+
+                <div class="featured__item">
+                    <a href="#">
+                        <div class="featured__item-img" style="background-image: url('image/halkmarket/slider/featured-item-1.jpg');">
+                    </div>
+                    </a>
+                    
+                    <div class="featured__item-star">
+                        <div class="rating home__rating">                            
+                                {% for i in 1..5 %}
+                                {% if rating < i %}
+                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                {% else %}
+                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                {% endif %}
+                                {% endfor %} 
+                                <a class="rating__rew-num-link" href="#" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">{{ reviews }}13</a>                                
+                            
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="featured__item-title"><h4 class="featured__item-title-text">Холодный чай черный Lipton Лимон 1 л</h4></div>
+                    </a>
+                    
+                    <div class="featured__item-box">
+                        <div class="featured__item-box-price">
+                            <div class="featured__item-box-old">18.60 TMT</div>
+                            <div class="featured__item-box-new">12.00 TMT</div>
+                        </div>
+                            <button type="button" id="button-cart" data-loading-text="Загрузка..." class="btn btn-primary btn-lg btn-block item__btn">
+                            </button>
+                    </div>
+                </div> 
+
+                <div class="featured__item">
+                    <a href="#">
+                        <div class="featured__item-img" style="background-image: url('image/halkmarket/slider/featured-item-1.jpg');">
+                    </div>
+                    </a>
+                    
+                    <div class="featured__item-star">
+                        <div class="rating home__rating">                            
+                                {% for i in 1..5 %}
+                                {% if rating < i %}
+                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                {% else %}
+                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                {% endif %}
+                                {% endfor %} 
+                                <a class="rating__rew-num-link" href="#" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">{{ reviews }}13</a>                                
+                            
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="featured__item-title"><h4 class="featured__item-title-text">Холодный чай черный Lipton Лимон 1 л</h4></div>
+                    </a>
+                    
+                    <div class="featured__item-box">
+                        <div class="featured__item-box-price">
+                            <div class="featured__item-box-old">18.60 TMT</div>
+                            <div class="featured__item-box-new">12.00 TMT</div>
+                        </div>
+                            <button type="button" id="button-cart" data-loading-text="Загрузка..." class="btn btn-primary btn-lg btn-block item__btn">
+                            </button>
+                    </div>
+                </div> 
+
+                <div class="featured__item">
+                    <a href="#">
+                        <div class="featured__item-img" style="background-image: url('image/halkmarket/slider/featured-item-1.jpg');">
+                    </div>
+                    </a>
+                    
+                    <div class="featured__item-star">
+                        <div class="rating home__rating">                            
+                                {% for i in 1..5 %}
+                                {% if rating < i %}
+                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                {% else %}
+                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                {% endif %}
+                                {% endfor %} 
+                                <a class="rating__rew-num-link" href="#" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">{{ reviews }}13</a>                                
+                            
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="featured__item-title"><h4 class="featured__item-title-text">Холодный чай черный Lipton Лимон 1 л</h4></div>
+                    </a>
+                    
+                    <div class="featured__item-box">
+                        <div class="featured__item-box-price">
+                            <div class="featured__item-box-old">18.60 TMT</div>
+                            <div class="featured__item-box-new">12.00 TMT</div>
+                        </div>
+                            <button type="button" id="button-cart" data-loading-text="Загрузка..." class="btn btn-primary btn-lg btn-block item__btn">
+                            </button>
+                    </div>
+                </div> 
+
         </div>
 
         </div>
@@ -111,14 +279,14 @@
 
 
 
-<!-- <script>
+<script>
     $(function() {
         $('.featured__slider').slick({
             infinite: true,
             slidesToShow: 5,
-            slidesToScroll: 5,
-            /* arrows: false */
-            responsive: [{
+            slidesToScroll: 2,
+            nextArrow: '<button class="slick-arrow slick-next "><img src="images/next.svg" alt=""></button>'           
+            /* responsive: [{
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
@@ -128,9 +296,9 @@
                 settings: {
                     slidesToShow: 1,
                 }
-            }]
+            }] */
         });
     });
-</script> -->
+</script>
 
 {{ footer }}
