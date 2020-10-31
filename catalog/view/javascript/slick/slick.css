@@ -120,6 +120,6 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
-.featured-arrow-prev{
+.featured-arrow-prev, .choice-arrow-prev{
     display: none !important;
 }
