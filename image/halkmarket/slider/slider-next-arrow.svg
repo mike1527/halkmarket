@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="21" height="31" viewBox="0 0 21 31"><g><g><path fill="none" stroke="#3c275c" stroke-miterlimit="20" stroke-width="3" d="M18.346 2v0L2 16.152v0L19 30v0"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>strelka</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-1056.000000, -92.000000)" fill="#3C275C" fill-rule="nonzero">
+            <polygon id="Path" transform="translate(1063.691974, 96.495347) scale(1, -1) rotate(90.000000) translate(-1063.691974, -96.495347) " points="1066.19361 89.3192824 1067.6587 90.6807176 1062.357 96.385 1067.74109 102.328589 1066.25891 103.671411 1059.64286 96.3687874"></polygon>
+        </g>
+    </g>
+</svg>

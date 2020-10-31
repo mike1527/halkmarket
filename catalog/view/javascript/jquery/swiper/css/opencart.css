@@ -93,16 +93,16 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
-.slider__btn-span::after {
-background-image: url('/image/halkmarket/slider/slider-prev-arrow.svg');
+.slider__btn-span-left::after {
+background-image: url('/image/halkmarket/slider/slider-arrow.svg');
 top: 50%;
 transform: translateY(-50%)
 }
 
-.slider__btn-span::after {
-background-image: url('/image/halkmarket/slider/slider-next-arrow.svg');
+.slider__btn-span-right::after {
+background-image: url('/image/halkmarket/slider/slider-arrow.svg');
 top: 50%;
-transform: translateY(-50%)
+transform: translateY(-50%) rotate(180deg);
 }
 
 /* .swiper-button-prev, .swiper-button-next {

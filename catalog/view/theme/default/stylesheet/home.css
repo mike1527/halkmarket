@@ -460,13 +460,13 @@
     position: absolute;
     width: 21px;
     height: 31px;
-    background-image: url('/image/halkmarket/slider/slider-next-arrow.svg');
+    background-image: url('/image/halkmarket/slider/slider-arrow.svg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(180deg);
     right: 26px;
 }
 /* END featured */
