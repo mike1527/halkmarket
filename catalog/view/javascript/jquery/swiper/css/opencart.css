@@ -5,6 +5,9 @@ box-shadow: 0 1px 11px rgba(59, 36, 90, 0.4);
 padding-top: 32px;
 padding-bottom: 37px;
 }
+.swiper__inner:hover .slider__btn-span{
+    opacity: 1;
+}
 
 .swiper-viewport {
 margin: 0 0 60px;
@@ -81,6 +84,8 @@ border-radius: 5px;
 background-color: rgba(255, 255, 255, 0.5);
 display: flex;
 justify-content: center;
+opacity: 0;
+transition: all .3s;
 }
 
 .slider__btn-span::after {

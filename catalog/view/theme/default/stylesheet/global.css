@@ -56,7 +56,8 @@ h6 {
 .container__page-grey {
     margin: 0 auto;
     padding: 0 10px;
-    background-color: #f8f7fa;
+    /* background-color: #f8f7fa; */
+    background-color: #fff;
 }
 
 .container {
