@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 30 2020 г., 05:54
+-- Время создания: Ноя 02 2020 г., 06:47
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.3.17
 
@@ -1420,7 +1420,7 @@ CREATE TABLE `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Рубль', 'RUB', '', 'р.', '2', 1.00000000, 1, '2020-10-29 16:56:20'),
+(1, 'Рубль', 'RUB', '', 'р.', '2', 1.00000000, 1, '2020-10-31 04:24:08'),
 (2, 'US Dollar', 'USD', '$', '', '2', 0.01697793, 1, '2017-07-19 21:28:21'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.01476363, 1, '2017-07-19 21:28:21'),
 (4, 'Гривна', 'UAH', '', 'грн.', '2', 0.44016022, 1, '2017-07-19 21:28:21');
@@ -2408,7 +2408,7 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (30, 'Category', 'banner', '{\"name\":\"Category\",\"banner_id\":\"6\",\"width\":\"182\",\"height\":\"182\",\"status\":\"1\"}'),
 (29, 'Home Page', 'carousel', '{\"name\":\"Home Page\",\"banner_id\":\"8\",\"width\":\"130\",\"height\":\"100\",\"status\":\"1\"}'),
 (28, 'Home Page', 'featured', '{\"name\":\"Home Page\",\"product\":[\"43\",\"40\",\"42\",\"30\"],\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
-(27, 'Home Page', 'slideshow', '{\"name\":\"Home Page\",\"banner_id\":\"7\",\"width\":\"1140\",\"height\":\"380\",\"status\":\"1\"}'),
+(27, 'Home Page', 'slideshow', '{\"name\":\"Home Page\",\"banner_id\":\"7\",\"width\":\"1074\",\"height\":\"342\",\"status\":\"1\"}'),
 (31, 'Banner 1', 'banner', '{\"name\":\"Banner 1\",\"banner_id\":\"6\",\"width\":\"182\",\"height\":\"182\",\"status\":\"1\"}'),
 (32, 'Последние статьи', 'blog_latest', '{\"name\":\"\\u041f\\u043e\\u0441\\u043b\\u0435\\u0434\\u043d\\u0438\\u0435 \\u0441\\u0442\\u0430\\u0442\\u044c\\u0438\",\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
 (33, 'Рекомендуемые статьи', 'blog_featured', '{\"name\":\"\\u0420\\u0435\\u043a\\u043e\\u043c\\u0435\\u043d\\u0434\\u0443\\u0435\\u043c\\u044b\\u0435 \\u0441\\u0442\\u0430\\u0442\\u044c\\u0438\",\"article_name\":\"\",\"article\":[\"120\",\"123\",\"125\",\"124\"],\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
@@ -3812,19 +3812,19 @@ CREATE TABLE `oc_session` (
 --
 
 INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
-('07978de5e8a89d0de5c6658f9d', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-29 16:45:31'),
 ('0f15a2b7078761f5dadb0f8e9f', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"nqCMfiKw7IZSsznhdcdXamTs3LwTNA1h\"}', '2020-10-25 19:52:37'),
 ('120eba90f6169007a154f2d27b', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 04:49:12'),
-('2cc512c292555df10b12e30f59', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"VqmaicwJw7JtqUcmUXBWofqi4kYGHkF6\",\"path\":\"20\"}', '2020-10-29 20:14:29'),
+('2cc512c292555df10b12e30f59', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"IPILEarjwxL63trRGGE28V58uBODYcx2\",\"path\":\"20\"}', '2020-10-28 18:25:55'),
 ('54f5d39da07e56eef65ad81e4e', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 05:07:40'),
 ('6a278bfcb91c184e78e7370d58', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-28 12:09:51'),
 ('6ff3b09d7097a2e7332e1274a1', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-27 13:13:40'),
 ('7b9a29d0cca38c05acec08f45c', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 04:48:25'),
-('974ebaf7ad3fae269c59a87606', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"L2U7dYLy03CXtlGzT2bh09JXduNTfDb0\"}', '2020-10-28 13:12:20'),
+('974ebaf7ad3fae269c59a87606', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"A0pubBRY7dmfdbtu2dAwzO6XuOw3l8jx\"}', '2020-11-02 04:47:00'),
 ('ae38323d6c8b6ea941a22c1621', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 05:07:21'),
 ('c831dca348c221e766f1ce2ad5', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 04:53:46'),
 ('d41a29641671228a1d57c99286', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 04:48:34'),
-('f9ea41416097026be65ee8fa8a', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-29 16:21:27');
+('e536fd1d3c7732409ed351f597', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-29 13:19:08'),
+('f9ea41416097026be65ee8fa8a', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-28 17:05:28');
 
 -- --------------------------------------------------------
 

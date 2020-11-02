@@ -349,3 +349,22 @@
 2020-10-29 10:03:01 - PHP Notice:  A non well formed numeric value encountered in C:\OpenServer\domains\halkmarket\system\library\image.php on line 166
 2020-10-29 10:03:01 - PHP Notice:  A non well formed numeric value encountered in C:\OpenServer\domains\halkmarket\system\library\image.php on line 169
 2020-10-29 10:03:01 - PHP Notice:  A non well formed numeric value encountered in C:\OpenServer\domains\halkmarket\system\library\image.php on line 180
+2020-11-02 3:42:38 - PHP Warning:  fopen(C:/OpenServer/domains/halkmarket/storage/modification/system/engine/action.php): failed to open stream: No such file or directory in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 413
+2020-11-02 3:42:38 - PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 415
+2020-11-02 3:42:38 - PHP Warning:  fclose() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 417
+2020-11-02 3:42:38 - PHP Warning:  fopen(C:/OpenServer/domains/halkmarket/storage/modification/system/engine/loader.php): failed to open stream: No such file or directory in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 413
+2020-11-02 3:42:38 - PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 415
+2020-11-02 3:42:38 - PHP Warning:  fclose() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 417
+2020-11-02 3:42:38 - PHP Warning:  fopen(C:/OpenServer/domains/halkmarket/storage/modification/system/library/config.php): failed to open stream: No such file or directory in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 413
+2020-11-02 3:42:38 - PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 415
+2020-11-02 3:42:38 - PHP Warning:  fclose() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 417
+2020-11-02 3:42:38 - PHP Warning:  fopen(C:/OpenServer/domains/halkmarket/storage/modification/system/library/language.php): failed to open stream: No such file or directory in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 413
+2020-11-02 3:42:38 - PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 415
+2020-11-02 3:42:38 - PHP Warning:  fclose() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 417
+2020-11-02 3:42:38 - PHP Warning:  fopen(C:/OpenServer/domains/halkmarket/storage/modification/system/library/template/template.php): failed to open stream: No such file or directory in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 413
+2020-11-02 3:42:38 - PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 415
+2020-11-02 3:42:38 - PHP Warning:  fclose() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 417
+2020-11-02 3:42:38 - PHP Warning:  fopen(C:/OpenServer/domains/halkmarket/storage/modification/system/library/template/twig.php): failed to open stream: No such file or directory in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 413
+2020-11-02 3:42:38 - PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 415
+2020-11-02 3:42:38 - PHP Warning:  fclose() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\admin\controller\marketplace\modification.php on line 417
+2020-11-02 3:42:38 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\halkmarket\admin\controller\startup\error.php:34) in C:\OpenServer\domains\halkmarket\system\library\response.php on line 36

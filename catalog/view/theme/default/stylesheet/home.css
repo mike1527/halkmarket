@@ -119,6 +119,7 @@
     background-repeat: no-repeat;
     bottom: 13px;
     right: 17px;
+    transition: all .3s;
 }
 
 .list__item:nth-child(even):before {
@@ -130,6 +131,10 @@
     background-repeat: no-repeat;
     bottom: 13px;
     right: 17px;
+    transition: all .3s;
+}
+.list__item:hover::before {
+    transform: scale(1.3);
 }
 
 .list__item:nth-child(1) {
