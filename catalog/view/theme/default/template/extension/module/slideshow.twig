@@ -1,83 +1,3 @@
-<!-- Подключение SWIPER слайдера -->
-<!-- <div class="swiper__container">
-  <div class="slider__wrapper">{% for banner in banners %}    
-        <div class="slider__item">
-            {% if banner.link %}
-            <a class="slider__item-link" href="{{ banner.link }}">
-              <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic">
-            </a>
-            {% else %}
-            <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic"/>
-            {% endif %}
-        </div>
-            {% endfor %} 
-  </div>
-</div> -->
-
-<!-- <script>
-  var mySwiper = new Swiper('.swiper__container', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-})
-</script> -->
-<!-- <script type="text/javascript">
-$('#slideshow{{ module }}').swiper({
-	mode: 'horizontal',
-	slidesPerView: 1,
-	pagination: '.slideshow{{ module }}',
-	paginationClickable: true,
-	nextButton: '.right__btn',
-    prevButton: '.left__btn',
-    spaceBetween: 30,
-	autoplay: 2500,
-    autoplayDisableOnInteraction: true,
-	loop: true
-});
-</script> -->
-
-
-<!-- Подключение SLICK слайдера -->
-
-<!-- <div class="slider__wrapper">{% for banner in banners %}    
-        <div class="slider__item">
-            {% if banner.link %}
-            <a class="slider__item-link" href="{{ banner.link }}">
-              <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic">
-            </a>
-            {% else %}
-            <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__item-pic"/>
-            {% endif %}
-        </div>
-            {% endfor %} 
-    </div>
-
-<script>
-  $(function () {
-   $('.slider__wrapper').slick({
-    nextArrow: '<button class="slick-arrow featured-arrow slick-arrow-transform slick-next"><img src="/image/halkmarket/slider/slider-next-arrow.svg" alt="next arrow"></button>',
-    prevArrow: '<button class="slick-arrow featured-arrow slick-arrow-transform slick-prev"><img src="/image/halkmarket/slider/slider-prev-arrow.svg" alt="prev arrow"></button>'
-   });   
-});
-</script> -->
-
-
 <!-- Подключение swiper слайдера -->
 
 <div class="swiper__inner">
@@ -86,11 +6,18 @@ $('#slideshow{{ module }}').swiper({
             <div class="swiper__box">
                 <div id="slideshow{{ module }}" class="swiper-container">
                     <div class="swiper-wrapper"> {% for banner in banners %}
-                        <div class="swiper-slide text-center">{% if banner.link %}
-                            <a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__img-responsive" /></a>
+                        <div class="swiper-slide text-center">
+                            <div class="swiper-slide-block swiper-slide__left-block">
+                                <!-- <img class="" src="/image/halkmarket/slider/left-block.png" alt="" style="height: 344px;"> -->
+                            </div>
+                            {% if banner.link %}
+                            <a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__img-responsive"/></a>
                             {% else %}
-                            <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__img-responsive" />
+                            <a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive slider__img-responsive"/></a>
                             {% endif %}
+                            <div class="swiper-slide-block swiper-slide__right-block">
+                                <!-- <img class="" src="/image/halkmarket/slider/right-block.png" alt="" style="height: 344px;"> -->
+                            </div>                             
                         </div>
                         {% endfor %}
                     </div>
@@ -120,12 +47,12 @@ $('#slideshow{{ module }}').swiper({
         nextButton: '.right__btn',
         prevButton: '.left__btn',
         spaceBetween: 30,
-        autoplay: 2500,
+        /* autoplay: 2500, */
         autoplayDisableOnInteraction: true,
         loop: true,
         breakpoints: {
             1000: {
-                spaceBetween: 50,
+                /* spaceBetween: 50, */
             }
         }
     });

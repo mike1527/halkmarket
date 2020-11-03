@@ -1477,6 +1477,7 @@ img {
     object-fit: cover;
     width: 1078px;
     height: 344px;
+    margin: 0 auto;
 }
 
 .img-rounded {
