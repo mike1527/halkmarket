@@ -40,10 +40,15 @@
         justify-content: space-between;
         align-items: center;
         padding: 26px 0;
+        position: relative;
     }
     
     .header__bottom-logo {
         cursor: pointer;
+    }
+
+    .header__bottom-catalog{
+        margin: 0 5px;
     }
     
     .catalog-btn {
@@ -130,48 +135,45 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 410px;
+        margin-left: 5px;
+        margin-right: 16px;
     }
     
-    .header__bottom-percent {
+    .header__bottom-discount-link {
+        font-family: 'Lato-Semibold';
+        border-radius: 4px;        
+        position: relative;
+        color: #040507;
+        font-size: 16px;
+        font-weight: 600;
+        padding-left: 30px;
+    }
+    
+    .header__bottom-discount-link::before {
+        content: '';
+        position: absolute;
+        background-color: #3b245a;
         width: 25px;
         height: 20px;
-        border-radius: 4px;
-        background-color: #3b245a;
-        position: relative;
-        margin-right: 40px;
-    }
-    
-    .header__bottom-percent::before {
-        content: '';
-        position: absolute;
-        width: 18px;
-        height: 15px;
         background-image: url('/image/halkmarket/header/icon/btn-header-percent.svg');
-        top: 2px;
-        left: 3px;
+        background-position: center center;
+        background-size: initial;
+        background-repeat: no-repeat;
+        border-radius: 4px;
+        top: 0;
+        left: 0;
     }
-    
-    .header__bottom-account {
-        width: 68px;
+    .header__bottom-account-link {
+        color: #040507;
+        font-family: 'Lato-Semibold';
+        font-size: 16px;
+        font-weight: 600;
+        padding-left: 35px;
         position: relative;
     }
     
-    .header__bottom-account li span.account-caret {
-        opacity: 0;
-    }
-    
-    .bottom-account__arrow::before {
-        content: '';
-        position: absolute;
-        width: 14px;
-        height: 10px;
-        background-image: url('/image/halkmarket/header/icon/arrow-down-header-acc.svg');
-        background-repeat: no-repeat;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    .header__bottom-account::after {
+    .header__bottom-account-link::before {
         content: '';
         position: absolute;
         width: 17px;
@@ -180,13 +182,130 @@
         background-repeat: no-repeat;
         top: 50%;
         transform: translateY(-50%);
-        right: 0;
+        left: 0;
     }
+    .header__bottom-cut{
+        position: relative;   
+    }
+    .header__bottom-cut-link{
+        color: #040507;
+        font-family: 'Lato-Semibold';
+        font-size: 16px;
+        font-weight: 600;
+        padding-left: 35px;             
+    }
+    .header__bottom-cut-link::before{
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-image: url('/image/halkmarket/header/icon/cut.svg');
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .header__bottom-cut-num{
+        position: absolute;
+        width: 18px;
+        height: 19px;
+        background-color: #f62f5e;
+        border-radius: 50%;
+        font-family: 'OpenSans-Bold', sans-serif;
+        color: #fff;
+        font-size: 8px;
+        left: 11px;
+        top: -9px;
+        text-align: center;        
+    }
+    .header__bottom-favorites-link{
+        display: block;
+        width: 18px;
+        height: 16px;
+        background-image: url('/image/halkmarket/header/icon/heart.svg');
+        position: relative;        
+    }
+    .header__bottom-favorites-num{
+        position: absolute;
+        width: 18px;
+        height: 19px;
+        background-color: #3b245a;
+        border-radius: 50%;
+        font-family: 'OpenSans-Bold', sans-serif;
+        color: #fff;
+        font-size: 8px;
+        left: 11px;
+        top: -9px;
+        text-align: center; 
+    }
+    
+
     /* END HEADER */
     
-    @media (max-width: 1200px) {
+    @media (max-width: 1185px){
+        .header__bottom-wrapper{
+            flex-wrap: wrap;
+        }
+        .header__bottom-inner{
+            margin-top: 22px;
+            width: 100%;
+        }
+    }
+    @media (max-width: 844px){
+        .input__header-bottom{
+            width: 100%;
+            margin-top: 22px;
+        }
+        .header__bottom-search{
+            width: 100%;
+        }
+    }
+    @media (max-width: 426px){
+        .header__bottom-inner{
+            opacity: 0;
+            display: none;
+            transition: all .3s;
+        }
+        .header__bottom-btn{
+            display: block;
+            display: block;
+            width: 70px;
+            height: 45px;
+            background-color: #3b245a;
+            margin-top: 22px;
+            border-radius: 10px;
+        }
+        .header__bottom-inner--active{
+            opacity: 1;
+            display: block;
+            margin: 0;
+            position: absolute;
+            bottom: -116px;
+            z-index: 5;
+            background-color: #eff3f3;
+            width: 100%;
+            padding: 10px 10px;
+        }
+        .header__bottom-discount{
+            margin-bottom: 15px;            
+        }
+        .header__bottom-discount-link{
+            padding-left: 35px;
+        }
+        .header__bottom-account{
+            margin-bottom: 15px;
+        }
+        .header__bottom-cut{
+            margin-bottom: 15px;
+        }
+    }
+    @media (max-width: 383px){
+        .header__bottom-catalog{
+            margin-top: 22px;
+            margin-left: 0;
+        }
+    }
+    /* @media (max-width: 1200px) {
         .header__bottom-logo {
-            /* flex-wrap: wrap; */
         }
     }
     
@@ -219,7 +338,7 @@
             flex-wrap: wrap;
             padding-bottom: 50px;
         }
-        .header__bottom-percent {
+        .header__bottom-discount {
             margin-left: 10px;
         }
         .header__bottom-catalog {
@@ -228,7 +347,7 @@
         .header__bottom-wrapper {
             position: relative;
         }
-        .header__bottom-percent {
+        .header__bottom-discount {
             position: absolute;
             top: 90px;
             right: 75px;
@@ -281,7 +400,7 @@
                 .input-lg {
                     width: 100%;
                 }
-                .header__bottom-percent {
+                .header__bottom-discount {
                     top: 140px;
                 }
                 .header__bottom-account {
@@ -299,7 +418,7 @@
                     display: flex;
                     justify-content: start;
                 }
-                .header__bottom-percent {
+                .header__bottom-discount {
                     top: 89px
                 }
                 .header__bottom-account {
@@ -307,7 +426,7 @@
                 }
             }
             @media (max-width: 335px) {
-                .header__bottom-percent{
+                .header__bottom-discount{
                     right: 40px;
                 }
-            }
+            } */

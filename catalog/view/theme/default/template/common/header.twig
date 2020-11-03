@@ -61,11 +61,11 @@
 
                     <div id="logo" class="header__bottom-logo">
                         <a href="#">
-            {% if logo %}
-              {% if home == og_url %}
-                <img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" />
-              {% else %}
-                <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a> {% endif %} {% else %}
+                    {% if logo %}
+                    {% if home == og_url %}
+                        <img src="{{ logo }}" title="{{ name }}" alt="{{ name }}"/>
+                    {% else %}
+                    <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}"/></a> {% endif %} {% else %}
                         <h1><a href="{{ home }}">{{ name }}</a></h1>
                         {% endif %}
                         </a>
@@ -74,33 +74,45 @@
                     <div class="header__bottom-catalog">
                         <button class="catalog-btn">
             
-          </button>
+                        </button>
                     </div>
 
                     {{ search }}
 
                     <div class="header__bottom-inner">
-                        <div class="header__bottom-percent"></div>
-
-                        <div class="header__bottom-account"><a href="{{ account }}" title="{{ text_account }}" class="dropdown-toggle bottom-account__arrow" data-toggle="dropdown"><span class="account-caret"></span></a>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                {% if logged %}
-                                <li><a href="{{ account }}">{{ text_account }}
-                        <li><a href="{{ order }}">{{ text_order }}</a></li>
-                                <li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
-                                <li><a href="{{ download }}">{{ text_download }}</a></li>
-                                <li><a href="{{ logout }}">{{ text_logout }}</a></li>
-                                {% else %}
-                                <li><a href="{{ register }}">{{ text_register }}</a></li>
-                                <li><a href="{{ login }}">{{ text_login }}</a></li>
-                                {% endif %}
-                            </ul>
+                        <div class="header__bottom-discount">
+                            <a class="header__bottom-discount-link" href="#">
+                                Скидки
                             </a>
-                            </li>
+                        </div>
+
+                        <div class="header__bottom-account">
+                            <a class="header__bottom-account-link" href="#">Войти
+                                <span class="account-caret"></span>
+                            </a>
+                            
+                        </div>
+
+                        <div class="header__bottom-cut">
+                            <a class="header__bottom-cut-link" href="#">Корзина</a>
+                            <span class="header__bottom-cut-num">10</span>
+                        </div>
+                        <div class="header__bottom-favorites">
+                            <a class="header__bottom-favorites-link" href="#">
+                                <span class="header__bottom-favorites-num">12</span>
+                            </a>                            
                         </div>
                     </div>
+
+                    <div class="header__bottom-btn"></div>
 
                 </div>
             </div>
         </div>
     </header>
+
+    <script>
+         $('.header__bottom-btn').on('click', function () {
+            $('.header__bottom-inner').toggleClass('header__bottom-inner--active');
+        });
+    </script>
