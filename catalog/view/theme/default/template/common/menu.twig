@@ -8,22 +8,13 @@
                     <div class="navbar-header"><span id="category" class="visible-xs navbar-header-span">{{ text_category }}</span>
                         <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
                     </div>
-                    <div class="collapse navbar-collapse navbar-ex1-collapse collapse__list-items">
-                        <ul class="nav navbar-nav list__category">
+                    <div class="collapse navbar-collapse navbar-ex1-collapse collapse__list-items bottom-catalog__list">
+                        <ul class="nav navbar-nav list__category catalog__category">
                             {% for category in categories %} {% if category.children %}
-                            <li class="dropdown list__item">
+                            <li class="dropdown list__item catalog__item">
                                 <a href="{{ category.href }}" class="dropdown-toggle list__item-link" data-toggle="dropdown">
                                     <h4 class="list__item-link-title">{{ category.name }}</h4>
                                 </a>
-                                <div class="dropdown-menu">
-                                    <div class="dropdown-inner"> {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
-                                        <ul class="list-unstyled">
-                                            {% for child in children %}
-                                            <li><a href="{{ child.href }}">{{ child.name }}</a></li>
-                                            {% endfor %}
-                                        </ul>
-                                        {% endfor %}</div>
-                                    <a href="{{ category.href }}" class="see-all">{{ text_all }} <h4 class="list__item-link-title">{{ category.name }}</h4></a> </div>
                             </li>
                             {% else %}
                             <li class="list__item">

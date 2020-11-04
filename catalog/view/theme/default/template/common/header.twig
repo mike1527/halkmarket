@@ -72,9 +72,8 @@
                     </div>
 
                     <div class="header__bottom-catalog">
-                        <button class="catalog-btn">
-            
-                        </button>
+                        <div class="catalog-btn"></div>
+                        {{ menucatalog }}
                     </div>
 
                     {{ search }}
@@ -110,9 +109,15 @@
             </div>
         </div>
     </header>
+    
 
     <script>
          $('.header__bottom-btn').on('click', function () {
             $('.header__bottom-inner').toggleClass('header__bottom-inner--active');
+        });
+    </script>
+    <script>
+         $('.header__bottom-catalog').on('click', function () {
+            $('.catalog__container').toggleClass('active');
         });
     </script>

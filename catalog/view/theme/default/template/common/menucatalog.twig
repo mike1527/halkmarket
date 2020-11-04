@@ -1,0 +1,47 @@
+
+            {% if categories %}
+            <nav id="menucatalog" class="navbar">
+                <div class="container catalog__container">
+                    <h4 class="category__title catalog__title">Все категории</h4>
+                    <div class="navbar-header"><span id="category" class="visible-xs navbar-header-span">{{ text_category }}</span>
+                        <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-ex1-collapse collapse__list-items bottom-catalog__list">
+                        <ul class="nav navbar-nav catalog__category-list">
+                            {% for category in categories %} {% if category.children %}
+                            <li class="catalog__item catalog__acordion">
+                                <a href="{{ category.href }}" class="dropdown-toggle catalog__item-link" data-toggle="dropdown">
+                                    <h4 class="catalog__item-title">{{ category.name }}</h4>
+                                </a>
+                                    <div class="dropdown-inner"> 
+                                        {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
+                                        <div class="list-unstyled "></div>
+                                        {% for child in children %}
+                                        <div class="list-unstyled__item"><a class="list-unstyled__item-link" href="{{ child.href }}">{{ child.name }}</a></div>
+                                        {% endfor %}                                        
+                                        {% endfor %}
+                                    </div>
+                            </li>
+                            {% else %}
+                            <li class="catalog__item">
+                                <a class="catalog__item-link" href="{{ category.href }} ">
+                                    <h4 class="catalog__item-title">{{ category.name }}</h4>
+                                </a>
+                            </li>
+                            {% endif %} {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            {% endif %}
+            
+        <script>
+            const accordion = document.getElementsByClassName('catalog__acordion');
+                for(i = 0; i<accordion.length; i++){
+                    accordion[i].addEventListener('click', function(){
+                        this.classList.toggle('active-click')
+                    })
+                }            
+        </script>
+
