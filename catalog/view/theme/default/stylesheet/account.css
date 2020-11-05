@@ -1,0 +1,253 @@
+.login__wrapper{
+    display: flex;
+    justify-content: center;
+}
+.login__content{
+    /* float: left; */
+    background-color: #fff;
+    height: 100vh;
+    width: 50%;
+}
+.login__slider{
+    /* float: right; */
+    height: 100vh;
+    width: 50%;
+}
+.login__slider-wrapper{
+    float: right;
+    height: 100vh;
+    width: 50%;
+}
+.login__content{
+    padding: 48px 36px 55px 47px;
+}
+.login__menu{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 227px;
+}
+.login__menu-img{
+    width: 97px;
+    height: 25px;       
+}
+.login__menu-link a{
+    color: #6b6c6f;
+    font-family: 'OpenSans-Bold', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+.login__content-box{
+    display: flex;
+    justify-content: center;
+}
+.login__form-title{
+    color: #252529;
+    font-family: 'OpenSans-Bold', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 27px;
+}
+.form-group .control-label{
+    color: #6b6c6f;
+    font-family: 'OpenSans-Bold', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 13px;
+}
+.form-control__login{
+    color: #6b6c6f;
+    font-family: 'OpenSans-Bold', sans-serif;
+    width: 350px;
+    height: 40px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    border: 1px solid #dfe2e6;
+    margin-bottom: 23px;
+    padding: 13px 13px 13px 45px;
+    position: relative;
+}
+.form-control__login::placeholder {
+    color: #e1e4e8;
+    font-family: 'OpenSans-Bold', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+.form-group__email, .form-group__pass{
+    position: relative;
+}
+.form-group__email::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 16px;
+    background-image: url('/image/halkmarket/login/email-input-icon.svg');
+    top: 46px;
+    left: 14px;
+    z-index: 1;
+}
+.form-group__pass::before{
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 12px;
+    background-image: url('/image/halkmarket/login/pass-input-icon.svg');
+    top: 48px;
+    left: 15px;
+    z-index: 1;
+}
+.input__show-pas{
+    position: absolute;
+    bottom: 14px;
+    right: 16px;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    margin: 0;
+}
+.input__show-pas-btn::before{
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 12px;
+    background-image: url('/image/halkmarket/login/show-pass.svg');
+    bottom: 57px;
+    right: 16px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.input__show-pas:checked + .input__show-pas-btn::before{
+    background-image: url('/image/halkmarket/login/show-pass-grey.svg');
+}
+.login__form-forgot-pass-link{
+    display: none;
+}
+.login__slider-item-img{
+    width: 100%;
+    height: 100vh;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+.login__form-btn-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+.login__btn{
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #3a245b;
+    color: #ffffff;
+    font-family: 'OpenSans-Bold', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    transition: all .3s;
+}
+.login__btn:hover{
+    background-color: #fff;
+    color: #3a245b;
+}
+.login__entry-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login__register-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login__form-forgot-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 22px;
+}
+.login__form-forgot-item{
+    transition: all .3s;
+}
+.login__form-forgot-item:hover{
+    color: #6b6c6f;
+}
+label.label__keep{
+    color: #dee2e6;
+    font-family: 'OpenSans-Bold', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s;
+}
+label.label__keep:hover{
+    color: #6b6c6f;
+}
+input.input__keep{
+    cursor: pointer;
+}
+.login__form-forgot-link{
+    color: #dee2e6;
+    font-family: 'OpenSans-Bold', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+.input__keep{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);   
+}
+.input__keep-style{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #dfe2e6;
+    margin-left: -22px;
+    transition: all .3s;
+}
+.input__keep:checked + .input__keep-style::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #dfe2e6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s;
+}
+label.label__keep:hover span.input__keep-style::before{
+    background-color: #6b6c6f;
+}
+label.label__keep:hover .input__keep-style{
+    border-color: #6b6c6f;
+}
+.slick-dots{
+    display: flex;
+    position: absolute;
+    right: 72px;
+    bottom: 72px;
+}
+.slick-dots li{
+    margin-right: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .3s;
+}
+.slick-dots .slick-active{
+    width: 22px;
+    height: 6px;
+    border-radius: 10px;
+}
+.slick-dots button{
+    font-size: 0;    
+    border: none;
+    outline: none;    
+    padding: 0;
+}

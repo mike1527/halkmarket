@@ -31,7 +31,14 @@
 .slick-list:focus
 {
     outline: none;
+    border: none;
 }
+.slick-list:active
+{
+    outline: none !important;
+    border: none;
+}
+
 .slick-list.dragging
 {
     cursor: pointer;

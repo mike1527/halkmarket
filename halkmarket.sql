@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 02 2020 г., 06:47
+-- Время создания: Ноя 05 2020 г., 16:30
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.3.17
 
@@ -511,9 +511,8 @@ INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `language_id`, `t
 (107, 8, 1, 'Sony', '', 'catalog/demo/manufacturer/sony.png', 0),
 (106, 8, 1, 'RedBull', '', 'catalog/demo/manufacturer/redbull.png', 0),
 (105, 8, 1, 'NFL', '', 'catalog/demo/manufacturer/nfl.png', 0),
-(142, 7, 2, 'slider2', 'index.php?route=product/product&amp;path=57&amp;product_id=49', 'catalog/halkmarket/slider/slider-1.jpg', 0),
-(139, 7, 1, 'slider1', '', 'catalog/halkmarket/slider/slider-1.jpg', 0),
-(140, 7, 1, 'slider2', '', 'catalog/halkmarket/slider/slider-1.jpg', 0),
+(173, 7, 2, 'slider2', 'index.php?route=product/product&amp;path=57&amp;product_id=49', '', 0),
+(172, 7, 2, 'slider1', 'index.php?route=product/product&amp;path=57&amp;product_id=49', '', 0),
 (104, 6, 2, 'HP Banner', 'index.php?route=product/manufacturer/info&amp;manufacturer_id=7', 'catalog/demo/compaq_presario.jpg', 0),
 (114, 8, 1, 'Starbucks', '', 'catalog/demo/manufacturer/starbucks.png', 0),
 (115, 8, 1, 'Nintendo', '', 'catalog/demo/manufacturer/nintendo.png', 0),
@@ -528,7 +527,9 @@ INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `language_id`, `t
 (124, 8, 2, 'Disney', '', 'catalog/demo/manufacturer/disney.png', 0),
 (125, 8, 2, 'Starbucks', '', 'catalog/demo/manufacturer/starbucks.png', 0),
 (126, 8, 2, 'Nintendo', '', 'catalog/demo/manufacturer/nintendo.png', 0),
-(141, 7, 2, 'slider1', 'index.php?route=product/product&amp;path=57&amp;product_id=49', 'catalog/halkmarket/slider/slider-1.jpg', 0);
+(170, 7, 1, 'slider2', '', 'catalog/halkmarket/slider/slider-2.png', 2),
+(171, 7, 1, 'slider3', '', 'catalog/halkmarket/slider/slider-1.png', 3),
+(169, 7, 1, 'slider1', '', 'catalog/halkmarket/slider/slider-1.png', 1);
 
 -- --------------------------------------------------------
 
@@ -737,7 +738,10 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (67, '', 0, 1, 1, 5, 1, '2020-10-27 23:18:51', '2020-10-27 23:18:51', 1),
 (68, '', 0, 1, 1, 6, 1, '2020-10-27 23:19:19', '2020-10-27 23:19:19', 1),
 (69, '', 0, 1, 1, 7, 1, '2020-10-27 23:19:52', '2020-10-27 23:19:52', 1),
-(70, '', 0, 1, 1, 8, 1, '2020-10-27 23:20:23', '2020-10-27 23:20:23', 1);
+(70, '', 0, 1, 1, 8, 1, '2020-10-27 23:20:23', '2020-10-27 23:20:23', 1),
+(71, '', 63, 1, 1, 0, 1, '2020-11-04 12:10:22', '2020-11-04 12:10:22', 1),
+(72, '', 63, 0, 1, 0, 1, '2020-11-04 12:26:16', '2020-11-04 12:26:16', 1),
+(73, '', 63, 0, 1, 0, 1, '2020-11-04 12:26:36', '2020-11-04 12:26:36', 1);
 
 -- --------------------------------------------------------
 
@@ -852,7 +856,13 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (69, 1, 'Морепродукты', '', '', '', '', ''),
 (69, 2, 'Seafood', '', '', '', '', ''),
 (70, 1, 'Напитки', '', '', '', '', ''),
-(70, 2, 'Beverages', '', '', '', '', '');
+(70, 2, 'Beverages', '', '', '', '', ''),
+(71, 1, 'test', '', '', '', '', ''),
+(71, 2, 'test', '', '', '', '', ''),
+(72, 1, 'test', '', '', '', '', ''),
+(72, 2, 'test', '', '', '', '', ''),
+(73, 1, 'test', '', '', '', '', ''),
+(73, 2, 'test', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -960,7 +970,13 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (67, 67, 0),
 (68, 68, 0),
 (69, 69, 0),
-(70, 70, 0);
+(70, 70, 0),
+(71, 63, 0),
+(71, 71, 1),
+(72, 63, 0),
+(72, 72, 1),
+(73, 63, 0),
+(73, 73, 1);
 
 -- --------------------------------------------------------
 
@@ -987,7 +1003,10 @@ INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VAL
 (67, 0, 0),
 (68, 0, 0),
 (69, 0, 0),
-(70, 0, 0);
+(70, 0, 0),
+(71, 0, 0),
+(72, 0, 0),
+(73, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1050,7 +1069,10 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 (67, 0),
 (68, 0),
 (69, 0),
-(70, 0);
+(70, 0),
+(71, 0),
+(72, 0),
+(73, 0);
 
 -- --------------------------------------------------------
 
@@ -1420,7 +1442,7 @@ CREATE TABLE `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Рубль', 'RUB', '', 'р.', '2', 1.00000000, 1, '2020-10-31 04:24:08'),
+(1, 'Рубль', 'RUB', '', 'р.', '2', 1.00000000, 1, '2020-11-05 10:31:23'),
 (2, 'US Dollar', 'USD', '$', '', '2', 0.01697793, 1, '2017-07-19 21:28:21'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.01476363, 1, '2017-07-19 21:28:21'),
 (4, 'Гривна', 'UAH', '', 'грн.', '2', 0.44016022, 1, '2017-07-19 21:28:21');
@@ -2408,13 +2430,13 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (30, 'Category', 'banner', '{\"name\":\"Category\",\"banner_id\":\"6\",\"width\":\"182\",\"height\":\"182\",\"status\":\"1\"}'),
 (29, 'Home Page', 'carousel', '{\"name\":\"Home Page\",\"banner_id\":\"8\",\"width\":\"130\",\"height\":\"100\",\"status\":\"1\"}'),
 (28, 'Home Page', 'featured', '{\"name\":\"Home Page\",\"product\":[\"43\",\"40\",\"42\",\"30\"],\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
-(27, 'Home Page', 'slideshow', '{\"name\":\"Home Page\",\"banner_id\":\"7\",\"width\":\"1074\",\"height\":\"342\",\"status\":\"1\"}'),
+(27, 'Home Page', 'slideshow', '{\"name\":\"Home Page\",\"banner_id\":\"7\",\"width\":\"1320\",\"height\":\"342\",\"status\":\"1\"}'),
 (31, 'Banner 1', 'banner', '{\"name\":\"Banner 1\",\"banner_id\":\"6\",\"width\":\"182\",\"height\":\"182\",\"status\":\"1\"}'),
 (32, 'Последние статьи', 'blog_latest', '{\"name\":\"\\u041f\\u043e\\u0441\\u043b\\u0435\\u0434\\u043d\\u0438\\u0435 \\u0441\\u0442\\u0430\\u0442\\u044c\\u0438\",\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
 (33, 'Рекомендуемые статьи', 'blog_featured', '{\"name\":\"\\u0420\\u0435\\u043a\\u043e\\u043c\\u0435\\u043d\\u0434\\u0443\\u0435\\u043c\\u044b\\u0435 \\u0441\\u0442\\u0430\\u0442\\u044c\\u0438\",\"article_name\":\"\",\"article\":[\"120\",\"123\",\"125\",\"124\"],\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
 (34, 'Рекомендуемые статьи в товаре, категории и производителе', 'featured_article', '{\"name\":\"\\u0420\\u0435\\u043a\\u043e\\u043c\\u0435\\u043d\\u0434\\u0443\\u0435\\u043c\\u044b\\u0435 \\u0441\\u0442\\u0430\\u0442\\u044c\\u0438 \\u0432 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0435, \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438 \\u0438 \\u043f\\u0440\\u043e\\u0438\\u0437\\u0432\\u043e\\u0434\\u0438\\u0442\\u0435\\u043b\\u0435\",\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
 (35, 'Рекомендуемые товары в категории и производителе', 'featured_product', '{\"name\":\"\\u0420\\u0435\\u043a\\u043e\\u043c\\u0435\\u043d\\u0434\\u0443\\u0435\\u043c\\u044b\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u044b \\u0432 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438 \\u0438 \\u043f\\u0440\\u043e\\u0438\\u0437\\u0432\\u043e\\u0434\\u0438\\u0442\\u0435\\u043b\\u0435\",\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
-(36, 'Slider', 'slideshow', '{\"name\":\"Slider\",\"banner_id\":\"7\",\"width\":\"1078\",\"height\":\"344\",\"status\":\"1\"}'),
+(36, 'Slider', 'slideshow', '{\"name\":\"Slider\",\"banner_id\":\"7\",\"width\":\"1325\",\"height\":\"344\",\"status\":\"1\"}'),
 (38, 'Выбор покупателей', 'featured_product', '{\"name\":\"\\u0412\\u044b\\u0431\\u043e\\u0440 \\u043f\\u043e\\u043a\\u0443\\u043f\\u0430\\u0442\\u0435\\u043b\\u0435\\u0439\",\"limit\":\"5\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
 (39, 'Наши спецпредложения', 'featured', '{\"name\":\"\\u041d\\u0430\\u0448\\u0438 \\u0441\\u043f\\u0435\\u0446\\u043f\\u0440\\u0435\\u0434\\u043b\\u043e\\u0436\\u0435\\u043d\\u0438\\u044f\",\"product_name\":\"\",\"product\":[\"42\",\"47\",\"30\",\"28\"],\"limit\":\"5\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}');
 
@@ -3815,15 +3837,18 @@ INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
 ('0f15a2b7078761f5dadb0f8e9f', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"nqCMfiKw7IZSsznhdcdXamTs3LwTNA1h\"}', '2020-10-25 19:52:37'),
 ('120eba90f6169007a154f2d27b', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 04:49:12'),
 ('2cc512c292555df10b12e30f59', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"IPILEarjwxL63trRGGE28V58uBODYcx2\",\"path\":\"20\"}', '2020-10-28 18:25:55'),
+('5368e3b8ae282e35c7effc717f', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-11-02 05:29:14'),
 ('54f5d39da07e56eef65ad81e4e', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 05:07:40'),
 ('6a278bfcb91c184e78e7370d58', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-28 12:09:51'),
 ('6ff3b09d7097a2e7332e1274a1', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-27 13:13:40'),
 ('7b9a29d0cca38c05acec08f45c', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 04:48:25'),
-('974ebaf7ad3fae269c59a87606', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"A0pubBRY7dmfdbtu2dAwzO6XuOw3l8jx\"}', '2020-11-02 04:47:00'),
+('974ebaf7ad3fae269c59a87606', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"8NOkf8ns3PSx1Nje5kAzOPXisnEsTgsd\",\"path\":\"63\"}', '2020-11-05 11:45:20'),
+('9e748ee806396a02e999f573e3', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-11-04 05:44:15'),
 ('ae38323d6c8b6ea941a22c1621', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 05:07:21'),
 ('c831dca348c221e766f1ce2ad5', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 04:53:46'),
 ('d41a29641671228a1d57c99286', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-26 04:48:34'),
-('e536fd1d3c7732409ed351f597', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-29 13:19:08'),
+('e536fd1d3c7732409ed351f597', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-11-02 05:17:40'),
+('f70251fc796c15320af99a178a', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-11-02 05:29:34'),
 ('f9ea41416097026be65ee8fa8a', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2020-10-28 17:05:28');
 
 -- --------------------------------------------------------
@@ -9710,7 +9735,7 @@ ALTER TABLE `oc_banner`
 -- AUTO_INCREMENT для таблицы `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
-  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
+  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=174;
 
 --
 -- AUTO_INCREMENT для таблицы `oc_blog_category`
@@ -9728,7 +9753,7 @@ ALTER TABLE `oc_cart`
 -- AUTO_INCREMENT для таблицы `oc_category`
 --
 ALTER TABLE `oc_category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT для таблицы `oc_country`
