@@ -22,7 +22,7 @@
 }
 
 .swiper-container-no-flexbox .swiper-slide {
-    float: left
+    float: left;
 }
 
 .swiper-container-vertical>.swiper-wrapper {
@@ -197,12 +197,12 @@
 }
 
 .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
+    width: 6.4px;
+    height: 6px;
     display: inline-block;
-    border-radius: 100%;
-    background: #000;
-    opacity: .2
+    border-radius: 10px;
+    background: #fff;
+    opacity: 1;
 }
 
 button.swiper-pagination-bullet {
@@ -226,7 +226,9 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-bullet-active {
     opacity: 1;
-    background: #007aff
+    background-color: #fff;
+    width: 20.8px;
+    border-radius: 10px;
 }
 
 .swiper-pagination-white .swiper-pagination-bullet-active {
@@ -246,9 +248,57 @@ button.swiper-pagination-bullet {
     -ms-transform: translate3d(0, -50%, 0);
     transform: translate3d(0, -50%, 0)
 }
+.swiper-pagination-bullet{
+    transition: all .3s;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    width: 50px;
+    height: 59.03px;
+    background-color: #000;
+    opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+
+}
+.swiper-button-next{
+    right: 72.5px;
+}
+.swiper-button-prev{
+    left: 72.5px;
+}
+.swiper-button-next::before{
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 21.41px;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-image: url("/image/catalog/halkmarket/home-slider/next-arrow.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.swiper-button-prev:before{
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 21.41px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("/image/catalog/halkmarket/home-slider/prev-arrow.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 5px 0;
+    margin: 3px 0;
     display: block
 }
 
@@ -569,5 +619,20 @@ button.swiper-pagination-bullet {
 @keyframes swiper-preloader-spin {
     100% {
         transform: rotate(360deg)
+    }
+}
+
+@media (max-width: 600px){
+    .swiper-button-next{
+        right: 32.5px;
+    }
+    .swiper-button-prev{
+        left: 32.5px;
+    }
+}
+@media (max-width: 450px){
+    .swiper-button-next, .swiper-button-prev{
+        width: 40px;
+        height: 49.03px;
     }
 }

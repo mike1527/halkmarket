@@ -6,7 +6,7 @@
 $_['text_search']              = 'Поиск';
 $_['text_brand']               = 'Производитель';
 $_['text_manufacturer']        = 'Производитель:';
-$_['text_model']               = 'Код Товара:';
+$_['text_model']               = 'Артикуль:';
 $_['text_reward']              = 'Бонусные баллы:';
 $_['text_points']              = 'Цена в бонусных баллах:';
 $_['text_stock']               = 'Наличие:';
@@ -33,7 +33,11 @@ $_['text_week']                = 'Неделя';
 $_['text_semi_month']          = 'Полмесяца';
 $_['text_month']               = 'Месяц';
 $_['text_year']                = 'Год';
-$_['text_benefits']     = 'Преимущества:';
+$_['text_benefits']            = 'Преимущества:';
+$_['text_prise_for_one']       = 'цена за шт';
+$_['text_description']         = 'Описание';
+$_['text_specifications']         = 'Характеристики';
+
 
 // Entry
 $_['entry_qty']                = 'Кол-во';
@@ -44,9 +48,12 @@ $_['entry_good']               = 'Хорошо';
 $_['entry_bad']                = 'Плохо';
 
 // Tabs
-$_['tab_description']          = 'Описание';
-$_['tab_attribute']            = 'Характеристики';
-$_['tab_review']               = 'Отзывов (%s)';
+$_['tab_description']           = 'Описание';
+$_['tab_attribute']             = 'Характеристики';
+$_['tab_review']                = 'Отзывов (%s)';
+$_['tab_recommended']           = 'Рекомендуем';
+$_['tab_buy_with_this_product'] = 'С этим товаром покупают';
+$_['tab_similar_products']      = 'Похожие товары';
 
 // Error
 $_['error_name']               = 'Имя должно содержать от 3 до 25 символов!';

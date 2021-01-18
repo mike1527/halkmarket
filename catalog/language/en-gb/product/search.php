@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']     = 'Search';
+$_['heading_title']     = 'Product search';
 $_['heading_tag']       = 'Tag - ';
 
 // Text
@@ -8,7 +8,7 @@ $_['text_search']       = 'Products meeting the search criteria';
 $_['text_keyword']      = 'Keywords';
 $_['text_category']     = 'All Categories';
 $_['text_sub_category'] = 'Search in subcategories';
-$_['text_empty']        = 'There is no product that matches the search criteria.';
+$_['text_empty']        = 'Sorry, no results were found for your search';
 $_['text_quantity']     = 'Qty:';
 $_['text_manufacturer'] = 'Brand:';
 $_['text_model']        = 'Product Code:';
@@ -28,6 +28,7 @@ $_['text_rating_desc']  = 'Rating (Highest)';
 $_['text_model_asc']    = 'Model (A - Z)';
 $_['text_model_desc']   = 'Model (Z - A)';
 $_['text_limit']        = 'Show:';
+$_['text_home_link']     = 'Go to store';
 
 // Entry
 $_['entry_search']      = 'Search Criteria';

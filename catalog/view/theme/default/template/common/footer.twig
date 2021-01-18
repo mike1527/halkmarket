@@ -5,30 +5,31 @@
 
         <div class="footer__inner">
           <div class="footer__item footer__item-1">
-          <h5 class="footer__item-title">О Компании</h5>
-          <a class="footer__item-link" href="#">Вакансии в компании</a>
-          <a class="footer__item-link" href="{{ contact }}">{{ text_contact }}</a>
+          <h5 class="footer__item-title">{{ text_about }}</h5>
+          <a class="footer__item-link" href="index.php?route=information/ourstore">{{ text_our_history }}</a>
+          <a class="footer__item-link" href="#">{{ text_shops }}</a>
+          <a class="footer__item-link" href="#">{{ text_vacation }}</a>
+          <a class="footer__item-link" href="#">{{ text_partners }}</a>
+{#          <a class="footer__item-link" href="{{ contact }}">{{ text_contact }}</a>#}
         </div>
 
         <div class="footer__item footer__item-2">
-          <h5 class="footer__item-title">Покупателям</h5>
-          <a class="footer__item-link" href="#">Доставка и оплата</a>
-          <a class="footer__item-link" href="#">Как заказать</a>
-          <a class="footer__item-link" href="#">Вопросы и ответы</a>
+          <h5 class="footer__item-title">{{ text_buyer }}</h5>
+          <a class="footer__item-link" href="#">{{ text_shipping_and_payment }}</a>
+          <a class="footer__item-link" href="#">{{ text_questions_and_answers }}</a>
         </div>
-        </div>     
+        </div>
 
         <div class="footer__item footer__item-3">
           <div class="footer__item-link-box">
             <a class="footer__item-link social-link" href="#"><img src="/image/halkmarket/footer/footer-logo-1.png" alt=""></a>
             <a class="footer__item-link social-link" href="#"><img src="/image/halkmarket/footer/footer-logo-2.png" alt=""></a>
-          </div>          
+          </div>
           <p class="footer__item-text service-text">
-            Есть вопрос? Напишите нам письмо или воспользуйтесь формой <a class="footer__item-text-link" href="{{ contact }}">обратной связи</a>
+            {{ text_have_question }} <a class="footer__item-text-link" href="{{ contact }}">{{ text_feedback }}</a>
           </p>
         </div>
       </div>
-
     </div>
 
       <div class="footer__copy">
@@ -37,25 +38,11 @@
             © Copyright 2020. All rights reserved.
           </p>
         </div>
-      
+      </div>
 
-  </div>
 </footer>
-{% for script in scripts %}
-<script src="{{ script }}" type="text/javascript"></script>
 
-<!-- <script src="catalog/view/javascript/jquery/jquery-3.5.1.min.js"></script>
-<script src="catalog/view/javascript/main.js"></script>
-<script src="catalog/view/javascript/slick/slick.min.js"></script> -->
-<!-- <script>
-  $(document).ready(function(){
-    $('.catalog-btn').click(function(){
-        $('.catalog-btn__list').toggleClass('active')
-    })
-})
-</script> -->
 
-{% endfor %}
 </body>
 
 </html>

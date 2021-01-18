@@ -2,7 +2,11 @@
 class ControllerExtensionModuleSpecial extends Controller {
 	public function index($setting) {
 		$this->load->language('extension/module/special');
-
+		if(empty($setting)){
+			$setting['height'] = 100;
+			$setting['width'] = 100;
+			$setting['limit']= 10;
+		}
 		$this->load->model('catalog/product');
 
 		$this->load->model('tool/image');
@@ -63,6 +67,7 @@ class ControllerExtensionModuleSpecial extends Controller {
 				);
 			}
 
+			
 			return $this->load->view('extension/module/special', $data);
 		}
 	}

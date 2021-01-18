@@ -10,7 +10,7 @@ $_['decimal_point']         = '.';
 $_['thousand_point']        = ',';
 
 // Text
-$_['text_home']             = '<i class="fa fa-home"></i>';
+$_['text_home']             = 'Home';
 $_['text_yes']              = 'Yes';
 $_['text_no']               = 'No';
 $_['text_none']             = ' --- None --- ';
@@ -24,6 +24,7 @@ $_['text_no_results']       = 'No results!';
 $_['button_address_add']    = 'Add Address';
 $_['button_back']           = 'Back';
 $_['button_continue']       = 'Continue';
+$_['button_continue_empty_cart']       = 'Go to store';
 $_['button_cart']           = 'Add to Cart';
 $_['button_cancel']         = 'Cancel';
 $_['button_compare']        = 'Compare this Product';

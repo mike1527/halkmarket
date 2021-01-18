@@ -189,7 +189,7 @@
     height: 2em;
     line-height: 2em;
     vertical-align: middle;
-    margin-right: 5px;
+    /*margin-right: 5px;*/
 }
 
 
@@ -230,7 +230,32 @@
 }
 
 .fa-heart:before {
-    content: "\f004"
+    /*content: "\f004"*/
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 14px;
+    background-image: url("/image/halkmarket/category/heart.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.fa-heart__favorite-page:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 14px;
+    background-image: url("/image/halkmarket/category/heart-red.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
 }
 
 .fa-star:before {
@@ -238,8 +263,31 @@
 }
 
 .fa-star-o:before {
-    content: "\f006"
+    /*content: "\f006"*/
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-image: url("/image/halkmarket/cart/star.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 9px;
+    left: 0;
 }
+.fa-star-o-product{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url("/image/halkmarket/cart/star.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 9px;
+    left: 0;
+}
+
 
 .fa-user:before {
     content: "\f007"
@@ -386,7 +434,7 @@
 }
 
 .fa-book:before {
-    content: "\f02d"
+    /*content: "\f02d"*/
 }
 
 .fa-bookmark:before {
@@ -550,7 +598,18 @@
 }
 
 .fa-times-circle:before {
-    content: "\f057"
+    /*content: "\f057"*/
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 17px;
+    background-image: url("/image/halkmarket/cart/delete-btn.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
 }
 
 .fa-check-circle:before {
@@ -684,7 +743,33 @@
 }
 
 .fa-shopping-cart:before {
-    content: "\f07a"
+    /*content: "\f07a"*/
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 18px;
+    background-image: url("/image/halkmarket/cart/cart-green.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fa-shopping-cart-black:before {
+    /*content: "\f07a"*/
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url("/image/halkmarket/cart/cart-black.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s;
 }
 
 .fa-folder:before {
@@ -3043,4 +3128,11 @@
     margin: 0;
     overflow: visible;
     clip: auto
+}
+
+@media (max-width: 464px) {
+    .fa-star-o-product {
+        width: 15px;
+        height: 15px;
+    }
 }

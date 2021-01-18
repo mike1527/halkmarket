@@ -4,6 +4,7 @@
 
 // Heading
 $_['heading_title'] = 'Акции';
+$_['special_info_box_title'] = 'Наши спецпредложения';
 
 // Text
 $_['text_tax']      = 'Без НДС:';

@@ -1,17 +1,48 @@
-<div class="list-group">
-  {% for category in categories %}
-  {% if category.category_id == category_id %} 
-  <a href="{{ category.href }}" class="list-group-item active">{{ category.name }}</a> 
-  {% if category.children %}
-  {% for child in category.children %}
-  {% if child.category_id == child_id %}
-  <a href="{{ child.href }}" class="list-group-item active">&nbsp;&nbsp;&nbsp;- {{ child.name }}</a> 
-  {% else %} 
-  <a href="{{ child.href }}" class="list-group-item">&nbsp;&nbsp;&nbsp;- {{ child.name }}</a>
-  {% endif %}
-  {% endfor %}
-  {% endif %}
-  {% else %} <a href="{{ category.href }}" class="list-group-item">{{ category.name }}</a>
-  {% endif %}
-  {% endfor %}
+<link rel="stylesheet" href="catalog/view/javascript/scrollbar/simplebar.css">
+<script src="catalog/view/javascript/scrollbar/simplebar.min.js"></script>
+
+
+
+
+<div class="list-group cataccordion">
+  <div class="contentBx">
+    {% for category in categories %}
+    {% if category.category_id == category_id %}
+    <div class="aside__category-title-box">
+      <a href="{{ category.href }}" class="list-group-item-cat active aside__category-title">{{ category.name }}</a>
+    </div> 
+    </div>      
+    <div class="aside__category-box" id="myScroll">    
+      {% if category.children %}
+      {% for child in category.children %}
+      {% if child.category_id == child_id %}
+      <a href="{{ child.href }}" class="list-group-item-cat active">{{ child.name }}</a> 
+      {% else %} 
+      <a href="{{ child.href }}" class="list-group-item-cat">{{ child.name }}</a>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+    </div>  
+    {% endif %}
+    {% endfor %}
+  
+  
 </div>
+
+<script>
+  new SimpleBar(document.getElementById('myScroll'), {
+    autoHide: false,
+    scrollbarMinSize: 52
+  });
+</script>
+
+<script>
+  const cataccordion = document.getElementsByClassName('contentBx');
+   for(i = 0; i < cataccordion.length; i++){
+    cataccordion[i].addEventListener('click', function(){
+         this.classList.toggle('active')
+      })
+   }
+</script>
+
+

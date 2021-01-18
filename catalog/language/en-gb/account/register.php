@@ -10,13 +10,25 @@ $_['text_your_details']    = 'Your Personal Details';
 $_['text_newsletter']      = 'Newsletter';
 $_['text_your_password']   = 'Your Password';
 $_['text_agree']           = 'I have read and agree to the <a href="%s" class="agree"><b>%s</b></a>';
+$_['text_register_home_link']           = 'Home';
+$_['text_subscribe_news']  = 'Subscribe to the newsletter';
 
 // Entry
 $_['entry_customer_group'] = 'Customer Group';
 $_['entry_firstname']      = 'First Name';
+$_['entry_firstname_placeholder']      = 'Please enter your name';
 $_['entry_lastname']       = 'Last Name';
+$_['entry_lastname_placeholder']       = 'Please enter your last name';
 $_['entry_email']          = 'E-Mail';
-$_['entry_telephone']      = 'Telephone';
+$_['entry_email_placeholder']          = 'Enter your email';
+$_['entry_telephone']      = 'Tel (+993)';
+$_['entry_telephone_placeholder']      = 'Enter your phone number (+993)';
+$_['entry_address']        = 'Address';
+$_['entry_address_placeholder']        = 'Enter your address';
+$_['entry_city']           = 'City';
+$_['entry_city_placeholder']           = 'Enter your city';
+$_['entry_zone']           = 'Region/Oblast';
+$_['entry_zone_placeholder']           = 'Enter your region';
 $_['entry_newsletter']     = 'Subscribe';
 $_['entry_password']       = 'Password';
 $_['entry_confirm']        = 'Password Confirm';

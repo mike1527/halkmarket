@@ -3,7 +3,7 @@
 // *	@license	GNU General Public License version 3; see LICENSE.txt
 
 // Heading
-$_['heading_title']     = 'Поиск';
+$_['heading_title']     = 'Поиск товаров';
 $_['heading_tag']		= 'По тегу - ';
 
 // Text
@@ -11,7 +11,7 @@ $_['text_search']       = 'Товары, соответствующие крит
 $_['text_keyword']      = 'Ключевые слова';
 $_['text_category']     = 'Все категории';
 $_['text_sub_category'] = 'Поиск в подкатегориях';
-$_['text_empty']        = 'Нет товаров, которые соответствуют критериям поиска.';
+$_['text_empty']        = 'Извините по вашему запросу ничего не найдено';
 $_['text_quantity']     = 'Кол-во:';
 $_['text_manufacturer'] = 'Производитель:';
 $_['text_model']        = 'Код Товара:';
@@ -32,6 +32,7 @@ $_['text_model_asc']    = 'Код Товара (А - Я)';
 $_['text_model_desc']   = 'Код Товара (Я - А)';
 $_['text_limit']        = 'Показать:';
 $_['text_benefits']     = 'Преимущества:';
+$_['text_home_link']     = 'Перейти в магазин';
 
 // Entry
 $_['entry_search']      = 'Поиск';

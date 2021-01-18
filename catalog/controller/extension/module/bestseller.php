@@ -3,15 +3,20 @@ class ControllerExtensionModuleBestSeller extends Controller {
 	public function index($setting) {
 		$this->load->language('extension/module/bestseller');
 
+        if(empty($setting)){
+            $setting['height'] = 100;
+            $setting['width'] = 100;
+            $setting['limit']= 10;
+        }
 		$this->load->model('catalog/product');
 
 		$this->load->model('tool/image');
 
 		$data['products'] = array();
-
 		$results = $this->model_catalog_product->getBestSellerProducts($setting['limit']);
 
 		if ($results) {
+
 			foreach ($results as $result) {
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height']);

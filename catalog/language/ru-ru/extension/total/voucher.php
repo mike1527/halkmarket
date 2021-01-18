@@ -3,7 +3,7 @@
 // *	@license	GNU General Public License version 3; see LICENSE.txt
 
 // Heading
-$_['heading_title'] = 'Использовать подарочный сертификат';
+$_['heading_title'] = 'Корзина покупок';
 
 // Text
 $_['text_voucher']  = 'Подарочный сертификат (%s)';

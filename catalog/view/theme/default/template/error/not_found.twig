@@ -1,8 +1,18 @@
 {{ header }}
+
 <div id="error-not-found" class="container">
-  <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+{#  <ul class="breadcrumb">#}
+{#    {% for breadcrumb in breadcrumbs %}#}
+{#    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>#}
+{#    {% endfor %}#}
+{#  </ul>#}
+  <ul class="breadcrumb breadcrumb__list">
+    {% for key, breadcrumb in breadcrumbs %}
+      {% if key + 1 < breadcrumbs|length %}
+        <li class="breadcrumb__item breadcrumb__item-hover"><a class="breadcrumb__link" href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+      {% else %}
+        <li class="breadcrumb__item">{{ breadcrumb.text }}</li>
+      {% endif %}
     {% endfor %}
   </ul>
   <div class="row">{{ column_left }}
@@ -13,12 +23,22 @@
     {% else %}
     {% set class = 'col-sm-12' %}
     {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
-      <p>{{ text_error }}</p>
-      <div class="buttons clearfix">
-        <div class="pull-right"><a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a></div>
-      </div>
+    <div class="container">
+      <div id="content" class="{{ class }}">{{ content_top }}
+        <div class="cart__wrapper">
+{#          <h1 class="cart__title">{{ heading_title }}</h1>#}
+          <p class="cart__text-empty">{{ text_empty }}</p>
+          <p class="cart__text-home-link">{{ text_home_link }}</p>
+          <div class="cart__img-box">
+            <img src="/image/halkmarket/cart/cart-empty.png" alt="">
+          </div>
+          <div class="buttons clearfix">
+            <div class="pull-right cart__empty-box"><a href="{{ continue }}" class="btn btn-primary cart__empty-link">{{ button_continue_empty_cart }}</a></div>
+          </div>
+        </div>
+    </div>
+
+
       {{ content_bottom }}</div>
     {{ column_right }}</div>
 </div>

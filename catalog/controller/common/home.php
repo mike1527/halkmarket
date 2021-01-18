@@ -1,6 +1,8 @@
 <?php
 class ControllerCommonHome extends Controller {
 	public function index() {
+        $this->load->language('common/home');
+
 		$this->document->setTitle($this->config->get('config_meta_title'));
 		$this->document->setDescription($this->config->get('config_meta_description'));
 		$this->document->setKeywords($this->config->get('config_meta_keyword'));
@@ -20,7 +22,8 @@ class ControllerCommonHome extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 		$data['menu'] = $this->load->controller('common/menu');
-
+		$data['special'] = $this->load->controller('extension/module/special');
+        $data['bestseller'] = $this->load->controller('extension/module/bestseller');
 		$this->response->setOutput($this->load->view('common/home', $data));
 	}
 }

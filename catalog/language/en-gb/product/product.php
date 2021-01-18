@@ -30,6 +30,10 @@ $_['text_week']                = 'week';
 $_['text_semi_month']          = 'half-month';
 $_['text_month']               = 'month';
 $_['text_year']                = 'year';
+$_['text_prise_for_one']       = 'price for one';
+$_['text_description']         = 'Description';
+$_['text_specifications']         = 'Specifications';
+
 
 // Entry
 $_['entry_qty']                = 'Qty';
@@ -40,9 +44,12 @@ $_['entry_good']               = 'Good';
 $_['entry_bad']                = 'Bad';
 
 // Tabs
-$_['tab_description']          = 'Description';
-$_['tab_attribute']            = 'Specification';
-$_['tab_review']               = 'Reviews (%s)';
+$_['tab_description']           = 'Description';
+$_['tab_attribute']             = 'Specification';
+$_['tab_review']                = 'Reviews (%s)';
+$_['tab_recommended']           = 'Recommended';
+$_['tab_buy_with_this_product'] = 'Buy with this product';
+$_['tab_similar_products']      = 'Similar products';
 
 // Error
 $_['error_name']               = 'Warning: Review Name must be between 3 and 25 characters!';

@@ -3,11 +3,11 @@
 // *	@license	GNU General Public License version 3; see LICENSE.txt
 
 // Heading
-$_['heading_title'] 		 = 'Checkout';
+$_['heading_title'] 		 = 'Ordering';
 $_['heading_title_customer'] = 'Your Order #%s Has Been Placed!';
 
 // Text
-$_['text_cart']                      = 'Shopping Cart';
+$_['text_cart']                      = 'Cart';
 $_['text_checkout_option']           = 'Step %s: Checkout Options';
 $_['text_checkout_account']          = 'Step %s: Account &amp; Billing Details';
 $_['text_checkout_payment_address']  = 'Step %s: Billing Details';
@@ -24,14 +24,21 @@ $_['text_register']                  = 'Register Account';
 $_['text_guest']                     = 'Guest Checkout';
 $_['text_register_account']          = 'By creating an account you will be able to shop faster, be up to date on an order\'s status, and keep track of the orders you have previously made.';
 $_['text_forgotten']                 = 'Forgotten Password';
-$_['text_your_details']              = 'Your Personal Details';
-$_['text_your_address']              = 'Your Address';
+$_['text_your_details']              = 'Enter your contact details';
+$_['text_your_address']              = 'Select address';
 $_['text_your_password']             = 'Your Password';
 $_['text_agree']                     = 'I have read and agree to the <a href="%s" class="agree"><b>%s</b></a>';
 $_['text_address_new']               = 'I want to use a new address';
-$_['text_address_existing']          = 'I want to use an existing address';
+$_['text_address_existing']          = 'Use an existing address';
 $_['text_shipping_method']           = 'Please select the preferred shipping method to use on this order.';
-$_['text_payment_method']            = 'Please select the preferred payment method to use on this order.';
+$_['text_payment_method']            = 'Select a payment method for this order';
+$_['text_payment_method_cash']       = 'Cash payment';
+$_['text_payment_method_bank']       = 'Payment by credit card';
+$_['text_method_bank_rysgal']        = '“Rysgal” card';
+$_['text_method_bank_altynasyr']     = '“Altyn asyr” card';
+$_['text_method_bank_mastercard']    = '“Mastercard” card';
+$_['text_method_bank_milli']         = '“Milli” card';
+$_['text_method_bank_visa']          = '“Visa” card';
 $_['text_comments']                  = 'Add Comments About Your Order';
 $_['text_recurring_item']            = 'Recurring Item';
 $_['text_payment_recurring']         = 'Payment Profile';
@@ -43,6 +50,16 @@ $_['text_week']                      = 'week';
 $_['text_semi_month']                = 'half-month';
 $_['text_month']                     = 'month';
 $_['text_year']                      = 'year';
+$_['text_panel_title']               = 'Select a payment method for this order';
+$_['text_contact_data']              = 'Enter your contact details';
+$_['text_telephone']                = 'Call another phone number';
+$_['text_name']                     = 'Name';
+$_['text_order_title_name']         = 'Name of product';
+$_['text_order_title_articul']      = 'Article number';
+$_['text_order_title_quality']      = 'Qty';
+$_['text_order_title_price']        = 'Price per piece';
+$_['text_order_title_total']        = 'Total';
+$_['text_button_checkout']          = 'Checkout';
 
 // Column
 $_['column_name']                    = 'Product Name';
@@ -52,13 +69,16 @@ $_['column_price']                   = 'Unit Price';
 $_['column_total']                   = 'Total';
 
 // Entry
+$_['entry_firstname_placeholder']      = 'Please enter your name';
+$_['entry_tel_placeholder']          = 'Enter your phone number';
+$_['entry_message_placeholder']         = 'Add a comment';
+$_['entry_telephone']               = 'Tel (+993)';
 $_['entry_email_address']            = 'E-Mail Address';
 $_['entry_email']                    = 'E-Mail';
 $_['entry_password']                 = 'Password';
 $_['entry_confirm']                  = 'Password Confirm';
 $_['entry_firstname']                = 'First Name';
 $_['entry_lastname']                 = 'Last Name';
-$_['entry_telephone']                = 'Telephone';
 $_['entry_address']                  = 'Choose Address';
 $_['entry_company']                  = 'Company';
 $_['entry_customer_group']           = 'Customer Group';
@@ -69,7 +89,10 @@ $_['entry_city']                     = 'City';
 $_['entry_country']                  = 'Country';
 $_['entry_zone']                     = 'Region / State';
 $_['entry_newsletter']               = 'I wish to subscribe to the %s newsletter.';
-$_['entry_shipping']                 = 'My delivery and billing addresses are the same.';
+$_['entry_shipping']                 = 'My delivery and billing addresses are the same';
+$_['entry_new_address'] 	         = 'Enter a new address';
+$_['entry_new_tel'] 	             = 'Enter new phone number';
+
 
 // Error
 $_['error_warning']                  = 'There was a problem while trying to process your order! If the problem persists please try selecting a different payment method or you can contact the store owner by <a href="%s">clicking here</a>.';

@@ -1,0 +1,38 @@
+{{ header }}
+
+<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<div id="information-contact" class="container">
+  <ul class="breadcrumb breadcrumb__list">
+    {% for key, breadcrumb in breadcrumbs %}
+      {% if key + 1 < breadcrumbs|length %}
+        <li class="breadcrumb__item breadcrumb__item-hover"><a class="breadcrumb__link" href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+      {% else %}
+        <li class="breadcrumb__item">{{ text_title }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+   <h1 class="ourstore__title">{{ text_title }}</h1>
+
+    <div class="ourstore__box">
+        <div class="ourstore__content-title">
+            <h3 class="ourstore__content-title-text">{{ text_content_title }}</h3>
+        </div>
+        <div class="ourstore__img-box">
+            <img src="/image/halkmarket/information/ourstore-img.png" alt="">
+        </div>
+    </div>
+
+    <div class="ourstore__content-box">
+        <p class="ourstore__content-text">
+            {{ text_content_up }}
+        </p>
+        <p class="ourstore__content-text">
+            {{ text_content_down }}
+        </p>
+    </div>
+
+</div>
+{{ footer }}

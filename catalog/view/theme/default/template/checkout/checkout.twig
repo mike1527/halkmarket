@@ -1,91 +1,435 @@
 {{ header }}
-<div id="checkout-checkout" class="container">
-  <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-    {% endfor %}
-  </ul>
-  {% if error_warning %}
-  <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-  </div>
-  {% endif %}
-  <div class="row">{{ column_left }}
-    {% if column_left and column_right %}
-    {% set class = 'col-sm-6' %}
-    {% elseif column_left or column_right %}
-    {% set class = 'col-sm-9' %}
-    {% else %}
-    {% set class = 'col-sm-12' %}
-    {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">{{ text_checkout_option }}</h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-checkout-option">
-            <div class="panel-body"></div>
-          </div>
+
+<div class="container__page">
+    <ul class="breadcrumb breadcrumb__list">
+        {% for key, breadcrumb in breadcrumbs %}
+            {% if key + 1 < breadcrumbs|length %}
+                <li class="breadcrumb__item breadcrumb__item-hover"><a class="breadcrumb__link" href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+            {% else %}
+                <li class="breadcrumb__item">{{ breadcrumb.text }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <div class="checkout__wrapper">
+        <div class="checkout__info-inner">
+            <div class="checkout__info-left">
+                <h3 class="checkout__info-title">{{ text_your_details }}</h3>
+                <div class="chekout__info-left-box">
+                    <div class="checkout__info-name">
+                        <div class="form-group required form__group-item">
+                            <label class="control-label register__label-name checkout__info-name" for="input-firstname">{{ text_name }}</label>
+                            <input type="name" name="name" value="{{ firstname }}" placeholder="{{ entry_firstname_placeholder }}" id="input-firstname" class="form-control form-control__register" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="account__svg name-checkout__svg">
+                                <use xlink:href="/img/icon/sprite.svg#AccountUser"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="checkout__info-tel">
+                        <div class="form-group required form__group-item">
+                            <label class="control-label register__label-name" for="input-email">{{ entry_telephone }}</label>
+                            <div class="register__input">
+                                <input data-rules="tel" type="tel" name="phone" value="{{ telephone }}" placeholder="{{ entry_tel_placeholder }}" id="input-tel" class="form-control form-control__register form-control__tel-exist" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="account__svg telephone__svg">
+                                    <use xlink:href="/img/icon/sprite.svg#TelephoneRegister"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="checkout__info-checkbox">
+                            <div class="register__btn-box">
+                                <label class="label__keep register__label-keep">
+                                    <input id="inputTelNew" class="input__keep login__input-keep" type="checkbox" name="agree" value="1">
+                                    <span class="login-input__keep-style"></span>
+                                </label>
+                                <p class="checkout__text">{{ text_telephone }}</p>
+                            </div>
+                        </div>
+                        <div id="telNew" class="form-group required form__group-item form__group-checkout">
+                            <div class="register__input">
+                                <input data-rules="tel" type="tel" name="phone" value="{{ telephone }}" placeholder="{{ entry_new_tel }}" id="input-telnew" class="form-control form-control__register" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="account__svg telephone__svg">
+                                    <use xlink:href="/img/icon/sprite.svg#TelephoneRegister"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout__info-right">
+                <div class="checkout__info-address">
+                    <div class="checkout__info-address-exist">
+                        <h3 class="checkout__info-title">{{ text_your_address }}</h3>
+
+                        <div class="checkout__info-address-box">
+                            <div class="">
+                                <div class="register__btn-box checkout__btn-box">
+                                    <label class="label__keep register__label-keep">
+                                        <input id="inputAddressExisting" class="input__keep login__input-keep" type="radio" name="agree" value="1">
+                                        <span class="login-input__keep-style"></span>
+                                    </label>
+                                    <p class="checkout__existing-text">{{ text_address_existing }}</p>
+                                </div>
+
+                                <div id="addressExistingFirst" class="form-group required form__group-item">
+                                    <div class="register__input">
+                                        <input type="text" name="text" value="{{ address }}" placeholder="" id="input-address" class="form-control form-control__register form-control__checkout input__address-form" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="account__svg address__svg">
+                                            <use xlink:href="/img/icon/sprite.svg#AddressRegister"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <div class="register__btn-box checkout__btn-box">
+                                    <label class="label__keep register__label-keep">
+                                        <input id="inputAddressnew" class="input__keep login__input-keep" type="radio" name="agree" value="1">
+                                        <span class="login-input__keep-style"></span>
+                                    </label>
+                                    <p class="checkout__existing-text">{{ text_address_new }}</p>
+                                </div>
+
+                                <div id="addressNew" class="form-group required form__group-item form__group-checkout">
+                                    <div class="register__input">
+                                        <input type="text" name="text" value="{{ addressnew }}" placeholder="{{ entry_new_address }}" class="form-control form-control__register form-control__checkout"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="account__svg address__svg">
+                                            <use xlink:href="/img/icon/sprite.svg#AddressRegister"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="checkout__info-payment">
+                    <h3 class="checkout__info-title">{{ text_payment_method }}</h3>
+
+                    <div class="register__btn-box checkout__btn-box checkout__btn-box-inner">
+                        <label class="label__keep register__label-keep">
+                            <input id="paymentMetodCash"class="input__keep login__input-keep" type="radio" name="agree" value="1">
+                            <span class="login-input__keep-style"></span>
+                        </label>
+                        <p class="checkout__existing-text">{{ text_payment_method_cash }}</p>
+                    </div>
+
+                    <div class="register__btn-box checkout__btn-box">
+                        <label class="label__keep register__label-keep">
+                            <input id="paymentMetodCheck" class="input__keep login__input-keep" type="radio" name="agree" value="1">
+                            <span class="login-input__keep-style"></span>
+                        </label>
+                        <p class="checkout__existing-text">{{ text_payment_method_bank }}</p>
+                    </div>
+
+                    <div id="paymentCartBox" class="checkout__bank-cart">
+                        <div class="checkout__bank-cart-inner">
+                            <div class="checkout__bank-cart-item">
+                                <label class="label__keep checkout__label-keep">
+                                    <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
+                                    <span class="cart-input__keep-style"></span>
+                                    {{ text_method_bank_rysgal }}
+                                </label>
+                                <div class="checkout__bank-cart-img checkout__bank-cart-rysgal"></div>
+                            </div>
+                            <div class="checkout__bank-cart-item">
+                                <label class="label__keep checkout__label-keep">
+                                    <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
+                                    <span class="cart-input__keep-style"></span>
+                                    {{ text_method_bank_altynasyr }}
+                                </label>
+                                <div class="checkout__bank-cart-img checkout__bank-cart-altynasyr"></div>
+                            </div>
+                            <div class="checkout__bank-cart-item">
+                                <label class="label__keep checkout__label-keep">
+                                    <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
+                                    <span class="cart-input__keep-style"></span>
+                                    {{ text_method_bank_mastercard }}
+                                </label>
+                                <div class="checkout__bank-cart-img checkout__bank-cart-mastercard"></div>
+                            </div>
+                            <div class="checkout__bank-cart-item">
+                                <label class="label__keep checkout__label-keep">
+                                    <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
+                                    <span class="cart-input__keep-style"></span>
+                                    {{ text_method_bank_milli }}
+                                </label>
+                                <div class="checkout__bank-cart-img checkout__bank-cart-milli"></div>
+                            </div>
+                            <div class="checkout__bank-cart-item">
+                                <label class="label__keep checkout__label-keep">
+                                    <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
+                                    <span class="cart-input__keep-style"></span>
+                                    {{ text_method_bank_visa }}
+                                </label>
+                                <div class="checkout__bank-cart-img checkout__bank-cart-visa"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="checkout__info-comment">
+                    <p><strong>{{ text_comments }}</strong></p>
+                    <div>
+                        <textarea id="textmessage" name="comment" rows="1" class="checkout__message" placeholder="{{ entry_message_placeholder }}">{{ comment }}</textarea>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="message-textarea__svg">
+                            <use xlink:href="/img/icon/sprite.svg#MessageTextarea"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="checkout__order-list">
+        <table>
+            <tr class="checkout__order-string">
+                <td class="checkout__order-product-title">{{ text_order_title_name }}</td>
+                <td>{{ text_order_title_articul }}</td>
+                <td>{{ text_order_title_quality }}</td>
+                <td>{{ text_order_title_price }}</td>
+                <td>{{ text_order_title_total }}</td>
+            </tr>
+            <tr class="checkout__order-string checkout__order-string-bottom">
+                <td class="checkout__order-product-name">Хлеб Черемушки Бородинский 390 г в нарезке</td>
+                <td>HK123</td>
+                <td>1</td>
+                <td>12 ТМТ</td>
+                <td>12 ТМТ</td>
+            </tr>
+            <tr class="checkout__order-string checkout__order-string-bottom checkout__order-string-total">
+                <td colspan="5" class="checkout__order-string-total-line">{{ text_order_title_total }}: </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="checkout__bottom-content">
+        <div class="checkout__bottom-img">
+            <img src="/image/halkmarket/checkout/checkout-img.png" alt="">
         </div>
-        {% if not logged and account != 'guest' %}
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">{{ text_checkout_account }}</h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-payment-address">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        {% else %}
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">{{ text_checkout_payment_address }}</h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-payment-address">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        {% endif %}
-        {% if shipping_required %}
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">{{ text_checkout_shipping_address }}</h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-shipping-address">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">{{ text_checkout_shipping_method }}</h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-shipping-method">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        {% endif %}
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">{{ text_checkout_payment_method }}</h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-payment-method">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">{{ text_checkout_confirm }}</h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-checkout-confirm">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-      </div>
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
+        <div class="cart-full__order-wrapper checkout-full__order-wrapper">
+                <div class="cart-full__order-products">
+                    <div class="cart-full__order-products-text checkout__text-style"><span>5</span> товаров</div>
+                    <div class="cart-full__order-products-sum checkout__text-style"><span>151</span> ТМТ</div>
+                </div>
+                <div class="cart-full__order-delivery">
+                    <span class="cart-full__order-delivery-text checkout__text-style">Доставка</span>
+                    <div class="cart-full__order-delivery-sum checkout__text-style"><span>10</span> ТМТ</div>
+                </div>
+                <div class="cart-full__order-orderprise">
+                    <span class="cart-full__order-orderprise-text checkout__text-style">Сумма заказа</span>
+                    <div class="cart-full__order-orderprise-sum checkout__text-style"><span>161</span> ТМТ</div>
+                </div>
+                <div class="cart-full__order-link-box">
+                    <a class="cart-full__order-link" href="{{ checkout }}" class="btn btn-primary">{{ text_button_checkout }}</a>
+                </div>
+            </div>
+    </div>
+
 </div>
+</div>
+    {{ footer }}
+
+{#<div id="checkout-checkout" class="container">#}
+{#  <ul class="breadcrumb">#}
+{#    {% for breadcrumb in breadcrumbs %}#}
+{#    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>#}
+{#    {% endfor %}#}
+{#  </ul>#}
+{#  {% if error_warning %}#}
+{#  <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}#}
+{#    <button type="button" class="close" data-dismiss="alert">&times;</button>#}
+{#  </div>#}
+{#  {% endif %}#}
+{#  <div class="row">{{ column_left }}#}
+{#    {% if column_left and column_right %}#}
+{#    {% set class = 'col-sm-6' %}#}
+{#    {% elseif column_left or column_right %}#}
+{#    {% set class = 'col-sm-9' %}#}
+{#    {% else %}#}
+{#    {% set class = 'col-sm-12' %}#}
+{#    {% endif %}#}
+{#    <div id="content" class="{{ class }}">{{ content_top }}#}
+{#      <h1>{{ heading_title }}</h1>#}
+{#      <div class="panel-group" id="accordion">#}
+{#        <div class="panel panel-default">#}
+{#          <div class="panel-heading">#}
+{#            <h4 class="panel-title">{{ text_checkout_option }}</h4>#}
+{#          </div>#}
+{#          <div class="panel-collapse collapse" id="collapse-checkout-option">#}
+{#            <div class="panel-body"></div>#}
+{#          </div>#}
+{#        </div>#}
+{#        {% if not logged and account != 'guest' %}#}
+{#        <div class="panel panel-default">#}
+{#          <div class="panel-heading">#}
+{#            <h4 class="panel-title">{{ text_checkout_account }}</h4>#}
+{#          </div>#}
+{#          <div class="panel-collapse collapse" id="collapse-payment-address">#}
+{#            <div class="panel-body"></div>#}
+{#          </div>#}
+{#        </div>#}
+{#        {% else %}#}
+{#        <div class="panel panel-default">#}
+{#          <div class="panel-heading">#}
+{#            <h4 class="panel-title">{{ text_checkout_payment_address }}</h4>#}
+{#          </div>#}
+{#          <div class="panel-collapse collapse" id="collapse-payment-address">#}
+{#            <div class="panel-body"></div>#}
+{#          </div>#}
+{#        </div>#}
+{#        {% endif %}#}
+{#        {% if shipping_required %}#}
+{#        <div class="panel panel-default">#}
+{#          <div class="panel-heading">#}
+{#            <h4 class="panel-title">{{ text_checkout_shipping_address }}</h4>#}
+{#          </div>#}
+{#          <div class="panel-collapse collapse" id="collapse-shipping-address">#}
+{#            <div class="panel-body"></div>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="panel panel-default">#}
+{#          <div class="panel-heading">#}
+{#            <h4 class="panel-title">{{ text_checkout_shipping_method }}</h4>#}
+{#          </div>#}
+{#          <div class="panel-collapse collapse" id="collapse-shipping-method">#}
+{#            <div class="panel-body"></div>#}
+{#          </div>#}
+{#        </div>#}
+{#        {% endif %}#}
+{#        <div class="panel panel-default">#}
+{#          <div class="panel-heading">#}
+{#            <h4 class="panel-title">{{ text_checkout_payment_method }}</h4>#}
+{#          </div>#}
+{#          <div class="panel-collapse collapse" id="collapse-payment-method">#}
+{#            <div class="panel-body"></div>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="panel panel-default">#}
+{#          <div class="panel-heading">#}
+{#            <h4 class="panel-title">{{ text_checkout_confirm }}</h4>#}
+{#          </div>#}
+{#          <div class="panel-collapse collapse" id="collapse-checkout-confirm">#}
+{#            <div class="panel-body"></div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#      {{ content_bottom }}</div>#}
+{#    {{ column_right }}</div>#}
+{#</div>#}
+
+{#----------------start validation for input tel----------------#}
+<script>
+    let telInputs = document.querySelectorAll('input[data-rules]');
+    for (let input of telInputs) {
+        input.addEventListener ('blur',  function() {
+            let rules = this.dataset.rules;
+            let value = this.value;
+            let check;
+            switch (rules) {
+                case 'tel':
+                    check =  /^(?:\(\d{3}\)|\d{3})(?: *- *)?\d{3}(?: *- *)?\d{4}$/.test(value);
+                    break;
+            }
+            if (check) {
+                this.classList.remove('invalid');
+                this.classList.add('valid');
+
+            } else {
+                this.classList.remove('valid');
+                this.classList.add('invalid');
+            }
+        })}
+</script>
+{#----------------end validation for input tel----------------#}
+
+{#----------------start add class/atribute disabled for input tel----------------#}
+<script>
+    document.getElementById('inputTelNew').onclick = function () {
+        document.getElementById('telNew').classList.toggle('tel-new-show');
+        const telExist = document.querySelector('.form-control__tel-exist')
+        telExist.toggleAttribute('disabled');
+    }
+</script>
+{#----------------end add class/atribute disabled for input tel----------------#}
+
+{#----------------start autoresize textarea----------------#}
+<script>
+    const tx = document.getElementsByTagName('textarea');
+    for (let i = 0; i < tx.length; i++) {
+        tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;');
+        tx[i].addEventListener("input", OnInput, false);
+    }
+
+    function OnInput() {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight) + 'px';
+    }
+</script>
+{#----------------end autoresize textarea----------------#}
+
+{#----------------start add atribute disabled for input----------------#}
+<script>
+
+
+</script>
+{#----------------end add atribute disabled for input----------------#}
+{#----------------start add checked payment adress/method----------------#}
+<script>
+    document.getElementById('inputAddressExisting').checked = true;
+    document.getElementById('paymentMetodCash').checked = true;
+</script>
+
+{#----------------end add checked payment adress/method----------------#}
+
+{#----------------start add class / add atribute address new----------------#}
+<script>
+    document.getElementById('inputAddressnew').onclick = function() {
+        document.getElementById('addressNew').classList.add('address_new_open');
+        const inputAddressCheckout = document.querySelector('.input__address-form');
+        inputAddressCheckout.setAttribute('disabled', 'disabled');
+        // document.getElementById('addressExistingFirst').classList.add('address_existing_close');
+    }
+</script>
+{#----------------end add class / add atribute address new----------------#}
+
+{#----------------start remove class address new----------------#}
+<script>
+    document.getElementById('inputAddressExisting').onclick = function() {
+        document.getElementById('addressNew').classList.remove('address_new_open');
+        const inputAddressExistingCheckout = document.querySelector('.input__address-form');
+        inputAddressExistingCheckout.removeAttribute('disabled', 'disabled');
+        // document.getElementById('addressExistingFirst').classList.remove('address_existing_close');
+    }
+</script>
+{#----------------end remove class address new----------------#}
+
+{#----------------start add/remove class payment cash metod----------------#}
+<script>
+    document.getElementById('paymentMetodCheck').onclick = function() {
+        document.getElementById('paymentCartBox').classList.toggle('payment_cart_open');
+    }
+</script>
+{#----------------end remove class address new----------------#}
+<script>
+    document.getElementById('paymentMetodCash').onclick = function() {
+        document.getElementById('paymentCartBox').classList.remove('payment_cart_open');
+    }
+</script>
+{#----------------start remove class address new----------------#}
+{#----------------end remove class payment cash metod----------------#}
+<script>
+    document.getElementById('paymentMetodCash').onclick = function() {
+        document.getElementById('paymentCartBox').classList.remove('payment_cart_open');
+    }
+</script>
+{#----------------start remove class payment cart metod----------------#}
+<script>
+    document.getElementById('paymentMetodCheck').onclick = function() {
+        document.getElementById('paymentCartBox').classList.add('payment_cart_open');
+    }
+</script>
+{#----------------end add/remove class payment cart metod----------------#}
 <script type="text/javascript"><!--
 $(document).on('change', 'input[name=\'account\']', function() {
 	if ($('#collapse-payment-address').parent().find('.panel-heading .panel-title > *').is('a')) {
@@ -430,7 +774,7 @@ $(document).delegate('#button-payment-address', 'click', function() {
 						error: function(xhr, ajaxOptions, thrownError) {
 							alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
 						}
-					});				
+					});
 				});
                 {% endif %}
             }
@@ -492,7 +836,7 @@ $(document).delegate('#button-shipping-address', 'click', function() {
 
 						$('#collapse-payment-method').parent().find('.panel-heading .panel-title').html('{{ text_checkout_payment_method }}');
 						$('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('{{ text_checkout_confirm }}');
-						
+
                         $.ajax({
                             url: 'index.php?route=checkout/shipping_address',
                             dataType: 'html',
@@ -781,7 +1125,7 @@ $(document).delegate('#button-payment-method', 'click', function() {
                 location = json['redirect'];
             } else if (json['error']) {
                 $('#button-payment-method').button('reset');
-                
+
                 if (json['error']['warning']) {
                     $('#collapse-payment-method .panel-body').prepend('<div class="alert alert-danger alert-dismissible">' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
                 }
@@ -811,4 +1155,5 @@ $(document).delegate('#button-payment-method', 'click', function() {
     });
 });
 //--></script>
-{{ footer }}
+
+

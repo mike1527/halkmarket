@@ -18,3 +18,17 @@ $_['text_order']        = 'Order History';
 $_['text_wishlist']     = 'Wish List';
 $_['text_newsletter']   = 'Newsletter';
 $_['text_powered']      = 'Powered By <a href="https://ocstore.com/">ocStore</a><br /> %s &copy; %s';
+
+$_['text_about']        = 'About company';
+$_['text_our_history']     = 'Our story';
+$_['text_shops']      = 'The shops';
+$_['text_vacation']      = 'Vacancies in the company';
+$_['text_partners']      = 'Our partners';
+$_['text_contact']      = 'Contact us';
+$_['text_buyer']      = 'Buyers';
+$_['text_shipping_and_payment']      = 'Shipping and payment';
+$_['text_how_to_order']      = 'How to order';
+$_['text_questions_and_answers']      = 'Questions and answers';
+
+$_['text_have_question']      = 'Have a question? Write us a letter or use the form';
+$_['text_feedback']      = 'feedback';

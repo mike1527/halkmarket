@@ -4,14 +4,15 @@
             {% if categories %}
             <nav id="menu" class="navbar">
                 <div class="container">
-                    <h4 class="category__title">Категории</h4>
+{#                    <h4 class="category__title">Категории</h4>#}
                     <div class="navbar-header"><span id="category" class="visible-xs navbar-header-span">{{ text_category }}</span>
                         <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
                     </div>
                     <div class="collapse navbar-collapse navbar-ex1-collapse collapse__list-items bottom-catalog__list">
                         <ul class="nav navbar-nav list__category catalog__category">
-                            {% for category in categories %} {% if category.children %}
-                            <li class="dropdown list__item catalog__item">
+                            {% for category in categories %} 
+                            {% if category.children %}
+                            <li class="list__item catalog__item">
                                 <a href="{{ category.href }}" class="dropdown-toggle list__item-link" data-toggle="dropdown">
                                     <h4 class="list__item-link-title">{{ category.name }}</h4>
                                 </a>
@@ -19,10 +20,13 @@
                             {% else %}
                             <li class="list__item">
                                 <a class="list__item-link" href="{{ category.href }} ">
+                                    <span></span>
+                                    <span></span>
                                     <h4 class="list__item-link-title">{{ category.name }}</h4>
                                 </a>
                             </li>
-                            {% endif %} {% endfor %}
+                            {% endif %} 
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>

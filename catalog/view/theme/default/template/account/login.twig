@@ -12,15 +12,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ title }}</title>
     {% if robots %}
-    <meta name="robots" content="{{ robots }}" /> {% endif %}
+        <meta name="robots" content="{{ robots }}" /> {% endif %}
     <base href="{{ base }}" /> {% if description %}
-    <meta name="description" content="{{ description }}" /> {% endif %} {% if keywords %}
-    <meta name="keywords" content="{{ keywords }}" /> {% endif %}
+        <meta name="description" content="{{ description }}" /> {% endif %} {% if keywords %}
+        <meta name="keywords" content="{{ keywords }}" /> {% endif %}
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ og_url }}" /> {% if og_image %}
-    <meta property="og:image" content="{{ og_image }}" /> {% else %}
-    <meta property="og:image" content="{{ logo }}" /> {% endif %}
+        <meta property="og:image" content="{{ og_image }}" /> {% else %}
+        <meta property="og:image" content="{{ logo }}" /> {% endif %}
     <meta property="og:site_name" content="{{ name }}" />
     <script src="catalog/view/javascript/jquery/jquery-3.5.1.min.js" type="text/javascript"></script>
     <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
@@ -29,141 +29,148 @@
     <link href="catalog/view/theme/default/stylesheet/global.css" rel="stylesheet">
     <link href="catalog/view/javascript/slick/slick.css" rel="stylesheet">
     <script src="catalog/view/javascript/slick/slick.min.js"></script>
-    <!-- <link rel="stylesheet" href="catalog/view/javascript/jquery/swiper/css/swiper.min.css">
-    <script src="catalog/view/javascript/jquery/swiper/js/swiper.min.js"></script> -->
-    <!-- <link href="catalog/view/javascript/swiper/swiper-bundle.css" rel="stylesheet">
-    <link href="catalog/view/javascript/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <script src="catalog/view/javascript/swiper/swiper-bundle.js"></script>
-    <script src="catalog/view/javascript/swiper/swiper-bundle.min.js"></script> -->    
-    <!-- <link href="catalog/view/theme/default/stylesheet/fonts.css" rel="stylesheet"> -->
-    <link href="catalog/view/theme/default/stylesheet/header.css" rel="stylesheet">
-    <link href="catalog/view/theme/default/stylesheet/account.css" rel="stylesheet">
-    <link href="catalog/view/theme/default/stylesheet/home.css" rel="stylesheet">
-    <link href="catalog/view/theme/default/stylesheet/footer.css" rel="stylesheet"> {% for style in styles %}
-    <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" /> {% endfor %} {% for script in scripts %}
-    <script src="{{ script }}" type="text/javascript"></script>
-    {% endfor %}
+    <link href="catalog/view/theme/default/stylesheet/fonts.css" rel="stylesheet">
     <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
-    {% for link in links %}
-    <link href="{{ link.href }}" rel="{{ link.rel }}" /> {% endfor %} {% for analytic in analytics %} {{ analytic }} {% endfor %}
+
 </head>
 
 
 <section class="login">
 
-  <div class="login__wrapper">
+    <div class="login__wrapper">
 
-      <div class="login__content">
-        <nav class="login__menu">
-          <div class="login__menu-img">
-            <a class="login__menu-img-link" href="/index.php?route=common/home">
-              <img src="/image/halkmarket/login/logo-login.png" alt="">
-            </a>
-          </div>
-          <div class="login__menu-link">
-            <a class="login__menu-link-item" href="/index.php?route=common/home">Главная</a>
-          </div>
-        </nav>
-        <div class="login__content-box">
+        <div class="login__content">
+            <nav class="login__menu">
+                <div class="login__menu-img">
+                    <a class="login__menu-img-link" href="/index.php?route=common/home">
+                        <img src="/image/halkmarket/login/logo-login.png" alt="">
+                    </a>
+                </div>
+                <div class="login__menu-box">
+                    <div class="login__menu-lang">
+                        {{ language }}
+                    </div>
+                    <div class="login__menu-link">
+                        <a class="login__menu-link-item" href="/index.php?route=common/home">{{ text_link_home }}</a>
+                    </div>
 
-            <div class="login__content-inner">
+                </div>
+            </nav>
+            <div class="login__content-box">
 
-            <h4 class="login__form-title">Войти</h4>
-            <form action="{{ action }}" method="post" enctype="multipart/form-data">
-              <div class="form-group form-group__email">
-                <label class="control-label" for="input-email">E-Mail</label>
-                <input type="text" name="email" value="{{ email }}" placeholder="{{ entry_email }}" id="input-email" class="form-control form-control__login form-control__email" />
-              </div>
-              <div class="form-group form-group__pass">
-                <label class="control-label" for="input-password">{{ entry_password }}</label>
-                <input type="password" name="password" value="{{ password }}" placeholder="Введите пароль" id="input-password" class="form-control form-control__login form-control__pass" />
-                <label>
-                <input class="input__show-pas" onclick="showPass()" type="checkbox">
-                <span class="input__show-pas-btn"></span>
-                </label>
-                 <!-- <a class="login__form-forgot-pass-link" href="{{ forgotten }}">{{ text_forgotten }}</a> -->
-              </div>
-              <div class="login__form-btn-box">
-                <a class="btn btn-primary login__btn login__register-btn" href="http://halkmarket-first/index.php?route=account/register" >Регистрация</a>
-                <input class="btn btn-primary login__btn login__entry-btn" type="submit" value="{{ button_login }}"/>                
-              </div>
-              <div class="login__form-forgot-box">              
-              <label class="label__keep">
-                <input class="input__keep" type="checkbox">
-                <span class="input__keep-style"></span>Запомните меня
-              </label>
-                <a class="login__form-forgot-link login__form-forgot-item" href="http://halkmarket-first/index.php?route=account/forgotten">Забыли пароль?</a>                 
-              </div>
-                             
-              {% if redirect %}
-              <input type="hidden" name="redirect" value="{{ redirect }}" />
-              {% endif %}
-            </form>
+                <div class="login__content-inner">
+
+                    <h4 class="login__form-title">{{ text_come_in_title }}</h4>
+                    <form action="{{ action }}" method="post" enctype="multipart/form-data">
+                        <div class="form-group form-group__tel">
+                            <label class="control-label" for="input-email">{{ text_come_in_text }}</label>
+                            <input type="text" name="email" value="{{ email }}" placeholder="{{ entry_telephone }}" id="input-email" class="form-control form-control__login form-control__tel" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="account__svg telephone__svg-login">
+                                <use xlink:href="/img/icon/sprite.svg#TelephoneRegister"></use>
+                            </svg>
+                        </div>
+{#                        <div class="form-group form-group__email">#}
+{#                            <label class="control-label" for="input-email">E-Mail</label>#}
+{#                            <input type="text" name="email" value="{{ email }}" placeholder="{{ entry_email }}" id="input-email" class="form-control form-control__login form-control__email" />#}
+{#                        </div>#}
+                        <div class="form-group form-group__pass">
+                            <label class="control-label" for="input-password">{{ entry_password }}</label>
+                            <input type="password" name="password" value="{{ password }}" placeholder="{{ entry_pass_input }}" id="input-password" class="form-control form-control__login form-control__pass" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="account__svg password__svg-login">
+                                <use xlink:href="/img/icon/sprite.svg#PasswordKey"></use>
+                            </svg>
+                            <label>
+                                <input class="input__show-pas" onclick="showPass()" type="checkbox">
+                                <span class="input__show-pas-btn"></span>
+                            </label>
+                            <!-- <a class="login__form-forgot-pass-link" href="{{ forgotten }}">{{ text_forgotten }}</a> -->
+                        </div>
+                        <div class="login__form-btn-box">
+                            <a class="btn btn-primary login__btn login__register-btn" href="http://halkmarket/index.php?route=account/register" >{{ text_register }}</a>
+                            <input class="btn btn-primary login__btn login__entry-btn" type="submit" value="{{ text_come_in_title_btn }}"/>
+                        </div>
+                        <div class="login__form-forgot-box">
+                            <label class="label__keep">
+                                <input class="input__keep login__input-keep" type="checkbox">
+                                <span class="login-input__keep-style"></span>{{ text_remember }}
+                            </label>
+                            <a class="login__form-forgot-link login__form-forgot-item" href="http://halkmarket/index.php?route=account/forgotten">{{ text_forget_pass }}</a>
+                        </div>
+
+                        {% if redirect %}
+                            <input type="hidden" name="redirect" value="{{ redirect }}" />
+                        {% endif %}
+                    </form>
+
+                </div>
 
             </div>
 
         </div>
-        
-      </div>
-    
-      <!-- <div class="swiper-container"> -->
+
+        <!-- <div class="swiper-container"> -->
         <div class="login__slider">
 
             <div class="login__slider-item">
-              <a class="login__slider-item-link" href="#">
-                <div class="login__slider-item-img" style="background-image: url('/image/halkmarket/login/1.jpg');"></div>
-              </a>
+                <a class="login__slider-item-link" href="#">
+                    <div class="login__slider-item-img" style="background-image: url('/image/halkmarket/login/login-slider-1.jpg');"></div>
+                </a>
             </div>
 
             <div class="login__slider-item">
-              <a class="login__slider-item-link" href="#">
-                <div class="login__slider-item-img" style="background-image: url('/image/halkmarket/login/2.jpg');"></div>
-              </a>
+                <a class="login__slider-item-link" href="#">
+                    <div class="login__slider-item-img" style="background-image: url('/image/halkmarket/login/login-slider-2.jpg');"></div>
+                </a>
             </div>
 
             <div class="login__slider-item">
-              <a class="login__slider-item-link" href="#">
-                <div class="login__slider-item-img" style="background-image: url('/image/halkmarket/login/3.jpg');"></div>
-              </a>
+                <a class="login__slider-item-link" href="#">
+                    <div class="login__slider-item-img" style="background-image: url('/image/halkmarket/login/login-slider-3.jpg');"></div>
+                </a>
             </div>
 
-            <div class="login__slider-item">
-              <a class="login__slider-item-link" href="#">
-                <div class="login__slider-item-img" style="background-image: url('/image/halkmarket/login/4.jpg');"></div>
-              </a>
-            </div>
+        </div>
+        <!-- </div>    -->
 
-        </div>     
-      <!-- </div>    -->
-
-  </div>
+    </div>
 </section>
 
 <script>
-  function showPass() {
-      var x = document.getElementById("input-password");
-      if (x.type === "password") {
-          x.type = "text";
-      } else {
-          x.type = "password";
-      }
-  }
+    function showPass() {
+        var x = document.getElementById("input-password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
 </script>
 
 <script>
-  $(document).ready(function(){
-  $('.login__slider').slick({
-    infinite: true,
-    speed: 1000,
-    fade: true,
-    cssEase: 'linear',
-    arrows: false,
-    dots: true
-  });
-});
+    $(document).ready(function(){
+        $('.login__slider').slick({
+            infinite: true,
+            speed: 1000,
+            fade: true,
+            cssEase: 'linear',
+            arrows: false,
+            dots: true
+        });
+    });
+</script>
+
+<script>
+    function ValidPhone() {
+        var re = /^\d[\d\(\)\ -]{4,14}\d$/;
+        var myPhone = document.getElementById('phone').value;
+        var valid = re.test(myPhone);
+        if (valid) output = 'Номер телефона введен правильно!';
+        else output = 'Номер телефона введен неправильно!';
+        document.getElementById('message').innerHTML = document.getElementById('message').innerHTML+'<br />'+output;
+        return valid;
+    }
 </script>
 <!-- <script>
-
 var swiper = new Swiper('.login__slider-wrapper', {
   pagination: {
     el: '.swiper-pagination',
@@ -175,7 +182,7 @@ var swiper = new Swiper('.login__slider-wrapper', {
    effect: 'coverflow',
    grabCursor: true,
    centeredSlides: true,
-   slidesPerView: 'auto',   
+   slidesPerView: 'auto',
    pagination: {
       el: '.swiper-pagination',
    },
@@ -194,18 +201,15 @@ var swiper = new Swiper('.login__slider-wrapper', {
   // Optional parameters
   direction: 'vertical',
   loop: true,
-
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
   },
-
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
   // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',

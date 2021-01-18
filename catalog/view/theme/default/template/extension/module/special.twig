@@ -1,26 +1,142 @@
-<h3>{{ heading_title }}</h3>
-<div class="row"> {% for product in products %}
-    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <div class="product-thumb transition">
-            <div class="image">
-                <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive" /></a>
-            </div>
-            <div class="caption">
-                <h4><a href="{{ product.href }}">{{ product.name }}</a></h4>
-                <p>{{ product.description }}</p>
-                {% if product.rating %}
-                <div class="rating">{% for i in 1..5 %} {% if product.rating
-                    < i %} <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span> {% else %} <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> {% endif %} {% endfor %}
-                </div>
-                {% endif %} {% if product.price %}
-                <p class="price"> {% if not product.special %} {{ product.price }} {% else %} <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span> {% endif %} {% if product.tax %} <span class="price-tax">{{ text_tax }} {{ product.tax }}</span>                    {% endif %} </p>
-                {% endif %} </div>
-            <div class="button-group">
-                <button type="button" onclick="cart.add('{{ product.product_id }}');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span></button>
-                <button type="button" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');"><i class="fa fa-heart"></i></button>
-                <button type="button" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');"><i class="fa fa-exchange"></i></button>
+<div class="special">
+    <div class="container">
+        <div class="special__container">
+            <div class="special__wrapper">
+                <h4 class="special__info-box-title">{{ special_info_box_title }}</h4>
+
+
+                    <div class="special__slider">
+{#                        <div class="swiper-wrapper">#}
+                        {% for product in products %}
+                                <div class="special__item">
+                                    <div class="special__item-img">
+                                        <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive" /></a>
+
+                                    </div>
+                                    </a>
+
+                                    <div class="special__item-star">
+                                        <div class="rating home__rating">
+                                            {% for i in 1..5 %}
+                                                {% if rating < i %}
+                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                {% else %}
+                                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <a class="rating__rew-num-link" href="#" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">{{ reviews }}13</a>
+
+                                        </div>
+                                    </div>
+                                    <a href="#">
+                                        <div class="special__item-title">
+                                            <h4>
+                                                <a class="special__item-title-text" href="{{ product.href }}">{{ product.name }}</a>
+                                            </h4>
+                                        </div>
+                                    </a>
+
+                                    <div class="special__item-box">
+                                        <div class="price special__item-box-price">
+                                            <span class="special__item-box-text">цена за шт</span>
+                                            {% if not product.special %}
+                                                {{ product.price }}
+                                            {% else %}
+                                            <span class="price-old special__item-box-old">
+                                            {{ product.price }}
+                                            </span>
+                                            <span class="price-new special__item-box-new">
+                                            {{ product.special }}
+                                            </span>
+                                            {% endif %}
+                                        </div>
+                                        <button class="cart__add-btn" type="button" onclick="cart.add('{{ product.product_id }}');">
+                                            <i class="fa fa-shopping-cart-black"></i>
+                                        </button>
+                                    </div>
+                                    <div class="favorit__box">
+                                        <button class="favorit__box-btn" type="button" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');">
+                                            <i class="fa fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                        {% endfor %}
+{#                        </div>#}
+                    </div>
+
             </div>
         </div>
     </div>
-    {% endfor %}
 </div>
+
+
+<script>
+    // let mySwiperBrands = new Swiper('.special__slider', {
+    //     slidesPerView: 6,
+    //     spaceBetween: 30,
+    //     loop: true,
+    //     speed: 500,
+    //     centeredSlides: true,
+    //     breakpoints: {
+    //         // 1030: {
+    //         //     slidesPerView: 4
+    //         //     // spaceBetween: 20
+    //         // },
+    //         // 870: {
+    //         //     slidesPerView: 3
+    //         //     // spaceBetween: 20
+    //         // },
+    //         // 590: {
+    //         //     slidesPerView: 2
+    //         //     // spaceBetween: 20
+    //         // },
+    //         // 420: {
+    //         //     slidesPerView: 1
+    //         //     // spaceBetween: 20
+    //         // },
+    //     }
+    // });
+    $(function () {
+        $('.special__slider').slick({
+            infinite: true,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            // swipeToSlide: true,
+            touchThreshold: 10,
+            nextArrow: '<button class="slick-arrow slick-next"><img src="images/next.svg" alt=""></button>',
+            responsive: [{
+                breakpoint: 1400,
+                settings: {
+                    autoplay: true,
+                    // autoplaySpeed: 3000,
+                }
+            },
+                {
+                    breakpoint: 1178,
+                    settings: {
+                        slidesToShow: 5,
+                    }
+                },
+                {
+                    breakpoint: 950,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 700,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+
+            ]
+        });
+    });
+</script>
