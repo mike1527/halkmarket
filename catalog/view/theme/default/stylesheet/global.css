@@ -4724,7 +4724,7 @@ tr.checkout__order-string td.checkout__order-product-name{
 }
 tr.checkout__order-string-total td.checkout__order-string-total-line{
     text-align: end;
-    padding-right: 16px;
+    padding-right: 68px;
 }
 .checkout__bottom-content{
     display: flex;
@@ -5158,3 +5158,226 @@ p.ourstore__content-text{
     }
 }
 /*----- ----- ----- END OURSTORE ----- ----- -----*/
+
+/*----- ----- ----- START VACANCYPAGE ----- ----- -----*/
+.vacancypage__inner{
+    position: relative;
+    margin-bottom: 58px;
+}
+.vacancypage__img-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 284px;
+    background-image: url("/image/halkmarket/information/vacansypage.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.vacancypage__title-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 493px;
+    height: 130px;
+    filter: blur(135.914px);
+}
+h2.vacancypage__title{
+    margin: 0;
+    font-family: 'OpenSans-Bold';
+    font-size: 25px;
+    line-height: 34px;
+    text-align: center;
+    color: #3B245A;
+    width: 390px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.vacancypage__items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;
+}
+.vacancypage__item-box{
+    position: relative;
+}
+.vacancypage__item{
+    width: 350px;
+    height: 152px;
+    mix-blend-mode: normal;
+    opacity: 0.3;
+    border-radius: 14px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vacancypage__item-1{
+    background-image: url("/image/halkmarket/information/vacancy-1.jpg");
+}
+.vacancypage__item-2{
+    background-image: url("/image/halkmarket/information/vacancy-2.jpg");
+}
+.vacancypage__item-3{
+    background-image: url("/image/halkmarket/information/vacancy-3.jpg");
+}
+h3.vacancypage__item-title{
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: #3B245A;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.vacancypage__number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 58px;
+}
+.vacancypage__number span.vacancypage__number-text, .vacancypage__number a.vacancypage__number-link{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #3B245A;
+}
+@media (max-width: 1180px){
+    .vacancypage__inner{
+        margin-bottom: 38px;
+    }
+    .vacancypage__item{
+        width: 280px;
+        height: 121px;
+    }
+    .vacancypage__img-box{
+        height: 227px;
+    }
+    .vacancypage__items{
+        margin-bottom: 44px;
+    }
+    .vacancypage__number{
+        margin-bottom: 38px;
+    }
+}
+@media (max-width: 927px){
+    .vacancypage__item{
+        width: 252px;
+        height: 108px;
+    }
+    .vacancypage__img-box{
+        height: 204px;
+    }
+}
+@media (max-width: 830px){
+    .vacancypage__item{
+        width: 226px;
+        height: 97px;
+    }
+    .vacancypage__img-box{
+        height: 183px;
+    }
+}
+@media (max-width: 750px) {
+    .vacancypage__item {
+        width: 203px;
+        height: 87px;
+    }
+    .vacancypage__img-box {
+        height: 164px;
+    }
+    h3.vacancypage__item-title {
+        font-size: 18px;
+    }
+    h2.vacancypage__title {
+        font-size: 24px;
+        line-height: 26px;
+    }
+}
+@media (max-width: 660px) {
+    .vacancypage__item {
+        width: 182px;
+        height: 78px;
+    }
+    .vacancypage__img-box {
+        height: 147px;
+    }
+}
+@media (max-width: 600px) {
+    .vacancypage__items{
+        flex-direction: column;
+        margin-bottom: 14px;
+    }
+    .vacancypage__item-box{
+        margin-bottom: 20px;
+    }
+    .vacancypage__item{
+        width: 280px;
+        height: 121px;
+    }
+    .vacancypage__img-box{
+        height: 227px;
+    }
+    .vacancypage__number span.vacancypage__number-text, .vacancypage__number a.vacancypage__number-link{
+        font-size: 18px;
+    }
+}
+@media (max-width: 530px){
+    .vacancypage__number{
+        flex-direction: column;
+    }
+    span.vacancypage__number-text{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 440px){
+    h2.vacancypage__title{
+        font-size: 22px;
+    }
+}
+@media(max-width: 406px){
+    h2.vacancypage__title{
+        width: 329px;
+        font-size: 21px;
+        line-height: 23px;
+    }
+}
+@media (max-width: 376px) {
+    .vacancypage__number span.vacancypage__number-text, .vacancypage__number a.vacancypage__number-link {
+        line-height: 10px;
+    }
+    .vacancypage__number span.vacancypage__number-text, .vacancypage__number a.vacancypage__number-link {
+        line-height: 20px;
+    }
+    .vacancypage__number {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 356px){
+    h2.vacancypage__title {
+        width: 300px;
+        font-size: 19px;
+        line-height: 23px;
+    }
+}
+@media (max-width: 325px){
+    h2.vacancypage__title {
+        width: 290px;
+        font-size: 19px;
+        line-height: 23px;
+    }
+}
+/*----- ----- ----- END VACANCYPAGE ----- ----- -----*/

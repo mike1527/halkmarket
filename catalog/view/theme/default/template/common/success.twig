@@ -1,4 +1,24 @@
 {{ header }}
+
+<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/default/stylesheet/global.css" rel="stylesheet">
+<link href="catalog/view/theme/default/stylesheet/fonts.css" rel="stylesheet">
+{% for link in links %}
+  <link href="{{ link.href }}" rel="{{ link.rel }}" />
+{% endfor %}
+{% for analytic in analytics %}
+  {{ analytic }}
+{% endfor %}
+{% for script in scripts %}
+  <script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+{% for script in scripts %}
+  <script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+<script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+
 <div id="common-success" class="container">
   <ul class="breadcrumb breadcrumb__list">
     {% for key, breadcrumb in breadcrumbs %}
