@@ -5383,6 +5383,7 @@ h3.vacancypage__item-title{
 /*----- ----- ----- END VACANCYPAGE ----- ----- -----*/
 
 /*----- ----- ----- START SHOPS ----- ----- -----*/
+
 .shops__title{
     font-family: OpenSans-Bold;
     font-size: 25px;
@@ -5391,29 +5392,15 @@ h3.vacancypage__item-title{
     margin: 0 0 35px 0;
     color: #3B245A;
 }
-.shops__inner{
-    margin: 0 0 58px 0;
-}
 .shops__map-box{
-    /*!*max-width: 993px;*!*/
-    /*!*height: 403px;*!*/
-    /*!*background-color: #ccc;*!*/
-    /*height: 0;*/
-    /*position: relative;*/
-    /*padding-bottom: 40.7%;*/
-    /*margin: 0 auto;*/
     display: flex;
     justify-content: center;
 }
-/*iframe.shops__map{*/
-    /*width: 993px;*/
-    /*height: 403px;*/
-/*    position: absolute;*/
-/*    left: 0;*/
-/*    top: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*}*/
+.shops__map-box .map{
+    width: 993px;
+    height: 403px;
+    margin-bottom: 58px;
+}
 /*START MAP STYLE*/
 #map{
     position: relative;
@@ -5467,4 +5454,78 @@ ymaps.ymaps-2-1-78-zoom{
     width: 100px;
 }
 /*END MAP STYLE*/
+@media (max-width: 1024px){
+    .shops__map-box .map{
+        margin-bottom: 38px;
+    }
+    .shops__title {
+        font-size: 24px;
+        line-height: 30px;
+        margin: 0 0 26px 0;
+    }
+}
+@media (max-width: 845px){
+    .shops__map-box .map{
+        height: 323px;
+    }
+    .shops__map-box{
+    }
+}
+@media (max-width: 740px){
+    .shops__title{
+        font-size: 22px;
+    }
+}
+@media (max-width: 681px){
+    .shops__title{
+        font-size: 21px;
+    }
+}
+@media (max-width: 652px){
+    .shops__title{
+        margin: 0 0 17px 0;
+    }
+    .shops__map-box .map{
+        height: 290px;
+    }
+    h1.shops__title{
+        width: 315px;
+        margin: 0 auto;
+        margin-bottom: 14px;
+    }
+}
+@media (max-width: 550px){
+    .shops__map-box .map{
+        height: 261px;
+        margin-bottom: 21px;
+    }
+    .shops__title{
+        font-size: 19px;
+        line-height: 23px;
+    }
+}
+@media (max-width: 480px){
+    .shops__map-box .map{
+        height: 234px;
+    }
+}
+@media (max-width: 430px){
+    .shops__title{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .shops__map-box .map{
+        height: 210px;
+    }
+}
+@media (max-width: 400px){
+    h1.shops__title{
+        width: 290px;
+    }
+}
+@media (max-width: 350px){
+    .shops__map-box .map{
+        height: 189px;
+    }
+}
 /*----- ----- ----- END SHOPS ----- ----- -----*/

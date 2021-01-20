@@ -30,7 +30,7 @@
 
     <div class="shops__inner">
         <div class="shops__map-box">
-            <div id="map" class="map" style="width: 993px; height: 403px">
+            <div id="map" class="map">
                 <div class="mlMapLazyLoad">
                     <svg xmlns="http://www.w3.org/2000/svg" class="iconLoading">
                         <use xlink:href="/img/icon/sprite.svg#ShopMapsPreloader"></use>
@@ -67,19 +67,13 @@
         });
 
         let placemark = new ymaps.Placemark([37.90936461, 58.40419986], {
-            // hintContent: '<div class="map__hint">магазин Халкмаркет</div>',
-            // balloonContent: [
-            //     '<div class="map__balloon">',
-            //     '<img class="map__balloon-img" src="/image/halkmarket/shops/maps-maker.png" alt="Маркер"/>',
-            //     'Самый хороший магазин у нас',
-            //     '</div>'
-            // ].join('')
+
         },
         {
         iconLayout: 'default#image',
         iconImageHref: 'image/halkmarket/shops/maps-maker.png',
         iconImageSize: [36, 45],
-        iconImageOffset: [-18, -45] //смещение влево и вниз
+        iconImageOffset: [-18, -45]
         });
         map.geoObjects.add(placemark);
     }
