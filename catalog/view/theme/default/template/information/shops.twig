@@ -15,7 +15,72 @@
 
    <h1 class="shops__title">{{ text_shops_title }}</h1>
 
+{#    <div class="shops__inner">#}
+{#        <div class="shops__map-box">#}
+{#            <div id="mlMap" style="height: 433px">#}
+{#                <div class="mlMapLazyLoad">#}
+{#                    <svg xmlns="http://www.w3.org/2000/svg" class="iconLoading">#}
+{#                        <use xlink:href="/img/icon/sprite.svg#ShopMapsPreloader"></use>#}
+{#                    </svg>#}
+{#                </div>#}
+{#            </div>#}
+{#            <iframe class="shops__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.9165281269043!2d58.401950815845055!3d37.909013712196696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f6ffda7b435d6a5%3A0xcd7040d7a91a7f18!2z0KLQvtGA0LPQvtCy0YvQuSDRhtC10L3RgtGAIMKrMTUg0LvQtdGCINC90LXQt9Cw0LLQuNGB0LjQvNC-0YHRgtC4wrs!5e0!3m2!1sru!2sil!4v1611116270164!5m2!1sru!2sil" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>#}
+{#        </div>#}
+{#    </div>#}
+
+    <div class="shops__inner">
+        <div class="shops__map-box">
+            <div id="map" class="map" style="width: 993px; height: 403px">
+                <div class="mlMapLazyLoad">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="iconLoading">
+                        <use xlink:href="/img/icon/sprite.svg#ShopMapsPreloader"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
 </div>
 {{ footer }}
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=1c392b17-23f4-4cb0-85f5-156cf08fcfe9&lang=ru_RU" type="text/javascript"></script>
+
+<script>
+    ymaps.ready(init);
+
+    function init() {
+        let map = new ymaps.Map('map', {
+            center: [37.90936461, 58.40419986],
+            zoom: 16,
+            controls: ['zoomControl'],
+            behavior: ['drag']
+            // behavior: ['disable'],
+        },
+        {
+            minZoom: 12,
+            maxZoom: 16,
+            searchControlProvider: 'yandex#search'
+
+        });
+
+        let placemark = new ymaps.Placemark([37.90936461, 58.40419986], {
+            // hintContent: '<div class="map__hint">магазин Халкмаркет</div>',
+            // balloonContent: [
+            //     '<div class="map__balloon">',
+            //     '<img class="map__balloon-img" src="/image/halkmarket/shops/maps-maker.png" alt="Маркер"/>',
+            //     'Самый хороший магазин у нас',
+            //     '</div>'
+            // ].join('')
+        },
+        {
+        iconLayout: 'default#image',
+        iconImageHref: 'image/halkmarket/shops/maps-maker.png',
+        iconImageSize: [36, 45],
+        iconImageOffset: [-18, -45] //смещение влево и вниз
+        });
+        map.geoObjects.add(placemark);
+    }
+</script>
