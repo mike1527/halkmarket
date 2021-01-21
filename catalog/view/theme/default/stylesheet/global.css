@@ -5529,3 +5529,75 @@ ymaps.ymaps-2-1-78-zoom{
     }
 }
 /*----- ----- ----- END SHOPS ----- ----- -----*/
+/*----- ----- ----- START INFORMATION (Shipping and payment) ----- ----- -----*/
+
+h1.infodelivery__title{
+    margin: 0;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    font-weight: 600;
+    color: #3B245A;
+    text-transform: uppercase;
+    margin-bottom: 29px;
+}
+h3.infodelivery__item-title{
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: #3B245A;
+    margin-bottom: 28px;
+}
+.infodelivery__box{
+    padding: 36px 0;
+    border-top: 1px solid #777;
+}
+.infodelivery__box-second{
+    padding-bottom: 0;
+    margin-bottom: 58px;
+}
+.infodelivery__list li.infodelivery__list-item{
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+}
+ol.infodelivery__list-first{
+    counter-reset: list1;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+ol.infodelivery__list-second{
+    counter-reset: list2;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+li.infodelivery__list-item{
+    margin-bottom: 33px;
+}
+li.infodelivery__list-item:last-child{
+    margin-bottom: 0;
+}
+.infodelivery__list li.list-item__first::before{
+    counter-increment: list1;
+    content: "1."counter(list1);
+    padding-right: 8px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+}
+.infodelivery__list li.list-item__second::before{
+    counter-increment: list2;
+    content: "2."counter(list2);
+    padding-right: 8px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+}
+
+
+
+/*----- ----- ----- END INFORMATION (Shipping and payment) ----- ----- -----*/
