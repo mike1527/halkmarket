@@ -1,5 +1,5 @@
 <footer>
-  <div class="footer__container">
+  <div class="footer__container" style="z-index: 1000;">
     <div class="container">
       <div class="footer__wrapper">
 
@@ -9,7 +9,7 @@
           <a class="footer__item-link" href="index.php?route=information/ourstore">{{ text_our_history }}</a>
           <a class="footer__item-link" href="index.php?route=information/shops">{{ text_shops }}</a>
           <a class="footer__item-link" href="index.php?route=information/vacancypage">{{ text_vacation }}</a>
-          <a class="footer__item-link" href="#">{{ text_partners }}</a>
+          <a class="footer__item-link" href="index.php?route=product/manufacturer">{{ text_partners }}</a>
         </div>
 
         <div class="footer__item footer__item-2">
@@ -25,7 +25,9 @@
             <a class="footer__item-link social-link" href="#"><img src="/image/halkmarket/footer/footer-logo-2.png" alt=""></a>
           </div>
           <p class="footer__item-text service-text">
-            {{ text_have_question }} <a class="footer__item-text-link" href="{{ contact }}">{{ text_feedback }}</a>
+            {{ text_have_question }}
+{#            <a class="footer__item-text-link" href="{{ contact }}">{{ text_feedback }}</a>#}
+            <a class="footer__item-text-link popup-with-form" href="#form-popup">{{ text_feedback }}</a>
           </p>
         </div>
       </div>
@@ -39,7 +41,44 @@
         </div>
       </div>
 
+    <div id="form-popup" class="popup-box mfp-hide">
+      <form action="#" class="popup__form">
+        <a class="close__btn" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="close__btn">
+            <use xlink:href="/img/icon/sprite.svg#CloseBtn"></use>
+          </svg>
+        </a>
+        <h3 class="popup__form-message">Есть вопрос или пожелание? Напишите нам об этом:</h3>
+        <div class="message__box">
+{#          <textarea name="message" id="message" class="inputbox"></textarea>#}
+          <textarea name="enquiry" id="input-enquiry" class="inputbox"></textarea>
+        </div>
+        <div class="popup__form-btn">
+          <input type="submit" value="Отправить">
+        </div>
+      </form>
+
+    </div>
+
 </footer>
+
+<link href="catalog/view/javascript/jquery/magnific/magnific-popup.css" type="text/css" rel="stylesheet" media="screen" />
+<script src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
+
+<script>
+  $('.popup-with-form').magnificPopup({
+    type: 'inline',
+    focus: '#message',
+    // type: 'ajax',
+    midClick: true,
+    closeOnBgClick: false
+  });
+
+  $(document).on('click', '.close__btn', function(e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+</script>
 
 
 </body>

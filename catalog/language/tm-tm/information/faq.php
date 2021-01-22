@@ -1,7 +1,14 @@
 <?php
 
 // Text
-$_['text_title']              = 'Hekaýamyz';
-$_['text_content_title']      = '"HALK BAZAR", sarp edijä ýylylyk we alada bilen döredilen maşgala işidir';
-$_['text_content_up']         = 'Uzak wagt bäri bazar işleýär we giňelýär, müşderilere amatly ýer we önümleriň köp görnüşini tapmagy teklip edýär. Ilki bilen esasy iş, Türkiýeden Şohle konditer önümlerini getirmekdi. Itöne ösensoň, azyk önümleriniň iň oňat markalarynyň aýratyn satyjysy statusyny berýän GDA ýurtlary bilen söwda şertnamalary baglaşyldy.';
-$_['text_content_down']       = 'Harytlaryň tekjelerinde ýerli öndürijileriň harytlary hem doldurylýar. Ynamly üpjün edijileri saýlamak bilen "Halk bazary" kolbasa, türkmen önümlerine we ýerli öndürilen azyk önümleriniň beýleki kategoriýalaryna baý.';
+$_['text_breadcrumps']              = 'Soraglar we jogaplar';
+$_['text_item_title_1']              = 'Nädip töleýärsiňiz?';
+$_['text_item_title_2']              = 'Kurýeriň gelmegi üçin näçe wagt gerek?';
+$_['text_item_title_3']              = 'Täze gök önümler we miweler barmy?';
+$_['text_item_title_4']              = 'Harydy halamaýan bolsam, sahypada gaýdyp bilerinmi?';
+$_['text_item_title_5']              = 'Kurýeriň gelmegi üçin näçe wagt gerek?';
+$_['text_item_title_6']              = 'Täze gök önümler we miweler barmy?';
+$_['text_item_title_7']              = 'Harydy halamaýan bolsam, sahypada gaýdyp bilerinmi?';
+$_['text_content_title']              = 'Satyn almak üçin öz islegiňize görä töläp bilersiňiz. Tölegiň iki görnüşi bar:';
+$_['text_content_item_1']              = 'Bank geçirmesi bilen töleg (Kartlary kabul edýäris: “Milli”, “Rysgal”, “Altyn Asyr”, Mastercard ”,“ Visa ”).';
+$_['text_content_item_2']              = 'Eltip bermek üçin nagt';
