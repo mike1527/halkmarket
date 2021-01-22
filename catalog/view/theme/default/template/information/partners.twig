@@ -1,0 +1,151 @@
+{{ header }}
+
+<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<div id="information-contact" class="container">
+  <ul class="breadcrumb breadcrumb__list">
+    {% for key, breadcrumb in breadcrumbs %}
+      {% if key + 1 < breadcrumbs|length %}
+        <li class="breadcrumb__item breadcrumb__item-hover"><a class="breadcrumb__link" href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+      {% else %}
+        <li class="breadcrumb__item">{{ text_partners_breadcrumps }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+    <section class="partners">
+        <h1 class="partners__title">{{ text_partners_title }}</h1>
+        <div class="partners__wrapper">
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/suytli-dere.png" alt="suytli-dere">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/miratorg.png" alt="miratorg">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <p class="partners__item-text">{{ text_partner_item }}</p>
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/maheev.png" alt="maheev">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/alpen-gold.png" alt="alpen-gold">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/garaja.png" alt="garaja">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/bars.png" alt="bars">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/taze-ay.png" alt="taze-ay">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/tac.png" alt="tac">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/mandm.png" alt="mandm">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/nutella.png" alt="nutella">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/jacobs.png" alt="jacobs">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/meller.png" alt="meller">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/nivea.png" alt="nivea">
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <p class="partners__item-text">{{ text_partner_item_1 }}</p>
+                </div>
+            </a>
+
+            <a class="partners__item-link" href="#">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="/image/halkmarket/partners/jacobs.png" alt="jacobs">
+                </div>
+            </a>
+
+        </div>
+        <div class="partners__link">
+            <a href="#" class="partners__link-btn">
+                {{ text_partners_link }}
+            </a>
+        </div>
+    </section>
+
+</div>
+{{ footer }}
