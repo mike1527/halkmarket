@@ -1,0 +1,70 @@
+
+<div class="mlDropdownListRow articlePadding bgGreyLight" id="mlDropdownListRow">
+                                            <div class="mlDropdownList">
+                            <section class="mlDropdownListHead">
+                                <h3>Пятый вопрос</h3>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="Icon">
+                                    <use xlink:href="http://mintrud.loc/assets/icon/sprite.svg#arrowDown"></use>
+                                </svg>
+                            </section>
+
+                            <div class="mlDropdownListContent">
+                                <div>
+                                    Ответ на пятый вопрос                                </div>
+                            </div>
+
+                        </div>
+                                            <div class="mlDropdownList">
+                            <section class="mlDropdownListHead">
+                                <h3>Шестой вопрос</h3>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="Icon">
+                                    <use xlink:href="http://mintrud.loc/assets/icon/sprite.svg#arrowDown"></use>
+                                </svg>
+                            </section>
+
+                            <div class="mlDropdownListContent">
+                                <div>
+                                    Ответ на шестой вопрос                                </div>
+                            </div>
+
+                        </div>
+                                    </div>
+
+// JS
+
+
+function mlDropdownList(elId)
+{
+    let box = document.getElementById(elId);
+    if (box === null) return false;
+    let timeOut;
+
+    document.addEventListener('click', click);
+
+    function click(e)
+    {
+        let target = e.target;
+        if (!e.target.classList.contains('mlDropdownListHead')) return false;
+
+        let item = target.parentElement,
+            content = item.getElementsByClassName('mlDropdownListContent')[0],
+            innerHeight = content.firstElementChild.clientHeight;
+
+        if (content.clientHeight === 0)
+        {
+            item.classList.add('open');
+            content.style.height = (innerHeight + 2) + 'px';
+            timeOut = setTimeout(() => content.style.height = 'unset', 400);
+        } else
+        {
+            clearTimeout(timeOut);
+            content.style.height = (innerHeight + 2) + 'px';
+            setTimeout(() => content.style.height = 0 + 'px', 10);
+            item.classList.remove('open');
+        }
+    }
+}
+
+mlDropdownList('mlDropdownListRow');

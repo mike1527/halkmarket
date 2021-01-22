@@ -1,3 +1,19 @@
 <?php
 
 // Text
+$_['text_breadcrumps']            = 'Ibermek we tölemek';
+$_['text_title']                  = 'ÜPJÜNÇILIK BARADA MAGLUMAT';
+$_['text_content_title1']         = '1 Sargyt goýlandan (bron edeninden) Alyjy bilen "Halkmarket" arasynda özara täsir etmegiň tertibi:';
+$_['text_content_title2']         = '2 "Halkmarket" önümi (leri) gowşurylandan soň töleg.';
+$_['text_content_1_1']            = '"Halkmarket" gönüden-göni aragatnaşyk saklaýar (hasaba alnanda ozal görkezilen jübi telefon belgisinde Ulanyjy bilen) we Önümiň (leriň) parametrleri, hasaba alynmagy (bron edilmegi) tassyklanylmagy ýa-da ret edilmegi, Önümiň hakyky elýeterliligi, Önümiň hakyky bahasy, Önümiň ulanyjysy üçin saklanyş wagty barada maglumat berýär. , satyn alma tertibi, berlen (bron edilen) harytlar we size laýyk eltiş wagty bilen beýleki maglumatlar.';
+$_['text_content_1_2']            = 'Harytlary alandan soň, Ulanyja Harytlaryň (önümleriň) daşky görnüşini we gaplanyşyny, şeýle hem mukdaryny, dolulygyny, assortimentini barlamak maslahat berilýär. Ulanyjy Harytlar üçin tölänsoň, Harytlaryň hili, mukdary, dozasy we gaplamanyň hili baradaky talaplar kabul edilmeýär.';
+$_['text_content_1_3']            = 'Harytlaryň gutarýan senesi, Saýtda görkezilen Harytlaryň gutarýan senesinden tapawutlanyp biler. Şol bir wagtyň özünde, Harytlaryň galan saklanyş möhleti, Saýtda Ulanyjy tarapyndan saýtda görkezilen telefon belgilerine ýüz tutup ýa-da Satyjy-Operator tarapyndan buýrugyň bellige alnandygyny (bron etmegini) tassyklandan soň aýdyňlaşdyrylmalydyr.';
+$_['text_content_1_4']            = 'Harytlaryň gaplanyşy, Saýtda görkezilen Harytlaryň gaplanyşyndan tapawutlanyp biler. Bu tapawut Önüm öndürijisi bilen baglanyşykly.';
+$_['text_content_1_5']            = 'Öňünden tölemezden ýokary bahaly önümler (lar) onlaýn dükanyň müdiriniň islegi boýunça kurýer tarapyndan Aşgabatda iberilýär. "Gymmat bahaly harytlar" diýilýän zadyň mukdary onlaýn dükanyň müdiri tarapyndan kesgitlenýär.';
+$_['text_content_1_6']            = 'Satyjy-operator bilen ylalaşylan wagtda buýrugy kabul etmek ýa-da ret etmek mümkin bolmasa, alyjy onlaýn dükanyna bu barada (bron edeninden) ýa-da harytlary ýerleşdirmezden (bron edeninden) 30 minutyň içinde habar bermeli.';
+$_['text_content_1_7']            = 'Görkezilen gowşuryş salgysyna esaslanyp, ulgam çykdajylary we gowşuryş wagtyny awtomatiki hasaplaýar.';
+$_['text_content_2_1']            = 'Tölän wagtyňyz, X.O "Halkmarket" guramasy we "Halkmarket" onlaýn dükany tarapyndan önümiň (leriň) satuw şertleri bilen ylalaşygyňyzy tassyklaýarsyňyz. Ulanyjy önüm (ler) alnan mahaly kurýer üçin önüm (ler) üçin tölemeli. Sargyt satyjy-operator tarapyndan sargyt goýlandan we tassyklanylandan soň harytlaryň mukdary üýtgemeýär.';
+$_['text_content_2_2']            = '"Halkmarket" onlaýn dükanyndaky sargytlary islendik amatly usulda töläp bolýar: nagt ýa-da kredit kartoçkasy (gönüden-göni el terminaly arkaly kredit kartoçkasynyň eýesi).';
+$_['text_content_2_3']            = 'Önümiň (önümleriň) mukdary 200 manatdan ýokary bolsa, eltip bermek bahasy mugt.';
+$_['text_content_2_4']            = 'Önümiň (önümleriň) bahasy 200 manatdan az bolsa, ulanyjy iberiş bahasyny Satyjy-operator bilen gepleşik geçirmäge borçly bolar. Getirmegiň bahasy, salgysyny, howa şertlerini we günüň wagtyny göz öňünde tutup, Satyjy-operator tarapyndan kesgitlenýär. Iberiş bahasy, 6.4-nji maddany görseňiz, soňky sargytdan soň hasap-faktura mukdaryna goşular.';
+$_['text_content_2_5']            = 'Bellenen mukdardan 200 manatdan az bolan harytlary (önümleri) eltmek üçin aýratyn kwitansiýa berilmeýär.';

@@ -1,0 +1,210 @@
+{{ header }}
+
+<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+{% for style in styles %}
+    <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+{% endfor %}
+    {% for link in links %}
+        <link href="{{ link.href }}" rel="{{ link.rel }}" />
+    {% endfor %}
+    {% for analytic in analytics %}
+        {{ analytic }}
+    {% endfor %}
+
+
+
+<div class="container">
+  <ul class="breadcrumb breadcrumb__list">
+    {% for key, breadcrumb in breadcrumbs %}
+      {% if key + 1 < breadcrumbs|length %}
+        <li class="breadcrumb__item breadcrumb__item-hover"><a class="breadcrumb__link" href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+      {% else %}
+        <li class="breadcrumb__item">{{ text_breadcrumps }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+{#    <section class="faq">#}
+
+{#        <div class="faq__wrapper">#}
+
+{#            <div class="faq__item">#}
+{#                <div class="faq__item-inner">#}
+{#                    <div class="faq__item-wrapper">#}
+{#                        <h3 class="faq__item-title">{{ text_item_title_1 }}</h3>#}
+{#                        <span class="faq__item-btn"></span>#}
+{#                    </div>#}
+{#                    <div class="faq__content">#}
+{#                        <h4 class="faq__content-title">{{ text_content_title }}</h4>#}
+{#                        <ol class="faq__content-list">#}
+{#                            <li class="faq__content-item">{{ text_content_item_1 }}</li>#}
+{#                            <li class="faq__content-item">{{ text_content_item_2 }}</li>#}
+{#                        </ol>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+
+{#    </section>#}
+
+    <div class="faq__dropdown-row" id="faq__dropdown-row">
+
+        <div class="faq__list">
+            <section class="faq__listHead">
+                <h3 class="faq__item-title">{{ text_item_title_1 }}</h3>
+                <span class="faq__item-btn"></span>
+            </section>
+            <div class="faq__dropdown-content">
+                <div class="faq__content">
+                    <h4 class="faq__content-title">{{ text_content_title }}</h4>
+                    <ol class="faq__content-list">
+                        <li class="faq__content-item">{{ text_content_item_1 }}</li>
+                        <li class="faq__content-item">{{ text_content_item_2 }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq__list">
+            <section class="faq__listHead">
+                <h3 class="faq__item-title">{{ text_item_title_2 }}</h3>
+                <span class="faq__item-btn"></span>
+            </section>
+            <div class="faq__dropdown-content">
+                <div class="faq__content">
+                    <h4 class="faq__content-title">{{ text_content_title }}</h4>
+                    <ol class="faq__content-list">
+                        <li class="faq__content-item">{{ text_content_item_1 }}</li>
+                        <li class="faq__content-item">{{ text_content_item_2 }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq__list">
+            <section class="faq__listHead">
+                <h3 class="faq__item-title">{{ text_item_title_3 }}</h3>
+                <span class="faq__item-btn"></span>
+            </section>
+            <div class="faq__dropdown-content">
+                <div class="faq__content">
+                    <h4 class="faq__content-title">{{ text_content_title }}</h4>
+                    <ol class="faq__content-list">
+                        <li class="faq__content-item">{{ text_content_item_1 }}</li>
+                        <li class="faq__content-item">{{ text_content_item_2 }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq__list">
+            <section class="faq__listHead">
+                <h3 class="faq__item-title">{{ text_item_title_4 }}</h3>
+                <span class="faq__item-btn"></span>
+            </section>
+            <div class="faq__dropdown-content">
+                <div class="faq__content">
+                    <h4 class="faq__content-title">{{ text_content_title }}</h4>
+                    <ol class="faq__content-list">
+                        <li class="faq__content-item">{{ text_content_item_1 }}</li>
+                        <li class="faq__content-item">{{ text_content_item_2 }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq__list">
+            <section class="faq__listHead">
+                <h3 class="faq__item-title">{{ text_item_title_5 }}</h3>
+                <span class="faq__item-btn"></span>
+            </section>
+            <div class="faq__dropdown-content">
+                <div class="faq__content">
+                    <h4 class="faq__content-title">{{ text_content_title }}</h4>
+                    <ol class="faq__content-list">
+                        <li class="faq__content-item">{{ text_content_item_1 }}</li>
+                        <li class="faq__content-item">{{ text_content_item_2 }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq__list">
+            <section class="faq__listHead">
+                <h3 class="faq__item-title">{{ text_item_title_6 }}</h3>
+                <span class="faq__item-btn"></span>
+            </section>
+            <div class="faq__dropdown-content">
+                <div class="faq__content">
+                    <h4 class="faq__content-title">{{ text_content_title }}</h4>
+                    <ol class="faq__content-list">
+                        <li class="faq__content-item">{{ text_content_item_1 }}</li>
+                        <li class="faq__content-item">{{ text_content_item_2 }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq__list">
+            <section class="faq__listHead">
+                <h3 class="faq__item-title">{{ text_item_title_7 }}</h3>
+                <span class="faq__item-btn"></span>
+            </section>
+            <div class="faq__dropdown-content">
+                <div class="faq__content">
+                    <h4 class="faq__content-title">{{ text_content_title }}</h4>
+                    <ol class="faq__content-list">
+                        <li class="faq__content-item">{{ text_content_item_1 }}</li>
+                        <li class="faq__content-item">{{ text_content_item_2 }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+{{ footer }}
+
+<script>
+    function faq__list(elId)
+    {
+        let box = document.getElementById(elId);
+        if (box === null) return false;
+        let timeOut;
+
+        document.addEventListener('click', click);
+
+        function click(e)
+        {
+            let target = e.target;
+            if (!e.target.classList.contains('faq__listHead')) return false;
+
+            let item = target.parentElement,
+                content = item.getElementsByClassName('faq__dropdown-content')[0],
+                innerHeight = content.firstElementChild.clientHeight;
+
+            if (content.clientHeight === 0)
+            {
+                item.classList.add('open');
+                content.style.height = (innerHeight + 2) + 'px';
+                timeOut = setTimeout(() => content.style.height = 'unset', 400);
+            } else
+            {
+                clearTimeout(timeOut);
+                content.style.height = (innerHeight + 2) + 'px';
+                setTimeout(() => content.style.height = 0 + 'px', 10);
+                item.classList.remove('open');
+            }
+        }
+    }
+    faq__list('faq__dropdown-row');
+</script>
+{#<script>#}
+{#    document.getElementById('.faq__listHead').onclick = function () {#}
+{#        document.querySelector('.faq__item-title').classList.toggle('selected');#}
+{#    }#}
+{#</script>#}

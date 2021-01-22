@@ -5597,7 +5597,135 @@ li.infodelivery__list-item:last-child{
     line-height: 22px;
     color: #000;
 }
-
-
-
+@media (max-width: 1185px){
+    h1.infodelivery__title{
+        font-size: 28px;
+        line-height: 35px;
+        margin-bottom: 20px;
+    }
+    h3.infodelivery__item-title{
+        margin-bottom: 22px;
+    }
+    .infodelivery__box{
+        padding: 25px 0;
+    }
+    .infodelivery__box-second{
+        margin-bottom: 28px;
+    }
+}
+@media (max-width: 833px){
+    h1.infodelivery__title{
+        font-size: 27px;
+        margin-bottom: 14px;
+    }
+}
+@media (max-width: 813px){
+    li.infodelivery__list-item{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 600px){
+    .infodelivery__box-second{
+        margin-bottom: 0px;
+    }
+}
+@media (max-width: 400px){
+    h1.infodelivery__title{
+        font-size: 25px;
+    }
+}
 /*----- ----- ----- END INFORMATION (Shipping and payment) ----- ----- -----*/
+
+/*----- ----- ----- START FAQ ----- ----- -----*/
+.faq__dropdown-row{
+    max-width: 690px;
+    margin: 0 auto;
+}
+.faq__list{
+    border: 1px solid #C6C6C5;
+    border-radius: 10px;
+    padding: 0px 24px 8px 24px;
+    margin-bottom: 20px;
+}
+.faq__listHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #C6C6C5;
+    padding: 18px 0 10px 0;
+    cursor: pointer;
+}
+.faq__list.open .faq__dropdown-content{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+.faq__item-title{
+    width: 100%;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #3B245A;
+    margin: 0;
+    padding-right: 10px;
+    z-index: -1;
+}
+.faq__item-title.selected{
+    font-weight: 600;
+}
+span.faq__item-btn{
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    position: relative;
+    margin-left: 5px;
+    z-index: -1;
+}
+span.faq__item-btn::before{
+    content: "";
+    position: absolute;
+    background-image: url("/image/halkmarket/faq/faq-btn-plus.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 18px;
+    height: 18px;
+    transition: all .3s;
+}
+.faq__list.open .faq__item-btn:before{
+    background-image: url("/image/halkmarket/faq/faq-btn-minus.svg");
+}
+.faq__dropdown-content{
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: all .3s;
+}
+h4.faq__content-title{
+    font-size: 14px;
+    color: #000;
+}
+ol.faq__content-list{
+    margin: 0;
+    padding-left: 16px;
+}
+li.faq__content-item{
+    list-style: unset;
+    font-size: 14px;
+    color: #000;
+}
+@media (max-width: 640px){
+    .faq__item-title, h4.faq__content-title, li.faq__content-item{
+        font-size: 13px;
+    }
+}
+@media (max-width: 600px){
+    .faq__item-title{
+        /*width: 460px;*/
+    }
+}
+/*-----------*/
+
+
+
+/*----- ----- ----- END FAQ ----- ----- -----*/
