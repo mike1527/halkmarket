@@ -7,9 +7,15 @@
 {#  </div>#}
   
   
-{#  <button class="button-close" onclick="document.getElementById('myInput').value='';"></button>#}
+  <span class="button-close" onclick="document.getElementById('myInput').value='';"></span>
   
   <input type="text" name="search" value="{{ search }}" placeholder="{#{{ text_search }}#}" class="form-control input-lg header__bottom-search" id="myInput"/>
   
 
 </div>
+
+{#<script>#}
+{#    $('.reset').on('click', function() {#}
+{#        $(this).closest('form').get(0).reset();#}
+{#    });#}
+{#</script>#}

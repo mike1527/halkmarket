@@ -20,7 +20,6 @@ class ControllerCheckoutCart extends Controller {
 			'href' => $this->url->link('checkout/cart'),
 			'text' => $this->language->get('heading_title')
 		);
-
 		if ($this->cart->hasProducts() || !empty($this->session->data['vouchers'])) {
 			if (!$this->cart->hasStock() && (!$this->config->get('config_stock_checkout') || $this->config->get('config_stock_warning'))) {
 				$data['error_warning'] = $this->language->get('error_stock');
@@ -247,6 +246,7 @@ class ControllerCheckoutCart extends Controller {
 			$this->response->setOutput($this->load->view('checkout/cart', $data));
 		} else {
 			$data['text_error'] = $this->language->get('text_empty');
+
 			
 			$data['continue'] = $this->url->link('common/home');
 
@@ -259,7 +259,7 @@ class ControllerCheckoutCart extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
-			$this->response->setOutput($this->load->view('error/not_found', $data));
+			$this->response->setOutput($this->load->view('error/cart_empty', $data));
 		}
 	}
 

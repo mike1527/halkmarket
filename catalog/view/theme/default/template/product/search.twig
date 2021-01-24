@@ -92,59 +92,16 @@
 {#      <input type="button" value="{{ button_search }}" id="button-search" class="btn btn-primary" />#}
 {#      <h2>{{ text_search }}</h2>#}
       {% if products %}
-{#      <div class="row">#}
-{#        <div class="col-md-2 col-sm-6 hidden-xs">#}
-{#          <div class="btn-group btn-group-sm">#}
-{#            <button type="button" id="list-view" class="btn btn-default" data-toggle="tooltip" title="{{ button_list }}"><i class="fa fa-th-list"></i></button>#}
-{#            <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="{{ button_grid }}"><i class="fa fa-th"></i></button>#}
-{#          </div>#}
-{#        </div>#}
-{#        <div class="col-md-3 col-sm-6">#}
-{#          <div class="form-group">#}
-{#            <a href="{{ compare }}" id="compare-total" class="btn btn-link">{{ text_compare }}</a>#}
-{#          </div>#}
-{#        </div>#}
-{#        <div class="col-md-4 col-xs-6">#}
-{#          <div class="form-group input-group input-group-sm">#}
-{#            <label class="input-group-addon" for="input-sort">{{ text_sort }}</label>#}
-{#            <select id="input-sort" class="form-control" onchange="location = this.value;">#}
-{#              {% for sorts in sorts %}#}
-{#              {% if sorts.value == '%s-%s'|format(sort, order) %}#}
-{#              <option value="{{ sorts.href }}" selected="selected">{{ sorts.text }}</option>#}
-{#              {% else %}#}
-{#              <option value="{{ sorts.href }}">{{ sorts.text }}</option>#}
-{#              {% endif %}#}
-{#              {% endfor %}#}
-{#            </select>#}
-{#          </div>#}
-{#        </div>#}
-{#        <div class="col-md-3 col-xs-6">#}
-{#          <div class="form-group input-group input-group-sm">#}
-{#            <label class="input-group-addon" for="input-limit">{{ text_limit }}</label>#}
-{#            <select id="input-limit" class="form-control" onchange="location = this.value;">#}
-{#              {% for limits in limits %}#}
-{#              {% if limits.value == limit %}#}
-{#              <option value="{{ limits.href }}" selected="selected">{{ limits.text }}</option>#}
-{#              {% else %}#}
-{#              <option value="{{ limits.href }}">{{ limits.text }}</option>#}
-{#              {% endif %}#}
-{#              {% endfor %}#}
-{#            </select>#}
-{#          </div>#}
-{#        </div>#}
-{#      </div>#}
       <div class="row">
           <div class="category__items search__items-box">
               {% for product in products %}
                   <div class="product-layout product-list col-xs-12 search__item search__item-wrapper">
                       <div class="product-thumb">
-
                           <div class="image category__item-img">
                               <a href="{{ product.href }}">
                                   <img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive" />
                               </a>
                           </div>
-
                           <div class="category__item-star">
                               <div class="rating home__rating">
                                   {% for i in 1..5 %}
@@ -160,13 +117,11 @@
                                   <a class="rating__rew-num-link" href="#" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">{{ reviews }}13</a>
                               </div>
                           </div>
-
                           <div class="category__item-title">
                               <h4>
                                   <a class="category__item-title-text" href="{{ product.href }}">{{ product.name }}</a>
                               </h4>
                           </div>
-
                           <div class="category__item-box">
 
                               <div class="price category__item-box-price">
@@ -199,58 +154,20 @@
                               </div>
 
                           </div>
-
                           <div class="favorit__box">
                               <button class="favorit__box-btn" type="button" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');">
                                   <span class="favorit__style"></span>
                                   <i class="fa fa-heart"></i>
                               </button>
                           </div>
-
-{#                              <div class="caption">#}
-{#                                  <h4><a href="{{ product.href }}">{{ product.name }}</a></h4>#}
-{#                                  <p>{{ product.description }}</p>#}
-{#                                  {% if product.price %}#}
-{#                                      <p class="price">#}
-{#                                          {% if  not product.special %}#}
-{#                                              {{ product.price }}#}
-{#                                          {% else %}#}
-{#                                              <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span>#}
-{#                                          {% endif %}#}
-{#                                          {% if product.tax %}#}
-{#                                              <span class="price-tax">{{ text_tax }} {{ product.tax }}</span>#}
-{#                                          {% endif %}#}
-{#                                      </p>#}
-{#                                  {% endif %}#}
-{#                                  {% if product.rating %}#}
-{#                                      <div class="rating">#}
-{#                                          {% for i in 1..5 %}#}
-{#                                              {% if product.rating < i %}#}
-{#                                                  <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>#}
-{#                                              {% else %}#}
-{#                                                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>#}
-{#                                              {% endif %}#}
-{#                                          {% endfor %}#}
-{#                                      </div>#}
-{#                                  {% endif %}#}
-{#                              </div>#}
-{#                              <div class="button-group">#}
-{#                                  <button type="button" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span></button>#}
-{#                                  <button type="button" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');"><i class="fa fa-heart"></i></button>#}
-{#                                  <button type="button" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');"><i class="fa fa-exchange"></i></button>#}
-{#                              </div>#}
                       </div>
                   </div>
               {% endfor %}
           </div>
       </div>
-{#      <div class="row">#}
-{#        <div class="col-sm-6 text-left">{{ pagination }}</div>#}
-{#        <div class="col-sm-6 text-right">{{ results }}</div>#}
-{#      </div>#}
       {% else %}
           <div class="search__notfound-box">
-              <h4 class="search__notfound-title">{{ text_empty }}</h4>
+              <h4 class="search__notfound-title">{{ text_empty_cart }}</h4>
               <div class="search__notfound-box-img">
                   <img src="/image/halkmarket/search/search-img.png" alt="">
               </div>
@@ -260,9 +177,9 @@
           </div>
       {% endif %}
       {{ content_bottom }}</div>
-    {{ column_right }}</div>
+      {{ column_right }}</div>
 </div>
-<script type="text/javascript"><!--
+<script type="text/javascript">
 $('#button-search').bind('click', function() {
 	url = 'index.php?route=product/search';
 

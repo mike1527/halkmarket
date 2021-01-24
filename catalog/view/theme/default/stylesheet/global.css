@@ -216,7 +216,7 @@ li .catalog__item {
     top: 14px;
     left: 13px;
 }
-button.button-close {
+span.button-close {
     width: 20px;
     height: 20px;
     background-image: url('/image/halkmarket/header/icon/btn-seach-close.svg');
@@ -229,6 +229,7 @@ button.button-close {
     position: absolute;
     right: 23px;
     top: 12px;
+    cursor: pointer;
 }
 .header__bottom-inner {
     display: flex;
@@ -3300,7 +3301,7 @@ textarea.inputbox{
     border: 1px solid #6B6C6F;
     border-radius: 20px;
     font-size: 15px;
-    padding: 10px;
+    padding: 35px 10px 10px 10px;
     resize: none;
     outline: none;
     margin-bottom: 30px;
@@ -3345,6 +3346,8 @@ svg.textarea__mess-icon{
     width: 19px;
     height: 18px;
     position: absolute;
+    top: 110px;
+    left: 70px;
 }
 /*----- ----- ----- END POPUP ----- ----- -----*/
 
