@@ -3459,7 +3459,10 @@ a.partners__link-btn{
     border-radius: 15px;
 }
 .account__wrapper{
-    background-color: transparent;
+    background-color: #0b91d2;
+    /*background: #FCFCFC;*/
+    box-shadow: 0px 0px 6px rgba(122, 122, 122, 0.158927);
+    border-radius: 15px;
     width: 73%;
 }
 li.account__item{
@@ -3507,6 +3510,59 @@ li.account__item:hover a.account__item-link{
 }
 li.account__item:hover a.account__item-link .account__icon{
     color: #0DB14B;
+}
+@media (max-width: 950px){
+    a.account__item-link{
+        padding: 14px 7px 14px 38px;
+    }
+    .account__icon{
+        margin-left: 8px;
+    }
+}
+@media (max-width: 835px){
+    .account{
+        flex-direction: column;
+    }
+    .account__aside{
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 0;
+    }
+    .account__wrapper{
+        width: 100%;
+    }
+    ul.account__list{
+        display: flex;
+        justify-content: space-between;
+    }
+    li.account__item{
+        width: 25%;
+        border-bottom: none;
+    }
+    a.account__item-link{
+        padding: 14px 0px 14px 38px;
+        border-bottom: none;
+    }
+}
+@media (max-width: 735px){
+    a.account__item-link{
+        font-size: 14px;
+    }
+}
+@media (max-width: 659px){
+    li.account__item{
+        display: flex;
+        justify-content: center;
+    }
+    a.account__item-link{
+        font-size: 0;
+        padding: 14px 0px 14px 0px;
+        display: inline-block;
+        width: 25px;
+    }
+    .account__icon{
+        margin: 0;
+    }
 }
 /*----- ----- ----- END ACCOUNT ----- ----- -----*/
 
