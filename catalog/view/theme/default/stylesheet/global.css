@@ -236,6 +236,10 @@ li .catalog__item {
     width: 20px;
     height: 20px;
     color: #3B245A;
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .close-btn__icon{
     width: 12px;
@@ -982,12 +986,6 @@ button.cart__add-btn{
 .search__item:hover .search__item-box button.cart__add-btn .fa-shopping-cart-black:before{
     background-image: url("/image/halkmarket/cart/cart-green.svg");
 }
-/*.special__item:hover .special__item-box button.cart__add-btn .fa-shopping-cart-black:before{*/
-/*    background-image: url("/image/halkmarket/cart/cart-green.svg");*/
-/*}*/
-/*.bestsellers__item:hover .bestsellers__item-box button.cart__add-btn .fa-shopping-cart-black:before{*/
-/*    background-image: url("/image/halkmarket/cart/cart-green.svg");*/
-/*}*/
 .product-tab__item:hover .product-tab__item-box button.product__slider-cart-btn:before{
     background-image: url("/image/halkmarket/cart/cart-green.svg");
 }
@@ -3447,5 +3445,69 @@ a.partners__link-btn{
 }
 
 /*----- ----- ----- END PARTNERS ----- ----- -----*/
+
+/*----- ----- ----- START ACCOUNT ----- ----- -----*/
+.account{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.account__aside{
+    width: 24%;
+    padding: 20px 0 20px 0;
+    background: #F8F8F8;
+    border-radius: 15px;
+}
+.account__wrapper{
+    background-color: transparent;
+    width: 73%;
+}
+li.account__item{
+    border-bottom: 1px solid #DFE2E6;
+    cursor: pointer;
+}
+li.account__item:last-child{
+    border-bottom: none;
+}
+a.account__item-link{
+    display: block;
+    color: #777;
+    padding: 14px 26px 14px 55px;
+    position: relative;
+    transition: color .3s;
+}
+.account__icon{
+    color: #777;
+    margin-right: 10px;
+    margin-left: 26px;
+    position: absolute;
+    left: 0;
+    transition: color .3s;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.account__order-icon{
+    width: 18px;
+    height: 12px;
+}
+.account__address-icon{
+    width: 17px;
+    height: 17px;
+}
+.account__profil-icon{
+    width: 14px;
+    height: 17px;
+}
+.account__password-icon{
+    width: 24px;
+    height: 21px;
+}
+li.account__item:hover a.account__item-link{
+    color: #0DB14B;
+}
+li.account__item:hover a.account__item-link .account__icon{
+    color: #0DB14B;
+}
+/*----- ----- ----- END ACCOUNT ----- ----- -----*/
 
 
