@@ -128,17 +128,22 @@ input.input__keep{
     background: #3b245a;
     padding: 8px 0;
 }
-.header__top-tel{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.header__top-tel__link {
-    font-size: 16px;
+/*.header__top-tel{*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*}*/
+/*.header__top-tel__link {*/
+/*    font-size: 16px;*/
+/*    color: #fff;*/
+/*    line-height: 31px;*/
+/*    padding-left: 10px;*/
+/*    position: relative;*/
+/*}*/
+.tel__icon{
+    width: 14px;
+    height: 14px;
     color: #fff;
-    line-height: 31px;
-    padding-left: 10px;
-    position: relative;
 }
 .header__bottom-wrapper {
     display: flex;
@@ -157,10 +162,14 @@ input.input__keep{
     opacity: 1;
     visibility: visible;
 }
+
 li .catalog__item {
     color: #f8cb00;
 }
 .catalog-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 140px;
     height: 45px;
     padding: 12px 18px 12px;
@@ -178,6 +187,11 @@ li .catalog__item {
     font-size: 16px;
     font-weight: 700;
 }
+.burger__icon{
+    width: 21px;
+    height: 14px;
+    color: #fff;
+}
 .header__bottom-search {
     color: #3b245a;
     font-size: 14px;
@@ -194,41 +208,43 @@ li .catalog__item {
     width: 460px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    position: relative;
+    display: table;
+    border-collapse: separate;
 }
 .header-search-btn{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    padding: 10px 21px;
+    height: 46px;
+    background-color: #eff3f3;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    border: 1px solid transparent;
+    outline: none;
 }
 .header-search-btn:active {
     outline: none;
     border-style: none;
     border: none;
 }
-.header-search-btn:before {
-    content: '';
-    position: absolute;
-    background-image: url('/image/halkmarket/header/icon/btn-search.svg');
-    width: 17px;
-    height: 17px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    top: 14px;
-    left: 13px;
-}
-span.button-close {
+.search-btn__icon{
     width: 20px;
     height: 20px;
-    background-image: url('/image/halkmarket/header/icon/btn-seach-close.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    z-index: 3;
+    color: #3B245A;
+}
+.close-btn__icon{
+    width: 12px;
+    height: 12px;
     position: absolute;
     right: 23px;
-    top: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
     cursor: pointer;
 }
 .header__bottom-inner {
@@ -245,22 +261,19 @@ span.button-close {
     color: #040507;
     font-size: 16px;
     font-weight: 600;
-    padding-left: 30px;
+    margin-left: 7px;
 }
-.header__bottom-discount-link::before {
-    content: '';
-    position: absolute;
-    background-color: #3b245a;
+.header__bottom-discount{
+    display: flex;
+    align-items: center;
+}
+.percent__icon{
     width: 25px;
     height: 20px;
-    background-image: url('/image/halkmarket/header/icon/btn-header-percent.svg');
-    background-position: center center;
-    background-size: initial;
-    background-repeat: no-repeat;
+    color: #fff;
     border-radius: 4px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
+    background-color: #3b245a;
+    padding: 2px;
 }
 .header__bottom-account-link {
     color: #040507;
@@ -269,13 +282,11 @@ span.button-close {
     padding-left: 25px;
     position: relative;
 }
-.header__bottom-account-link::before {
-    content: '';
-    position: absolute;
+.login__icon{
     width: 17px;
     height: 20px;
-    background-image: url('/image/halkmarket/header/icon/acc-icon.svg');
-    background-repeat: no-repeat;
+    color: #0DB14B;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
@@ -289,16 +300,24 @@ span.button-close {
     font-weight: 600;
     padding-left: 31px;
 }
-.header__bottom-cut-link::before{
-    content: '';
+.cart__icon{
+    width: 20px;
+    height: 18px;
     position: absolute;
-    width: 18px;
-    height: 17px;
-    background-image: url('/image/halkmarket/header/icon/cut-icon-green.svg');
+    top: 4px;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    color: #0DB85A;
 }
+/*.header__bottom-cut-link::before{*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 18px;*/
+/*    height: 17px;*/
+/*    background-image: url('/image/halkmarket/header/icon/cut-icon-green.svg');*/
+/*    left: 0;*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*}*/
 .header__bottom-cut-num{
     position: absolute;
     width: 18px;
@@ -312,11 +331,12 @@ span.button-close {
     text-align: center;
 }
 .header__bottom-favorites-link{
-    display: block;
-    width: 18px;
-    height: 16px;
-    background-image: url('/image/halkmarket/header/icon/heart.svg');
     position: relative;
+}
+.favorite__icon{
+    width: 20px;
+    height: 18px;
+    color: #F62F5E;
 }
 .header__bottom-favorites-num{
     position: absolute;
@@ -447,41 +467,60 @@ h4.catalog__title{
     margin-right: 15px;
 }
 .advantages__item::before {
-    content: '';
+    /*content: '';*/
+    /*position: absolute;*/
+    /*width: 44px;*/
+    /*height: 44px;*/
+    /*border-radius: 50%;*/
+    /*background-color: #984bff;*/
+    /*left: 0;*/
+}
+.advantages__icon{
     position: absolute;
+    color: #fff;
     width: 44px;
     height: 44px;
     border-radius: 50%;
     background-color: #984bff;
+    /*padding: 6px;*/
     left: 0;
 }
-.advantages__item-1::after {
-    content: '';
-    position: absolute;
-    background-image: url('/image/halkmarket/advantages/advantages-icon-1.svg');
-    left: 4px;
-    top: 4px;
-    width: 36px;
-    height: 32px;
+.advantages__icon-1{
+    padding: 0 8px 0 8px;
 }
-.advantages__item-2::after {
-    content: '';
-    position: absolute;
-    background-image: url('/image/halkmarket/advantages/advantages-icon-2.svg');
-    left: 8px;
-    top: 6px;
-    width: 26px;
-    height: 32px;
+.advantages__icon-2{
+    padding: 0 1px 0 8px;
 }
-.advantages__item-3::after {
-    content: '';
-    position: absolute;
-    background-image: url('/image/halkmarket/advantages/advantages-icon-3.svg');
-    left: 8px;
-    top: 7px;
-    width: 28px;
-    height: 26px;
+.advantages__icon-3{
+    padding: 2px 4px 0px 11px;
 }
+/*.advantages__item-1::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    background-image: url('/image/halkmarket/advantages/advantages-icon-1.svg');*/
+/*    left: 4px;*/
+/*    top: 4px;*/
+/*    width: 36px;*/
+/*    height: 32px;*/
+/*}*/
+/*.advantages__item-2::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    background-image: url('/image/halkmarket/advantages/advantages-icon-2.svg');*/
+/*    left: 8px;*/
+/*    top: 6px;*/
+/*    width: 26px;*/
+/*    height: 32px;*/
+/*}*/
+/*.advantages__item-3::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    background-image: url('/image/halkmarket/advantages/advantages-icon-3.svg');*/
+/*    left: 8px;*/
+/*    top: 7px;*/
+/*    width: 28px;*/
+/*    height: 26px;*/
+/*}*/
 .advantages__item-title {
     font-weight: 600;
     font-size: 20px;
@@ -691,7 +730,16 @@ h4.catalog__title{
     padding: 10px 10px;
     border-radius: 15px;
     position: relative;
+
 }
+/*.label__icon{*/
+/*    position: absolute;*/
+/*    width: 52px;*/
+/*    height: 31px;*/
+/*    top: -13px;*/
+/*    right: 13px;*/
+/*    z-index: 15;*/
+/*}*/
 .special__item:before{
     content: "";
     position: absolute;
@@ -821,33 +869,6 @@ span.special__item-box-text, span.category__item-box-text, span.search__item-box
     outline: none;
     border: none;
 }
-.item__btn::before{
-    content: '';
-    position: absolute;
-    width: 18px;
-    height: 17px;
-    background-image: url('/image/halkmarket/slider/cut-icon.svg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    top: 0;
-    right: 0;
-    transition: all .3s;
-}
-.special__item:hover .special__item-box .item__btn::before {
-    content: '';
-    position: absolute;
-    width: 18px;
-    height: 17px;
-    background-image: url('/image/halkmarket/slider/cut-icon-green.svg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    top: 0;
-    right: 0;
-}
 .bestsellers__item:hover .bestsellers__item-box .item__btn::before {
     content: '';
     position: absolute;
@@ -890,7 +911,6 @@ span.special__item-box-text, span.category__item-box-text, span.search__item-box
 .slick-next{
     position: absolute;
     right: -44px;
-    /*right: 0px;*/
     top: 50%;
     transform: translateY(-50%);
     border: none;
@@ -902,19 +922,14 @@ span.special__item-box-text, span.category__item-box-text, span.search__item-box
     border-radius: 0 20px 20px 0;
     background-color: rgba(246, 245, 245, 0.5);
 }
-.slick-next::before{
-    content: '';
+.next__icon{
     position: absolute;
     width: 21px;
     height: 31px;
-    background-image: url('/image/halkmarket/slider/slider-arrow.svg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
     top: 50%;
-    transform: translateY(-50%) rotate(180deg);
-    right: 26px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #3C275C;
 }
 .favorit__box{
     position: absolute;
@@ -928,7 +943,21 @@ button.cart__add-btn{
     font: inherit;
     color: inherit;
     position: relative;
-    width: 18px;
+    width: 20px;
+    height: 18px;
+}
+.cart__icon-item{
+    width: 20px;
+    height: 18px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    color: #000;
+    transition: color .3s;
+}
+.special__item:hover .special__item-box .cart__add-btn .cart__icon-item,
+.bestsellers__item:hover .cart__add-btn .cart__icon-item{
+    color: #0DB85A;
 }
 .favorit__box button.favorit__box-btn {
     border: none;
@@ -939,18 +968,26 @@ button.cart__add-btn{
     width: 22px;
     height: 18px;
 }
+.heart__icon{
+    width: 19px;
+    height: 17px;
+    position: absolute;
+    color: #F62F5E;
+    left: 2px;
+    top: 7px;
+}
 .favorit__box-btn:checked .fa-heart:before{
     background-color: green;
 }
 .search__item:hover .search__item-box button.cart__add-btn .fa-shopping-cart-black:before{
     background-image: url("/image/halkmarket/cart/cart-green.svg");
 }
-.special__item:hover .special__item-box button.cart__add-btn .fa-shopping-cart-black:before{
-    background-image: url("/image/halkmarket/cart/cart-green.svg");
-}
-.bestsellers__item:hover .bestsellers__item-box button.cart__add-btn .fa-shopping-cart-black:before{
-    background-image: url("/image/halkmarket/cart/cart-green.svg");
-}
+/*.special__item:hover .special__item-box button.cart__add-btn .fa-shopping-cart-black:before{*/
+/*    background-image: url("/image/halkmarket/cart/cart-green.svg");*/
+/*}*/
+/*.bestsellers__item:hover .bestsellers__item-box button.cart__add-btn .fa-shopping-cart-black:before{*/
+/*    background-image: url("/image/halkmarket/cart/cart-green.svg");*/
+/*}*/
 .product-tab__item:hover .product-tab__item-box button.product__slider-cart-btn:before{
     background-image: url("/image/halkmarket/cart/cart-green.svg");
 }

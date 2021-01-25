@@ -1,21 +1,21 @@
-<div id="search" class="input-group input__header-bottom">
+<div id="search" class="input__header-bottom">
 
-{#  <div class="input-btn__box">#}
     <span class="input-group-btn">
-      <button type="button" class="btn btn-default btn-lg header-search-btn"></button>
+      <button type="button" class="header-search-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="search-btn__icon">
+            <use xlink:href="/img/icon/sprite.svg#SearchIconBtn"></use>
+          </svg>
+      </button>
     </span>
-{#  </div>#}
+
   
-  
-  <span class="button-close" onclick="document.getElementById('myInput').value='';"></span>
+  <span onclick="document.getElementById('myInput').value='';">
+        <svg xmlns="http://www.w3.org/2000/svg" class="close-btn__icon">
+            <use xlink:href="/img/icon/sprite.svg#SearchClose"></use>
+        </svg>
+  </span>
   
   <input type="text" name="search" value="{{ search }}" placeholder="{#{{ text_search }}#}" class="form-control input-lg header__bottom-search" id="myInput"/>
   
 
 </div>
-
-{#<script>#}
-{#    $('.reset').on('click', function() {#}
-{#        $(this).closest('form').get(0).reset();#}
-{#    });#}
-{#</script>#}
