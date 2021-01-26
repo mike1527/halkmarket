@@ -3457,12 +3457,24 @@ a.partners__link-btn{
     padding: 20px 0 20px 0;
     background: #F8F8F8;
     border-radius: 15px;
+    height: 100%;
 }
 .account__wrapper{
-    background-color: #0b91d2;
-    /*background: #FCFCFC;*/
+    background: #FCFCFC;
     box-shadow: 0px 0px 6px rgba(122, 122, 122, 0.158927);
     border-radius: 15px;
+    width: 73%;
+    padding: 0px 25px;
+}
+.account__wrapper-order{
+    background: #FCFCFC;
+    box-shadow: 0px 0px 6px rgba(122, 122, 122, 0.158927);
+    border-radius: 15px;
+    width: 100%;
+    padding: 25px 25px;
+    margin-bottom: 20px;
+}
+.account__order-box{
     width: 73%;
 }
 li.account__item{
@@ -3478,6 +3490,25 @@ a.account__item-link{
     padding: 14px 26px 14px 55px;
     position: relative;
     transition: color .3s;
+}
+a.account__order-link{
+    color: #0DB14B;
+    display: block;
+    padding: 14px 26px 14px 55px;
+    position: relative;
+    transition: color .3s;
+}
+.account__order-link-icon{
+    color: #0DB14B;
+    width: 18px;
+    height: 12px;
+    margin-right: 10px;
+    margin-left: 26px;
+    position: absolute;
+    left: 0;
+    transition: color .3s;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .account__icon{
     color: #777;
@@ -3511,15 +3542,81 @@ li.account__item:hover a.account__item-link{
 li.account__item:hover a.account__item-link .account__icon{
     color: #0DB14B;
 }
-@media (max-width: 950px){
-    a.account__item-link{
-        padding: 14px 7px 14px 38px;
+h2.account__title{
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-family: 'OpenSans-Bold';
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    color: #3B245A;
+}
+h3.account__order-title{
+    font-size: 15px;
+    font-family: OpenSans-Bold;
+    color: #777;
+    margin: 0 0 25px 0;
+}
+td.account__content-title{
+    color: #777;
+    font-family: OpenSans-Bold;
+    padding: 25px 0 15px 0px;
+    text-align: left;
+}
+td.account__content-order-title{
+    padding: 0;
+}
+td.account__order-address{
+    padding-bottom: 25px;
+}
+tr td.account__content-text{
+    font-family: OpenSans-SemiBold;
+    text-align: left;
+    color: #000;
+    font-weight: 400;
+    padding: 10px 0;
+}
+/*td.account__content-name{*/
+/*    overflow: hidden;*/
+/*    white-space: nowrap;*/
+/*    text-overflow: ellipsis;*/
+/*}*/
+tbody.account__content-items tr{
+    border-bottom: 1px solid #DFE2E6;
+}
+tbody.account__content-items tr:last-child{
+    border-bottom: none;
+}
+.account__order-prev-icon{
+    width: 33px;
+    height: 28px;
+    background-color: #0DB14B;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+}
+.cart__icon-account{
+    width: 33px;
+    height: 28px;
+    background-color: #0DB14B;
+    border-radius: 5px;
+    padding: 5px 4px 2px 2px;
+    color: #fff;
+}
+@media (max-width: 1073px){
+    td.account__content-title, td.account__content-text, a.account__order-link, a.account__item-link{
+        font-size: 14px;
     }
-    .account__icon{
+}
+@media (max-width: 950px){
+    a.account__item-link, a.account__order-link{
+        padding: 14px 0px 14px 38px;
+    }
+    .account__icon, .account__order-link-icon{
         margin-left: 8px;
     }
 }
-@media (max-width: 835px){
+@media (max-width: 901px){
     .account{
         flex-direction: column;
     }
@@ -3529,6 +3626,9 @@ li.account__item:hover a.account__item-link .account__icon{
         padding: 0;
     }
     .account__wrapper{
+        width: 100%;
+    }
+    .account__order-box{
         width: 100%;
     }
     ul.account__list{
@@ -3543,18 +3643,34 @@ li.account__item:hover a.account__item-link .account__icon{
         padding: 14px 0px 14px 38px;
         border-bottom: none;
     }
-}
-@media (max-width: 735px){
-    a.account__item-link{
-        font-size: 14px;
+    table tr {
+          border–bottom: 3px solid #ddd;
+          display: block;
+      }
+    table td {
+        border–bottom: 1px solid #ddd;
+        display: block;
+        text–align: right;
+    }
+    table thead tr td.account__content-title{
+        display: none;
+    }
+    table.table__account td:before {
+        content: attr(aria-label);
+        float: left;
+        color: #777;
+        font-family: OpenSans-Bold;
+    }
+    tr td.account__content-text{
+        text-align: right;
     }
 }
-@media (max-width: 659px){
+@media (max-width: 676px){
     li.account__item{
         display: flex;
         justify-content: center;
     }
-    a.account__item-link{
+    a.account__item-link, a.account__order-link{
         font-size: 0;
         padding: 14px 0px 14px 0px;
         display: inline-block;
@@ -3564,6 +3680,7 @@ li.account__item:hover a.account__item-link .account__icon{
         margin: 0;
     }
 }
+
 /*----- ----- ----- END ACCOUNT ----- ----- -----*/
 
 
