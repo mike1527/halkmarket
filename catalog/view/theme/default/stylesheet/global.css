@@ -121,6 +121,17 @@ input.input__keep{
 .login__input-keep:checked + p.checkout__existing-text{
     color: #6B6C6F;
 }
+.content__inner-box{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.content__body{
+    flex: 1 0 auto;
+}
+.content__footer{
+    flex: 0 0 auto;
+}
 /*----- ----- ----- END GLOBAL ----- ----- -----*/
 
 /*----- ----- ----- START HEADER ----- ----- -----*/
@@ -3552,10 +3563,25 @@ h2.account__title{
     color: #3B245A;
 }
 h3.account__order-title{
-    font-size: 15px;
+    font-size: 16px;
     font-family: OpenSans-Bold;
     color: #777;
     margin: 0 0 25px 0;
+}
+.account__wrapper-order-box{
+    display: flex;
+    justify-content: space-between;
+}
+.account__item-history{
+    width: 33.3333%;
+}
+div.account__content-order-history, div.account__content-text{
+    font-family: 'OpenSans-SemiBold';
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+div.account__content-text{
+    margin: 0;
 }
 td.account__content-title{
     color: #777;
@@ -3566,6 +3592,15 @@ td.account__content-title{
 td.account__content-order-title{
     padding: 0;
 }
+td.order__text-center, tbody.account__content-items td.order__text-center{
+    text-align: center;
+}
+td.account__content-order-history{
+    padding: 0;
+    font-family: OpenSans-SemiBold;
+    font-size: 13px;
+    color: #000;
+}
 td.account__order-address{
     padding-bottom: 25px;
 }
@@ -3575,12 +3610,8 @@ tr td.account__content-text{
     color: #000;
     font-weight: 400;
     padding: 10px 0;
+    font-size: 13px;
 }
-/*td.account__content-name{*/
-/*    overflow: hidden;*/
-/*    white-space: nowrap;*/
-/*    text-overflow: ellipsis;*/
-/*}*/
 tbody.account__content-items tr{
     border-bottom: 1px solid #DFE2E6;
 }
@@ -3663,6 +3694,38 @@ tbody.account__content-items tr:last-child{
     }
     tr td.account__content-text{
         text-align: right;
+    }
+    tr.account__order-result{
+        display: flex;
+        justify-content: flex-end;
+    }
+    td.account__order-result-item{
+        margin-right: 25px;
+    }
+    .account__wrapper-order-box{
+        flex-direction: column;
+    }
+    .account__item-history{
+        padding: 20px 0;
+        width: 100%;
+        border-bottom: 1px solid #DFE2E6;
+    }
+    .account__item-history:last-child{
+        border-bottom: none;
+    }
+    h3.account__order-title{
+        margin: 0;
+    }
+    td.order__text-center, tbody.account__content-items td.order__text-center{
+        text-align: right;
+    }
+    tr td.account__order-result-item{
+        width: 60%;
+        text-align: inherit;
+        margin: 0;
+    }
+    tr td.account__order-result-num{
+        width: 40%;
     }
 }
 @media (max-width: 676px){

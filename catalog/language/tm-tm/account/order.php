@@ -17,6 +17,18 @@ $_['column_date_added']             = 'Goşuldy';
 $_['button_view_text']              = 'View order';
 $_['text_account']                  = 'Şahsy meýdan';
 
+$_['text_order']                    = 'Sargyt';
+$_['text_breadcrumb_myorder']       = 'Sargyt';
+$_['text_shipping_method']          = 'Eltip bermek usuly:';
+$_['text_payment_method']           = 'Töleg usuly:';
+$_['text_shipping_address']         = 'Eltip berme adresi';
+$_['text_payment_address']          = 'Hasaplaşyk salgysy';
+$_['column_name']                   = 'Önümiň ady';
+$_['column_model']                  = 'Satyjy kody';
+$_['column_price']                  = 'Bahasy';
+$_['text_comment']                  = 'Düşündiriş';
+$_['text_success']                  = '<a href="%s">%s</a> sargydyňyzdan üstünlikli goşuldy <a href="%s"> araba goşuň</a>!';
+
 
 ////$_['text_account']          = 'Личный кабинет';
 //$_['text_order']            = 'Заказ';

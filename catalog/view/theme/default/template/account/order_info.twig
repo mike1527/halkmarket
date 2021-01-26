@@ -143,8 +143,8 @@
                 <tr>
                   <td class="account__content-title account__content-order-title">{{ column_name }}</td>
                   <td class="account__content-title account__content-order-title">{{ column_model }}</td>
-                  <td class="account__content-title account__content-order-title">{{ column_product }}</td>
-                  <td class="account__content-title account__content-order-title">{{ column_price }}</td>
+                  <td class="account__content-title account__content-order-title order__text-center">{{ column_product }}</td>
+                  <td class="account__content-title account__content-order-title order__text-center">{{ column_price }}</td>
                   <td class="account__content-title account__content-order-title">{{ column_total }}</td>
                 </tr>
               </thead>
@@ -153,8 +153,8 @@
                 <tr>
                   <td class="account__content-text" aria-label="{{ column_name }}">{{ product.name }}</td>
                   <td class="account__content-text" aria-label="{{ column_model }}">{{ product.model }}</td>
-                  <td class="account__content-text" aria-label="{{ column_product }}">{{ product.quantity }}</td>
-                  <td class="account__content-text" aria-label="{{ column_price }}">{{ product.price }}</td>
+                  <td class="account__content-text order__text-center" aria-label="{{ column_product }}">{{ product.quantity }}</td>
+                  <td class="account__content-text order__text-center" aria-label="{{ column_price }}">{{ product.price }}</td>
                   <td class="account__content-text" aria-label="{{ column_total }}">{{ product.total }}</td>
                   <td class="text-right">
                     {% if product.reorder %}
@@ -167,76 +167,64 @@
                   </td>
                 </tr>
               {% endfor %}
+
               </tbody>
+
+              {% for total in totals %}
+                <tr class="account__order-result">
+                  <td class="account__content-text"></td>
+                  <td class="account__content-text"></td>
+                  <td class="account__content-text"></td>
+                  <td class="account__content-text account__order-result-item">{{ total.title }}</td>
+                  <td class="account__content-text account__order-result-num">{{ total.text }}</td>
+                </tr>
+              {% endfor %}
             </table>
+          </div>
+
+          <div class="account__wrapper-order">
+            <h3 class="account__order-title">История заказов</h3>
+
+            <div class="account__wrapper-order-box">
+              {% if histories %}
+              {% for history in histories %}
+              <div class="account__item-history">
+                <div class="account__content-title account__content-order-history">
+                  {{ column_date_added }}
+                </div>
+                <div class="account__content-text">
+                  {{ history.date_added }}
+                </div>
+              </div>
+              <div class="account__item-history">
+                <div class="account__content-title account__content-order-history">
+                  {{ column_status }}
+                </div>
+                <div class="account__content-text">
+                  {{ history.status }}
+                </div>
+              </div>
+              <div class="account__item-history">
+                {% if comment %}
+                <div class="account__content-title account__content-order-history">
+                  {{ text_comment }}
+                </div>
+                {% endif %}
+                <div class="account__content-text">
+                  {{ comment }}
+                </div>
+                {% endfor %}
+                {% endif %}
+              </div>
+            </div>
           </div>
 
         </div>
 
       </section>
 
-
-
-          {% for total in totals %}
-          <tr>
-            <td colspan="3"></td>
-            <td class="text-right"><b>{{ total.title }}</b></td>
-            <td class="text-right">{{ total.text }}</td>
-            {% if products %}
-            <td></td>
-            {% endif %} </tr>
-          {% endfor %}
-            </tfoot>
-
-{#        </table>#}
-{#      </div>#}
-{#      {% if comment %}#}
-{#      <table class="table table-bordered table-hover">#}
-{#        <thead>#}
-{#          <tr>#}
-{#            <td class="text-left">{{ text_comment }}</td>#}
-{#          </tr>#}
-{#        </thead>#}
-{#        <tbody>#}
-{#          <tr>#}
-{#            <td class="text-left">{{ comment }}</td>#}
-{#          </tr>#}
-{#        </tbody>#}
-{#      </table>#}
-{#      {% endif %}#}
-{#      {% if histories %}#}
-{#      <h3>{{ text_history }}</h3>#}
-{#      <table class="table table-bordered table-hover">#}
-{#        <thead>#}
-{#          <tr>#}
-{#            <td class="text-left">{{ column_date_added }}</td>#}
-{#            <td class="text-left">{{ column_status }}</td>#}
-{#            <td class="text-left">{{ column_comment }}</td>#}
-{#          </tr>#}
-{#        </thead>#}
-{#        <tbody>#}
-
-{#        {% if histories %}#}
-{#        {% for history in histories %}#}
-{#        <tr>#}
-{#          <td class="text-left">{{ history.date_added }}</td>#}
-{#          <td class="text-left">{{ history.status }}</td>#}
-{#          <td class="text-left">{{ history.comment }}</td>#}
-{#        </tr>#}
-{#        {% endfor %}#}
-{#        {% else %}#}
-{#        <tr>#}
-{#          <td colspan="3" class="text-center">{{ text_no_results }}</td>#}
-{#        </tr>#}
-{#        {% endif %}#}
-{#          </tbody>#}
-
-{#      </table>#}
-{#      {% endif %}#}
-
-
-
-
+        </table>
+      </div>
 
 
     </div>

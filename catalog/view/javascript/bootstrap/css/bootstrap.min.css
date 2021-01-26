@@ -2907,7 +2907,7 @@ th {
 .table>thead>tr>th {
     /*padding: 8px;*/
     line-height: 1.42857143;
-    vertical-align: middle;
+    vertical-align: bottom;
     /*border-top: 1px solid #ddd*/
 }
 

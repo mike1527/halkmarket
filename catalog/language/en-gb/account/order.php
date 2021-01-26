@@ -17,6 +17,18 @@ $_['column_date_added']             = 'Added';
 $_['button_view_text']              = 'Tertibi görmek';
 $_['text_account']                  = 'Personal area';
 
+$_['text_order']                    = 'My order';
+$_['text_breadcrumb_myorder']       = 'My order';
+$_['text_shipping_method']          = 'Delivery method:';
+$_['text_payment_method']           = 'Payment method:';
+$_['text_shipping_address']         = 'Delivery address';
+$_['text_payment_address']          = 'Billing address';
+$_['column_name']                   = 'Name of product';
+$_['column_model']                  = 'Vendor code';
+$_['column_price']                  = 'Price';
+$_['text_comment']                  = 'Comment';
+$_['text_success']                  = '<a href="%s">%s</a> successfully added from your order <a href="%s"> add to cart</a>!';
+
 
 ////$_['text_account']          = 'Личный кабинет';
 //$_['text_order']            = 'Заказ';
