@@ -1,18 +1,25 @@
 <?php
-// *	@source		See SOURCE.txt for source and other copyright.
-// *	@license	GNU General Public License version 3; see LICENSE.txt
-
 // Heading
-$_['heading_title']        = 'Мои Адреса';
+$_['heading_title']              = 'Salgylarym';
 
 // Text
-$_['text_account']         = 'Личный кабинет';
-$_['text_address_book']    = 'Список адресов доставки';
-$_['text_edit_address']    = 'Редактировать адрес';
-$_['text_add']             = 'Ваш адрес был успешно добавлен';
-$_['text_edit']            = 'Ваш адрес был успешно изменен';
-$_['text_delete']          = 'Ваш адрес был успешно удален';
-$_['text_empty']           = 'В вашей учетной записи нет адресов';
+$_['text_breadcrumb_address']    = 'Salgylarym';
+$_['text_account']               = 'Şahsy meýdan';
+$_['text_address_book']          = 'Salgylarym';
+$_['text_my_orders']             = 'Sargytlarym';
+$_['text_address']               = 'Salgylarym';
+$_['text_edit']                  = 'Profil';
+$_['text_password']              = 'Paroly üýtgetmek';
+$_['text_choise_address']        = 'Bu salgyny esasy ediň';
+$_['text_main_label']            = 'Esasy';
+$_['text_btn_new_address']       = 'Täze salgy goşuň';
+$_['text_add']                   = 'Salgyňyz üstünlikli goşuldy';
+$_['text_delete']                = 'Salgyňyz üstünlikli öçürildi';
+$_['text_empty']                 = 'Hasabyňyzda salgy ýok';
+
+
+$_['text_edit_address']          = 'Salgyny redaktirläň';
+
 
 // Entry
 $_['entry_firstname']      = 'Имя';

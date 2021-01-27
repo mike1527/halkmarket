@@ -118,8 +118,11 @@ input.input__keep{
 .login__input-keep:checked + .login-input__keep-style{
     border: 2px solid #6b6c6f;
 }
-.login__input-keep:checked + p.checkout__existing-text{
+.login__input-keep:checked + p.input__existing-text{
     color: #6B6C6F;
+}
+.content__inner{
+    height: 100%;
 }
 .content__inner-box{
     display: flex;
@@ -396,6 +399,7 @@ li .catalog__item {
 .header__top-inner{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .login__language-form{
     display: flex;
@@ -936,6 +940,19 @@ span.special__item-box-text, span.category__item-box-text, span.search__item-box
     height: 300px;
     border-radius: 0 20px 20px 0;
     background-color: rgba(246, 245, 245, 0.5);
+}
+.slick__address-arrow{
+    position: absolute;
+    right: -44px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 6px rgba(122, 122, 122, 0.158927);
+    border-radius: 5px;
+    width: 50px;
+    height: 59px;
+    cursor: pointer;
 }
 .next__icon{
     position: absolute;
@@ -2470,6 +2487,8 @@ label.label__keep{
     cursor: pointer;
     transition: all .3s;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 label.label__keep:hover{
     color: #6b6c6f;
@@ -2609,7 +2628,7 @@ p.register__form-text a{
     height: 14px;
     top: 46px;
 }
-.register__btn-box{
+.register__btn-box, .address__choise{
     display: flex;
 }
 .register__label-keep{
@@ -2745,7 +2764,7 @@ h3.checkout__info-title{
 p.checkout__text{
     color: #DFE2E6;
 }
-p.checkout__existing-text{
+p.input__existing-text{
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
@@ -3477,6 +3496,12 @@ a.partners__link-btn{
     width: 73%;
     padding: 0px 25px;
 }
+.account__address-wrapper{
+    width: 73%;
+}
+.account__address-box{
+    width: 93%;
+}
 .account__wrapper-order{
     background: #FCFCFC;
     box-shadow: 0px 0px 6px rgba(122, 122, 122, 0.158927);
@@ -3502,7 +3527,7 @@ a.account__item-link{
     position: relative;
     transition: color .3s;
 }
-a.account__order-link{
+a.account__order-link, a.account__address-link{
     color: #0DB14B;
     display: block;
     padding: 14px 26px 14px 55px;
@@ -3513,6 +3538,18 @@ a.account__order-link{
     color: #0DB14B;
     width: 18px;
     height: 12px;
+    margin-right: 10px;
+    margin-left: 26px;
+    position: absolute;
+    left: 0;
+    transition: color .3s;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.account__address-link-icon{
+    color: #0DB14B;
+    width: 17px;
+    height: 17px;
     margin-right: 10px;
     margin-left: 26px;
     position: absolute;
@@ -3618,6 +3655,40 @@ tbody.account__content-items tr{
 tbody.account__content-items tr:last-child{
     border-bottom: none;
 }
+.account__address-inner{
+    display: flex;
+    justify-content: space-between;
+}
+div.account__address-item{
+    padding: 70px 15px 0px 15px;
+    background: #FCFCFC;
+    /*box-shadow: 0px 0px 6px rgba(122, 122, 122, 0.158927);*/
+    border-radius: 15px;
+    font-size: 14px;
+    color: #777;
+    /*min-width: 241px;*/
+    height: 258px;
+    margin-right: 39px;
+    position: relative;
+}
+span.address__main-label{
+    background: #EFF3F3;
+    font-size: 11px;
+    color: #777;
+    text-transform: uppercase;
+    width: 124px;
+    height: 35px;
+    border-radius: 15px 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a.account__address-edit-link{
+    color: #000;
+}
 .account__order-prev-icon{
     width: 33px;
     height: 28px;
@@ -3634,16 +3705,78 @@ tbody.account__content-items tr:last-child{
     padding: 5px 4px 2px 2px;
     color: #fff;
 }
+.account__address-btn-group{
+    position: absolute;
+    top: 5px;
+    right: 16px;
+}
+.account__address-delete, .account__address-edit{
+    width: 33px;
+    height: 28px;
+    background-color: #0DB14B;
+    border-radius: 5px;
+    padding: 5px;
+    color: #000;
+    transition: color .3s;
+}
+.account__address-delete:hover, .account__address-edit:hover{
+    color: #fff;
+}
+p.input__account-text{
+    font-size: 12px;
+    font-family: 'OpenSans-Regular';
+    font-weight: 400;
+    color: #6B6C6F;
+}
+div.address__link-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+a.address__link-add-new{
+    padding: 10px 20px;
+    border: 1px solid #3C275C;
+    border-radius: 20px;
+    color: #3C275C;
+    transition: color .3s, background-color .3s ;
+}
+a.address__link-add-new:hover{
+    color: #fff;
+    background-color: #3C275C;
+}
+.account__address-delete{
+    margin-right: 5px;
+}
+.address__choise{
+    position: absolute;
+    bottom: 31px;
+}
+.account__slider-next{
+    width: 30px;
+    height: 34px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media (max-width: 1252px){
+    div.account__address-item{
+        margin-right: 17px;
+    }
+}
+@media (max-width: 1155px){
+
+}
 @media (max-width: 1073px){
-    td.account__content-title, td.account__content-text, a.account__order-link, a.account__item-link{
+    td.account__content-title, td.account__content-text, a.account__order-link, a.account__item-link, a.account__address-link{
         font-size: 14px;
     }
 }
 @media (max-width: 950px){
-    a.account__item-link, a.account__order-link{
+    a.account__item-link, a.account__order-link, a.account__address-link{
         padding: 14px 0px 14px 38px;
     }
-    .account__icon, .account__order-link-icon{
+    .account__icon, .account__order-link-icon, .account__address-link-icon{
         margin-left: 8px;
     }
 }
@@ -3656,7 +3789,7 @@ tbody.account__content-items tr:last-child{
         width: 100%;
         padding: 0;
     }
-    .account__wrapper{
+    .account__wrapper, .account__address-wrapper{
         width: 100%;
     }
     .account__order-box{
@@ -3727,13 +3860,22 @@ tbody.account__content-items tr:last-child{
     tr td.account__order-result-num{
         width: 40%;
     }
+    .account__address-box{
+        width: 100%;
+    }
+    .slick__address-arrow {
+        display: none !important;
+    }
+    div.account__address-item{
+        margin: 0px 9px;
+    }
 }
 @media (max-width: 676px){
     li.account__item{
         display: flex;
         justify-content: center;
     }
-    a.account__item-link, a.account__order-link{
+    a.account__item-link, a.account__order-link, a.account__address-link{
         font-size: 0;
         padding: 14px 0px 14px 0px;
         display: inline-block;

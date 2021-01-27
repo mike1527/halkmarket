@@ -1,18 +1,26 @@
 <?php
-// *	@source		See SOURCE.txt for source and other copyright.
-// *	@license	GNU General Public License version 3; see LICENSE.txt
 
 // Heading
-$_['heading_title']        = 'Мои Адреса';
+$_['heading_title']              = 'Мои Адреса';
 
 // Text
-$_['text_account']         = 'Личный кабинет';
-$_['text_address_book']    = 'Список адресов доставки';
+$_['text_breadcrumb_address']    = 'Мои Адреса';
+$_['text_account']               = 'Личный кабинет';
+$_['text_address_book']          = 'Мои Адреса';
+$_['text_my_orders']             = 'Мои заказы';
+$_['text_address']               = 'Мои Адреса';
+$_['text_edit']                  = 'Профиль';
+$_['text_password']              = 'Изменить пароль';
+$_['text_choise_address']        = 'Сделать этот адрес основным';
+$_['text_main_label']            = 'Основной';
+$_['text_btn_new_address']       = 'Добавить новый адрес';
+$_['text_add']                   = 'Ваш адрес был успешно добавлен';
+$_['text_delete']                = 'Ваш адрес был успешно удален';
+$_['text_empty']                 = 'В вашей учетной записи нет адресов';
+
+
 $_['text_edit_address']    = 'Редактировать адрес';
-$_['text_add']             = 'Ваш адрес был успешно добавлен';
-$_['text_edit']            = 'Ваш адрес был успешно изменен';
-$_['text_delete']          = 'Ваш адрес был успешно удален';
-$_['text_empty']           = 'В вашей учетной записи нет адресов';
+
 
 // Entry
 $_['entry_firstname']      = 'Имя';
