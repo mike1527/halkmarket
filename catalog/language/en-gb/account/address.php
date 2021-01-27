@@ -7,7 +7,7 @@ $_['text_breadcrumb_address']    = 'My Addresses';
 $_['text_account']               = 'Personal Area';
 $_['text_address_book']          = 'My Addresses';
 $_['text_my_orders']             = 'My orders';
-$_['text_address']               = 'My Addresses';
+$_['text_address_title']         = 'My Addresses';
 $_['text_edit']                  = 'Profile';
 $_['text_password']              = 'Change password';
 $_['text_choise_address']        = 'Make this address main';
@@ -16,32 +16,39 @@ $_['text_btn_new_address']       = 'Add new address';
 $_['text_add']                   = 'Your address has been successfully added';
 $_['text_delete']                = 'Your address has been successfully deleted';
 $_['text_empty']                 = 'Your account has no addresses';
+$_['text_edit_address']          = 'Edit address';
+$_['entry_address_1']            = 'The address';
+$_['entry_firstname']            = 'Name';
+$_['entry_lastname']             = 'Surname';
+$_['entry_city']                 = 'City';
+$_['entry_zone']                 = 'Region / Oblast';
+$_['address_button_continue']    = 'Continue';
 
 
 $_['text_edit_address']          = 'Edit address';
 
 
-// Entry
-$_['entry_firstname']      = 'Имя';
-$_['entry_lastname']       = 'Фамилия';
-$_['entry_company']        = 'Компания';
-$_['entry_address_1']      = 'Адрес 1';
-$_['entry_address_2']      = 'Адрес 2';
-$_['entry_postcode']       = 'Почтовый индекс';
-$_['entry_city']           = 'Город';
-$_['entry_country']        = 'Страна';
-$_['entry_zone']           = 'Регион / Область';
-$_['entry_default']        = 'Основной адрес';
-
-// Error
-$_['error_delete']         = 'У Вас должно быть не менее 1 адреса!';
-$_['error_default']        = 'Вы не можете удалить основной адрес!';
-$_['error_firstname']      = 'Имя должно содержать от 1 до 32 символов!';
-$_['error_lastname']       = 'Фамилия должна содержать от 1 до 32 символов!';
-$_['error_vat']            = 'Неправильный VAT number!';
-$_['error_address_1']      = 'Адрес должен содержать от 3 до 128 символов!';
-$_['error_postcode']       = 'Индекс должен содержать от 2 до 10 символов!';
-$_['error_city']           = 'Название города должно содержать от 2 до 128 символов!';
-$_['error_country']        = 'Пожалуйста, укажите страну!';
-$_['error_zone']           = 'Пожалуйста, укажите регион / область!';
-$_['error_custom_field']   = '%s необходим!';
+//// Entry
+//$_['entry_firstname']      = 'Имя';
+//$_['entry_lastname']       = 'Фамилия';
+//$_['entry_company']        = 'Компания';
+//$_['entry_address_1']      = 'Адрес 1';
+//$_['entry_address_2']      = 'Адрес 2';
+//$_['entry_postcode']       = 'Почтовый индекс';
+//$_['entry_city']           = 'Город';
+//$_['entry_country']        = 'Страна';
+//$_['entry_zone']           = 'Регион / Область';
+//$_['entry_default']        = 'Основной адрес';
+//
+//// Error
+//$_['error_delete']         = 'У Вас должно быть не менее 1 адреса!';
+//$_['error_default']        = 'Вы не можете удалить основной адрес!';
+//$_['error_firstname']      = 'Имя должно содержать от 1 до 32 символов!';
+//$_['error_lastname']       = 'Фамилия должна содержать от 1 до 32 символов!';
+//$_['error_vat']            = 'Неправильный VAT number!';
+//$_['error_address_1']      = 'Адрес должен содержать от 3 до 128 символов!';
+//$_['error_postcode']       = 'Индекс должен содержать от 2 до 10 символов!';
+//$_['error_city']           = 'Название города должно содержать от 2 до 128 символов!';
+//$_['error_country']        = 'Пожалуйста, укажите страну!';
+//$_['error_zone']           = 'Пожалуйста, укажите регион / область!';
+//$_['error_custom_field']   = '%s необходим!';

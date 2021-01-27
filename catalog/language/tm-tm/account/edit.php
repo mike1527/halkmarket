@@ -1,27 +1,34 @@
 <?php
-// *	@source		See SOURCE.txt for source and other copyright.
-// *	@license	GNU General Public License version 3; see LICENSE.txt
-
 // Heading
-$_['heading_title']      = 'Учетная запись';
+$_['heading_title']                = 'Meniň profilim';
 
 // Text
-$_['text_account']       = 'Личный кабинет';
-$_['text_edit']          = 'Редактировать информацию';
-$_['text_your_details']  = 'Ваша учетная запись';
-$_['text_success']       = 'Ваша учетная запись была успешно обновлена!';
+$_['text_breadcrumb_profil']       = 'Meniň profilim';
+$_['text_my_orders']               = 'Sargytlarym';
+$_['text_address_title']           = 'My addresses';
+$_['text_edit']                    = 'Meniň profilim';
+$_['text_password']                = 'Paroly üýtgetmek';
+$_['address_button_continue']      = 'Dowam et';
+
+$_['text_account']       = 'Şahsy meýdan';
+//$_['text_your_details']  = 'Ваша учетная запись';
+$_['text_success']       = 'Hasabyňyz üstünlikli täzelendi!';
 
 // Entry
-$_['entry_firstname']    = 'Имя';
-$_['entry_lastname']     = 'Фамилия';
-$_['entry_email']        = 'E-Mail';
-$_['entry_telephone']    = 'Телефон';
-$_['entry_fax']          = 'Факс';
+$_['entry_firstname']    = 'Ady';
+$_['entry_lastname']     = 'Familiýa';
+$_['entry_email']        = 'E-poçta';
+$_['entry_telephone']    = 'Telefon (+993)';
+
+$_['entry_firstname_placeholder']    = 'Adyňyzy giriziň';
+$_['entry_lastname_placeholder']     = 'Familiýaňyzy ýazmagyňyzy';
+$_['entry_email_placeholder']        = 'E-poçta giriziň';
+$_['entry_telephone_placeholder']    = 'Telefon belgiňizi giriziň';
 
 // Error
-$_['error_exists']       = 'Такой E-Mail уже зарегистрирован!';
-$_['error_firstname']    = 'Имя должно содержать от 1 до 32 символов!';
-$_['error_lastname']     = 'Фамилия должна содержать от 1 до 32 символов!';
-$_['error_email']        = 'E-Mail адрес введен неверно!';
-$_['error_telephone']    = 'Номер телефона должен содержать от 3 до 32 символов!';
-$_['error_custom_field'] = '%s необходим!';
+$_['error_exists']       = 'Bu e-poçta eýýäm hasaba alyndy!';
+$_['error_firstname']    = 'Ady 1-den 32-e çenli simwoldan ybarat bolmaly!';
+$_['error_lastname']     = 'Familiýasy 1-den 32 simwoldan ybarat bolmaly!';
+$_['error_email']        = 'E-poçta salgysy nädogry girizildi!';
+$_['error_telephone']    = 'Telefon belgisinde 3 bilen 32 simwoldan ybarat bolmaly!';
+$_['error_custom_field'] = '%s zerur!';
