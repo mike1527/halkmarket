@@ -1,13 +1,13 @@
 <?php
 
 // Heading
-$_['heading_title']              = 'Мои Адреса';
+$_['heading_title']              = 'Мои адреса';
 
 // Text
-$_['text_breadcrumb_address']    = 'Мои Адреса';
+$_['text_breadcrumb_address']    = 'Мои адреса';
 $_['text_account']               = 'Личный кабинет';
 $_['text_my_orders']             = 'Мои заказы';
-$_['text_address_title']         = 'Мои Адреса';
+$_['text_address_title']         = 'Мои адреса';
 $_['text_edit']                  = 'Профиль';
 $_['text_password']              = 'Изменить пароль';
 $_['text_choise_address']        = 'Сделать этот адрес основным';
