@@ -2,12 +2,23 @@
     <div class="container">
         <div class="bestsellers__container">
             <div class="bestsellers__wrapper">
+
                 <h4 class="bestsellers__info-box-title">{{ heading_title }}</h4>
                 <div class="bestsellers__slider-inner">
 
                     <div class="bestsellers__slider">
                         {% for product in products %}
                             <div class="bestsellers__item">
+
+                                <div class="item__label-special">
+                                    <div class="item__label-special-box">
+                                        {#              <svg xmlns="http://www.w3.org/2000/svg" class="special__icon">#}
+                                        {#                <use xlink:href="/img/icon/sprite.svg#LabelSpecial"></use>#}
+                                        {#              </svg>#}
+                                        <p class="item__label-text">10%</p>
+                                    </div>
+                                </div>
+
                                 <div class="bestsellers__item-img">
                                     <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive" /></a>
                                 </div>
@@ -34,7 +45,7 @@
 
                                 <div class="bestsellers__item-box">
                                     <div class="price bestsellers__item-box-price">
-                                        <span class="special__item-box-text">цена за шт</span>
+                                        <span class="item__wrapper-box-text">цена за шт</span>
                                         {% if not product.special %}
                                             {{ product.price }}
                                             {% else %}

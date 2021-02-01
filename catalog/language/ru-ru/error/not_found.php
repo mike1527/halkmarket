@@ -1,9 +1,9 @@
 <?php
-// *	@source		See SOURCE.txt for source and other copyright.
-// *	@license	GNU General Public License version 3; see LICENSE.txt
-
 // Heading
-$_['heading_title'] = 'Запрашиваемая страница не найдена!';
+$_['heading_title'] = 'Страница не найдена';
 
 // Text
-$_['text_error']    = 'Запрашиваемая страница не найдена!';
+$_['text_notfound_title']       = 'Извините такой страницы не существует';
+$_['text_notfound_title_2']     = 'Но вы можете искать из каталога товара';
+$_['text_error']                = 'Страница не найдена';
+$_['text_notfound_home_link']   = 'Перейти в магазин';

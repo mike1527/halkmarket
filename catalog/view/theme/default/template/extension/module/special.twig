@@ -2,13 +2,23 @@
     <div class="container">
         <div class="special__container">
             <div class="special__wrapper">
-                <h4 class="special__info-box-title">{{ special_info_box_title }}</h4>
 
+                <h4 class="special__info-box-title">{{ special_info_box_title }}</h4>
 
                     <div class="special__slider">
 {#                        <div class="swiper-wrapper">#}
                         {% for product in products %}
                                 <div class="special__item">
+
+                                    <div class="item__label-special">
+                                        <div class="item__label-special-box">
+                                            {#              <svg xmlns="http://www.w3.org/2000/svg" class="special__icon">#}
+                                            {#                <use xlink:href="/img/icon/sprite.svg#LabelSpecial"></use>#}
+                                            {#              </svg>#}
+                                            <p class="item__label-text">10%</p>
+                                        </div>
+                                    </div>
+
                                     <div class="special__item-img">
                                         <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive" /></a>
 
@@ -51,16 +61,12 @@
                                             {% endif %}
                                         </div>
                                         <button class="cart__add-btn" type="button" onclick="cart.add('{{ product.product_id }}');">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="cart__icon-item">
-                                                <use xlink:href="/img/icon/sprite.svg#CartIcon"></use>
-                                            </svg>
+                                            <i class="fa fa-shopping-cart-black"></i>
                                         </button>
                                     </div>
                                     <div class="favorit__box">
                                         <button class="favorit__box-btn" type="button" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="heart__icon">
-                                                <use xlink:href="/img/icon/sprite.svg#Heart"></use>
-                                            </svg>
+                                            <i class="fa fa-heart"></i>
                                         </button>
                                     </div>
                                 </div>
@@ -75,6 +81,31 @@
 
 
 <script>
+    // let mySwiperBrands = new Swiper('.special__slider', {
+    //     slidesPerView: 6,
+    //     spaceBetween: 30,
+    //     loop: true,
+    //     speed: 500,
+    //     centeredSlides: true,
+    //     breakpoints: {
+    //         // 1030: {
+    //         //     slidesPerView: 4
+    //         //     // spaceBetween: 20
+    //         // },
+    //         // 870: {
+    //         //     slidesPerView: 3
+    //         //     // spaceBetween: 20
+    //         // },
+    //         // 590: {
+    //         //     slidesPerView: 2
+    //         //     // spaceBetween: 20
+    //         // },
+    //         // 420: {
+    //         //     slidesPerView: 1
+    //         //     // spaceBetween: 20
+    //         // },
+    //     }
+    // });
     $(function () {
         $('.special__slider').slick({
             infinite: true,
@@ -82,7 +113,7 @@
             slidesToScroll: 1,
             // swipeToSlide: true,
             touchThreshold: 10,
-            nextArrow: '<button class="slick-arrow slick-next"><svg xmlns="http://www.w3.org/2000/svg" class="next__icon"><use xlink:href="/img/icon/sprite.svg#NextArrow"></use></svg></button>',
+            nextArrow: '<button class="slick-arrow slick-next"><img src="images/next.svg" alt=""></button>',
             responsive: [{
                 breakpoint: 1400,
                 settings: {

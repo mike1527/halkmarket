@@ -3174,3 +3174,14 @@
 2021-01-27 12:58:31 - PHP Notice:  Undefined index: company in C:\OpenServer\domains\halkmarket\catalog\model\account\address.php on line 16
 2021-01-27 12:58:31 - PHP Notice:  Undefined index: address_2 in C:\OpenServer\domains\halkmarket\catalog\model\account\address.php on line 16
 2021-01-27 12:58:31 - PHP Notice:  Undefined index: postcode in C:\OpenServer\domains\halkmarket\catalog\model\account\address.php on line 16
+2021-02-01 11:55:52 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$data has no effect in C:\OpenServer\domains\halkmarket\catalog\controller\common\header.php on line 41
+2021-02-01 11:55:56 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$data has no effect in C:\OpenServer\domains\halkmarket\catalog\controller\common\header.php on line 41
+2021-02-01 11:56:10 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$data has no effect in C:\OpenServer\domains\halkmarket\catalog\controller\common\header.php on line 41
+2021-02-01 11:56:37 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$data has no effect in C:\OpenServer\domains\halkmarket\catalog\controller\common\header.php on line 41
+2021-02-01 11:56:42 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$data has no effect in C:\OpenServer\domains\halkmarket\catalog\controller\common\header.php on line 41
+2021-02-01 11:56:48 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$data has no effect in C:\OpenServer\domains\halkmarket\catalog\controller\common\header.php on line 41
+2021-02-01 12:02:16 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$data has no effect in C:\OpenServer\domains\halkmarket\catalog\controller\common\header.php on line 41
+2021-02-01 12:02:25 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$data has no effect in C:\OpenServer\domains\halkmarket\catalog\controller\common\header.php on line 41
+2021-02-01 12:12:36 - PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'misha'@'localhost' (using password: YES) in C:\OpenServer\domains\halkmarket\system\library\db\mysqli.php on line 7
+2021-02-01 12:12:36 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\OpenServer\domains\halkmarket\system\library\db\mysqli.php on line 10
+2021-02-01 12:12:36 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\OpenServer\domains\halkmarket\system\library\db\mysqli.php on line 10

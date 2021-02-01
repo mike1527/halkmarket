@@ -1,28 +1,34 @@
-{{ header }}
+<div class="content__inner">
+    <div class="content__inner-box">
+        <div class="content__body">
 
-<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
-<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/default/stylesheet/global.css" rel="stylesheet">
-<link href="catalog/view/theme/default/stylesheet/fonts.css" rel="stylesheet">
-{% for link in links %}
-    <link href="{{ link.href }}" rel="{{ link.rel }}" />
-{% endfor %}
-{% for analytic in analytics %}
-    {{ analytic }}
-{% endfor %}
-{% for script in scripts %}
-    <script src="{{ script }}" type="text/javascript"></script>
-{% endfor %}
-<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-{% for script in scripts %}
-    <script src="{{ script }}" type="text/javascript"></script>
-{% endfor %}
-<script src="catalog/view/javascript/common.js" type="text/javascript"></script>
-<script src="catalog/view/javascript/jquery/jquery-3.5.1.min.js" type="text/javascript"></script>
+            {{ header }}
+
+            <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+            <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+            <link href="catalog/view/theme/default/stylesheet/global.css" rel="stylesheet">
+            <link href="catalog/view/theme/default/stylesheet/fonts.css" rel="stylesheet">
+            <link href="catalog/view/theme/default/stylesheet/media.css" rel="stylesheet">
+
+            {% for link in links %}
+                <link href="{{ link.href }}" rel="{{ link.rel }}" />
+            {% endfor %}
+            {% for analytic in analytics %}
+                {{ analytic }}
+            {% endfor %}
+            {% for script in scripts %}
+                <script src="{{ script }}" type="text/javascript"></script>
+            {% endfor %}
+            <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+            {% for script in scripts %}
+                <script src="{{ script }}" type="text/javascript"></script>
+            {% endfor %}
+            <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+            <script src="catalog/view/javascript/jquery/jquery-3.5.1.min.js" type="text/javascript"></script>
 
 
-<div class="container__page">
-    <ul class="breadcrumb breadcrumb__list">
+            <div class="container__page">
+                <ul class="breadcrumb breadcrumb__list">
         {% for key, breadcrumb in breadcrumbs %}
             {% if key + 1 < breadcrumbs|length %}
                 <li class="breadcrumb__item breadcrumb__item-hover"><a class="breadcrumb__link" href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
@@ -32,224 +38,230 @@
         {% endfor %}
     </ul>
 
-    <div class="checkout__wrapper">
-        <div class="checkout__info-inner">
-            <div class="checkout__info-left">
-                <h3 class="checkout__info-title">{{ text_your_details }}</h3>
-                <div class="chekout__info-left-box">
-                    <div class="checkout__info-name">
-                        <div class="form-group required form__group-item">
-                            <label class="control-label register__label-name checkout__info-name" for="input-firstname">{{ text_name }}</label>
-                            <input type="name" name="name" value="{{ firstname }}" placeholder="{{ entry_firstname_placeholder }}" id="input-firstname" class="form-control form-control__register" />
-                            <svg xmlns="http://www.w3.org/2000/svg" class="account__svg name-checkout__svg">
-                                <use xlink:href="/img/icon/sprite.svg#AccountUser"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="checkout__info-tel">
-                        <div class="form-group required form__group-item">
-                            <label class="control-label register__label-name" for="input-email">{{ entry_telephone }}</label>
-                            <div class="register__input">
-                                <input data-rules="tel" type="tel" name="phone" value="{{ telephone }}" placeholder="{{ entry_tel_placeholder }}" id="input-tel" class="form-control form-control__register form-control__tel-exist" />
-                                <svg xmlns="http://www.w3.org/2000/svg" class="account__svg telephone__svg">
-                                    <use xlink:href="/img/icon/sprite.svg#TelephoneRegister"></use>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="checkout__info-checkbox">
-                            <div class="register__btn-box">
-                                <label class="label__keep register__label-keep">
-                                    <input id="inputTelNew" class="input__keep login__input-keep" type="checkbox" name="agree" value="1">
-                                    <span class="login-input__keep-style"></span>
-                                </label>
-                                <p class="checkout__text">{{ text_telephone }}</p>
-                            </div>
-                        </div>
-                        <div id="telNew" class="form-group required form__group-item form__group-checkout">
-                            <div class="register__input">
-                                <input data-rules="tel" type="tel" name="phone" value="{{ telephone }}" placeholder="{{ entry_new_tel }}" id="input-telnew" class="form-control form-control__register" />
-                                <svg xmlns="http://www.w3.org/2000/svg" class="account__svg telephone__svg">
-                                    <use xlink:href="/img/icon/sprite.svg#TelephoneRegister"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="checkout__info-right">
-                <div class="checkout__info-address">
-                    <div class="checkout__info-address-exist">
-                        <h3 class="checkout__info-title">{{ text_your_address }}</h3>
-
-                        <div class="checkout__info-address-box">
-                            <div class="">
-                                <div class="register__btn-box checkout__btn-box">
-                                    <label class="label__keep register__label-keep">
-                                        <input id="inputAddressExisting" class="input__keep login__input-keep" type="radio" name="agree" value="1">
-                                        <span class="login-input__keep-style"></span>
-                                    </label>
-                                    <p class="input__existing-text">{{ text_address_existing }}</p>
-                                </div>
-
-                                <div id="addressExistingFirst" class="form-group required form__group-item">
-                                    <div class="register__input">
-                                        <input type="text" name="text" value="{{ address }}" placeholder="" id="input-address" class="form-control form-control__register form-control__checkout input__address-form" />
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="account__svg address__svg">
-                                            <use xlink:href="/img/icon/sprite.svg#AddressRegister"></use>
+                <div class="checkout__wrapper">
+                    <div class="checkout__info-inner">
+                        <div class="checkout__info-left">
+                            <h3 class="checkout__info-title">{{ text_your_details }}</h3>
+                            <div class="chekout__info-left-box">
+                                <div class="checkout__info-name">
+                                    <div class="form-group required form__group-item">
+                                        <label class="control-label register__label-name checkout__info-name" for="input-firstname">{{ text_name }}</label>
+                                        <input type="name" name="name" value="{{ firstname }}" placeholder="{{ entry_firstname_placeholder }}" id="input-firstname" class="form-control form-control__register" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="account__svg name-checkout__svg">
+                                            <use xlink:href="/img/icon/sprite.svg#AccountUser"></use>
                                         </svg>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="">
-                                <div class="register__btn-box checkout__btn-box">
-                                    <label class="label__keep register__label-keep">
-                                        <input id="inputAddressnew" class="input__keep login__input-keep" type="radio" name="agree" value="1">
-                                        <span class="login-input__keep-style"></span>
-                                    </label>
-                                    <p class="input__existing-text">{{ text_address_new }}</p>
-                                </div>
-
-                                <div id="addressNew" class="form-group required form__group-item form__group-checkout">
-                                    <div class="register__input">
-                                        <input type="text" name="text" value="{{ addressnew }}" placeholder="{{ entry_new_address }}" class="form-control form-control__register form-control__checkout"/>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="account__svg address__svg">
-                                            <use xlink:href="/img/icon/sprite.svg#AddressRegister"></use>
-                                        </svg>
+                                <div class="checkout__info-tel">
+                                    <div class="form-group required form__group-item">
+                                        <label class="control-label register__label-name" for="input-email">{{ entry_telephone }}</label>
+                                        <div class="register__input">
+                                            <input data-rules="tel" type="tel" name="phone" value="{{ telephone }}" placeholder="{{ entry_tel_placeholder }}" id="input-tel" class="form-control form-control__register form-control__tel-exist" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="account__svg telephone__svg">
+                                                <use xlink:href="/img/icon/sprite.svg#TelephoneRegister"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="checkout__info-checkbox">
+                                        <div class="register__btn-box">
+                                            <label class="label__keep register__label-keep">
+                                                <input id="inputTelNew" class="input__keep login__input-keep" type="checkbox" name="agree" value="1">
+                                                <span class="login-input__keep-style"></span>
+                                            </label>
+                                            <p class="checkout__text">{{ text_telephone }}</p>
+                                        </div>
+                                    </div>
+                                    <div id="telNew" class="form-group required form__group-item form__group-checkout">
+                                        <div class="register__input">
+                                            <input data-rules="tel" type="tel" name="phone" value="{{ telephone }}" placeholder="{{ entry_new_tel }}" id="input-telnew" class="form-control form-control__register" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="account__svg telephone__svg">
+                                                <use xlink:href="/img/icon/sprite.svg#TelephoneRegister"></use>
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+                        <div class="checkout__info-right">
+                            <div class="checkout__info-address">
+                                <div class="checkout__info-address-exist">
+                                    <h3 class="checkout__info-title">{{ text_your_address }}</h3>
 
-                    </div>
-                </div>
-                <div class="checkout__info-payment">
-                    <h3 class="checkout__info-title">{{ text_payment_method }}</h3>
+                                    <div class="checkout__info-address-box">
+                                        <div class="">
+                                            <div class="register__btn-box checkout__btn-box">
+                                                <label class="label__keep register__label-keep">
+                                                    <input id="inputAddressExisting" class="input__keep login__input-keep" type="radio" name="agree" value="1">
+                                                    <span class="login-input__keep-style"></span>
+                                                </label>
+                                                <p class="input__existing-text">{{ text_address_existing }}</p>
+                                            </div>
 
-                    <div class="register__btn-box checkout__btn-box checkout__btn-box-inner">
-                        <label class="label__keep register__label-keep">
-                            <input id="paymentMetodCash"class="input__keep login__input-keep" type="radio" name="agree" value="1">
-                            <span class="login-input__keep-style"></span>
-                        </label>
-                        <p class="input__existing-text">{{ text_payment_method_cash }}</p>
-                    </div>
+                                            <div id="addressExistingFirst" class="form-group required form__group-item">
+                                                <div class="register__input">
+                                                    <input type="text" name="text" value="{{ address }}" placeholder="" id="input-address" class="form-control form-control__register form-control__checkout input__address-form" />
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="account__svg address__svg">
+                                                        <use xlink:href="/img/icon/sprite.svg#AddressRegister"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                    <div class="register__btn-box checkout__btn-box">
-                        <label class="label__keep register__label-keep">
-                            <input id="paymentMetodCheck" class="input__keep login__input-keep" type="radio" name="agree" value="1">
-                            <span class="login-input__keep-style"></span>
-                        </label>
-                        <p class="input__existing-text">{{ text_payment_method_bank }}</p>
-                    </div>
+                                        <div class="">
+                                            <div class="register__btn-box checkout__btn-box">
+                                                <label class="label__keep register__label-keep">
+                                                    <input id="inputAddressnew" class="input__keep login__input-keep" type="radio" name="agree" value="1">
+                                                    <span class="login-input__keep-style"></span>
+                                                </label>
+                                                <p class="input__existing-text">{{ text_address_new }}</p>
+                                            </div>
 
-                    <div id="paymentCartBox" class="checkout__bank-cart">
-                        <div class="checkout__bank-cart-inner">
-                            <div class="checkout__bank-cart-item">
-                                <label class="label__keep checkout__label-keep">
-                                    <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
-                                    <span class="cart-input__keep-style"></span>
-                                    {{ text_method_bank_rysgal }}
-                                </label>
-                                <div class="checkout__bank-cart-img checkout__bank-cart-rysgal"></div>
+                                            <div id="addressNew" class="form-group required form__group-item form__group-checkout">
+                                                <div class="register__input">
+                                                    <input type="text" name="text" value="{{ addressnew }}" placeholder="{{ entry_new_address }}" class="form-control form-control__register form-control__checkout"/>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="account__svg address__svg">
+                                                        <use xlink:href="/img/icon/sprite.svg#AddressRegister"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
                             </div>
-                            <div class="checkout__bank-cart-item">
-                                <label class="label__keep checkout__label-keep">
-                                    <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
-                                    <span class="cart-input__keep-style"></span>
-                                    {{ text_method_bank_altynasyr }}
-                                </label>
-                                <div class="checkout__bank-cart-img checkout__bank-cart-altynasyr"></div>
+                            <div class="checkout__info-payment">
+                                <h3 class="checkout__info-title">{{ text_payment_method }}</h3>
+
+                                <div class="register__btn-box checkout__btn-box checkout__btn-box-inner">
+                                    <label class="label__keep register__label-keep">
+                                        <input id="paymentMetodCash"class="input__keep login__input-keep" type="radio" name="agree" value="1">
+                                        <span class="login-input__keep-style"></span>
+                                    </label>
+                                    <p class="input__existing-text">{{ text_payment_method_cash }}</p>
+                                </div>
+
+                                <div class="register__btn-box checkout__btn-box">
+                                    <label class="label__keep register__label-keep">
+                                        <input id="paymentMetodCheck" class="input__keep login__input-keep" type="radio" name="agree" value="1">
+                                        <span class="login-input__keep-style"></span>
+                                    </label>
+                                    <p class="input__existing-text">{{ text_payment_method_bank }}</p>
+                                </div>
+
+                                <div id="paymentCartBox" class="checkout__bank-cart">
+                                    <div class="checkout__bank-cart-inner">
+                                        <div class="checkout__bank-cart-item">
+                                            <label class="label__keep checkout__label-keep">
+                                                <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
+                                                <span class="cart-input__keep-style"></span>
+                                                {{ text_method_bank_rysgal }}
+                                            </label>
+                                            <div class="checkout__bank-cart-img checkout__bank-cart-rysgal"></div>
+                                        </div>
+                                        <div class="checkout__bank-cart-item">
+                                            <label class="label__keep checkout__label-keep">
+                                                <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
+                                                <span class="cart-input__keep-style"></span>
+                                                {{ text_method_bank_altynasyr }}
+                                            </label>
+                                            <div class="checkout__bank-cart-img checkout__bank-cart-altynasyr"></div>
+                                        </div>
+                                        <div class="checkout__bank-cart-item">
+                                            <label class="label__keep checkout__label-keep">
+                                                <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
+                                                <span class="cart-input__keep-style"></span>
+                                                {{ text_method_bank_mastercard }}
+                                            </label>
+                                            <div class="checkout__bank-cart-img checkout__bank-cart-mastercard"></div>
+                                        </div>
+                                        <div class="checkout__bank-cart-item">
+                                            <label class="label__keep checkout__label-keep">
+                                                <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
+                                                <span class="cart-input__keep-style"></span>
+                                                {{ text_method_bank_milli }}
+                                            </label>
+                                            <div class="checkout__bank-cart-img checkout__bank-cart-milli"></div>
+                                        </div>
+                                        <div class="checkout__bank-cart-item">
+                                            <label class="label__keep checkout__label-keep">
+                                                <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
+                                                <span class="cart-input__keep-style"></span>
+                                                {{ text_method_bank_visa }}
+                                            </label>
+                                            <div class="checkout__bank-cart-img checkout__bank-cart-visa"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            <div class="checkout__bank-cart-item">
-                                <label class="label__keep checkout__label-keep">
-                                    <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
-                                    <span class="cart-input__keep-style"></span>
-                                    {{ text_method_bank_mastercard }}
-                                </label>
-                                <div class="checkout__bank-cart-img checkout__bank-cart-mastercard"></div>
-                            </div>
-                            <div class="checkout__bank-cart-item">
-                                <label class="label__keep checkout__label-keep">
-                                    <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
-                                    <span class="cart-input__keep-style"></span>
-                                    {{ text_method_bank_milli }}
-                                </label>
-                                <div class="checkout__bank-cart-img checkout__bank-cart-milli"></div>
-                            </div>
-                            <div class="checkout__bank-cart-item">
-                                <label class="label__keep checkout__label-keep">
-                                    <input class="input__keep cart__input-keep" type="radio" name="agree" value="1">
-                                    <span class="cart-input__keep-style"></span>
-                                    {{ text_method_bank_visa }}
-                                </label>
-                                <div class="checkout__bank-cart-img checkout__bank-cart-visa"></div>
+
+                            <div class="checkout__info-comment">
+                                <p><strong>{{ text_comments }}</strong></p>
+                                <div>
+                                    <textarea id="textmessage" name="comment" rows="1" class="checkout__message" placeholder="{{ entry_message_placeholder }}">{{ comment }}</textarea>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="message-textarea__svg">
+                                        <use xlink:href="/img/icon/sprite.svg#MessageTextarea"></use>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
                 </div>
 
-                <div class="checkout__info-comment">
-                    <p><strong>{{ text_comments }}</strong></p>
-                    <div>
-                        <textarea id="textmessage" name="comment" rows="1" class="checkout__message" placeholder="{{ entry_message_placeholder }}">{{ comment }}</textarea>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="message-textarea__svg">
-                            <use xlink:href="/img/icon/sprite.svg#MessageTextarea"></use>
-                        </svg>
-                    </div>
+                <div class="checkout__order-list">
+                    <table>
+                        <tr class="checkout__order-string">
+                            <td class="checkout__order-product-title">{{ text_order_title_name }}</td>
+                            <td>{{ text_order_title_articul }}</td>
+                            <td>{{ text_order_title_quality }}</td>
+                            <td>{{ text_order_title_price }}</td>
+                            <td>{{ text_order_title_total }}</td>
+                        </tr>
+                        <tr class="checkout__order-string checkout__order-string-bottom">
+                            <td class="checkout__order-product-name">Хлеб Черемушки Бородинский 390 г в нарезке</td>
+                            <td>HK123</td>
+                            <td>1</td>
+                            <td>12 ТМТ</td>
+                            <td>12 ТМТ</td>
+                        </tr>
+                        <tr class="checkout__order-string checkout__order-string-bottom checkout__order-string-total">
+                            <td colspan="5" class="checkout__order-string-total-line">{{ text_order_title_total }}: </td>
+                        </tr>
+                    </table>
                 </div>
+
+                <div class="checkout__bottom-content">
+                    <div class="checkout__bottom-img">
+                        <img src="/image/halkmarket/checkout/checkout-img.png" alt="">
+                    </div>
+                    <div class="cart-full__order-wrapper checkout-full__order-wrapper">
+                            <div class="cart-full__order-products">
+                                <div class="cart-full__order-products-text checkout__text-style"><span>5</span> товаров</div>
+                                <div class="cart-full__order-products-sum checkout__text-style"><span>151</span> ТМТ</div>
+                            </div>
+                            <div class="cart-full__order-delivery">
+                                <span class="cart-full__order-delivery-text checkout__text-style">Доставка</span>
+                                <div class="cart-full__order-delivery-sum checkout__text-style"><span>10</span> ТМТ</div>
+                            </div>
+                            <div class="cart-full__order-orderprise">
+                                <span class="cart-full__order-orderprise-text checkout__text-style">Сумма заказа</span>
+                                <div class="cart-full__order-orderprise-sum checkout__text-style"><span>161</span> ТМТ</div>
+                            </div>
+                            <div class="cart-full__order-link-box">
+                                <a class="cart-full__order-link" href="{{ checkout }}" class="btn btn-primary">{{ text_button_checkout }}</a>
+                            </div>
+                        </div>
+                </div>
+
             </div>
-    </div>
+            </div>
 
-    <div class="checkout__order-list">
-        <table>
-            <tr class="checkout__order-string">
-                <td class="checkout__order-product-title">{{ text_order_title_name }}</td>
-                <td>{{ text_order_title_articul }}</td>
-                <td>{{ text_order_title_quality }}</td>
-                <td>{{ text_order_title_price }}</td>
-                <td>{{ text_order_title_total }}</td>
-            </tr>
-            <tr class="checkout__order-string checkout__order-string-bottom">
-                <td class="checkout__order-product-name">Хлеб Черемушки Бородинский 390 г в нарезке</td>
-                <td>HK123</td>
-                <td>1</td>
-                <td>12 ТМТ</td>
-                <td>12 ТМТ</td>
-            </tr>
-            <tr class="checkout__order-string checkout__order-string-bottom checkout__order-string-total">
-                <td colspan="5" class="checkout__order-string-total-line">{{ text_order_title_total }}: </td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="checkout__bottom-content">
-        <div class="checkout__bottom-img">
-            <img src="/image/halkmarket/checkout/checkout-img.png" alt="">
         </div>
-        <div class="cart-full__order-wrapper checkout-full__order-wrapper">
-                <div class="cart-full__order-products">
-                    <div class="cart-full__order-products-text checkout__text-style"><span>5</span> товаров</div>
-                    <div class="cart-full__order-products-sum checkout__text-style"><span>151</span> ТМТ</div>
-                </div>
-                <div class="cart-full__order-delivery">
-                    <span class="cart-full__order-delivery-text checkout__text-style">Доставка</span>
-                    <div class="cart-full__order-delivery-sum checkout__text-style"><span>10</span> ТМТ</div>
-                </div>
-                <div class="cart-full__order-orderprise">
-                    <span class="cart-full__order-orderprise-text checkout__text-style">Сумма заказа</span>
-                    <div class="cart-full__order-orderprise-sum checkout__text-style"><span>161</span> ТМТ</div>
-                </div>
-                <div class="cart-full__order-link-box">
-                    <a class="cart-full__order-link" href="{{ checkout }}" class="btn btn-primary">{{ text_button_checkout }}</a>
-                </div>
-            </div>
+        <div class="content__footer">
+            {{ footer }}
+        </div>
     </div>
-
 </div>
-</div>
-    {{ footer }}
 
 {#<div id="checkout-checkout" class="container">#}
 {#  <ul class="breadcrumb">#}

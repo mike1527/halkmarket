@@ -9,6 +9,7 @@
             <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
             <link href="catalog/view/theme/default/stylesheet/global.css" rel="stylesheet">
             <link href="catalog/view/theme/default/stylesheet/fonts.css" rel="stylesheet">
+            <link href="catalog/view/theme/default/stylesheet/media.css" rel="stylesheet">
             <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
 
             <div id="error-not-found" class="container">
@@ -34,12 +35,13 @@
                     {{ content_top }}
 
                       <div class="notfound-box">
-                          <h4 class="search__notfound-title">{{ text_empty_cart }}</h4>
-                          <div class="search__notfound-box-img">
+                          <h4 class="notfound-title">{{ text_notfound_title }}</h4>
+                          <h5 class="notfound-title">{{ text_notfound_title_2 }}</h5>
+                          <div class="notfound-box-img">
                               <img src="/image/halkmarket/search/search-img.png" alt="">
                           </div>
-                          <div class="search__notfound-box-link">
-                              <a href="index.php?route=common/home" class="search__notfound-link">{{ text_home_link }}</a>
+                          <div class="notfound-box-link">
+                              <a href="index.php?route=common/home" class="search__notfound-link">{{ text_notfound_home_link }}</a>
                           </div>
                       </div>
 
@@ -50,8 +52,7 @@
                 {{ column_right }}</div>
             </div>
 
-
-        </div>
+         </div>
         <div class="content__footer">
         {{ footer }}
         </div>

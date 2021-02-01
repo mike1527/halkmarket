@@ -70,15 +70,13 @@
                             </div>
                             <div class="header__bottom-account">
                                 <a class="header__bottom-account-link" href="/index.php?route=account/login">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="login__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="login__icon-white">
                                         <use xlink:href="/img/icon/sprite.svg#LoginIcon"></use>
                                     </svg>
                                     {{ text_account_come }}
-{#                                    <span class="account-caret"></span>#}
+                                    <span class="account-caret"></span>
                                 </a>
-
                             </div>
-
                         </div>
                         <div class="login__language">
                             {{ language }}
@@ -115,9 +113,7 @@
                                 {{ menucatalog }}
                             </div>
                         </div>
-{#                        <div class="menu__catalog-box">#}
-{#                            {{ menucatalog }}#}
-{#                        </div>#}
+
 
                     </div>
 
@@ -137,10 +133,9 @@
                                     <use xlink:href="/img/icon/sprite.svg#LoginIcon"></use>
                                 </svg>
                                 {{ text_account_come }}
-{#                                <span class="account-caret"></span>#}
                             </a>
-
                         </div>
+
                         <div class="header__bottom-cut">
                             <a class="header__bottom-cut-link" href="index.php?route=checkout/cart">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="cart__icon">
@@ -148,6 +143,9 @@
                                 </svg>
                                 {{ text_shopping_cart }}</a>
                             <span class="header__bottom-cut-num">10</span>
+{#                            <span class="header__bottom-cut-num">#}
+{#                                {{ cart_total }}#}
+{#                            </span>#}
                         </div>
                         <div class="header__bottom-favorites">
                             <a class="header__bottom-favorites-link" href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}">
@@ -194,12 +192,18 @@
 
                             <div class="header__bottom-favorites-mobile">
                                 <a class="header__bottom-favorites-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="favorite__icon">
+                                        <use xlink:href="/img/icon/sprite.svg#FavoriteIcon"></use>
+                                    </svg>
                                     <span class="header__bottom-favorites-num">12</span>
                                 </a>
                             </div>
 
                             <div class="header__bottom-catalog">
-                                <div class="catalog-btn catalog-btn__mobile">
+                                <div id="headerBottomCatalog" class="catalog-btn catalog-btn__mobile">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="burger-black__icon">
+                                        <use xlink:href="/img/icon/sprite.svg#CategoryBurger"></use>
+                                    </svg>
                                     <span>{{ text_catalog_btn }}</span>
                                     <div class="menu__catalog-box">
                                         {{ menucatalog }}
@@ -220,6 +224,8 @@
     </header>
 
 
+
+
     <script>
 
      let myAccordion = document.getElementsByClassName('catalog__acordion');
@@ -230,7 +236,7 @@
      }
          $(function() {
              $('.header__top-close-mobile-btn').click(function () {
-                 $('.catalog__container-mobile').toggleClass('toggle');
+                 $('.catalog__title').toggleClass('toggle');
              });
          });
          $(function() {
@@ -240,6 +246,20 @@
          });
 
     </script>
+
+{#    <script>#}
+{#        document.getElementById('headerBottomCatalog').onclick = function() {#}
+{#            document.getElementById('menucatalog').classList.toggle('open');#}
+{#        }#}
+{#    </script>#}
+
+{#    <script>#}
+{#        $(document).ready(function(){#}
+{#            $('.catalog-btn__mobile').click(function(){#}
+{#                $('.catalog__container-mobile').toggleClass('active');#}
+{#            });#}
+{#        });#}
+{#    </script>#}
 
 
 
