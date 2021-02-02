@@ -112,6 +112,119 @@ div.required .control-label:before {
 #top #form-language .language-select {
     text-align: left;
 }
+/*#form-language .language-select{*/
+/*    background: transparent;*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    width: 34px;*/
+/*    height: 21px;*/
+/*    position: relative;*/
+/*    background-color: transparent;*/
+/*    -webkit-box-shadow: none;*/
+/*    box-shadow: none;*/
+/*    border: none;*/
+/*}*/
+
+/*.language-select{*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    width: 34px;*/
+/*    height: 21px;*/
+/*    position: relative;*/
+/*    background-color: transparent;*/
+/*    -webkit-box-shadow: none;*/
+/*    box-shadow: none;*/
+/*    border: none;*/
+/*}*/
+
+/*.language-select:nth-child(1)::before{*/
+/*    content: 'RU';*/
+/*    position: absolute;*/
+/*    width: 34px;*/
+/*    height: 21px;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    color: #6b6c6f;*/
+/*    font-family: 'OpenSans-Bold';*/
+/*    font-size: 14px;*/
+/*    font-weight: 700;*/
+/*    transition: all .3s;*/
+/*}*/
+
+/*.language-select:nth-child(1)::after{*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 5px;*/
+/*    height: 5px;*/
+/*    background-color: #6b6c6f;*/
+/*    border-radius: 50%;*/
+/*    top: 8px;*/
+/*    right: -4px;*/
+/*    transition: all .3s;*/
+/*}*/
+
+/*.language-select:hover:nth-child(1):visited{*/
+/*    color: #b3b3b3;*/
+/*}*/
+/*.language-select:hover:nth-child(1)::after{*/
+/*    color: #cad1e0;*/
+/*}*/
+/*.language-select:hover:nth-child(1)::before{*/
+/*    color: #fff;*/
+/*}*/
+/*.language-select:nth-child(2)::before{*/
+/*    content: 'TM';*/
+/*    position: absolute;*/
+/*    width: 34px;*/
+/*    height: 21px;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    color: #6b6c6f;*/
+/*    font-family: 'OpenSans-Bold';*/
+/*    font-size: 14px;*/
+/*    font-weight: 700;*/
+/*    transition: all .3s;*/
+/*}*/
+/*.language-select:hover:nth-child(2)::after{*/
+/*    color: #b3b3b3;*/
+/*}*/
+/*.language-select:hover:nth-child(2)::before,*/
+/*.language-select:focus:nth-child(2)::before{*/
+/*    color: #cad1e0;*/
+/*}*/
+/*.language-select:nth-child(3)::before{*/
+/*    content: 'EN';*/
+/*    position: absolute;*/
+/*    width: 34px;*/
+/*    height: 21px;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    color: #6b6c6f;*/
+/*    font-family: 'OpenSans-Bold';*/
+/*    font-size: 14px;*/
+/*    font-weight: 700;*/
+/*    transition: all .3s;*/
+/*}*/
+/*.language-select:nth-child(3)::after{*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 5px;*/
+/*    height: 5px;*/
+/*    background-color: #6b6c6f;*/
+/*    border-radius: 50%;*/
+/*    top: 8px;*/
+/*    left: -3px;*/
+/*    transition: all .3s;*/
+/*}*/
+/*.language-select:hover:nth-child(3)::after{*/
+/*    color: #cad1e0;*/
+/*}*/
+/*.language-select:hover:nth-child(3)::before{*/
+/*    color: #cad1e0;*/
+/*}*/
+
 #top #form-currency .currency-select:hover,
 #top #form-language .language-select:hover {
     text-shadow: none;

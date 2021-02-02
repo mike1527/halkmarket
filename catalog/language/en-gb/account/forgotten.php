@@ -1,21 +1,19 @@
 <?php
 // Heading
-$_['heading_title']   = 'Forgot Your Password?';
+$_['heading_title']   = 'Password recovery';
 
 // Text
-$_['text_account']    = 'Account';
-$_['text_forgotten']  = 'Forgotten Password';
-$_['text_your_email'] = 'Your E-Mail Address';
-$_['text_email']      = 'Enter the e-mail address associated with your account. Click submit to have a password reset link e-mailed to you.';
-$_['text_success']    = 'An email with a confirmation link has been sent your email address.';
+$_['text_account']    = 'Personal Area';
+$_['text_forgotten']  = 'Password recovery';
+$_['text_your_email'] = 'Your E-Mail';
+$_['text_email']      = 'Enter your account email address. Click Continue to receive your password by email.';
+$_['text_success']    = 'A new password has been sent to your email address.';
+$_['button_forgotten_continue']    = 'Proceed';
 
 // Entry
-$_['entry_email']     = 'E-Mail Address';
-$_['entry_password']  = 'New Password';
-$_['entry_confirm']   = 'Confirm';
+$_['entry_email']     = 'E-mail address';
+$_['entry_email_placeholder']     = 'Enter E-Mail';
 
 // Error
-$_['error_email']     = 'Warning: The E-Mail Address was not found in our records, please try again!';
-$_['error_approved']  = 'Warning: Your account requires approval before you can login.';
-$_['error_password']  = 'Password must be between 4 and 20 characters!';
-$_['error_confirm']   = 'Password and password confirmation do not match!';
+$_['error_email']     = 'E-mail address not found, please check and try again!';
+$_['error_approved']  = 'Your account requires approval before you can sign in.';

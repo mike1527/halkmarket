@@ -417,6 +417,11 @@ li .catalog__item {
     width: 106px;
     align-items: baseline;
 }
+.login__language-form .language-login__btn {
+    background: transparent;
+    border: none;
+    outline: none;
+}
 .catalog__container{
     width: 375px;
     box-shadow: 0 16px 34px 7px rgba(121, 121, 121, 0.1);
@@ -496,15 +501,6 @@ h4.catalog__title{
     position: relative;
     margin-right: 15px;
 }
-.advantages__item::before {
-    /*content: '';*/
-    /*position: absolute;*/
-    /*width: 44px;*/
-    /*height: 44px;*/
-    /*border-radius: 50%;*/
-    /*background-color: #984bff;*/
-    /*left: 0;*/
-}
 .advantages__icon{
     position: absolute;
     color: #fff;
@@ -524,33 +520,6 @@ h4.catalog__title{
 .advantages__icon-3{
     padding: 2px 4px 0px 11px;
 }
-/*.advantages__item-1::after {*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    background-image: url('/image/halkmarket/advantages/advantages-icon-1.svg');*/
-/*    left: 4px;*/
-/*    top: 4px;*/
-/*    width: 36px;*/
-/*    height: 32px;*/
-/*}*/
-/*.advantages__item-2::after {*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    background-image: url('/image/halkmarket/advantages/advantages-icon-2.svg');*/
-/*    left: 8px;*/
-/*    top: 6px;*/
-/*    width: 26px;*/
-/*    height: 32px;*/
-/*}*/
-/*.advantages__item-3::after {*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    background-image: url('/image/halkmarket/advantages/advantages-icon-3.svg');*/
-/*    left: 8px;*/
-/*    top: 7px;*/
-/*    width: 28px;*/
-/*    height: 26px;*/
-/*}*/
 .advantages__item-title {
     font-weight: 600;
     font-size: 20px;
@@ -3986,9 +3955,6 @@ select.select__address-zone{
     .account__icon, .account__order-link-icon, .account__address-link-icon, .account__profil-link-icon, .account__password-link-icon{
         margin-left: 8px;
     }
-    /*h2.account__title{*/
-    /*    font-size: 28px;*/
-    /*}*/
 }
 @media (max-width: 901px){
     .account{
@@ -4106,9 +4072,6 @@ select.select__address-zone{
     .address__input-box input, select.select__address-zone{
         font-size: 13px;
     }
-    /*h2.account__title{*/
-    /*    font-size: 24px;*/
-    /*}*/
     input.form-control::placeholder{
         font-size: 12px;
     }
@@ -4117,9 +4080,6 @@ select.select__address-zone{
     .address__input-box input, select.select__address-zone{
         font-size: 12px;
     }
-    /*h2.account__title{*/
-    /*    font-size: 22px;*/
-    /*}*/
 }
 @media (max-width: 430px){
     input.form-control::placeholder{
@@ -4129,7 +4089,88 @@ select.select__address-zone{
 
 /*----- ----- ----- END ACCOUNT ----- ----- -----*/
 
+/*----- ----- ----- START FORGOTTEN PASSWORD ----- ----- -----*/
+.forgotten__form{
+    width: 75%;
+    margin: 0 auto;
+}
+.forgotten__alert{
+    width: 75%;
+    margin: 0 auto;
+    background-color: #F62F5E;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 15px;
+}
+p.forgotten__text{
+    color: #777;
+    margin-bottom: 22px;
+    text-align: center;
+    margin: 0 auto;
+    width: 75%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 
+.forgotten__link-box{
+    text-align: center;
+}
+.forgotten__input-box{
+    margin-bottom: 22px;
+    position: relative;
+}
+.forgotten__input-box input{
+    border: 1px solid #6B6C6F;
+    border-radius: 20px;
+    padding: 10px 10px 10px 55px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #6B6C6F;
+    height: 40px;
+}
+.forgotten__link-box input{
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 12px 40px;
+    background-color: #3B245A;
+    border: 1px solid #3A245B;
+    border-radius: 20px;
+    margin-bottom: 58px;
+    transition: color .3s, background-color .3s;
+}
+.forgotten__link-box input:hover{
+    color: #3B245A;
+    background-color: #fff;
+}
+.forgotten__input-box input::placeholder{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #6B6C6F;
+    font-family: OpenSans-Regular;
+}
+
+.forgotten__email-icon{
+    color: #6B6C6F;
+    position: absolute;
+    z-index: 1;
+    transition: color .3s;
+    width: 20px;
+    height: 16px;
+    top: 37px;
+    left: 17px;
+}
+/*----- ----- ----- END FORGOTTEN PASSWORD ----- ----- -----*/
+
+/*----- ----- ----- START MANUFACTURER ----- ----- -----*/
+
+
+
+/*----- ----- ----- END MANUFACTURER ----- ----- -----*/
 
 
 /*----- ----- ----- START MEDIA ----- ----- -----*/
@@ -4244,13 +4285,6 @@ select.select__address-zone{
         width: 73%;
     }
 }
-/*@media (max-width: 1210px) {*/
-/*    .list__item{*/
-/*        width: 382px;*/
-/*        height: 142px;*/
-/*        margin-right: 40px;*/
-/*    }*/
-/*}*/
 @media (max-width: 1205px){
     h3.ourstore__content-title-text{
         width: 75%;
@@ -5000,6 +5034,9 @@ select.select__address-zone{
     .cart-full__descr-text{
         width: 166px;
     }
+    .forgotten__email-icon{
+        top: 11px;
+    }
 }
 @media (max-width: 840px) {
     .ourstore__box {
@@ -5557,9 +5594,6 @@ select.select__address-zone{
         flex-direction: column;
         align-items: center;
     }
-    /*.list__item:nth-child(odd){*/
-    /*    margin-right: 0;*/
-    /*}*/
 }
 @media (max-width: 619px) {
     .cart-full__descr-box{
@@ -5627,6 +5661,9 @@ select.select__address-zone{
     }
     .infodelivery__box-second{
         margin-bottom: 0px;
+    }
+    .forgotten__alert, p.forgotten__text{
+        font-size: 14px;
     }
 }
 @media (max-width: 599px) {

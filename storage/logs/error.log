@@ -3185,3 +3185,4 @@
 2021-02-01 12:12:36 - PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'misha'@'localhost' (using password: YES) in C:\OpenServer\domains\halkmarket\system\library\db\mysqli.php on line 7
 2021-02-01 12:12:36 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\OpenServer\domains\halkmarket\system\library\db\mysqli.php on line 10
 2021-02-01 12:12:36 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\OpenServer\domains\halkmarket\system\library\db\mysqli.php on line 10
+2021-02-02 4:40:14 - PHP Notice:  Undefined index: last_order_id in C:\OpenServer\domains\halkmarket\catalog\controller\checkout\success.php on line 69

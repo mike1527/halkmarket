@@ -1,20 +1,19 @@
 <?php
-// *	@source		See SOURCE.txt for source and other copyright.
-// *	@license	GNU General Public License version 3; see LICENSE.txt
-
 // Heading
-$_['heading_title']   = 'Забыли пароль?';
+$_['heading_title']   = 'Paroly dikeltmek';
 
 // Text
-$_['text_account']    = 'Личный кабинет';
-$_['text_forgotten']  = 'Забыли пароль?';
-$_['text_your_email'] = 'Ваш E-Mail';
-$_['text_email']      = 'Введите адрес электронной почты Вашей учетной записи. Нажмите кнопку продолжить, чтобы получить пароль по электронной почте.';
-$_['text_success']    = 'Новый пароль был выслан на Ваш адрес электронной почты.';
+$_['text_account']    = 'Şahsy meýdan';
+$_['text_forgotten']  = 'Paroly dikeltmek';
+$_['text_your_email'] = 'Siziň emailiňiz';
+$_['text_email']      = 'Hasabyňyzyň e-poçta salgysyny giriziň. Parolyňyzy e-poçta bilen almagy dowam etdiriň.';
+$_['text_success']    = 'E-poçta salgyňyza täze parol iberildi.';
+$_['button_forgotten_continue']    = 'Dowam et';
 
 // Entry
-$_['entry_email']     = 'E-Mail адрес';
+$_['entry_email']     = 'Email adres';
+$_['entry_email_placeholder']     = 'E-poçta giriziň';
 
 // Error
-$_['error_email']     = 'E-Mail адрес не найден, проверьте и попробуйте ещё раз!';
-$_['error_approved']  = 'Ваша учетная запись требует одобрения, прежде чем вы сможете войти.';
+$_['error_email']     = 'E-poçta salgysy tapylmady, barlap görüň we gaýtadan synanyşyň!';
+$_['error_approved']  = 'Hasabyňyza girmezden ozal tassyklamany talap edýär.';

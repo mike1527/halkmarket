@@ -3774,14 +3774,18 @@ textarea.input-lg {
     border-radius: 4px
 }
 .language-select__btn{
+    display: block;
+    width: 100%;
     width: 34px;
     height: 21px;
     position: relative;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
 }
-.language-select__btn{
-    width: 18px;
-    height: 11px;
-}
+
 .language-select__btn:nth-child(1)::before{
     content: 'RU';
     position: absolute;
@@ -3826,17 +3830,6 @@ textarea.input-lg {
     font-family: 'OpenSans-Bold';
     font-size: 14px;
     font-weight: 700;
-    transition: all .3s;
-}
-.language-select__btn:nth-child(2)::after{
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background-color: #6b6c6f;
-    border-radius: 50%;
-    top: 8px;
-    left: -3px;
     transition: all .3s;
 }
 .language-select__btn:hover:nth-child(2)::after{

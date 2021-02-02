@@ -27,16 +27,16 @@
             <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
 
             <div class="container__category">
-        <ul class="breadcrumb breadcrumb__list">
-            {% for key, breadcrumb in breadcrumbs %}
-                {% if key + 1 < breadcrumbs|length %}
-                    <li class="breadcrumb__item breadcrumb__item-hover"><a class="breadcrumb__link" href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-                {% else %}
-                    <li class="breadcrumb__item">{{ breadcrumb.text }}</li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-        <div class="row">{{ column_left }}
+            <ul class="breadcrumb breadcrumb__list">
+                {% for key, breadcrumb in breadcrumbs %}
+                    {% if key + 1 < breadcrumbs|length %}
+                        <li class="breadcrumb__item breadcrumb__item-hover"><a class="breadcrumb__link" href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+                    {% else %}
+                        <li class="breadcrumb__item">{{ breadcrumb.text }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <div class="row">{{ column_left }}
             {% if column_left and column_right %}
                 {% set class = 'col-sm-6' %}
             {% elseif column_left or column_right %}
@@ -165,9 +165,9 @@
                 {% endif %}
                 {% if not categories and not products %}
                     <p>{{ text_empty }}</p>
-                    <div class="buttons">
-                        <div class="pull-right"><a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a></div>
-                    </div>
+{#                    <div class="buttons">#}
+{#                        <div class="pull-right"><a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a></div>#}
+{#                    </div>#}
                 {% endif %}
                 {{ content_bottom }}</div>
             {{ column_right }}</div>

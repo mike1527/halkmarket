@@ -1,19 +1,18 @@
 <?php
-// *	@source		See SOURCE.txt for source and other copyright.
-// *	@license	GNU General Public License version 3; see LICENSE.txt
-
 // Heading
-$_['heading_title']   = 'Забыли пароль?';
+$_['heading_title']   = 'Восстановление пароля';
 
 // Text
 $_['text_account']    = 'Личный кабинет';
-$_['text_forgotten']  = 'Забыли пароль?';
+$_['text_forgotten']  = 'Восстановление пароля';
 $_['text_your_email'] = 'Ваш E-Mail';
 $_['text_email']      = 'Введите адрес электронной почты Вашей учетной записи. Нажмите кнопку продолжить, чтобы получить пароль по электронной почте.';
 $_['text_success']    = 'Новый пароль был выслан на Ваш адрес электронной почты.';
+$_['button_forgotten_continue']    = 'Продолжить';
 
 // Entry
 $_['entry_email']     = 'E-Mail адрес';
+$_['entry_email_placeholder']     = 'Введите E-Mail';
 
 // Error
 $_['error_email']     = 'E-Mail адрес не найден, проверьте и попробуйте ещё раз!';

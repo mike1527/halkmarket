@@ -23,7 +23,7 @@ define('DIR_UPLOAD', DIR_STORAGE . 'upload/');
 // DB
 define('DB_DRIVER', 'mysqli');
 define('DB_HOSTNAME', '127.0.0.1');
-define('DB_USERNAME', 'misha');
+define('DB_USERNAME', 'hohol');
 define('DB_PASSWORD', 'hohol123456');
 define('DB_DATABASE', 'halkmarket');
 define('DB_PORT', '3306');
