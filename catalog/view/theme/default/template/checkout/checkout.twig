@@ -210,20 +210,26 @@
 
                 <div class="checkout__order-list">
                     <table>
-                        <tr class="checkout__order-string">
-                            <td class="checkout__order-product-title">{{ text_order_title_name }}</td>
-                            <td>{{ text_order_title_articul }}</td>
-                            <td>{{ text_order_title_quality }}</td>
-                            <td>{{ text_order_title_price }}</td>
-                            <td>{{ text_order_title_total }}</td>
-                        </tr>
-                        <tr class="checkout__order-string checkout__order-string-bottom">
-                            <td class="checkout__order-product-name">Хлеб Черемушки Бородинский 390 г в нарезке</td>
-                            <td>HK123</td>
-                            <td>1</td>
-                            <td>12 ТМТ</td>
-                            <td>12 ТМТ</td>
-                        </tr>
+                        <thead>
+                            <tr class="checkout__order-string">
+                                <td class="checkout__order-product-title">{{ text_order_title_name }}</td>
+                                <td>{{ text_order_title_articul }}</td>
+                                <td>{{ text_order_title_quality }}</td>
+                                <td>{{ text_order_title_price }}</td>
+                                <td>{{ text_order_title_total }}</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="checkout__order-string checkout__order-string-bottom">
+                                <td aria-label="{{ text_order_title_name }}" class="checkout__order-product-name">Хлеб Черемушки Бородинский 390 г в нарезке</td>
+                                <td aria-label="{{ text_order_title_articul }}">HK123</td>
+                                <td aria-label="{{ text_order_title_quality }}">1</td>
+                                <td aria-label="{{ text_order_title_price }}">12 ТМТ</td>
+                                <td aria-label="{{ text_order_title_total }}">12 ТМТ</td>
+                            </tr>
+                        </tbody>
+
                         <tr class="checkout__order-string checkout__order-string-bottom checkout__order-string-total">
                             <td colspan="5" class="checkout__order-string-total-line">{{ text_order_title_total }}: </td>
                         </tr>

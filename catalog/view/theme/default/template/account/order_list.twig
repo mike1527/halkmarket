@@ -86,10 +86,10 @@
                     <tbody class="account__content-items">
                     {% for order in orders %}
 
-                      <tr>
+                    <tr>
                         <td class="account__content-text" aria-label="{{ column_order_id }}">{{ order.order_id }}</td>
                         <td class="account__content-text account__content-name" aria-label="{{ column_customer }}">{{ order.name }}</td>
-                        <td class="account__content-text" aria-label="{{ column_product }}" style="text-align: center;">{{ order.products }}</td>
+                        <td class="account__content-text" aria-label="{{ column_product }}">{{ order.products }}</td>
                         <td class="account__content-text" aria-label="{{ column_status }}">{{ order.status }}</td>
                         <td class="account__content-text" aria-label="{{ column_total }}">{{ order.total }}</td>
                         <td class="account__content-text" aria-label="{{ column_date_added }}">{{ order.date_added }}</td>
