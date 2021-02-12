@@ -20,7 +20,7 @@ $_['text_account']      = 'Личный кабинет';
 $_['text_order']        = 'История заказа';
 $_['text_wishlist']     = 'Закладки';
 $_['text_newsletter']   = 'Рассылка';
-$_['text_powered']      = 'Работает на <a target="_blank" href="https://ocstore.com/">ocStore</a><br /> %s &copy; %s';
+$_['text_powered']      = '%s &copy; %s';
 
 $_['text_about']        = 'Kompaniýa hakda';
 $_['text_our_history']     = 'Hekaýamyz';

@@ -3615,3 +3615,6 @@
 2021-02-03 6:37:29 - PHP Warning:  imagecolortransparent() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\system\library\image.php on line 175
 2021-02-03 6:37:29 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\system\library\image.php on line 180
 2021-02-03 6:37:29 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, bool given in C:\OpenServer\domains\halkmarket\system\library\image.php on line 182
+2021-02-12 5:18:56 - PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'hohol'@'localhost' (using password: YES) in C:\OpenServer\domains\halkmarket\system\library\db\mysqli.php on line 7
+2021-02-12 5:18:56 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\OpenServer\domains\halkmarket\system\library\db\mysqli.php on line 10
+2021-02-12 5:18:56 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\OpenServer\domains\halkmarket\system\library\db\mysqli.php on line 10

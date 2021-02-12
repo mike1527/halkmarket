@@ -3397,6 +3397,9 @@ h3.popup__form-message{
     color: #6B6C6F;
     margin: 0 0 44px 0;
 }
+.message__box{
+    position: relative;
+}
 textarea.inputbox{
     width: 100%;
     height: 168px;
@@ -3448,8 +3451,8 @@ svg.textarea__mess-icon{
     width: 19px;
     height: 18px;
     position: absolute;
-    top: 110px;
-    left: 70px;
+    top: 12px;
+    left: 12px;
 }
 /*----- ----- ----- END POPUP ----- ----- -----*/
 
@@ -4534,6 +4537,7 @@ p.forgotten__text{
     }
     .footer__item-text {
         font-size: 16px;
+        text-align: center;
     }
     .footer__item-text-link {
         font-size: 16px;
@@ -4749,6 +4753,7 @@ p.forgotten__text{
     }
     form.popup__form{
         padding: 20px 35px;
+        width: auto;
     }
     a.close__btn{
         width: 41px;
@@ -5657,6 +5662,12 @@ p.forgotten__text{
         min-width: 270px;
     }
 }
+@media (max-width: 620px){
+    h3.popup__form-message{
+        margin: 0 0 17px 0;
+        font-size: 16px;
+    }
+}
 @media (max-width: 628px) {
     .list__category{
         flex-direction: column;
@@ -5707,9 +5718,6 @@ p.forgotten__text{
     .login__menu-box{
         width: 45%;
     }
-    /*.checkout__order-list table tbody{*/
-    /*    font-size: 14px;*/
-    /*}*/
     .vacancypage__items{
         flex-direction: column;
         margin-bottom: 14px;
@@ -5814,6 +5822,16 @@ p.forgotten__text{
     }
     .checkout__order-string td, .checkout__text-style{
         font-size: 13px;
+    }
+}
+@media (max-width: 564px){
+    a.close__btn{
+        right: 0;
+        top: 0;
+    }
+    h3.popup__form-message{
+        margin: 24px 0 15px 0;
+        font-size: 15px;
     }
 }
 @media (max-width: 559px) {
@@ -6106,6 +6124,9 @@ p.forgotten__text{
     }
     .checkout__order-string td, .checkout__text-style{
         font-size: 12px;
+    }
+    .popup__form-btn input{
+        padding: 7px 22px;
     }
 }
 @media (max-width: 456px) {
