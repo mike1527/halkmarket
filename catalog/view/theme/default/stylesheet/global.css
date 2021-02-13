@@ -3420,11 +3420,14 @@ h3.popup__form-message{
 .message__box{
     position: relative;
 }
+<<<<<<< HEAD
 .popup__btn-box{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+=======
+>>>>>>> 41db782f5038b984847b7a9b7167b45ce23bc456
 textarea.inputbox{
     width: 100%;
     height: 168px;
@@ -3491,6 +3494,7 @@ svg.textarea__mess-icon{
     width: 19px;
     height: 18px;
     position: absolute;
+<<<<<<< HEAD
     top: 10px;
     left: 10px;
 }
@@ -3507,6 +3511,10 @@ svg.textarea__mess-icon{
 .mfp-fade.mfp-wrap .mfp-content {
     opacity: 0;
     transition: all .3s;
+=======
+    top: 12px;
+    left: 12px;
+>>>>>>> 41db782f5038b984847b7a9b7167b45ce23bc456
 }
 
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content    { opacity: 1; }
@@ -4603,6 +4611,7 @@ p.forgotten__text{
     }
     .footer__item-text {
         font-size: 16px;
+        text-align: center;
     }
     .footer__item-text-link {
         font-size: 16px;
@@ -4820,6 +4829,7 @@ p.forgotten__text{
     }
     form.popup__form{
         padding: 20px 35px;
+        width: auto;
     }
     a.close__btn{
         width: 41px;
@@ -5728,6 +5738,12 @@ p.forgotten__text{
         min-width: 270px;
     }
 }
+@media (max-width: 620px){
+    h3.popup__form-message{
+        margin: 0 0 17px 0;
+        font-size: 16px;
+    }
+}
 @media (max-width: 628px) {
     .list__category{
         flex-direction: column;
@@ -5778,9 +5794,6 @@ p.forgotten__text{
     .login__menu-box{
         width: 45%;
     }
-    /*.checkout__order-list table tbody{*/
-    /*    font-size: 14px;*/
-    /*}*/
     .vacancypage__items{
         flex-direction: column;
         margin-bottom: 14px;
@@ -5885,6 +5898,16 @@ p.forgotten__text{
     }
     .checkout__order-string td, .checkout__text-style{
         font-size: 13px;
+    }
+}
+@media (max-width: 564px){
+    a.close__btn{
+        right: 0;
+        top: 0;
+    }
+    h3.popup__form-message{
+        margin: 24px 0 15px 0;
+        font-size: 15px;
     }
 }
 @media (max-width: 559px) {
@@ -6183,6 +6206,9 @@ p.forgotten__text{
     }
     .checkout__order-string td, .checkout__text-style{
         font-size: 12px;
+    }
+    .popup__form-btn input{
+        padding: 7px 22px;
     }
 }
 @media (max-width: 456px) {
