@@ -9,7 +9,7 @@
           <a class="footer__item-link" href="index.php?route=information/ourstore">{{ text_our_history }}</a>
           <a class="footer__item-link" href="index.php?route=information/shops">{{ text_shops }}</a>
           <a class="footer__item-link" href="index.php?route=information/vacancypage">{{ text_vacation }}</a>
-          <a class="footer__item-link" href="index.php?route=information/partners">{{ text_partners }}</a>
+          <a class="footer__item-link" href="index.php?route=product/manufacturer">{{ text_partners }}</a>
         </div>
 
         <div class="footer__item footer__item-2">
@@ -24,11 +24,12 @@
             <a class="footer__item-link social-link" href="#"><img src="/image/halkmarket/footer/footer-logo-1.png" alt=""></a>
             <a class="footer__item-link social-link" href="#"><img src="/image/halkmarket/footer/footer-logo-2.png" alt=""></a>
           </div>
+
           <p class="footer__item-text service-text">
             {{ text_have_question }}
-{#            <a class="footer__item-text-link" href="{{ contact }}">{{ text_feedback }}</a>#}
-            <a class="footer__item-text-link popup-with-form" href="#form-popup">{{ text_feedback }}</a>
+            <a href="#form-popup" class="footer__item-text-link popup-with-form">{{ text_feedback }}</a>
           </p>
+
         </div>
       </div>
     </div>
@@ -42,10 +43,7 @@
       </div>
 
     <div id="form-popup" class="popup-box mfp-hide">
-      <form action="#" class="popup__form">
-        <svg xmlns="http://www.w3.org/2000/svg" class="textarea__mess-icon">
-          <use xlink:href="/img/icon/sprite.svg#MessageTextarea"></use>
-        </svg>
+      <form action="#" class="popup__form" method="post">
         <a class="close__btn" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" class="close__btn">
             <use xlink:href="/img/icon/sprite.svg#CloseBtn"></use>
@@ -53,10 +51,13 @@
         </a>
         <h3 class="popup__form-message">Есть вопрос или пожелание? Напишите нам об этом:</h3>
         <div class="message__box">
+          <svg xmlns="http://www.w3.org/2000/svg" class="textarea__mess-icon">
+            <use xlink:href="/img/icon/sprite.svg#MessageTextarea"></use>
+          </svg>
           <textarea name="enquiry" id="input-enquiry" class="inputbox"></textarea>
         </div>
-        <div class="popup__form-btn">
-          <input type="submit" value="Отправить">
+        <div class="popup__btn-box">
+          <button class="popup__form-btn" type="submit" value="Отправить">Отправить</button>
         </div>
       </form>
 
@@ -72,6 +73,7 @@
     type: 'inline',
     focus: '#message',
     // type: 'ajax',
+    mainClass: 'mfp-fade',
     midClick: true,
     closeOnBgClick: false
   });
@@ -81,6 +83,8 @@
     $.magnificPopup.close();
   });
 </script>
+
+
 
 
 </body>

@@ -409,13 +409,14 @@ li .catalog__item {
 .header__top-inner{
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
 }
 .login__language-form{
     display: flex;
     justify-content: center;
     width: 106px;
     align-items: baseline;
+    margin: 0;
 }
 .login__language-form .language-login__btn {
     background: transparent;
@@ -2368,7 +2369,7 @@ div.button__continue-box {
     width: 35%;
 }
 div.login__menu-link{
-    margin-top: 12px;
+    /*margin-top: 12px;*/
 }
 .login__menu-link a{
     color: #6b6c6f;
@@ -2408,7 +2409,25 @@ div.login__menu-link{
     position: relative;
     transition: all .3s;
 }
+.form-control__manufacture-popup{
+    color: #000;
+    font-size: 12px;
+    font-family: 'OpenSans-Bold';
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #6B6C6F;
+    margin-bottom: 23px;
+    padding: 13px 13px 13px 45px;
+    position: relative;
+    opacity: 1;
+}
 .form-control__login::placeholder, .form-control__register::placeholder {
+    color: #e1e4e8;
+    font-family: 'OpenSans-Bold';
+    font-size: 12px;
+    font-weight: 600;
+}
+.form-control__manufacture-popup::placeholder{
     color: #e1e4e8;
     font-family: 'OpenSans-Bold';
     font-size: 12px;
@@ -2680,6 +2699,7 @@ input.register__btn{
 .register__btn:hover{
     background-color: #fff;
     color: #3a245b;
+    border: 1px solid #3a245b;
 }
 .form-control__login:focus + .account__svg, .form-control__register:focus + .account__svg, .checkout__message:focus + .message-textarea__svg{
     color: #6B6C6F;
@@ -3397,12 +3417,20 @@ h3.popup__form-message{
     color: #6B6C6F;
     margin: 0 0 44px 0;
 }
+.message__box{
+    position: relative;
+}
+.popup__btn-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 textarea.inputbox{
     width: 100%;
     height: 168px;
     border: 1px solid #6B6C6F;
     border-radius: 20px;
-    font-size: 15px;
+    font-size: 12px;
     padding: 35px 10px 10px 10px;
     resize: none;
     outline: none;
@@ -3413,20 +3441,27 @@ textarea.inputbox{
 .popup__form-btn{
     text-align: center;
 }
-.popup__form-btn input{
+button.popup__form-btn{
     background: #3B245A;
-    border: 1px solid #3A245B;
     border-radius: 20px;
+    border: 1px solid #3A245B;
     color: #fff;
     font-size: 12px;
     line-height: 16px;
     font-family: OpenSans-Bold;
     padding: 11px 45px;
+    transition: color, background .3s;
+}
+button.popup__form-btn:hover{
+    color: #3A245B;
+    background: #fff;
+    border: 1px solid #3A245B;
 }
 a.close__btn{
     width: 45px;
     height: 45px;
     background-color: #3B245A;
+    border: 1px solid #3A245B;
     border-radius: 10px;
     outline: none;
     border: none;
@@ -3434,6 +3469,11 @@ a.close__btn{
     right: -22px;
     top: -23px;
     display: block;
+    transition: background .3s;
+}
+a.close__btn:hover{
+    background: #fff;
+    border: 1px solid #3A245B;
 }
 svg.close__btn{
     width: 18px;
@@ -3444,13 +3484,36 @@ svg.close__btn{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+a.close__btn:hover svg.close__btn{
+    color: #3B245A;
+}
 svg.textarea__mess-icon{
     width: 19px;
     height: 18px;
     position: absolute;
-    top: 110px;
-    left: 70px;
+    top: 10px;
+    left: 10px;
 }
+/*-------START smooth appearance-------*/
+.mfp-fade.mfp-bg {
+    opacity: 0;
+    background: #979797;
+    transition: all .3s;
+}
+
+.mfp-fade.mfp-bg.mfp-ready    { opacity: .9; }
+.mfp-fade.mfp-bg.mfp-removing { opacity: 0; }
+
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    transition: all .3s;
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content    { opacity: 1; }
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content { opacity: 0; }
+/*-------END smooth appearance-------*/
+
+
 /*----- ----- ----- END POPUP ----- ----- -----*/
 
 /*----- ----- ----- START PARTNERS ----- ----- -----*/
@@ -3510,6 +3573,12 @@ a.partners__link-btn{
     background: #3B245A;
     border: 1px solid #3A245B;
     border-radius: 20px;
+    transition: color, border, background .3s;
+}
+a.partners__link-btn:hover{
+    color: #3B245A;
+    border: 1px solid #3B245A;
+    background: #FFF;
 }
 .manufacturer__img-box{
     display: flex;
@@ -4555,8 +4624,7 @@ p.forgotten__text{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 19%;
-        margin-right: 20px;
+        width: 38%;
     }
     .btn-block+.btn-block {
         margin-top: 0;
@@ -4568,10 +4636,10 @@ p.forgotten__text{
         display: none;
     }
     .header__top-tel{
-        display: none;
+        /*display: none;*/
     }
     div.header__top-inner{
-        justify-content: flex-end;
+        justify-content: space-between;
     }
     .header__bottom-discount-link, .header__bottom-account-link {
         color: #fff;
@@ -4735,6 +4803,9 @@ p.forgotten__text{
     }
     h1.partners__title{
         font-size: 27px;
+    }
+    .percent__icon{
+        transform: rotate(5deg);
     }
 }
 @media (max-width: 1000px) {
@@ -6076,6 +6147,9 @@ p.forgotten__text{
     a.header__bottom-account-link{
         font-size: 0;
     }
+    .login__icon-white{
+        top: -2px;
+    }
     .header__bottom-discount-link::before{
         top: -13px;
         transform: rotate(184deg);
@@ -6085,6 +6159,9 @@ p.forgotten__text{
     }
     a.header__bottom-cut-link{
         font-size: 0;
+    }
+    .cart__icon{
+        top: -10px;
     }
     span.header__bottom-cut-num{
         top: -24px;
@@ -6574,7 +6651,7 @@ p.forgotten__text{
         width: 230px;
     }
     .list__item-link{
-        padding-left: 106px;
+        padding-left: 101px;
     }
     .list__item-link-title{
         font-size: 15px;

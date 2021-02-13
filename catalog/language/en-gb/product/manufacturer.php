@@ -1,8 +1,14 @@
 <?php
 // Heading
-$_['heading_title']     = 'Find Your Favorite Brand';
+$_['heading_title']     = 'Manufacturers';
 
 // Text
+$_['text_partner_breadcrumps']        = 'Our partners';
+$_['text_partner_title']              = 'Cooperate with us';
+$_['text_partners_link']              = 'I want to cooperate with Halkmarket';
+$_['popup__form-title']               = 'Have a question or request? Write to us about it:';
+
+
 $_['text_brand']        = 'Brand';
 $_['text_index']        = 'Brand Index:';
 $_['text_error']        = 'Brand not found!';

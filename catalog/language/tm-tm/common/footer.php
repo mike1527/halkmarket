@@ -35,3 +35,4 @@ $_['text_questions_and_answers']      = 'Soraglar we jogaplar';
 
 $_['text_have_question']      = 'Soragyňyz barmy? Bize hat ýazyň ýa-da formany ulanyň';
 $_['text_feedback']      = 'seslenme';
+$_['popup__form-title']      = 'Soragyňyz ýa-da haýyşyňyz barmy? Bu barada bize ýazyň:';

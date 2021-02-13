@@ -1,10 +1,13 @@
 <?php
 // Heading
-//$_['heading_title']     = 'Производители';
+$_['heading_title']     = 'Производители';
 
 // Text
 $_['text_partner_breadcrumps']        = 'Наши партнеры';
 $_['text_partner_title']              = 'С нами сотрудничают';
+$_['text_partners_link']              = 'Хочу сотрудничать с Халкмаркетом';
+$_['popup__form-title']               = 'Есть вопрос или пожелание? Напишите нам об этом:';
+
 
 $_['text_brand']        = 'Производитель';
 $_['text_index']        = 'Алфавитный указатель';

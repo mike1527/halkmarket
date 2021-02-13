@@ -32,3 +32,4 @@ $_['text_questions_and_answers']      = 'Questions and answers';
 
 $_['text_have_question']      = 'Have a question? Write us a letter or use the form';
 $_['text_feedback']      = 'feedback';
+$_['popup__form-title']      = 'Have a question or request? Write to us about it:';

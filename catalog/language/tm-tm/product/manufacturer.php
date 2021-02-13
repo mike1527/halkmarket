@@ -1,11 +1,14 @@
 <?php
-// *	@source		See SOURCE.txt for source and other copyright.
-// *	@license	GNU General Public License version 3; see LICENSE.txt
-
 // Heading
-$_['heading_title']     = 'Производители';
+$_['heading_title']     = 'Öndürijiler';
 
 // Text
+$_['text_partner_breadcrumps']        = 'Hyzmatdaşlarymyz';
+$_['text_partner_title']              = 'Biz bilen hyzmatdaşlyk ediň';
+$_['text_partners_link']              = 'Halkmarket bilen hyzmatdaşlyk etmek isleýärin';
+$_['popup__form-title']               = 'Soragyňyz ýa-da haýyşyňyz barmy? Bu barada bize ýazyň:';
+
+
 $_['text_brand']        = 'Öndüriji';
 $_['text_index']        = 'Алфавитный указатель';
 $_['text_error']        = 'Производитель не найден!';

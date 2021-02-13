@@ -5203,3 +5203,97 @@ FILE: admin/controller/catalog/information.php
 CODE: function getForm()
 LINE: 258
 ----------------------------------------------------------------
+2021-02-06 4:57:08 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: Auto Fill URL
+
+FILE: admin/controller/catalog/product.php
+CODE: function getForm()
+LINE: 851
+
+FILE: admin/controller/catalog/category.php
+CODE: function getForm()
+LINE: 220
+
+FILE: admin/controller/catalog/manufacturer.php
+CODE: function getForm()
+LINE: 256
+
+FILE: admin/controller/catalog/information.php
+CODE: function getForm()
+LINE: 258
+----------------------------------------------------------------
+2021-02-06 5:20:32 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: Auto Fill URL
+
+FILE: admin/controller/catalog/product.php
+CODE: function getForm()
+LINE: 851
+
+FILE: admin/controller/catalog/category.php
+CODE: function getForm()
+LINE: 220
+
+FILE: admin/controller/catalog/manufacturer.php
+CODE: function getForm()
+LINE: 256
+
+FILE: admin/controller/catalog/information.php
+CODE: function getForm()
+LINE: 258
+----------------------------------------------------------------
