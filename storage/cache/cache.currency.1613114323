@@ -1,5 +1,0 @@
-<<<<<<< HEAD:storage/cache/cache.currency.1613194310
-{"USD":{"currency_id":"2","title":"US Dollar","code":"USD","symbol_left":"$","symbol_right":"","decimal_place":"2","value":"0.01697793","status":"1","date_modified":"2017-07-19 21:28:21"},"TMT":{"currency_id":"5","title":"\u041c\u0430\u043d\u0430\u0442","code":"TMT","symbol_left":"","symbol_right":" TMT","decimal_place":"2","value":"1.00000000","status":"1","date_modified":"2021-02-06 07:53:49"}}
-=======
-{"USD":{"currency_id":"2","title":"US Dollar","code":"USD","symbol_left":"$","symbol_right":"","decimal_place":"2","value":"0.01697793","status":"1","date_modified":"2017-07-19 21:28:21"},"TMT":{"currency_id":"5","title":"\u041c\u0430\u043d\u0430\u0442","code":"TMT","symbol_left":"","symbol_right":" TMT","decimal_place":"2","value":"1.00000000","status":"1","date_modified":"2021-02-12 06:18:41"}}
->>>>>>> 41db782f5038b984847b7a9b7167b45ce23bc456:storage/cache/cache.currency.1613114323

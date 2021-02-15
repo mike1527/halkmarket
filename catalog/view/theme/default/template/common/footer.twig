@@ -43,27 +43,27 @@
       </div>
 
     <div id="form-popup" class="popup-box mfp-hide">
-<<<<<<< HEAD
-      <form action="#" class="popup__form" method="post">
-=======
-      <form action="#" class="popup__form">
->>>>>>> 41db782f5038b984847b7a9b7167b45ce23bc456
+
+      <form class="popup__form" enctype="multipart/form-data" method="post" id="formPopup" onsubmit="send(event, 'send-footer-form.php')">
+
         <a class="close__btn" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" class="close__btn">
             <use xlink:href="/img/icon/sprite.svg#CloseBtn"></use>
           </svg>
         </a>
-        <h3 class="popup__form-message">Есть вопрос или пожелание? Напишите нам об этом:</h3>
+        <h3 class="popup__form-message">{{ popup__form-title }}</h3>
+        <div class="sendMsg" onclick="gsapMsg.reverse()"></div>
         <div class="message__box">
           <svg xmlns="http://www.w3.org/2000/svg" class="textarea__mess-icon">
             <use xlink:href="/img/icon/sprite.svg#MessageTextarea"></use>
           </svg>
-          <textarea name="enquiry" id="input-enquiry" class="inputbox"></textarea>
+          <textarea name="message" id="message" class="inputbox" required></textarea>
         </div>
         <div class="popup__btn-box">
           <button class="popup__form-btn" type="submit" value="Отправить">Отправить</button>
         </div>
       </form>
+
 
     </div>
 
@@ -71,6 +71,7 @@
 
 <link href="catalog/view/javascript/jquery/magnific/magnific-popup.css" type="text/css" rel="stylesheet" media="screen" />
 <script src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
+<script src="catalog/view/javascript/gsap.min.js"></script>
 
 <script>
   $('.popup-with-form').magnificPopup({
@@ -88,7 +89,56 @@
   });
 </script>
 
+<script>
+  // Объявления
+  let sendMsg = document.querySelector(".sendMsg");
+  let gsapMsg = gsap.to(".sendMsg", 0.25, {autoAlpha: 1,y: -40,ease: Expo.inOut, paused: true});
+  let arrInput = document.querySelectorAll('.aInput');
 
+  // Функция отправки сообщения
+  function send(event, php){
+    event.preventDefault ? event.preventDefault() : event.returnValue = false;
+    for (let i = 0,count=arrInput.length; i<count; i++) {arrInput[i].classList.remove("errorInput");}
+    event.target.querySelector("button").disabled = true;
+    showMsg("Подождите. Идёт отправка сообщения", "#b1b1b1");
+    let req = new XMLHttpRequest();
+    req.open('POST', php, true);
+    req.onload = function() {
+      event.target.querySelector("button").disabled = false;
+
+      if (req.status >= 200 && req.status < 400) {
+        json = JSON.parse(this.response);
+        console.log(json);
+
+        // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+        if (json.result == "success") {
+          // если сообщение отправлено
+          showMsg("Сообщение успешно отправлено", "#3B245A");
+          console.log("Сообщение отправлено");
+          event.target.reset();
+        }
+        else {
+          // Если произошла ошибка
+          showMsg("Ошибка. Сообщение не отправлено", "#DC352F");
+          console.log("Ошибка. Сообщение не отправлено");
+        }
+
+        // Если не удалось связаться с php файлом
+      } else {showMsg("Ошибка сервера. Номер: "+req.status, "#DC352F");}};
+
+// Если не удалось отправить запрос. Стоит блок на хостинге
+    req.onerror = function() {showMsg("Ошибка отправки запроса", "#DC352F");};
+    req.send(new FormData(event.target));
+  }
+
+  // Функция появления статуса отправки сообщения
+  function showMsg(message, color) {
+    sendMsg.innerText = message;
+    sendMsg.style.background = color;
+    gsapMsg.restart();
+  }
+
+</script>
 
 
 </body>
