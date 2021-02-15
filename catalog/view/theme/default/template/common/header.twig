@@ -91,7 +91,7 @@
             <div class="container__page">
                 <div class="header__bottom-wrapper">
 
-                    <div id="logo" class="header__bottom-logo">
+                    <div id="logo" class="header__bottom-logo header__logo-hide">
                         <a href="#">
                     {% if logo %}
                     {% if home == og_url %}
@@ -103,7 +103,7 @@
                         </a>
                     </div>
 
-                    <div class="header__bottom-catalog">
+                    <div class="header__bottom-catalog header__catalog-hide">
                         <div class="catalog-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" class="burger__icon">
                                 <use xlink:href="/img/icon/sprite.svg#CategoryBurger"></use>
@@ -116,7 +116,6 @@
 
 
                     </div>
-
 
                     {{ search }}
 
@@ -215,7 +214,7 @@
 
                     </div>
 
-                    {{ search }}
+{#                    {{ search }}#}
 
                 </div>
             </div>

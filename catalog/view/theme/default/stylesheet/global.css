@@ -443,7 +443,7 @@ li .catalog__item {
     visibility: visible;
 }
 div.header__top-close-mobile{
-    /*display: none;*/
+    display: none;
 }
 .catalog__category-list{
     display: flex;
@@ -4649,6 +4649,9 @@ p.forgotten__text{
 }
 @media (max-width: 1024px){
     .header__wrapper{
+        /*display: none;*/
+    }
+    .header__logo-hide, .header__catalog-hide{
         display: none;
     }
     .header__top-inner-items{
@@ -4750,7 +4753,7 @@ p.forgotten__text{
     }
     .catalog__container-mobile{
         right: -15px;
-        top: -77px;
+        top: -168px;
         left: unset;
         background-color: #3b245a;
         border-radius: initial;

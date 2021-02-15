@@ -52,9 +52,6 @@
 
                                       <div class="item__label-special">
                                           <div class="item__label-special-box">
-                                              {#              <svg xmlns="http://www.w3.org/2000/svg" class="special__icon">#}
-                                              {#                <use xlink:href="/img/icon/sprite.svg#LabelSpecial"></use>#}
-                                              {#              </svg>#}
                                               <p class="item__label-text">10%</p>
                                           </div>
                                       </div>
@@ -90,7 +87,6 @@
                                               <div class="price item__wrapper-box-price">
                                                   <span class="item__wrapper-box-text">цена за шт</span>
                                                   {% if product.price %}
-                                                      {#                  <p class="price">#}
                                                       {% if not product.special %}
                                                           {{ product.price }}
                                                       {% else %}
@@ -98,9 +94,7 @@
                                                           <span class="price-new item__wrapper-box-new">{{ product.special }}</span>
                                                       {% endif %}
                                                       {% if product.tax %}
-                                                          {#                      <span class="price-tax">{{ text_tax }} {{ product.tax }}</span>#}
                                                       {% endif %}
-                                                      {#                  </p>#}
                                                   {% endif %}
                                               </div>
 
@@ -108,12 +102,7 @@
                                                   <button class="cart__add-btn category-cart__add" type="button" onclick="cart.add('{{ product.product_id }}');">
                                                       <i class="fa fa-shopping-cart-black"></i>
                                                   </button>
-                                                  {#                <div class="category__cart-descr-quality">#}
-                                                  {#                  <button id="minus-btn" class="category-cart__btn category-cart__minus-btn" type="button" name="button"></button>#}
-                                                  {#                  <input id="inputcart" type="text" name="quantity[{{ product.cart_id }}]" value="{{ product.quantity }}1 шт" size="1" class="form-control category-cart__quantity" />#}
-                                                  {#                  <button id="plus-btn" class="category-cart__btn category-cart__plus-btn" type="button" name="button"></button>#}
-                                                  {#                  <span class="input-group-btn"></span>#}
-                                                  {#                </div>#}
+
                                               </div>
 
                                           </div>
@@ -189,7 +178,7 @@
             });
 
             $('select[name=\'category_id\']').trigger('change');
-            --></script>
+            </script>
 
         </div>
         <div class="content__footer">
