@@ -1,6 +1,7 @@
 <?php
 class ControllerCommonCart extends Controller {
 	public function index() {
+//        $data['count'] = $this->cart->countProducts();
 		$this->load->language('common/cart');
 
 		// Totals
@@ -47,7 +48,7 @@ class ControllerCommonCart extends Controller {
 			array_multisort($sort_order, SORT_ASC, $totals);
 		}
 
-        $data['count'] = $this->cart->countProducts();
+
 //		$data['text_items'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
 
 		$this->load->model('tool/image');

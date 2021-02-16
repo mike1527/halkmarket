@@ -136,15 +136,13 @@
                         </div>
 
                         <div class="header__bottom-cut">
-                            <a class="header__bottom-cut-link" href="index.php?route=checkout/cart">
+                            <a class="header__bottom-cut-link" href="{{ shopping_cart }}" title="{{ text_shopping_cart }}">
+                                <span class="header__bottom-cut-num" id="text_count_cart">{{ text_count_cart }}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="cart__icon">
                                     <use xlink:href="/img/icon/sprite.svg#CartIcon"></use>
                                 </svg>
-                                {{ text_shopping_cart }}</a>
-                            <span class="header__bottom-cut-num">10</span>
-{#                            <span class="header__bottom-cut-num">#}
-{#                                {{ cart_total }}#}
-{#                            </span>#}
+                                {{ text_shopping_cart }}
+                            </a>
                         </div>
                         <div class="header__bottom-favorites">
                             <a class="header__bottom-favorites-link" href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}">

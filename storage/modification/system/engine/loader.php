@@ -116,10 +116,7 @@ final class Loader {
 		if ($result && !$result instanceof Exception) {
 			$output = $result;
 		} else {
-			
-            //d_twig_manager.xml
-            $template = new Template($this->registry->get('config')->get('template_engine'), $this->registry);
-            
+			$template = new Template($this->registry->get('config')->get('template_engine'));
 				
 			foreach ($data as $key => $value) {
 				$template->set($key, $value);

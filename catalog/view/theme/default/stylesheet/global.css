@@ -356,6 +356,7 @@ li .catalog__item {
     left: 11px;
     top: -9px;
     text-align: center;
+    z-index: 1;
 }
 .header__bottom-favorites-link{
     position: relative;
@@ -747,7 +748,7 @@ h4.catalog__title{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    top: -13px;
+    top: 0px;
     right: 16px;
 }
 .item__label-special-box{
@@ -2338,10 +2339,11 @@ div.button__continue-box {
     display: flex;
     justify-content: center;
 }
-.login__content{
+.login__content, .register__content{
     background-color: #fff;
     height: 100vh;
     width: 50%;
+    padding: 48px 36px 55px 47px;
 }
 .login__slider{
     /* float: right; */
@@ -2352,9 +2354,6 @@ div.button__continue-box {
     float: right;
     height: 100vh;
     width: 50%;
-}
-.login__content, .register__content{
-    padding: 48px 36px 55px 47px;
 }
 .login__menu{
     display: flex;
@@ -2436,6 +2435,18 @@ div.login__menu-link{
 .form-group__tel, .form-group__pass{
     position: relative;
 }
+.login__show-pass{
+    position: absolute;
+    top: 43px;
+    right: 18px;
+    margin-bottom: 0px;
+}
+.register__show-pass{
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    margin-bottom: 0px;
+}
 .input__show-pas{
     position: absolute;
     bottom: 14px;
@@ -2495,6 +2506,7 @@ div.login__menu-link{
 .login__btn:hover{
     background-color: #fff;
     color: #3a245b;
+    border: 1px solid #3a245b;
 }
 .login__entry-btn{
     display: flex;
@@ -2509,7 +2521,7 @@ div.login__menu-link{
 .login__form-forgot-box{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /*align-items: center;*/
     padding-left: 22px;
 }
 .login__form-forgot-item{
@@ -2579,6 +2591,9 @@ label.label__keep:hover{
     float: left;
     display: inline-block;
 }
+.register__slider{
+    z-index: -1;
+}
 .register__slider-box{
     height: 100vh;
     width: 50%;
@@ -2588,7 +2603,7 @@ label.label__keep:hover{
     display: inline-block;
 }
 .register__content-inner{
-    width: 48%;
+    /*width: 48%;*/
 }
 h1.register__form-title{
     color: #252529;
@@ -2721,7 +2736,7 @@ div.label__pass-box{
     width: 18px;
     height: 12px;
     position: absolute;
-    top: 14px;
+    top: 10px;
     right: 28px;
 }
 div.label__acc-pass-box{
@@ -2745,7 +2760,6 @@ div.label__acc-pass-box{
     font-family: 'OpenSans-Bold';
     font-size: 12px;
     font-weight: 600;
-    margin-bottom: 11px;
 }
 /*----- ----- ----- END REGISTER ----- ----- -----*/
 
@@ -4043,7 +4057,7 @@ select.select__address-zone{
     width: 18px;
     height: 12px;
     cursor: pointer;
-    color: #6B6C6F;
+    color: #D8D8D8;
 }
 @media (max-width: 1252px){
     div.account__address-item{
@@ -4825,7 +4839,7 @@ p.forgotten__text{
         /*display: none;*/
     }
     div.login__menu-link {
-        margin-top: 2px;
+        /*margin-top: 2px;*/
     }
     .shops__map-box .map{
         margin-bottom: 38px;
@@ -4912,6 +4926,43 @@ p.forgotten__text{
     }
 }
 @media (max-width: 950px){
+    .register__wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .register__content-box{
+        margin-bottom: 0px;
+    }
+    .login__wrapper{
+        display: block;
+    }
+    .login__content, .register__content{
+        height: auto;
+        width: 100%;
+        padding: 27px 21px 34px 15px;
+    }
+    .login__menu, .register__menu{
+        margin-bottom: 37px;
+    }
+    .login__slider{
+        width: 100%;
+        height: 100%;
+    }
+    .login__slider-item-img {
+        height: 50vh;
+    }
+    .slick-dots {
+        top: 40px;
+    }
+    .login__content-inner, .register__content-inner{
+        width: 60%;
+    }
+    .form-control__login, .form-control__register{
+        width: 100%;
+    }
+    .login__form-title, h1.register__form-title, p.register__form-text{
+        text-align: center;
+    }
     .descr-box__prise{
         font-size: 17px;
     }
@@ -5199,29 +5250,29 @@ p.forgotten__text{
     }
 }
 @media (max-width: 835px){
-    .login__wrapper{
-        display: block;
-    }
-    .login__content{
-        height: auto;
-        width: 100%;
-    }
-    .login__menu{
-        margin-bottom: 37px;
-    }
-    .login__content{
-        padding: 27px 21px 34px 15px;
-    }
-    .login__slider{
-        width: 100%;
-        height: 100%;
-    }
-    .login__slider-item-img {
-        height: 50vh;
-    }
-    .slick-dots {
-        top: 40px;
-    }
+    /*.login__wrapper{*/
+    /*    display: block;*/
+    /*}*/
+    /*.login__content{*/
+    /*    height: auto;*/
+    /*    width: 100%;*/
+    /*}*/
+    /*.login__menu{*/
+    /*    margin-bottom: 37px;*/
+    /*}*/
+    /*.login__content{*/
+    /*    padding: 27px 21px 34px 15px;*/
+    /*}*/
+    /*.login__slider{*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*}*/
+    /*.login__slider-item-img {*/
+    /*    height: 50vh;*/
+    /*}*/
+    /*.slick-dots {*/
+    /*    top: 40px;*/
+    /*}*/
 }
 @media (max-width: 834px) {
     .list__category{
@@ -5427,7 +5478,7 @@ p.forgotten__text{
         transform: scale(0.9);
     }
     .form-control__login, .form-control__register, input.form-control__checkout{
-        width: 300px;
+        /*width: 300px;*/
     }
     .vacancypage__item {
         width: 203px;
@@ -6133,6 +6184,9 @@ p.forgotten__text{
     }
     ul li.product__brand-text {
         font-size: 14px;
+    }
+    .login__content-inner, .register__content-inner{
+        width: 100%;
     }
 }
 @media (max-width: 499px) {
