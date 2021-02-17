@@ -1246,6 +1246,7 @@ label.favorit__label {
     height: 18px;
     background-image: url('/image/halkmarket/category/cat-filter-minus.svg');
     right: 0;
+    top: 1px;
     z-index: 3;
 }
 .aside__filter-title-box::before{

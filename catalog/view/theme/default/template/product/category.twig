@@ -45,16 +45,22 @@
                 {% set class = 'col-sm-12' %}
             {% endif %}
             <div id="content" class="category__box {{ class }}">{{ content_top }}
-                <div class="category__banner">
-                  <img src="/image/halkmarket/category/bread.jpg" alt="">
-                </div>
+{#                <div class="category__banner">#}
+{#                  <img src="/image/halkmarket/category/bread.jpg" alt="">#}
+{#                </div>#}
                 {% if thumb or description %}
                     <div class="row"> {% if thumb %}
-                            <div class="col-sm-2"><img src="{{ thumb }}" alt="{{ heading_title }}" title="{{ heading_title }}" class="img-thumbnail" /></div>
+                            <div class="category__banner">
+                                <img src="{{ thumb }}" alt="{{ heading_title }}" title="{{ heading_title }}" class="img-thumbnail category__banner img" />
+                                {% if description %}
+                                    {{ description }}
+                                {% endif %}
+                            </div>
                         {% endif %}
-                        {% if description %}
-                            <div class="col-sm-10">{{ description }}</div>
-                        {% endif %}</div>
+{#                        {% if description %}#}
+{#                            <div class="">{{ description }}</div>#}
+{#                        {% endif %}#}
+                    </div>
                     <hr>
                 {% endif %}
 
@@ -64,12 +70,12 @@
                         <div class="col-md-4 col-xs-6 category__sorting">
                             <div class="form-group input-group input-group-sm">
                                 <label class="input-group-addon category__sorting-label" for="input-sort">{{ text_sort }}</label>
-                                <select id="input-sort" class="form-control" onchange="location = this.value;">
+                                <select id="input-sort" class="form-control select turnintodropdown" onchange="location = this.value;" name="select-box">
                                     {% for sorts in sorts %}
                                         {% if sorts.value == '%s-%s'|format(sort, order) %}
-                                            <option value="{{ sorts.href }}" selected="selected">{{ sorts.text }}</option>
+                                            <option value="{{ sorts.href }}" selected="selected" name="value">{{ sorts.text }}</option>
                                         {% else %}
-                                            <option value="{{ sorts.href }}">{{ sorts.text }}</option>
+                                            <option value="{{ sorts.href }}" name="value">{{ sorts.text }}</option>
                                         {% endif %}
                                     {% endfor %}
                                 </select>
@@ -185,5 +191,7 @@
         </div>
     </div>
 </div>
+
+
 
 
