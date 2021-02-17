@@ -1223,6 +1223,7 @@ label.favorit__label {
     border: 1px solid #c6c6c5;
     border-radius: 5px;
     padding: 19px 21px 32px 21px;
+    background: #fff;
 }
 .contentBx{
     cursor: pointer;
@@ -1234,9 +1235,11 @@ label.favorit__label {
     height: 139px;
     overflow: auto;
 }
-.aside__category-title-box, .aside__filter-title-box{
+.aside__category-title-inner, .aside__filter-title-inner{
     border-bottom: 1px solid #c6c6c5;
     padding-bottom: 10px;
+}
+.aside__category-title-box, .aside__filter-title-box{
     position: relative;
 }
 .aside__category-title-box::before{
@@ -1246,7 +1249,8 @@ label.favorit__label {
     height: 18px;
     background-image: url('/image/halkmarket/category/cat-filter-minus.svg');
     right: 0;
-    top: 1px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 3;
 }
 .aside__filter-title-box::before{
@@ -1362,7 +1366,7 @@ label.label__keep:hover{
     color: #6b6c6f;
 }
 .category__box{
-    width: 77.7%;
+    width: 75.7%;
     margin-left: 30px;
 }
 .category__title{
@@ -1389,6 +1393,10 @@ label.label__keep:hover{
 .category__view-btn{
     margin-bottom: 25px;
 }
+.aside__mobile-btn{
+    display: none;
+    cursor: pointer;
+}
 .category__sorting{
     float: left;
 }
@@ -1409,7 +1417,7 @@ label.label__keep:hover{
     flex-wrap: wrap;
 }
 .item__wrapper{
-    width: calc(88%/5);
+    width: calc(87%/5);
     height: auto;
     border-radius: 15px;
     margin-bottom: 20px;
@@ -1607,6 +1615,11 @@ button.category-cart__add {
     font-weight: 600;
     text-align: center;
     opacity: 1;
+}
+.aside__btn-icon{
+    color: #000;
+    width: 24px;
+    height: 24px;
 }
 /*----- ----- ----- END CATEGORY ----- ----- -----*/
 /*----- ----- ----- START PRODUCT ----- ----- -----*/
@@ -4312,7 +4325,7 @@ p.forgotten__text{
 }
 @media (max-width: 1323px){
     .item__category-wrapper{
-        width: calc(90.9%/4);
+        width: calc(89.9%/4);
     }
     .item__category-wrapper:nth-child(5n+5){
         margin-right: 30px;
@@ -4540,7 +4553,31 @@ p.forgotten__text{
     #column-left{
         visibility: hidden;
         opacity: 0;
-        display: none;
+        /*display: none;*/
+        height: 0;
+        transition: all .3s;
+        position: absolute;
+        left: 37px;
+        bottom: -273px;
+    }
+    .category__view-btn{
+        display: flex;
+        align-items: center;
+    }
+    .aside__mobile-btn{
+        display: block;
+    }
+    #column-left.aside-active{
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        position: absolute;
+        z-index: 100;
+        background-color: #fff;
+        left: 37px;
+        top: 463px;
+        /*bottom: -217px;*/
+        background: transparent;
     }
     .category__box{
         margin: 0;
@@ -4855,6 +4892,9 @@ p.forgotten__text{
     }
     .percent__icon{
         transform: rotate(5deg);
+    }
+    #column-left.aside-active{
+        top: 497px;
     }
 }
 @media (max-width: 1000px) {
@@ -5224,6 +5264,9 @@ p.forgotten__text{
     }
     .forgotten__email-icon{
         top: 11px;
+    }
+    #column-left.aside-active {
+        top: 515px;
     }
 }
 @media (max-width: 840px) {
@@ -5819,6 +5862,9 @@ p.forgotten__text{
     h3.popup__form-message{
         margin: 0 0 17px 0;
         font-size: 16px;
+    }
+    label.category__sorting-label{
+        display: none;
     }
 }
 @media (max-width: 628px) {

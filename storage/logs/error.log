@@ -3622,3 +3622,7 @@
 2021-02-12 5:18:56 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\OpenServer\domains\halkmarket\system\library\db\mysqli.php on line 10
 2021-02-12 5:18:56 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\OpenServer\domains\halkmarket\system\library\db\mysqli.php on line 10
 >>>>>>> 41db782f5038b984847b7a9b7167b45ce23bc456
+2021-02-17 10:32:14 - PHP Notice:  Undefined index: start in C:\OpenServer\domains\halkmarket\catalog\model\catalog\product.php on line 192
+2021-02-17 10:32:14 - PHP Notice:  Undefined index: start in C:\OpenServer\domains\halkmarket\catalog\model\catalog\product.php on line 200
+2021-02-17 10:32:15 - PHP Notice:  Undefined index: start in C:\OpenServer\domains\halkmarket\catalog\model\catalog\product.php on line 192
+2021-02-17 10:32:15 - PHP Notice:  Undefined index: start in C:\OpenServer\domains\halkmarket\catalog\model\catalog\product.php on line 200

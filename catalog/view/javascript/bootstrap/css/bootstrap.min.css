@@ -2407,7 +2407,7 @@ pre code {
         width: 33.33333333%
     }
     .col-sm-3 {
-        width: 19%
+        width: 22%
     }
     .col-sm-2 {
         width: 16.66666667%
@@ -6698,6 +6698,7 @@ button.list-group-item {
     text-transform: uppercase;
     pointer-events: none;
     cursor: default;
+    max-width: 153px;
 }
 
 .list-group-item.active .list-group-item-heading,
@@ -8172,6 +8173,16 @@ button.close {
 .visible-xs-inline-block {
     display: none!important
 }
+@media (max-width: 1323px){
+    .col-sm-3{
+        width: 21%;
+    }
+}
+@media (max-width: 934px){
+    .col-sm-3{
+        width: 196px;
+    }
+}
 
 @media (max-width:767px) {
     .visible-xs {
@@ -8311,7 +8322,7 @@ button.close {
 
 @media (max-width:767px) {
     .hidden-xs {
-        display: none!important
+        /*display: none!important*/
     }
 }
 

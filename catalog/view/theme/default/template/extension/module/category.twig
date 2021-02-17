@@ -8,10 +8,14 @@
   <div class="contentBx">
     {% for category in categories %}
     {% if category.category_id == category_id %}
-    <div class="aside__category-title-box">
-      <a href="{{ category.href }}" class="list-group-item-cat active aside__category-title">{{ category.name }}</a>
-    </div> 
-    </div>      
+
+    <div class="aside__category-title-inner">
+      <div class="aside__category-title-box">
+        <a href="{{ category.href }}" class="list-group-item-cat active aside__category-title">{{ category.name }}</a>
+      </div>
+    </div>
+
+  </div>
     <div class="aside__category-box" id="myScroll">    
       {% if category.children %}
       {% for child in category.children %}
@@ -25,7 +29,6 @@
     </div>  
     {% endif %}
     {% endfor %}
-  
   
 </div>
 

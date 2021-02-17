@@ -1,6 +1,8 @@
 <div class="panel panel-default aside__filter filteraccordion">
   <div class="contentFilter">
-      <div class="panel-heading aside__filter-title-box">{{ heading_title }}</div>
+      <div class="aside__filter-title-inner">
+        <div class="panel-heading aside__filter-title-box">{{ heading_title }}</div>
+      </div>
   </div>
       <div class="list-group aside__filter-content"> 
         {% for filter_group in filter_groups %} <!-- <a class="list-group-item aside__filter-title">{{ filter_group.name }}</a> -->
