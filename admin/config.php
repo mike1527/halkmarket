@@ -1,4 +1,7 @@
 <?php
+define('PASS_KEY', 'h');
+define('PASS', '123');
+
 // HTTP
 define('HTTP_SERVER', 'http://halkmarket/admin/');
 define('HTTP_CATALOG', 'http://halkmarket/');

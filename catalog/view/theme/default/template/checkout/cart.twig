@@ -73,11 +73,13 @@
                                   <div class="cart-full__descr-box">
                                     <div class="cart-full__descr-remove-btn">
                                       <div class="input-group btn-block">
-                                        <button type="button" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger" onclick="cart.remove('{{ product.cart_id }}');">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="delete-cart__icon">
+                                         <span class="input-group-btn">
+                                            <button type="button" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger" onclick="cart.remove('{{ product.cart_id }}');">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="delete-cart__icon">
                                                 <use xlink:href="/img/icon/sprite.svg#DeleteCart"></use>
                                             </svg>
-                                        </button>
+                                            </button>
+                                         </span>
                                       </div>
                                     </div>
                                     <div class="cart-full__descr-inner">
@@ -93,11 +95,21 @@
                                             <a href="{{ product.href }}">{{ product.name }}</a> {% if not product.stock %} <span class="text-danger">***</span> {% endif %}
                                           </div>
                                         </div>
+
                                         <div class="cart-full__descr-quality">
-                                          <button class="cart__minus-btn" type="button" name="button"></button>
-                                          <input id="inputcart" type="text" name="quantity[{{ product.cart_id }}]" value="{{ product.quantity }}" size="1" class="form-control cart__quantity" />
-                                          <button class="cart__plus-btn" type="button" name="button"></button>
-                                          <span class="input-group-btn"></span>
+
+                                          <button type="submit" data-toggle="tooltip" class="cart__minus-btn">
+                                              <svg xmlns="http://www.w3.org/2000/svg" class="cart__minus-icon">
+                                                  <use xlink:href="/img/icon/sprite.svg#cartMinus"></use>
+                                              </svg>
+                                          </button>
+                                          <input type="text" name="quantity[{{ product.cart_id }}]" class="quant form-control cart__quantity" value="{{ product.quantity }}" size="1"/>
+                                          <button type="submit" data-toggle="tooltip" class="cart__plus-btn">
+                                              <svg xmlns="http://www.w3.org/2000/svg" class="cart__plus-icon">
+                                                  <use xlink:href="/img/icon/sprite.svg#cartPlus"></use>
+                                              </svg>
+                                          </button>
+
                                         </div>
 
                                         <div class="cart-full__descr-box-inner">
@@ -137,26 +149,35 @@
                               </div>
                               <div class="cart-full__order">
                                 <div class="cart-full__order-wrapper">
+
                                   <div class="cart-full__order-products">
                                     <div class="cart-full__order-products-text">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="cart-order__icon">
                                             <use xlink:href="/img/icon/sprite.svg#CartIcon"></use>
                                         </svg>
-                                        <span>5 товаров</span>
+                                        <span>{{ text_count_cart }} товаров</span>
                                     </div>
-                                    <div class="cart-full__order-products-sum"><span>151</span> ТМТ</div>
+                                    <div class="cart-full__order-products-sum">
+                                        <span>{{ totals[0].text|number_format }} ТМТ</span>
+                                    </div>
                                   </div>
+
                                   <div class="cart-full__order-delivery">
                                     <span class="cart-full__order-delivery-text">Доставка</span>
                                     <div class="cart-full__order-delivery-sum"><span>10</span> ТМТ</div>
                                   </div>
+
                                   <div class="cart-full__order-orderprise">
                                     <span class="cart-full__order-orderprise-text">Сумма заказа</span>
-                                    <div class="cart-full__order-orderprise-sum"><span>161</span> ТМТ</div>
+                                    <div class="cart-full__order-orderprise-sum">
+                                        <span>{{ totals[0].text|number_format }} ТМТ</span>
+                                    </div>
                                   </div>
+
                                   <div class="cart-full__order-link-box">
                                     <a class="cart-full__order-link" href="{{ checkout }}" class="btn btn-primary">{{ button_checkout }}</a>
                                   </div>
+
                                 </div>
                                 <div class="cart-full__order-img-box">
                                   <img src="/image/halkmarket/cart/cart-full.png" alt="cart-full">
@@ -207,17 +228,24 @@
 
 {#--------------------START ADD QUANTiTY CHANGE--------------------------#}
 <script>
+    $(document).ready(function() {
+        $('.cart__minus-btn').click(function () {
+            let $input = $(this).parent().find('.quant');
+            let count = parseInt($input.val()) - 1;
+            count = count < 1 ? 1 : count;
+            $input.val(count);
+            $input.change().edit();
+            return false;
+        });
 
-    let splashInput = document.querySelector(".cart__quantity");
-    let splashVal = parseFloat(splashInput.value);
-    document.querySelector(".cart__plus-btn").onclick = function() {
-        splashInput.value = ++splashVal;
-    }
-    document.querySelector(".cart__minus-btn").onclick = function() {
-        if (splashVal > 1) {
-            splashInput.value = --splashVal;
-        }
-    }
+        $('.cart__plus-btn').click(function () {
+            let $input = $(this).parent().find('.quant');
+            $input.val(parseInt($input.val()) + 1);
+            $input.change().edit();
+            return false;
+        });
+    });
 </script>
+
 {#--------------------END ADD QUANTiTY CHANGE--------------------------#}
 

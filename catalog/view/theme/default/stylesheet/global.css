@@ -1327,6 +1327,7 @@ label.favorit__label {
     color: #1C1C1B;
     font-size: 14px;
     text-align: left;
+    font-weight: 400;
 }
 .input__keep {
     width: 1px;
@@ -2072,6 +2073,11 @@ div.cart__empty-box a.cart__empty-link{
     outline: none;
     border: none;
 }
+.cart__minus-icon, .cart__plus-icon{
+    width: 24px;
+    height: 24px;
+    color: #fff;
+}
 .cart-full__descr-quality input.cart__quantity{
     border: none;
     opacity: 1;
@@ -2545,8 +2551,8 @@ div.login__menu-link{
     color: #6b6c6f;
 }
 label.label__keep{
-    color: #dee2e6;
-    font-size: 12px;
+    /*color: #dee2e6;*/
+    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
     transition: all .3s;
@@ -5266,7 +5272,7 @@ p.forgotten__text{
         top: 11px;
     }
     #column-left.aside-active {
-        top: 515px;
+        top: 515label.label__keeppx;
     }
 }
 @media (max-width: 840px) {

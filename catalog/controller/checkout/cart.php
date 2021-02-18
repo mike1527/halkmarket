@@ -5,8 +5,10 @@
 class ControllerCheckoutCart extends Controller {
 	public function index() {
 		$this->load->language('checkout/cart');
+        $data['text_count_cart'] = $this->cart->countProducts();
 
-		$this->document->setTitle($this->language->get('heading_title'));
+
+        $this->document->setTitle($this->language->get('heading_title'));
 		$this->document->setRobots('noindex,follow');
 
 		$data['breadcrumbs'] = array();

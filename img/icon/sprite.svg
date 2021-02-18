@@ -281,6 +281,23 @@
         </g>
     </symbol>
 
+    <symbol id="cartPlus" viewBox="0 0 24 24">
+        <g>
+            <path fill="currentColor"
+                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+            />
+        </g>
+    </symbol>
+
+    <symbol id="cartMinus" viewBox="0 0 24 24">
+        <g>
+            <path fill="currentColor"
+                  d="M19,13H5V11H19V13Z"
+            />
+        </g>
+    </symbol>
+
+
     <symbol id="CloseBtn" viewBox="0 0 18 18">
         <g>
             <path fill="currentColor" d="M1.4 1.4L16.6 16.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="square"/>
