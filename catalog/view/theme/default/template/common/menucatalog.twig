@@ -18,7 +18,7 @@
                         <ul class="nav navbar-nav catalog__category-list">
                             {% for category in categories %} {% if category.children %}
                             <li class="catalog__item catalog__acordion">
-                                <a href="{{ category.href }}" class="dropdown-toggle catalog__item-link" data-toggle="dropdown">
+                                <a href="{{ category.href }}" class="dropdown-toggle catalog__item-link" data-toggle="dropdown" onclick="return false">
                                     <h4 class="catalog__item-title">{{ category.name }}</h4>
                                 </a>
                                     <div class="dropdown-inner"> 

@@ -1648,8 +1648,8 @@ h3 small {
 h4,
 h5,
 h6 {
-    margin-top: 10px;
-    margin-bottom: 10px
+    /*margin-top: 10px;*/
+    /*margin-bottom: 10px*/
 }
 
 .h4 .small,
@@ -6698,7 +6698,7 @@ button.list-group-item {
     text-transform: uppercase;
     pointer-events: none;
     cursor: default;
-    max-width: 153px;
+    max-width: 200px;
 }
 
 .list-group-item.active .list-group-item-heading,
